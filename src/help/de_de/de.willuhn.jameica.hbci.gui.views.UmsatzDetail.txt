@@ -4,9 +4,9 @@
 	</p>
 
 	<p>
-		<b>Tipp:</b> Klicken Sie auf <b>In Adressbuch übernehmen</b>
+		<b>Tipp:</b> Klicken Sie auf <b>In Adressbuch Ã¼bernehmen</b>
 		um das Gegenkonto dieser Buchung in Ihr Adressbuch zu
-		übernehmen. Hierbei wird automatisch geprüft, ob bereits
+		Ã¼bernehmen. Hierbei wird automatisch geprÃ¼ft, ob bereits
 		eine Bankverbindung mit dieser Kontonummer und BLZ
 		existiert.
 	</p>

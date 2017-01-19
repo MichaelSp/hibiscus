@@ -59,7 +59,7 @@ public class DBReminderImpl extends AbstractHibiscusDBObject implements DBRemind
     catch (RemoteException e)
     {
       Logger.error("error while insertcheck", e);
-      throw new ApplicationException(i18n.tr("Fehler bei der Prüfung der Daten"));
+      throw new ApplicationException(i18n.tr("Fehler bei der PrÃ¼fung der Daten"));
     }
   }
 

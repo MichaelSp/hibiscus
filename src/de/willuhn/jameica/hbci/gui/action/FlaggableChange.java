@@ -50,10 +50,10 @@ public class FlaggableChange implements Action
   public void handleAction(Object context) throws ApplicationException
   {
 		if (context == null)
-      throw new ApplicationException(i18n.tr("Bitte w‰hlen Sie einen oder mehrere Datens‰tze aus"));
+      throw new ApplicationException(i18n.tr("Bitte w√§hlen Sie einen oder mehrere Datens√§tze aus"));
 
     if (!(context instanceof Flaggable) && !(context instanceof Flaggable[]))
-      throw new ApplicationException(i18n.tr("Bitte w‰hlen Sie einen oder mehrere Datens‰tze aus"));
+      throw new ApplicationException(i18n.tr("Bitte w√§hlen Sie einen oder mehrere Datens√§tze aus"));
 
     Flaggable[] objects = null;
     
@@ -63,7 +63,7 @@ public class FlaggableChange implements Action
       objects = (Flaggable[]) context;
 
     if (objects.length == 0)
-      throw new ApplicationException(i18n.tr("Bitte w‰hlen Sie einen oder mehrere Datens‰tze aus"));
+      throw new ApplicationException(i18n.tr("Bitte w√§hlen Sie einen oder mehrere Datens√§tze aus"));
 
     try
     {
@@ -83,7 +83,7 @@ public class FlaggableChange implements Action
         Application.getMessagingFactory().sendMessage(new ObjectChangedMessage(objects[i]));
       }
       objects[0].transactionCommit();
-      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("ƒnderungen gespeichert"), StatusBarMessage.TYPE_SUCCESS));
+      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("√Ñnderungen gespeichert"), StatusBarMessage.TYPE_SUCCESS));
     }
 		catch (Exception e)
 		{
@@ -98,7 +98,7 @@ public class FlaggableChange implements Action
 	      throw (ApplicationException) e;
 
 	    Logger.error("error while setting flags",e);
-			throw new ApplicationException(i18n.tr("Fehler beim Speichern der ƒnderungen"));
+			throw new ApplicationException(i18n.tr("Fehler beim Speichern der √Ñnderungen"));
 		}
   }
   

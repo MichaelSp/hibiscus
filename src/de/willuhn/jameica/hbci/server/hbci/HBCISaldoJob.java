@@ -47,7 +47,7 @@ public class HBCISaldoJob extends AbstractHBCIJob {
 		try
 		{
 			if (konto == null)
-				throw new ApplicationException(i18n.tr("Bitte w‰hlen Sie ein Konto aus")); 
+				throw new ApplicationException(i18n.tr("Bitte w√§hlen Sie ein Konto aus")); 
 
 			if (konto.isNewObject())
 				konto.store();

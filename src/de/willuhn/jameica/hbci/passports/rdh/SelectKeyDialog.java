@@ -59,7 +59,7 @@ public class SelectKeyDialog extends AbstractDialog
   public SelectKeyDialog(int position)
   {
     super(position);
-    this.setTitle(i18n.tr("Schlüsselauswahl"));
+    this.setTitle(i18n.tr("SchlÃ¼sselauswahl"));
   }
 
   /**
@@ -68,9 +68,9 @@ public class SelectKeyDialog extends AbstractDialog
   protected void paint(Composite parent) throws Exception
   {
     Container container = new SimpleContainer(parent);
-    container.addText(i18n.tr("Bitte wählen Sie den zu verwendenden Schlüssel aus"),true);
+    container.addText(i18n.tr("Bitte wÃ¤hlen Sie den zu verwendenden SchlÃ¼ssel aus"),true);
 
-    final Button apply = new Button(i18n.tr("Übernehmen"), new Action() {
+    final Button apply = new Button(i18n.tr("Ãœbernehmen"), new Action() {
       public void handleAction(Object context) throws ApplicationException
       {
         new Apply().handleAction(table.getSelection());

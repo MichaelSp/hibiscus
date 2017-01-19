@@ -128,7 +128,7 @@ public class KontoMerge implements Action
       }
 
       String[] values = new String[] {Integer.toString(created),Integer.toString(skipped), Integer.toString(nosupport)};
-      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Konten abgeglichen. Angelegt: {0}, Übersprungen: {1}, nicht unterstützt: {2}",values),StatusBarMessage.TYPE_SUCCESS));
+      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Konten abgeglichen. Angelegt: {0}, Ãœbersprungen: {1}, nicht unterstÃ¼tzt: {2}",values),StatusBarMessage.TYPE_SUCCESS));
     }
     catch (Exception e)
     {

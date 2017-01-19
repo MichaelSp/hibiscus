@@ -53,13 +53,13 @@ public abstract class AbstractPrintSupportSammelTransfer extends AbstractPrintSu
     Object data = this.ctx;
     
     if (data == null)
-        throw new ApplicationException(i18n.tr("Bitte w‰hlen Sie einen Auftrag aus"));
+        throw new ApplicationException(i18n.tr("Bitte w√§hlen Sie einen Auftrag aus"));
     
     if (data instanceof TablePart)
       data = ((TablePart)data).getSelection();
     
     if (!(data instanceof SammelTransfer))
-      throw new ApplicationException(i18n.tr("Bitte w‰hlen Sie einen Auftrag aus"));
+      throw new ApplicationException(i18n.tr("Bitte w√§hlen Sie einen Auftrag aus"));
 
     try
     {
@@ -93,7 +93,7 @@ public abstract class AbstractPrintSupportSammelTransfer extends AbstractPrintSu
 
         // Ausfuehrungsstatus
         Date ausgefuehrt = a.getAusfuehrungsdatum();
-        table.add(new TextPrint(i18n.tr("Ausgef¸hrt"),fontNormal));
+        table.add(new TextPrint(i18n.tr("Ausgef√ºhrt"),fontNormal));
         if (ausgefuehrt != null)
           table.add(new TextPrint(HBCI.DATEFORMAT.format(ausgefuehrt),fontBold));
         else

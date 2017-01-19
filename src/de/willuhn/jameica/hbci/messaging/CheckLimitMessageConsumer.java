@@ -62,7 +62,7 @@ public class CheckLimitMessageConsumer implements MessageConsumer
       curr = k.getWaehrung();
     }
     if (t.getBetrag() > limit)
-      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Auftragslimit überschritten: {0} {1}", HBCI.DECIMALFORMAT.format(limit),curr),StatusBarMessage.TYPE_INFO));
+      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Auftragslimit Ã¼berschritten: {0} {1}", HBCI.DECIMALFORMAT.format(limit),curr),StatusBarMessage.TYPE_INFO));
   }
 
   /**

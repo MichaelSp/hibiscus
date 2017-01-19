@@ -97,21 +97,21 @@ public class SepaLastschriftImpl extends AbstractBaseUeberweisungImpl implements
       Konto k = getKonto();
 
       if (k == null)
-        throw new ApplicationException(i18n.tr("Bitte w‰hlen Sie ein Konto aus."));
+        throw new ApplicationException(i18n.tr("Bitte w√§hlen Sie ein Konto aus."));
       if (k.isNewObject())
-        throw new ApplicationException(i18n.tr("Bitte speichern Sie zun‰chst das Konto"));
+        throw new ApplicationException(i18n.tr("Bitte speichern Sie zun√§chst das Konto"));
       
       String kiban = k.getIban();
       if (kiban == null || kiban.length() == 0)
-        throw new ApplicationException(i18n.tr("Das ausgew‰hlte Konto besitzt keine IBAN"));
+        throw new ApplicationException(i18n.tr("Das ausgew√§hlte Konto besitzt keine IBAN"));
       
       String bic = k.getBic();
       if (bic == null || bic.length() == 0)
-        throw new ApplicationException(i18n.tr("Das ausgew‰hlte Konto besitzt keine BIC"));
+        throw new ApplicationException(i18n.tr("Das ausgew√§hlte Konto besitzt keine BIC"));
 
       double betrag = getBetrag();
       if (betrag == 0.0 || Double.isNaN(betrag))
-        throw new ApplicationException(i18n.tr("Bitte geben Sie einen g¸ltigen Betrag ein."));
+        throw new ApplicationException(i18n.tr("Bitte geben Sie einen g√ºltigen Betrag ein."));
 
       //////////////////////////////////////
       // IBAN und BIC pruefen
@@ -152,11 +152,11 @@ public class SepaLastschriftImpl extends AbstractBaseUeberweisungImpl implements
 
       String creditorId = getCreditorId();
       if (creditorId == null || creditorId.length() == 0)
-        throw new ApplicationException(i18n.tr("Bitte geben Sie die Gl‰ubiger-Identifikation ein."));
+        throw new ApplicationException(i18n.tr("Bitte geben Sie die Gl√§ubiger-Identifikation ein."));
       HBCIProperties.checkLength(creditorId, HBCIProperties.HBCI_SEPA_CREDITORID_MAXLENGTH);
       HBCIProperties.checkChars(creditorId, HBCIProperties.HBCI_SEPA_VALIDCHARS);
       if (!HBCIProperties.checkCreditorIdCRC(creditorId))
-        throw new ApplicationException(i18n.tr("Ung¸ltige Gl‰ubiger-Identifikation. Bitte pr¸fen Sie Ihre Eingaben."));
+        throw new ApplicationException(i18n.tr("Ung√ºltige Gl√§ubiger-Identifikation. Bitte pr√ºfen Sie Ihre Eingaben."));
 
       String mandateId = getMandateId();
       if (mandateId == null || mandateId.length() == 0)
@@ -168,7 +168,7 @@ public class SepaLastschriftImpl extends AbstractBaseUeberweisungImpl implements
         throw new ApplicationException(i18n.tr("Bitte geben Sie das Unterschriftsdatum des Mandats ein"));
       
       if (getSequenceType() == null)
-        throw new ApplicationException(i18n.tr("Bitte w‰hlen Sie den Sequenz-Typ aus"));
+        throw new ApplicationException(i18n.tr("Bitte w√§hlen Sie den Sequenz-Typ aus"));
       
       if (this.getTargetDate() == null)
         throw new ApplicationException(i18n.tr("Bitte geben Sie einen Zieltermin ein"));
@@ -185,7 +185,7 @@ public class SepaLastschriftImpl extends AbstractBaseUeberweisungImpl implements
     catch (RemoteException e)
     {
       Logger.error("error while checking foreign ueberweisung",e);
-      throw new ApplicationException(i18n.tr("Fehler beim Pr¸fen des SEPA-Auftrages."));
+      throw new ApplicationException(i18n.tr("Fehler beim Pr√ºfen des SEPA-Auftrages."));
     }
   }
 

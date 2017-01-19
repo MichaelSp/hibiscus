@@ -100,12 +100,12 @@ public class RDHKeyFactory
 		Logger.info("import rdh key " + f);
     if (f == null)
     {
-      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Bitte wählen Sie eine Schlüsseldatei aus"),StatusBarMessage.TYPE_ERROR));
+      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Bitte wÃ¤hlen Sie eine SchlÃ¼sseldatei aus"),StatusBarMessage.TYPE_ERROR));
       return;
     }
 		if (!f.canRead() || !f.isFile())
     {
-      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Schlüsseldatei {0} nicht lesbar",f.getAbsolutePath()),StatusBarMessage.TYPE_ERROR));
+      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("SchlÃ¼sseldatei {0} nicht lesbar",f.getAbsolutePath()),StatusBarMessage.TYPE_ERROR));
       return;
     }
 
@@ -115,7 +115,7 @@ public class RDHKeyFactory
       KeyFormat format = (KeyFormat) d.open();
       Logger.info("registering key, type " + format.getName() + ", " + format.getClass().getName());
       addKey(format.importKey(f));
-      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Schlüsseldatei erfolgreich importiert"),StatusBarMessage.TYPE_SUCCESS));
+      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("SchlÃ¼sseldatei erfolgreich importiert"),StatusBarMessage.TYPE_SUCCESS));
 		}
     catch (OperationCanceledException oce)
     {
@@ -129,7 +129,7 @@ public class RDHKeyFactory
 		catch (Throwable t)
 		{
       Logger.error("error while importing key",t);
-      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim Import des Schlüssels: {0}",t.getMessage()),StatusBarMessage.TYPE_ERROR));
+      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim Import des SchlÃ¼ssels: {0}",t.getMessage()),StatusBarMessage.TYPE_ERROR));
 		}
 	}
 
@@ -144,7 +144,7 @@ public class RDHKeyFactory
       Logger.info("creating new key in " + f);
       if (f == null)
       {
-        Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Bitte wählen Sie eine Schlüsseldatei aus"),StatusBarMessage.TYPE_ERROR));
+        Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Bitte wÃ¤hlen Sie eine SchlÃ¼sseldatei aus"),StatusBarMessage.TYPE_ERROR));
         return;
       }
 
@@ -165,7 +165,7 @@ public class RDHKeyFactory
       }
       
       addKey(format.createKey(f));
-      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Schlüsseldatei erfolgreich erstellt"),StatusBarMessage.TYPE_SUCCESS));
+      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("SchlÃ¼sseldatei erfolgreich erstellt"),StatusBarMessage.TYPE_SUCCESS));
     }
     catch (OperationCanceledException oce)
     {
@@ -187,7 +187,7 @@ public class RDHKeyFactory
     catch (Throwable t)
     {
       Logger.error("error while creating key",t);
-      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim Erzeugen des Schlüssels: {0}",t.getMessage()),StatusBarMessage.TYPE_ERROR));
+      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim Erzeugen des SchlÃ¼ssels: {0}",t.getMessage()),StatusBarMessage.TYPE_ERROR));
     }
 	}
 
@@ -203,7 +203,7 @@ public class RDHKeyFactory
 	{
 		GenericIterator i = getKeys();
 		if (!i.hasNext())
-			throw new ApplicationException(i18n.tr("Bitte erstellen Sie zuerst eine Schlüsseldiskette"));
+			throw new ApplicationException(i18n.tr("Bitte erstellen Sie zuerst eine SchlÃ¼sseldiskette"));
 
     RDHKey key = null;
     
@@ -238,7 +238,7 @@ public class RDHKeyFactory
       return (RDHKey) keys.get(0);
 
     if (Application.inServerMode())
-      throw new ApplicationException(i18n.tr("Zu verwendende Schlüsseldiskette nicht eindeutig ermittelbar. Bitte fest verknüpfen"));
+      throw new ApplicationException(i18n.tr("Zu verwendende SchlÃ¼sseldiskette nicht eindeutig ermittelbar. Bitte fest verknÃ¼pfen"));
 
     // Nicht eindeutig
     SelectKeyDialog d = new SelectKeyDialog(SelectKeyDialog.POSITION_CENTER);
@@ -253,7 +253,7 @@ public class RDHKeyFactory
     catch (Exception e)
     {
       Logger.error("error while choosing key",e);
-      throw new ApplicationException(i18n.tr("Fehler bei der Auswahl der Schlüsseldiskette"));
+      throw new ApplicationException(i18n.tr("Fehler bei der Auswahl der SchlÃ¼sseldiskette"));
     }
 	}
 
@@ -285,7 +285,7 @@ public class RDHKeyFactory
 	{
     if (key == null)
     {
-      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Bitte wählen Sie eine Schlüsseldatei aus"),StatusBarMessage.TYPE_ERROR));
+      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Bitte wÃ¤hlen Sie eine SchlÃ¼sseldatei aus"),StatusBarMessage.TYPE_ERROR));
       return;
     }
     String file = key.getFilename();
@@ -313,7 +313,7 @@ public class RDHKeyFactory
   public static void removeKey(RDHKey key) throws ApplicationException
   {
     if (key == null)
-      throw new ApplicationException(i18n.tr("Bitte wählen Sie eine Schlüsseldatei aus"));
+      throw new ApplicationException(i18n.tr("Bitte wÃ¤hlen Sie eine SchlÃ¼sseldatei aus"));
 
     try
     {
@@ -341,7 +341,7 @@ public class RDHKeyFactory
     catch (RemoteException re)
     {
       Logger.error("unable to remove key",re);
-      throw new ApplicationException(i18n.tr("Löschen fehlgeschlagen: {0}",re.getMessage()));
+      throw new ApplicationException(i18n.tr("LÃ¶schen fehlgeschlagen: {0}",re.getMessage()));
     }
   }
 }

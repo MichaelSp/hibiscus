@@ -103,7 +103,7 @@ public class VerwendungszweckDialog extends AbstractDialog
     this.ewz.paint(container.getComposite());
 
     ButtonArea buttons = new ButtonArea();
-    Button apply = new Button(i18n.tr("Übernehmen"),new Action() {
+    Button apply = new Button(i18n.tr("Ãœbernehmen"),new Action() {
       public void handleAction(Object context) throws ApplicationException
       {
         try
@@ -114,7 +114,7 @@ public class VerwendungszweckDialog extends AbstractDialog
         catch (RemoteException re)
         {
           Logger.error("unable to apply data",re);
-          throw new ApplicationException(i18n.tr("Fehler beim Übernehmen der Verwendungszwecke"));
+          throw new ApplicationException(i18n.tr("Fehler beim Ãœbernehmen der Verwendungszwecke"));
         }
       }
     },null,true,"ok.png");

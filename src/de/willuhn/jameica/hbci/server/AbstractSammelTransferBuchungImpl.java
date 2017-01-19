@@ -54,11 +54,11 @@ public abstract class AbstractSammelTransferBuchungImpl extends AbstractHibiscus
   {
     try {
       if (getSammelTransfer() == null)
-        throw new ApplicationException(i18n.tr("Bitte wählen Sie den zugehörigen Sammel-Auftrag aus."));
+        throw new ApplicationException(i18n.tr("Bitte wÃ¤hlen Sie den zugehÃ¶rigen Sammel-Auftrag aus."));
 
       double betrag = getBetrag();
       if (betrag == 0.0 || Double.isNaN(betrag))
-        throw new ApplicationException(i18n.tr("Bitte geben Sie einen gültigen Betrag ein."));
+        throw new ApplicationException(i18n.tr("Bitte geben Sie einen gÃ¼ltigen Betrag ein."));
 
       if (getGegenkontoNummer() == null || getGegenkontoNummer().length() == 0)
         throw new ApplicationException(i18n.tr("Bitte geben Sie die Kontonummer des Gegenkontos ein"));
@@ -76,7 +76,7 @@ public abstract class AbstractSammelTransferBuchungImpl extends AbstractHibiscus
 
       int blzLen = getGegenkontoBLZ().length();
       if (blzLen != HBCIProperties.HBCI_BLZ_LENGTH)
-        throw new ApplicationException(i18n.tr("Ungültige BLZ \"{0}\". Muss {1} Stellen lang sein.", new String[]{getGegenkontoBLZ(),""+HBCIProperties.HBCI_BLZ_LENGTH}));
+        throw new ApplicationException(i18n.tr("UngÃ¼ltige BLZ \"{0}\". Muss {1} Stellen lang sein.", new String[]{getGegenkontoBLZ(),""+HBCIProperties.HBCI_BLZ_LENGTH}));
 
       HBCIProperties.checkLength(getGegenkontoName(), HBCIProperties.HBCI_TRANSFER_NAME_MAXLENGTH);
 
@@ -84,7 +84,7 @@ public abstract class AbstractSammelTransferBuchungImpl extends AbstractHibiscus
       HBCIProperties.checkChars(getGegenkontoName(), HBCIProperties.HBCI_DTAUS_VALIDCHARS);
 
       if (!HBCIProperties.checkAccountCRC(getGegenkontoBLZ(),getGegenkontoNummer()))
-        throw new ApplicationException(i18n.tr("Ungültige BLZ/Kontonummer. Bitte prüfen Sie Ihre Eingaben."));
+        throw new ApplicationException(i18n.tr("UngÃ¼ltige BLZ/Kontonummer. Bitte prÃ¼fen Sie Ihre Eingaben."));
         
       if (getZweck() == null || "".equals(getZweck()))
         throw new ApplicationException(i18n.tr("Bitte geben Sie einen Verwendungszweck ein"));
@@ -100,7 +100,7 @@ public abstract class AbstractSammelTransferBuchungImpl extends AbstractHibiscus
     catch (RemoteException e)
     {
       Logger.error("error while checking sammeltransferbuchung",e);
-      throw new ApplicationException(i18n.tr("Fehler beim Prüfen der Buchung."));
+      throw new ApplicationException(i18n.tr("Fehler beim PrÃ¼fen der Buchung."));
     }
   }
 

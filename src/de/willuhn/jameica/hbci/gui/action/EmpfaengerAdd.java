@@ -52,7 +52,7 @@ public class EmpfaengerAdd implements Action
 		I18N i18n = Application.getPluginLoader().getPlugin(HBCI.class).getResources().getI18N();
 
 		if (context == null)
-			throw new ApplicationException(i18n.tr("Bitte w‰hlen Sie ein oder mehrere Auftr‰ge aus"));
+			throw new ApplicationException(i18n.tr("Bitte w√§hlen Sie ein oder mehrere Auftr√§ge aus"));
 
 		if (!(context instanceof Transfer) &&
         !(context instanceof Transfer[]) &&
@@ -60,7 +60,7 @@ public class EmpfaengerAdd implements Action
         !(context instanceof Address[]) &&
         !(context instanceof Umsatz) &&
         !(context instanceof Umsatz[]))
-      throw new ApplicationException(i18n.tr("Bitte w‰hlen Sie ein oder mehrere Auftr‰ge aus"));
+      throw new ApplicationException(i18n.tr("Bitte w√§hlen Sie ein oder mehrere Auftr√§ge aus"));
 
     List<HibiscusAddress> items = new ArrayList<HibiscusAddress>();
 		try {
@@ -160,7 +160,7 @@ public class EmpfaengerAdd implements Action
 		catch (Exception e)
 		{
 			Logger.error("error while storing empfaenger",e);
-			GUI.getStatusBar().setErrorText(i18n.tr("Fehler beim Speichern des Empf‰ngers"));
+			GUI.getStatusBar().setErrorText(i18n.tr("Fehler beim Speichern des Empf√§ngers"));
 		}
   }
 

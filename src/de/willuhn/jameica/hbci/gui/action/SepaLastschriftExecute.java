@@ -50,7 +50,7 @@ public class SepaLastschriftExecute implements Action
 			final SepaLastschrift u = (SepaLastschrift) context;
 			
 			if (u.ausgefuehrt())
-				throw new ApplicationException(i18n.tr("Lastschrift wurde bereits ausgeführt"));
+				throw new ApplicationException(i18n.tr("Lastschrift wurde bereits ausgefÃ¼hrt"));
 
 			if (u.isNewObject())
 				u.store(); // wir speichern bei Bedarf selbst.
@@ -69,7 +69,7 @@ public class SepaLastschriftExecute implements Action
 			catch (Exception e)
 			{
 				Logger.error("error while showing confirm dialog",e);
-				GUI.getStatusBar().setErrorText(i18n.tr("Fehler beim Ausführen des Auftrages"));
+				GUI.getStatusBar().setErrorText(i18n.tr("Fehler beim AusfÃ¼hren des Auftrages"));
 				return;
 			}
 
@@ -88,7 +88,7 @@ public class SepaLastschriftExecute implements Action
 		catch (RemoteException e)
 		{
 			Logger.error("error while executing transfer",e);
-			Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim Ausführen des Auftrages"),StatusBarMessage.TYPE_ERROR));
+			Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim AusfÃ¼hren des Auftrages"),StatusBarMessage.TYPE_ERROR));
 		}
   }
 

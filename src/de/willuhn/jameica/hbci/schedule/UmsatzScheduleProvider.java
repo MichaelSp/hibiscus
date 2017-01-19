@@ -72,7 +72,7 @@ public class UmsatzScheduleProvider implements ScheduleProvider<Umsatz>
    */
   public String getName()
   {
-    return i18n.tr("Ums‰tze");
+    return i18n.tr("Ums√§tze");
   }
 }
 

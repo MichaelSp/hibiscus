@@ -54,7 +54,7 @@ public class RangeInput extends SelectInput
     this.to = to;
     this.param = parameter != null ? parameter : "transferlist.filter.range";
     
-    this.setPleaseChoose(i18n.tr("Bitte w‰hlen..."));
+    this.setPleaseChoose(i18n.tr("Bitte w√§hlen..."));
     this.setName(i18n.tr("Zeitraum"));
     
     Range preset = Range.byId(settings.getString(this.param,null));

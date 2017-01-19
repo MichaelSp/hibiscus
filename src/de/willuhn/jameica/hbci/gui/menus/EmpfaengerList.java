@@ -47,11 +47,11 @@ public class EmpfaengerList extends ContextMenu implements Extendable
 	 */
 	public EmpfaengerList()
 	{
-		addItem(new CheckedSingleContextMenuItem(i18n.tr("Öffnen"),new EmpfaengerNew(),"document-open.png"));
+		addItem(new CheckedSingleContextMenuItem(i18n.tr("Ã–ffnen"),new EmpfaengerNew(),"document-open.png"));
     addItem(new ContextMenuItem(i18n.tr("Neue Adresse..."), new ENeu(),"contact-new.png"));
-    addItem(new CheckedHibiscusAddressContextMenuItem(i18n.tr("Löschen..."), new DBObjectDelete(),"user-trash-full.png"));
+    addItem(new CheckedHibiscusAddressContextMenuItem(i18n.tr("LÃ¶schen..."), new DBObjectDelete(),"user-trash-full.png"));
     addItem(ContextMenuItem.SEPARATOR);
-    addItem(new CheckedSingleContextMenuItem(i18n.tr("Neue Überweisung..."),new AuslandsUeberweisungNew(),"stock_next.png"));
+    addItem(new CheckedSingleContextMenuItem(i18n.tr("Neue Ãœberweisung..."),new AuslandsUeberweisungNew(),"stock_next.png"));
     addItem(new CheckedSingleContextMenuItem(i18n.tr("Neue Lastschrift..."),new SepaLastschriftNew(),"stock_previous.png"));
     addItem(new CheckedSingleContextMenuItem(i18n.tr("Neuer Dauerauftrag..."),new SepaDauerauftragNew(),"stock_form-time-field.png"));
     addItem(ContextMenuItem.SEPARATOR);

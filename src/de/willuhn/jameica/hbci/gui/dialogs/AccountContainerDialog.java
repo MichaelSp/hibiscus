@@ -91,12 +91,12 @@ public class AccountContainerDialog extends AbstractDialog
 		c.addText(i18n.tr("Geben Sie hier bitte die Verbindungsdaten zu Ihrer Bank ein."),true);
 		c.addLabelPair(i18n.tr("Hostname/URL des Bankservers"),getHost());
 		c.addLabelPair(i18n.tr("TCP-Port des Bankservers"),getPort());
-		c.addLabelPair(i18n.tr("Filter für die Übertragung"),getFilter());
+		c.addLabelPair(i18n.tr("Filter fÃ¼r die Ãœbertragung"),getFilter());
 
 		c.addLabelPair("",getText());
 
 		ButtonArea buttons = new ButtonArea();
-		buttons.addButton(i18n.tr("Übernehmen"),new Action()
+		buttons.addButton(i18n.tr("Ãœbernehmen"),new Action()
     {
       public void handleAction(Object context) throws ApplicationException
       {

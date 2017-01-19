@@ -1,28 +1,28 @@
 <form>
 	<p>
-		<span color="header" font="header">Details der Schlüsseldiskette</span>
+		<span color="header" font="header">Details der SchlÃ¼sseldiskette</span>
 	</p>
 	
   <p>
-    Die Angabe eines Alias-Namens hilft Ihnen, mehrere installierte Schlüssel
-    besser unterscheiden zu können. Geben Sie hier z.Bsp. den Namen der Bank ein.
+    Die Angabe eines Alias-Namens hilft Ihnen, mehrere installierte SchlÃ¼ssel
+    besser unterscheiden zu kÃ¶nnen. Geben Sie hier z.Bsp. den Namen der Bank ein.
   </p>
 
 	<p>
-	  Der Schlüssel wird beim Export mit einem Passwort geschützt.
-	  Merken Sie sich dieses bitte, um ihn wieder importieren zu können.
+	  Der SchlÃ¼ssel wird beim Export mit einem Passwort geschÃ¼tzt.
+	  Merken Sie sich dieses bitte, um ihn wieder importieren zu kÃ¶nnen.
 	</p>
 
   <p>
     Falls Sie bei einer Bank mehrere Konten mit verschiedenen
-    Schlüsseldisketten besitzen oder Ihre Bank für den HBCI-Zugang eine
-    abweichende BLZ verwendet, dann können Sie in der Tabelle
-    &quot;Fest zugeordnete Konten&quot; manuell einzelne Konten auswählen,
-    für die diese Schlüsseldiskette gelten soll. Auf diese Weise müssen Sie
-    beim Ausführen von Geschäftsvorfällen nicht manuell die zu verwendende Datei
-    wählen. Andernfalls können Sie die Auswahl freilassen. Sie werden dann
-    bei der Ausführung eines HBCI-Auftrages zur Auswahl der zu verwendenden
-    Schlüsseldatei aufgefordert, falls mehrere existieren.
+    SchlÃ¼sseldisketten besitzen oder Ihre Bank fÃ¼r den HBCI-Zugang eine
+    abweichende BLZ verwendet, dann kÃ¶nnen Sie in der Tabelle
+    &quot;Fest zugeordnete Konten&quot; manuell einzelne Konten auswÃ¤hlen,
+    fÃ¼r die diese SchlÃ¼sseldiskette gelten soll. Auf diese Weise mÃ¼ssen Sie
+    beim AusfÃ¼hren von GeschÃ¤ftsvorfÃ¤llen nicht manuell die zu verwendende Datei
+    wÃ¤hlen. Andernfalls kÃ¶nnen Sie die Auswahl freilassen. Sie werden dann
+    bei der AusfÃ¼hrung eines HBCI-Auftrages zur Auswahl der zu verwendenden
+    SchlÃ¼sseldatei aufgefordert, falls mehrere existieren.
   </p>
 
 </form>

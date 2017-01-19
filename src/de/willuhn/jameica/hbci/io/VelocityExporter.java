@@ -53,13 +53,13 @@ public class VelocityExporter implements Exporter
   public void doExport(Object[] objects, IOFormat format, OutputStream os, ProgressMonitor monitor) throws RemoteException, ApplicationException
   {
     if (os == null)
-      throw new ApplicationException(i18n.tr("Kein Ausgabe-Ziel für die Datei angegeben"));
+      throw new ApplicationException(i18n.tr("Kein Ausgabe-Ziel fÃ¼r die Datei angegeben"));
 
     if (format == null)
       throw new ApplicationException(i18n.tr("Kein Ausgabe-Format angegeben"));
 
     if (objects == null || objects.length == 0)
-      throw new ApplicationException(i18n.tr("Keine zu exportierenden Umsätze angegeben"));
+      throw new ApplicationException(i18n.tr("Keine zu exportierenden UmsÃ¤tze angegeben"));
 
     if (monitor != null)
     {

@@ -32,9 +32,9 @@ public enum PurposeCode
   DEPT("DEPT","Einzahlung"),
   
   /**
-   * Gutschrift/Rücküberweisung
+   * Gutschrift/RÃ¼ckÃ¼berweisung
    */
-  REFU("REFU","Gutschrift/Rücküberweisung"),
+  REFU("REFU","Gutschrift/RÃ¼ckÃ¼berweisung"),
   
   /**
    * Gehaltszahlungen
@@ -52,14 +52,14 @@ public enum PurposeCode
   SSBE("SSBE","Sozialleistung"),
   
   /**
-   * Zahlung an öffentl. Kassen
+   * Zahlung an Ã¶ffentl. Kassen
    */
-  GOWT("GOWT","Zahlung an öffentl. Kassen"),
+  GOWT("GOWT","Zahlung an Ã¶ffentl. Kassen"),
   
   /**
-   * Vermögenswirksame Leistungen
+   * VermÃ¶genswirksame Leistungen
    */
-  CBFF("CBFF","Vermögenswirksame Leistungen"),
+  CBFF("CBFF","VermÃ¶genswirksame Leistungen"),
   
   /**
    * Bonuszahlungen.
@@ -84,7 +84,7 @@ public enum PurposeCode
   /**
    * Nicht anders vorgeschrieben 
    */
-  NOWS("NOWS","Nicht näher definiert"),
+  NOWS("NOWS","Nicht nÃ¤her definiert"),
 
   /**
    * Andere

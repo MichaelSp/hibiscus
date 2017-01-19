@@ -69,7 +69,7 @@ public class LastschriftNew extends AbstractView
       container.addInput(control.getEmpfaengerName());
       container.addInput(control.getEmpfaengerKonto());
       container.addInput(control.getEmpfaengerBlz());
-      container.addCheckbox(control.getStoreEmpfaenger(),i18n.tr("In Adressbuch übernehmen"));
+      container.addCheckbox(control.getStoreEmpfaenger(),i18n.tr("In Adressbuch Ã¼bernehmen"));
     }
     
     // Rechte Seite
@@ -88,7 +88,7 @@ public class LastschriftNew extends AbstractView
     container.addInput(control.getBetrag());
 
 		ButtonArea buttonArea = new ButtonArea();
-		buttonArea.addButton(i18n.tr("Löschen"), new DBObjectDelete(),transfer,false,"user-trash-full.png");
+		buttonArea.addButton(i18n.tr("LÃ¶schen"), new DBObjectDelete(),transfer,false,"user-trash-full.png");
 		Button store = new Button(i18n.tr("Speichern"), new Action() {
       public void handleAction(Object context) throws ApplicationException {
       	control.handleStore();

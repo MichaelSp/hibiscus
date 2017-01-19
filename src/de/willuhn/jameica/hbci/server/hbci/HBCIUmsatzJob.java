@@ -67,7 +67,7 @@ public class HBCIUmsatzJob extends AbstractHBCIJob
 		{
       PluginResources res = Application.getPluginLoader().getPlugin(HBCI.class).getResources();
 			if (konto == null)
-				throw new ApplicationException(i18n.tr("Bitte w‰hlen Sie ein Konto aus")); 
+				throw new ApplicationException(i18n.tr("Bitte w√§hlen Sie ein Konto aus")); 
 
 			if (konto.isNewObject())
 				konto.store();
@@ -150,7 +150,7 @@ public class HBCIUmsatzJob extends AbstractHBCIJob
    */
   protected void markExecuted() throws RemoteException, ApplicationException
   {
-    konto.addToProtokoll(i18n.tr("Ums‰tze abgerufen"),Protokoll.TYP_SUCCESS);
+    konto.addToProtokoll(i18n.tr("Ums√§tze abgerufen"),Protokoll.TYP_SUCCESS);
 
     // In HBCI gibts fuer Umsaetze ja keine eindeutigen IDs. Daher muessen
     // wir anhand der Eigenschaften vergleichen, ob wir den Umsatz schon
@@ -247,7 +247,7 @@ public class HBCIUmsatzJob extends AbstractHBCIJob
         }
         catch (Exception e2)
         {
-          Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Nicht alle empfangenen Ums‰tze konnten gespeichert werden. Bitte pr¸fen Sie das System-Protokoll"),StatusBarMessage.TYPE_ERROR));
+          Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Nicht alle empfangenen Ums√§tze konnten gespeichert werden. Bitte pr√ºfen Sie das System-Protokoll"),StatusBarMessage.TYPE_ERROR));
           Logger.error("error while adding umsatz, skipping this one",e2);
         }
       }
@@ -335,7 +335,7 @@ public class HBCIUmsatzJob extends AbstractHBCIJob
           }
           catch (Exception e2)
           {
-            Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Nicht alle empfangenen Ums‰tze konnten gespeichert werden. Bitte pr¸fen Sie das System-Protokoll"),StatusBarMessage.TYPE_ERROR));
+            Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Nicht alle empfangenen Ums√§tze konnten gespeichert werden. Bitte pr√ºfen Sie das System-Protokoll"),StatusBarMessage.TYPE_ERROR));
             Logger.error("error while adding umsatz, skipping this one",e2);
           }
         }
@@ -419,7 +419,7 @@ public class HBCIUmsatzJob extends AbstractHBCIJob
    */
   protected String markFailed(String error) throws RemoteException, ApplicationException
   {
-    String msg = i18n.tr("Fehler beim Abrufen der Ums‰tze: {0}",error);
+    String msg = i18n.tr("Fehler beim Abrufen der Ums√§tze: {0}",error);
     konto.addToProtokoll(msg,Protokoll.TYP_ERROR);
     return msg;
   }

@@ -63,7 +63,7 @@ public class UmsatzTypNewDialog extends AbstractDialog
     group.addLabelPair("", getCheck());
     
     ButtonArea buttons = new ButtonArea(parent,2);
-    buttons.addButton(i18n.tr("Übernehmen"),new Action() {
+    buttons.addButton(i18n.tr("Ãœbernehmen"),new Action() {
       public void handleAction(Object context) throws ApplicationException
       {
         try

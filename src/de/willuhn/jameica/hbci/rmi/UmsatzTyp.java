@@ -59,7 +59,7 @@ public interface UmsatzTyp extends DBObjectNode
   public void setName(String name) throws RemoteException;
 	
   /**
-   * Liefert die Nummer des Umsatz-Typs. Die Nummer wird für die Sortierung bei der Auswertung
+   * Liefert die Nummer des Umsatz-Typs. Die Nummer wird fÃ¼r die Sortierung bei der Auswertung
    * eingesetzt.
    * @return Nummer des Umsatz-Typs.
    * @throws RemoteException
@@ -96,8 +96,8 @@ public interface UmsatzTyp extends DBObjectNode
   
   /**
    * Liefert eine Liste von Umsaetzen aus dem angegebenen Zeitraum.
-   * @param von Start-Datum. Wenn == null, dann bleibt es unberücksichtigt.
-   * @param bis Ende-Datum. Wenn == null, dann bleibt es unberücksichtigt.
+   * @param von Start-Datum. Wenn == null, dann bleibt es unberÃ¼cksichtigt.
+   * @param bis Ende-Datum. Wenn == null, dann bleibt es unberÃ¼cksichtigt.
    * @return Umsatz-Liste.
    * @throws RemoteException
    */
@@ -120,8 +120,8 @@ public interface UmsatzTyp extends DBObjectNode
   
   /**
    * Liefert die Hoehe des Umsatzes aus dem angegebenen Zeitraum.
-   * @param von Start-Datum. Wenn == null, dann bleibt es unberücksichtigt.
-   * @param bis Ende-Datum. Wenn == null, dann bleibt es unberücksichtigt.
+   * @param von Start-Datum. Wenn == null, dann bleibt es unberÃ¼cksichtigt.
+   * @param bis Ende-Datum. Wenn == null, dann bleibt es unberÃ¼cksichtigt.
    * @return Hoehe des Umsatzes.
    * @throws RemoteException
    */
@@ -251,10 +251,10 @@ public interface UmsatzTyp extends DBObjectNode
  * @N Charts erst beim ersten Paint-Event zeichnen. Dadurch laesst sich z.Bsp. die Konto-View schneller oeffnen, da der Saldo-Verlauf nicht berechnet werden muss
  *
  * Revision 1.13  2007/03/10 07:18:36  jost
- * Neu: Nummer für die Sortierung der Umsatz-Kategorien
+ * Neu: Nummer fÃ¼r die Sortierung der Umsatz-Kategorien
  *
  * Revision 1.12  2007/03/06 20:06:40  jost
- * Neu: Umsatz-Kategorien-Übersicht
+ * Neu: Umsatz-Kategorien-Ãœbersicht
  *
  * Revision 1.11  2006/11/29 00:40:37  willuhn
  * @N Keylistener in Umsatzlist nur dann ausfuehren, wenn sich wirklich etwas geaendert hat

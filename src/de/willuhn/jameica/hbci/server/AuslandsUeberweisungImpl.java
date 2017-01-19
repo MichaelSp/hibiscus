@@ -80,21 +80,21 @@ public class AuslandsUeberweisungImpl extends AbstractBaseUeberweisungImpl imple
       Konto k = getKonto();
 
       if (k == null)
-        throw new ApplicationException(i18n.tr("Bitte w‰hlen Sie ein Konto aus."));
+        throw new ApplicationException(i18n.tr("Bitte w√§hlen Sie ein Konto aus."));
       if (k.isNewObject())
-        throw new ApplicationException(i18n.tr("Bitte speichern Sie zun‰chst das Konto"));
+        throw new ApplicationException(i18n.tr("Bitte speichern Sie zun√§chst das Konto"));
       
       String kiban = k.getIban();
       if (kiban == null || kiban.length() == 0)
-        throw new ApplicationException(i18n.tr("Das ausgew‰hlte Konto besitzt keine IBAN"));
+        throw new ApplicationException(i18n.tr("Das ausgew√§hlte Konto besitzt keine IBAN"));
       
       String bic = k.getBic();
       if (bic == null || bic.length() == 0)
-        throw new ApplicationException(i18n.tr("Das ausgew‰hlte Konto besitzt keine BIC"));
+        throw new ApplicationException(i18n.tr("Das ausgew√§hlte Konto besitzt keine BIC"));
 
       double betrag = getBetrag();
       if (betrag == 0.0 || Double.isNaN(betrag))
-        throw new ApplicationException(i18n.tr("Bitte geben Sie einen g¸ltigen Betrag ein."));
+        throw new ApplicationException(i18n.tr("Bitte geben Sie einen g√ºltigen Betrag ein."));
 
       //////////////////////////////////////
       // IBAN und BIC pruefen
@@ -143,7 +143,7 @@ public class AuslandsUeberweisungImpl extends AbstractBaseUeberweisungImpl imple
     catch (RemoteException e)
     {
       Logger.error("error while checking foreign ueberweisung",e);
-      throw new ApplicationException(i18n.tr("Fehler beim Pr¸fen der SEPA-‹berweisung."));
+      throw new ApplicationException(i18n.tr("Fehler beim Pr√ºfen der SEPA-√úberweisung."));
     }
   }
   

@@ -49,7 +49,7 @@ public class CanTermDelRestriction implements Restriction
 		String s = p.getProperty("cantermdel");
 		Logger.debug("test if transfer deletable at defined date: restriction \"cantermdel\": " + s);
 		if ("N".equalsIgnoreCase(s))
-			throw new ApplicationException(i18n.tr("Der Auftrag kann bei Ihrer Bank nicht zu einem definierten Zeitpunkt gelöscht werden."));
+			throw new ApplicationException(i18n.tr("Der Auftrag kann bei Ihrer Bank nicht zu einem definierten Zeitpunkt gelÃ¶scht werden."));
   }
 }
 

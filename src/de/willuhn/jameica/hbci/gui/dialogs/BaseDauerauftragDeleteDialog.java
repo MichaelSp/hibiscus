@@ -58,10 +58,10 @@ public class BaseDauerauftragDeleteDialog extends AbstractDialog
   {
 		Container group = new SimpleContainer(parent);
 
-		group.addHeadline(i18n.tr("Zieldatum zur Löschung des Dauerauftrages"));
-  	group.addText(i18n.tr("Bitte wählen Sie das Datum aus, zu dem Sie den Dauerauftrag löschen wollen\n" +                          "Hinweis: Es ist durchaus möglich, dass Ihre Bank das Löschen eines\n" +
-                          "Dauerauftrages zu einem definierten Datum nicht unterstützt.\n" +
-                          "Wählen Sie in diesem Fall bitte \"Zum nächstmöglichen Zeitpunkt\""),true);
+		group.addHeadline(i18n.tr("Zieldatum zur LÃ¶schung des Dauerauftrages"));
+  	group.addText(i18n.tr("Bitte wÃ¤hlen Sie das Datum aus, zu dem Sie den Dauerauftrag lÃ¶schen wollen\n" +                          "Hinweis: Es ist durchaus mÃ¶glich, dass Ihre Bank das LÃ¶schen eines\n" +
+                          "Dauerauftrages zu einem definierten Datum nicht unterstÃ¼tzt.\n" +
+                          "WÃ¤hlen Sie in diesem Fall bitte \"Zum nÃ¤chstmÃ¶glichen Zeitpunkt\""),true);
     
     box = new CheckboxInput(true);
     box.addListener(new Listener()
@@ -76,7 +76,7 @@ public class BaseDauerauftragDeleteDialog extends AbstractDialog
       }
     });
 
-    group.addCheckbox(box,i18n.tr("Zum nächstmöglichen Zeitpunkt"));
+    group.addCheckbox(box,i18n.tr("Zum nÃ¤chstmÃ¶glichen Zeitpunkt"));
 
     CalendarDialog cd = new CalendarDialog(CalendarDialog.POSITION_MOUSE);
     cd.setTitle(i18n.tr("Zieldatum"));
@@ -88,7 +88,7 @@ public class BaseDauerauftragDeleteDialog extends AbstractDialog
         date = (Date) event.data;
         if (date == null)
         {
-          comment.setValue(i18n.tr("Bitte wählen Sie ein Zieldatum aus"));
+          comment.setValue(i18n.tr("Bitte wÃ¤hlen Sie ein Zieldatum aus"));
           dateInput.setValue(null);
           dateInput.setText(null);
           return;
@@ -115,14 +115,14 @@ public class BaseDauerauftragDeleteDialog extends AbstractDialog
     dateInput = new DialogInput(date == null ? null : HBCI.DATEFORMAT.format(date),cd);
     dateInput.disableClientControl();
     dateInput.setValue(date);
-		group.addLabelPair(i18n.tr("Dauerauftrag löschen zum"),dateInput);
+		group.addLabelPair(i18n.tr("Dauerauftrag lÃ¶schen zum"),dateInput);
 
     comment = new LabelInput("");
     comment.setColor(Color.ERROR);
     group.addLabelPair("",comment);
     
     ButtonArea b = new ButtonArea();
-		b.addButton(i18n.tr("Jetzt bei der Bank löschen"), new Action()
+		b.addButton(i18n.tr("Jetzt bei der Bank lÃ¶schen"), new Action()
     {
       public void handleAction(Object context) throws ApplicationException
       {
@@ -136,7 +136,7 @@ public class BaseDauerauftragDeleteDialog extends AbstractDialog
           date = (Date) dateInput.getValue();
           if (date == null)
           {
-            comment.setValue(i18n.tr("Bitte wählen Sie ein Datum aus."));
+            comment.setValue(i18n.tr("Bitte wÃ¤hlen Sie ein Datum aus."));
             return;
           }
           // Wir rechnen nicht mit gestern sonder mit heute, weil "date"

@@ -65,10 +65,10 @@ public class CsvImporter implements Importer
     try
     {
       if (is == null)
-        throw new ApplicationException(i18n.tr("Keine zu importierende Datei ausgewählt"));
+        throw new ApplicationException(i18n.tr("Keine zu importierende Datei ausgewÃ¤hlt"));
       
       if (format == null)
-        throw new ApplicationException(i18n.tr("Kein Datei-Format ausgewählt"));
+        throw new ApplicationException(i18n.tr("Kein Datei-Format ausgewÃ¤hlt"));
 
       if (!(format instanceof MyIOFormat))
         throw new ApplicationException(i18n.tr("Das Datei-Format ist unbekannt"));
@@ -76,7 +76,7 @@ public class CsvImporter implements Importer
       Format f = ((MyIOFormat)format).format;
 
 
-      monitor.setStatusText(i18n.tr("Öffne Datei"));
+      monitor.setStatusText(i18n.tr("Ã–ffne Datei"));
       monitor.addPercentComplete(1);
       
       
@@ -87,7 +87,7 @@ public class CsvImporter implements Importer
       // mit dem geaenderten Encoding gelesen werden koennen.
       byte[] data = copy(is);
       if (data == null || data.length == 0)
-        throw new ApplicationException(i18n.tr("CSV-Datei enthält keine Daten"));
+        throw new ApplicationException(i18n.tr("CSV-Datei enthÃ¤lt keine Daten"));
 
       CSVImportDialog d = new CSVImportDialog(data,f,CSVImportDialog.POSITION_CENTER);
       Profile p = (Profile) d.open();
@@ -105,7 +105,7 @@ public class CsvImporter implements Importer
 
       // Nochmal checken, ob wir nach dem Ueberspringen ueberhaupt noch Zeilen uebrig haben
       if (line == null || line.size() == 0)
-        throw new ApplicationException(i18n.tr("CSV-Datei enthält keine weiteren Daten"));
+        throw new ApplicationException(i18n.tr("CSV-Datei enthÃ¤lt keine weiteren Daten"));
 
       int created       = 0;
       int error         = 0;
@@ -162,7 +162,7 @@ public class CsvImporter implements Importer
             catch (Exception e)
             {
               Logger.error("unable to unserialize " + column.getProperty() + " for line " + csv.getLineNumber() + ", value: " + value,e);
-              monitor.log("  " + i18n.tr("Ungültiger Wert \"{0}\" in Spalte \"{1}\": {2}",value,column.getName(),e.getMessage()));
+              monitor.log("  " + i18n.tr("UngÃ¼ltiger Wert \"{0}\" in Spalte \"{1}\": {2}",value,column.getName(),e.getMessage()));
             }
           }
           
@@ -203,7 +203,7 @@ public class CsvImporter implements Importer
               String[] s = new String[]{value,
                                         name,
                                         e.getMessage()};
-              monitor.log("  " + i18n.tr("Ungültiger Wert \"{0}\" in Spalte \"{1}\": {2}",s));
+              monitor.log("  " + i18n.tr("UngÃ¼ltiger Wert \"{0}\" in Spalte \"{1}\": {2}",s));
             }
           }
           
@@ -245,7 +245,7 @@ public class CsvImporter implements Importer
       while ((line = csv.read()) != null);
 
       // Fertig.
-      monitor.setStatusText(i18n.tr("{0} importiert, {1} fehlerhaft, {2} übersprungen", new String[]{Integer.toString(created),Integer.toString(error),Integer.toString(skipped)}));
+      monitor.setStatusText(i18n.tr("{0} importiert, {1} fehlerhaft, {2} Ã¼bersprungen", new String[]{Integer.toString(created),Integer.toString(error),Integer.toString(skipped)}));
     }
     catch (OperationCanceledException oce)
     {

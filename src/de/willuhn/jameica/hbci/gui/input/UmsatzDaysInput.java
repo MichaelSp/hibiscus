@@ -142,7 +142,7 @@ public class UmsatzDaysInput extends ScaleInput
         }
         else if (start == -1)
         {
-          setComment(i18n.tr("Alle Umsätze"));
+          setComment(i18n.tr("Alle UmsÃ¤tze"));
         }
         else if (start > 0)
         {

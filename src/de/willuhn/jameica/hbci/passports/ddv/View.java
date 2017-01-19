@@ -39,8 +39,8 @@ public class View extends AbstractView
     final Controller control = new Controller(this);
 
     Container c = new SimpleContainer(getParent());
-    c.addText(i18n.tr("Starten Sie zun‰chst die automatische Suche nach dem Kartenleser. " +
-    		              "Falls sie nicht erfolgreich verl‰uft, dann konfigurieren Sie den " +
+    c.addText(i18n.tr("Starten Sie zun√§chst die automatische Suche nach dem Kartenleser. " +
+    		              "Falls sie nicht erfolgreich verl√§uft, dann konfigurieren Sie den " +
     		              "Kartenleser bitte manuell."),true);
     
     ButtonArea buttons = new ButtonArea();

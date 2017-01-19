@@ -358,7 +358,7 @@ public class UmsatzDetailEditControl extends UmsatzDetailControl
           k.getWaehrung() + " " + HBCI.DECIMALFORMAT.format(u.getBetrag())
         };
 
-        String msg = i18n.tr("Umsatz [Gegenkonto: {0}, Kto. {1} BLZ {2}], Datum {3}, Zweck: {4}] {5} ge‰ndert",fields);
+        String msg = i18n.tr("Umsatz [Gegenkonto: {0}, Kto. {1} BLZ {2}], Datum {3}, Zweck: {4}] {5} ge√§ndert",fields);
         k.addToProtokoll(msg,Protokoll.TYP_SUCCESS);
       }
 
@@ -446,7 +446,7 @@ public class UmsatzDetailEditControl extends UmsatzDetailControl
       catch (RemoteException er)
       {
         Logger.error("error while choosing empfaenger",er);
-        GUI.getStatusBar().setErrorText(i18n.tr("Fehler bei der Auswahl des Empf‰ngers"));
+        GUI.getStatusBar().setErrorText(i18n.tr("Fehler bei der Auswahl des Empf√§ngers"));
       }
     }
   }

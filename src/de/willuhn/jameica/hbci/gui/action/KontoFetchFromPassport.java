@@ -37,7 +37,7 @@ public class KontoFetchFromPassport implements Action
   public void handleAction(Object context) throws ApplicationException
   {
 		if (context == null || !(context instanceof Passport))
-			throw new ApplicationException(i18n.tr("Kein Sicherheitsmedium ausgewählt oder keines verfügbar"));
+			throw new ApplicationException(i18n.tr("Kein Sicherheitsmedium ausgewÃ¤hlt oder keines verfÃ¼gbar"));
 
 		final Passport p = (Passport) context;
 
@@ -64,7 +64,7 @@ public class KontoFetchFromPassport implements Action
 				catch (Throwable t)
 				{
 					Logger.error("error while reading data from passport",t);
-					GUI.getStatusBar().setErrorText(i18n.tr("Fehler beim Lesen der Konto-Daten. Bitte prüfen Sie die Einstellungen des Sicherheits-Mediums."));
+					GUI.getStatusBar().setErrorText(i18n.tr("Fehler beim Lesen der Konto-Daten. Bitte prÃ¼fen Sie die Einstellungen des Sicherheits-Mediums."));
 				}
 				finally
 				{

@@ -48,9 +48,9 @@ public class KontoDisable implements Action
       if ((k.getFlags() & Konto.FLAG_DISABLED) == Konto.FLAG_DISABLED)
         return;
 
-      String s = i18n.tr("Sind Sie sicher, dass Sie das Konto deaktivieren möchten?\n\n" +
-                         "Der Saldo wird hierbei gelöscht. Geschäftsvorfälle können anschließend\n" +
-                         "nicht mehr über dieses Konto ausgeführt werden.");
+      String s = i18n.tr("Sind Sie sicher, dass Sie das Konto deaktivieren mÃ¶chten?\n\n" +
+                         "Der Saldo wird hierbei gelÃ¶scht. GeschÃ¤ftsvorfÃ¤lle kÃ¶nnen anschlieÃŸend\n" +
+                         "nicht mehr Ã¼ber dieses Konto ausgefÃ¼hrt werden.");
 
       if (!Application.getCallback().askUser(s))
         return;

@@ -77,7 +77,7 @@ public class TransferMergeDialog extends AbstractDialog
     super(position);
 
     this.transfer = t;
-    this.setTitle(i18n.tr("Auftr‰ge zusammenf¸hren"));
+    this.setTitle(i18n.tr("Auftr√§ge zusammenf√ºhren"));
     this.setSize(550,SWT.DEFAULT);
   }
 
@@ -95,7 +95,7 @@ public class TransferMergeDialog extends AbstractDialog
   {
 
     if (this.transfer.ausgefuehrt())
-      throw new ApplicationException(i18n.tr("Der Auftrag wurde bereits ausgef¸hrt"));
+      throw new ApplicationException(i18n.tr("Der Auftrag wurde bereits ausgef√ºhrt"));
 
     SimpleContainer container = new SimpleContainer(parent);
 
@@ -106,14 +106,14 @@ public class TransferMergeDialog extends AbstractDialog
     container.addInput(this.getBezeichnung());
 
     final CheckboxInput delBox = new CheckboxInput(this.delete.booleanValue());
-    container.addCheckbox(delBox,i18n.tr("Einzelauftr‰ge nach ‹bernahme in den Sammel-Auftrag lˆschen"));
+    container.addCheckbox(delBox,i18n.tr("Einzelauftr√§ge nach √úbernahme in den Sammel-Auftrag l√∂schen"));
 
     final LabelInput comment = new LabelInput("");
     comment.setColor(Color.ERROR);
     container.addLabelPair("",comment);
 
     ButtonArea b = new ButtonArea();
-		b.addButton(i18n.tr("‹bernehmen"), new Action()
+		b.addButton(i18n.tr("√úbernehmen"), new Action()
     {
       public void handleAction(Object context) throws ApplicationException
       {
@@ -128,7 +128,7 @@ public class TransferMergeDialog extends AbstractDialog
             transfer = (SammelTransfer) getExistingList().getValue();
             if (transfer == null)
             {
-              comment.setValue(i18n.tr("Bitte w‰hlen Sie einen Auftrag aus."));
+              comment.setValue(i18n.tr("Bitte w√§hlen Sie einen Auftrag aus."));
               return;
             }
           }
@@ -139,7 +139,7 @@ public class TransferMergeDialog extends AbstractDialog
             Konto konto = (Konto) getKonto().getValue();
             if (konto == null)
             {
-              comment.setValue(i18n.tr("Bitte w‰hlen Sie ein Konto aus."));
+              comment.setValue(i18n.tr("Bitte w√§hlen Sie ein Konto aus."));
               return;
             }
             transfer.setKonto(konto);
@@ -158,7 +158,7 @@ public class TransferMergeDialog extends AbstractDialog
         catch (RemoteException e)
         {
           Logger.error("error while checking transfer",e);
-          throw new ApplicationException(i18n.tr("Fehler beim Pr¸fen des Auftrages"));
+          throw new ApplicationException(i18n.tr("Fehler beim Pr√ºfen des Auftrages"));
         }
 				close();
       }
@@ -235,8 +235,8 @@ public class TransferMergeDialog extends AbstractDialog
     list.addFilter("ausgefuehrt = 0");
     list.setOrder("ORDER BY " + service.getSQLTimestamp("termin") + " DESC, id DESC");
     this.existing = new SelectInput(list,null);
-    this.existing.setName(i18n.tr("Existierende Auftr‰ge"));
-    this.existing.setPleaseChoose(i18n.tr("Bitte w‰hlen..."));
+    this.existing.setName(i18n.tr("Existierende Auftr√§ge"));
+    this.existing.setPleaseChoose(i18n.tr("Bitte w√§hlen..."));
     this.existing.setEnabled(false);
 
     // Wenn wir keine existierenden Auftraege haben, koennen wir das gleich komplett deaktivieren

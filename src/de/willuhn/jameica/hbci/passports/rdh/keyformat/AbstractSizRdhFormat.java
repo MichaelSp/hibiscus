@@ -41,7 +41,7 @@ public abstract class AbstractSizRdhFormat implements KeyFormat
    */
   public RDHKey createKey(File file) throws ApplicationException, OperationCanceledException
   {
-    throw new ApplicationException(i18n.tr("Das Erstellen von neuen Schlüsseln wird für dieses Format nicht unterstützt"));
+    throw new ApplicationException(i18n.tr("Das Erstellen von neuen SchlÃ¼sseln wird fÃ¼r dieses Format nicht unterstÃ¼tzt"));
   }
 
   /**
@@ -88,7 +88,7 @@ public abstract class AbstractSizRdhFormat implements KeyFormat
         break;
     }
     if (file == null)
-      throw new ApplicationException(res.getI18N().tr("SizRDH-Schlüsseldisketten werden für Ihr Betriebssystem nicht von Hibiscus unterstützt"));
+      throw new ApplicationException(res.getI18N().tr("SizRDH-SchlÃ¼sseldisketten werden fÃ¼r Ihr Betriebssystem nicht von Hibiscus unterstÃ¼tzt"));
 
     file = mf.getPluginDir() + File.separator + "lib" + File.separator + file;
     Logger.info("using sizrdh native lib " + file);

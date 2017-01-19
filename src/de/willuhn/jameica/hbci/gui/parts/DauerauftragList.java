@@ -68,7 +68,7 @@ public class DauerauftragList extends TablePart implements Part
         catch (Exception e)
         {
           Logger.error("error while checking finish date",e);
-          GUI.getStatusBar().setErrorText(i18n.tr("Fehler beim Prüfen des Ablaufdatums eines Dauerauftrages"));
+          GUI.getStatusBar().setErrorText(i18n.tr("Fehler beim PrÃ¼fen des Ablaufdatums eines Dauerauftrages"));
         }
       }
     });
@@ -78,7 +78,7 @@ public class DauerauftragList extends TablePart implements Part
     addColumn(i18n.tr("Verwendungszweck"),"zweck");
     addColumn(i18n.tr("Betrag"),"betrag", new CurrencyFormatter(HBCIProperties.CURRENCY_DEFAULT_DE,HBCI.DECIMALFORMAT));
     addColumn(i18n.tr("Turnus"),"turnus_id");
-    addColumn(i18n.tr("Nächste Zahlung"),"naechste_zahlung", new DateFormatter(HBCI.DATEFORMAT),false,Column.ALIGN_RIGHT);
+    addColumn(i18n.tr("NÃ¤chste Zahlung"),"naechste_zahlung", new DateFormatter(HBCI.DATEFORMAT),false,Column.ALIGN_RIGHT);
     addColumn(i18n.tr("aktiv?"),"orderid",new Formatter()
     {
       public String format(Object o)

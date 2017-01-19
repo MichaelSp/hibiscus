@@ -161,7 +161,7 @@ public class AddressbookServiceImpl extends UnicastRemoteObject implements Addre
    */
   public String getName() throws RemoteException
   {
-    return i18n.tr("Alle Adressbücher");
+    return i18n.tr("Alle AdressbÃ¼cher");
   }
 
   /**

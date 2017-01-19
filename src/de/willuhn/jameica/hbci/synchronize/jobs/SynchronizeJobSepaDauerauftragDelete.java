@@ -36,7 +36,7 @@ public class SynchronizeJobSepaDauerauftragDelete extends AbstractSynchronizeJob
     
     try
     {
-      return i18n.tr("{0}: SEPA-Dauerauftrag {1} {2} an {3} löschen",k.getLongName(),HBCI.DECIMALFORMAT.format(dauer.getBetrag()),k.getWaehrung(),dauer.getGegenkontoName());
+      return i18n.tr("{0}: SEPA-Dauerauftrag {1} {2} an {3} lÃ¶schen",k.getLongName(),HBCI.DECIMALFORMAT.format(dauer.getBetrag()),k.getWaehrung(),dauer.getGegenkontoName());
     }
     catch (RemoteException re)
     {

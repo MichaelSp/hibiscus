@@ -24,7 +24,7 @@ import de.willuhn.util.ApplicationException;
 import de.willuhn.util.I18N;
 
 /**
- * Action f¸r die Ausgabe eine Umsatz-Kategorie-Liste
+ * Action f√ºr die Ausgabe eine Umsatz-Kategorie-Liste
  */
 public class UmsatzTypTreeExport implements Action
 {
@@ -37,10 +37,10 @@ public class UmsatzTypTreeExport implements Action
     I18N i18n = Application.getPluginLoader().getPlugin(HBCI.class).getResources().getI18N();
 
     if (context == null)
-      throw new ApplicationException(i18n.tr("Bitte w‰hlen Sie die zu exportierenden Ums‰tze aus"));
+      throw new ApplicationException(i18n.tr("Bitte w√§hlen Sie die zu exportierenden Ums√§tze aus"));
 
     if (!(context instanceof UmsatzTree))
-      throw new ApplicationException(i18n.tr("Bitte w‰hlen Sie die zu exportierenden Ums‰tze aus"));
+      throw new ApplicationException(i18n.tr("Bitte w√§hlen Sie die zu exportierenden Ums√§tze aus"));
 
     try
     {
@@ -77,6 +77,6 @@ public class UmsatzTypTreeExport implements Action
  * @C PDF-Export von Umsatz-Trees in IO-API gepresst ;)
  *
  * Revision 1.1  2007/04/29 10:18:46  jost
- * Neu: PDF-Ausgabe der Ums√§tze nach Kategorien
+ * Neu: PDF-Ausgabe der Ums√É¬§tze nach Kategorien
  *
  ******************************************************************************/

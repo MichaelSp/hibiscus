@@ -65,10 +65,10 @@ public class MoneyplexUmsatzImporter implements Importer
     cache.clear(); // Cache leeren
 
     if (is == null)
-      throw new ApplicationException(i18n.tr("Keine zu importierende Datei ausgew‰hlt"));
+      throw new ApplicationException(i18n.tr("Keine zu importierende Datei ausgew√§hlt"));
     
     if (format == null)
-      throw new ApplicationException(i18n.tr("Kein Datei-Format ausgew‰hlt"));
+      throw new ApplicationException(i18n.tr("Kein Datei-Format ausgew√§hlt"));
     
     try
     {
@@ -81,7 +81,7 @@ public class MoneyplexUmsatzImporter implements Importer
       if (konto == null)
       {
         KontoAuswahlDialog d = new KontoAuswahlDialog(KontoAuswahlDialog.POSITION_CENTER);
-        d.setText(i18n.tr("Bitte w‰hlen Sie das zu verwendende Konto aus."));
+        d.setText(i18n.tr("Bitte w√§hlen Sie das zu verwendende Konto aus."));
         konto = (Konto) d.open();
       }
 
@@ -96,7 +96,7 @@ public class MoneyplexUmsatzImporter implements Importer
       Vector<IXMLElement> lines = root.getChildrenNamed("BUCHUNG");
       
       if (lines == null || lines.size() == 0)
-        throw new ApplicationException(i18n.tr("Datei enth‰lt keine Buchungen"));
+        throw new ApplicationException(i18n.tr("Datei enth√§lt keine Buchungen"));
       
       double factor = 100d / (double) lines.size();
 
@@ -131,7 +131,7 @@ public class MoneyplexUmsatzImporter implements Importer
           error++;
         }
       }
-      monitor.setStatusText(i18n.tr("{0} Ums‰tze erfolgreich importiert, {1} fehlerhafte ¸bersprungen", new String[]{""+created,""+error}));
+      monitor.setStatusText(i18n.tr("{0} Ums√§tze erfolgreich importiert, {1} fehlerhafte √ºbersprungen", new String[]{""+created,""+error}));
       monitor.addPercentComplete(1);
     }
     catch (ApplicationException ae)

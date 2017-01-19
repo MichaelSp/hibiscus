@@ -97,7 +97,7 @@ public class ScriptingSynchronizeBackend extends AbstractSynchronizeBackend<Scri
     if (function == null)
     {
       Logger.warn("job type " + type.getSimpleName() + " not supported by " + this.getName());
-      throw new ApplicationException(i18n.tr("Der Geschäftsvorfall wird nicht via {0} unterstützt",this.getName()));
+      throw new ApplicationException(i18n.tr("Der GeschÃ¤ftsvorfall wird nicht via {0} unterstÃ¼tzt",this.getName()));
     }
 
     SynchronizeJob instance = super.create(type,konto);
@@ -129,7 +129,7 @@ public class ScriptingSynchronizeBackend extends AbstractSynchronizeBackend<Scri
       {
         Konto konto = job.getKonto();
         if (!this.supports(konto))
-          throw new ApplicationException(i18n.tr("Das Konto ist kein Offline-Konto oder das Zugangsverfahren {0} wurde nicht ausgewählt: {1}",this.getName(),konto.getLongName()));
+          throw new ApplicationException(i18n.tr("Das Konto ist kein Offline-Konto oder das Zugangsverfahren {0} wurde nicht ausgewÃ¤hlt: {1}",this.getName(),konto.getLongName()));
       }
     }
     catch (RemoteException re)
@@ -300,7 +300,7 @@ public class ScriptingSynchronizeBackend extends AbstractSynchronizeBackend<Scri
 
           String function = (String) job.getContext(CTX_JS_FUNCTION);
           if (StringUtils.isEmpty(function))
-            throw new ApplicationException(i18n.tr("Kein gültiger Scripting-Auftrag: {0}",job.getName()));
+            throw new ApplicationException(i18n.tr("Kein gÃ¼ltiger Scripting-Auftrag: {0}",job.getName()));
           
           Logger.info("executing javascript function " + function);
           QueryMessage msg = new QueryMessage("function." + function,new Object[]{job,getCurrentSession()}); // Direkt-Aufruf - ohne Event-Mapping

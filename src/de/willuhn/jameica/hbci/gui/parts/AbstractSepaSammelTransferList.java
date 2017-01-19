@@ -158,7 +158,7 @@ public abstract class AbstractSepaSammelTransferList extends AbstractFromToList
       return this.pending;
     
     this.pending = new CheckboxInput(settings.getBoolean("transferlist.filter.pending",false));
-    this.pending.setName(i18n.tr("Nur offene Auftr‰ge anzeigen"));
+    this.pending.setName(i18n.tr("Nur offene Auftr√§ge anzeigen"));
     this.pending.addListener(this.listener);
     this.pending.addListener(new Listener() {
       public void handleEvent(Event event)

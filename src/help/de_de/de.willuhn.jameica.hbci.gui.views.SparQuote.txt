@@ -5,10 +5,10 @@
 	
 	<p>
 	  Diese Auswertung stellt die monatlichen Ausgaben den Einnahmen
-	  gegenüber und bildet den sich daraus ergebenden Saldo grafisch
+	  gegenÃ¼ber und bildet den sich daraus ergebenden Saldo grafisch
 	  im zeitlichen Verlauf ab. Die Linie <b>Trend</b>
     stellt den 8-Monats-Durchschnitt dar. Mit Hilfe
-    dieser können Sie einen Trend erkennen, in den der Saldo
+    dieser kÃ¶nnen Sie einen Trend erkennen, in den der Saldo
     des Kontos tendiert.
 	</p>
 </form>

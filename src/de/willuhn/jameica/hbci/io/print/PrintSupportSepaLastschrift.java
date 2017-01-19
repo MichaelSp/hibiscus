@@ -56,7 +56,7 @@ public class PrintSupportSepaLastschrift extends AbstractPrintSupportSepaTransfe
     table.add(new TextPrint(i18n.tr("Lastschrift-Art"),fontNormal));
     table.add(new TextPrint(a.getType().getDescription(),fontNormal));
     Date faellig = a.getTargetDate();
-    table.add(new TextPrint(i18n.tr("Fälligkeitsdatum"),fontNormal));
+    table.add(new TextPrint(i18n.tr("FÃ¤lligkeitsdatum"),fontNormal));
     table.add(new TextPrint(faellig == null ? "-" : HBCI.DATEFORMAT.format(faellig),fontNormal));
   }
 }

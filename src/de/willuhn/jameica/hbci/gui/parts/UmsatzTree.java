@@ -285,7 +285,7 @@ public class UmsatzTree extends TreePart
         if (size == 1)
           return i18n.tr("1 Umsatz");
         else
-          return i18n.tr("{0} Ums‰tze",Integer.toString(size));
+          return i18n.tr("{0} Ums√§tze",Integer.toString(size));
       }
       
       // Andernfalls berechnen wir die Summe
@@ -301,7 +301,7 @@ public class UmsatzTree extends TreePart
       if (curr == null)
         curr = HBCIProperties.CURRENCY_DEFAULT_DE;
 
-      return i18n.tr("{0} Ums‰tze, {1} markiert, Summe: {2} {3}",new String[]{Integer.toString(size),
+      return i18n.tr("{0} Ums√§tze, {1} markiert, Summe: {2} {3}",new String[]{Integer.toString(size),
                                                                               Integer.toString(list.length),
                                                                               HBCI.DECIMALFORMAT.format(sum),
                                                                               curr});

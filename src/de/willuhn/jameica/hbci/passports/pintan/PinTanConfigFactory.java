@@ -57,7 +57,7 @@ public class PinTanConfigFactory
   public static synchronized void store(PinTanConfig config) throws Exception
   {
     if (config == null || config.getID() == null)
-      throw new ApplicationException(i18n.tr("Bitte w‰hlen Sie die zu speichernde Konfiguration aus"));
+      throw new ApplicationException(i18n.tr("Bitte w√§hlen Sie die zu speichernde Konfiguration aus"));
 
     Logger.info("storing pin/tan config");
 
@@ -101,7 +101,7 @@ public class PinTanConfigFactory
     try
     {
       if (config == null || config.getID() == null)
-        throw new ApplicationException(i18n.tr("Bitte w‰hlen Sie die zu lˆschende Konfiguration aus"));
+        throw new ApplicationException(i18n.tr("Bitte w√§hlen Sie die zu l√∂schende Konfiguration aus"));
 
       String[] existing = settings.getList("config",new String[0]);
 
@@ -139,7 +139,7 @@ public class PinTanConfigFactory
     catch (Exception e)
     {
       Logger.error("unable to delete pin/tan config",e);
-      throw new ApplicationException(i18n.tr("Lˆschen fehlgeschlagen: {0}",e.getMessage()));
+      throw new ApplicationException(i18n.tr("L√∂schen fehlgeschlagen: {0}",e.getMessage()));
     }
   }
 
@@ -210,12 +210,12 @@ public class PinTanConfigFactory
     }
 
 
-    String text = i18n.tr("Mehrere zutreffende Konfigurationen gefunden. Bitte w‰hlen Sie eine manuell aus.");
+    String text = i18n.tr("Mehrere zutreffende Konfigurationen gefunden. Bitte w√§hlen Sie eine manuell aus.");
     
     if (found.size() == 0)
     {
       Logger.warn("no config found for this konto. Asking user");
-      text = i18n.tr("Keine zutreffende Konfigurationen gefunden. Bitte w‰hlen Sie eine manuell aus.");
+      text = i18n.tr("Keine zutreffende Konfigurationen gefunden. Bitte w√§hlen Sie eine manuell aus.");
     }
     
     // Wir haben mehrere zur Auswahl. Lassen wir den User entscheiden.

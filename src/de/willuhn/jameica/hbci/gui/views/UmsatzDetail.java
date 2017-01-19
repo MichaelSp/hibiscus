@@ -48,7 +48,7 @@ public class UmsatzDetail extends AbstractUmsatzDetail
     
     GUI.getView().addPanelButton(new PanelButtonPrint(new PrintSupportUmsatzList(u)));
     
-    this.checked = new Button(i18n.tr("Geprüft"),new Action()
+    this.checked = new Button(i18n.tr("GeprÃ¼ft"),new Action()
     {
       public void handleAction(Object context) throws ApplicationException
       {
@@ -63,11 +63,11 @@ public class UmsatzDetail extends AbstractUmsatzDetail
     final Address found = getControl().getAddressbookEntry();
     if (found != null)
     {
-      ab = new Button(i18n.tr("In Adressbuch öffnen"),new de.willuhn.jameica.hbci.gui.action.EmpfaengerNew(),found,false,"contact-new.png");
+      ab = new Button(i18n.tr("In Adressbuch Ã¶ffnen"),new de.willuhn.jameica.hbci.gui.action.EmpfaengerNew(),found,false,"contact-new.png");
     }
     else
     {
-      ab = new Button(i18n.tr("In Adressbuch übernehmen"),new Action()
+      ab = new Button(i18n.tr("In Adressbuch Ã¼bernehmen"),new Action()
       {
         public void handleAction(Object context) throws ApplicationException
         {

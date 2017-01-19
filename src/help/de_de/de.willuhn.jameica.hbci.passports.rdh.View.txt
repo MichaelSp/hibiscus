@@ -1,23 +1,23 @@
 <form>
 	<p>
-		<span color="header" font="header">Schlüssel konfigurieren</span>
+		<span color="header" font="header">SchlÃ¼ssel konfigurieren</span>
 	</p>
 	
 	<p>
-	  Zum Erstellen eines neuen INI-Briefes klicken Sie auf <b>Neuen Schlüssel erstellen</b>.
+	  Zum Erstellen eines neuen INI-Briefes klicken Sie auf <b>Neuen SchlÃ¼ssel erstellen</b>.
 	</p>
 	
 	<p>
-	  Wenn Sie eine existierende Schlüssel-Datei (z.Bsp. aus einem anderen Programm) importieren möchten,
-	  dann wählen Sie bitte <b>Schlüssel importieren</b>.
+	  Wenn Sie eine existierende SchlÃ¼ssel-Datei (z.Bsp. aus einem anderen Programm) importieren mÃ¶chten,
+	  dann wÃ¤hlen Sie bitte <b>SchlÃ¼ssel importieren</b>.
 	</p>
 	
 	<p>
-	  Bei der Ausführung eines HBCI-Geschäftsvorfalls wählt Hibiscus
-	  anhand der Bankleitzahl automatisch den passenden Schlüssel.
+	  Bei der AusfÃ¼hrung eines HBCI-GeschÃ¤ftsvorfalls wÃ¤hlt Hibiscus
+	  anhand der Bankleitzahl automatisch den passenden SchlÃ¼ssel.
 	</p>
 	<p>
-	  Hinweis: Klicken Sie doppelt auf einen der aufgelisteten Schlüssel um
-	  weitere Details anzuzeigen oder den Schlüssel zu exportieren.
+	  Hinweis: Klicken Sie doppelt auf einen der aufgelisteten SchlÃ¼ssel um
+	  weitere Details anzuzeigen oder den SchlÃ¼ssel zu exportieren.
 	</p>
 </form>

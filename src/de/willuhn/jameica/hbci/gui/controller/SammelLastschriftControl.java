@@ -92,7 +92,7 @@ public class SammelLastschriftControl extends AbstractSammelTransferControl<Samm
     this.buchungen = new SammelTransferBuchungList(getTransfer(),a);
 
     ContextMenu ctx = new ContextMenu();
-    ctx.addItem(new CheckedSingleContextMenuItem(i18n.tr("Buchung öffnen"), new SammelLastBuchungNew(),"document-open.png"));
+    ctx.addItem(new CheckedSingleContextMenuItem(i18n.tr("Buchung Ã¶ffnen"), new SammelLastBuchungNew(),"document-open.png"));
     ctx.addItem(new DeleteMenuItem());
     ctx.addItem(ContextMenuItem.SEPARATOR);
     ctx.addItem(new CreateMenuItem(new SammelLastBuchungNew()));

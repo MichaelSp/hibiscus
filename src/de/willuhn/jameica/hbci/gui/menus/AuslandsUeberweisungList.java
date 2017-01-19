@@ -49,15 +49,15 @@ public class AuslandsUeberweisungList extends ContextMenu
 	 */
 	public AuslandsUeberweisungList()
 	{
-		addItem(new SingleItem(i18n.tr("Öffnen"), new AuslandsUeberweisungNew(),"document-open.png"));
-    addItem(new ContextMenuItem(i18n.tr("Neue SEPA-Überweisung..."), new UNeu(),"text-x-generic.png"));
-    addItem(new CheckedContextMenuItem(i18n.tr("Löschen..."), new AuslandsUeberweisungDelete(),"user-trash-full.png"));
+		addItem(new SingleItem(i18n.tr("Ã–ffnen"), new AuslandsUeberweisungNew(),"document-open.png"));
+    addItem(new ContextMenuItem(i18n.tr("Neue SEPA-Ãœberweisung..."), new UNeu(),"text-x-generic.png"));
+    addItem(new CheckedContextMenuItem(i18n.tr("LÃ¶schen..."), new AuslandsUeberweisungDelete(),"user-trash-full.png"));
     addItem(ContextMenuItem.SEPARATOR);
     addItem(new SingleItem(i18n.tr("Duplizieren..."), new Duplicate(),"edit-copy.png"));
-    addItem(new NotActiveMultiMenuItem(i18n.tr("Zu Sammelaufträgen zusammenfassen..."), new SepaUeberweisungMerge(),"stock_navigator-shift-right.png"));
+    addItem(new NotActiveMultiMenuItem(i18n.tr("Zu SammelauftrÃ¤gen zusammenfassen..."), new SepaUeberweisungMerge(),"stock_navigator-shift-right.png"));
     addItem(ContextMenuItem.SEPARATOR);
-    addItem(new NotActiveSingleMenuItem(i18n.tr("Jetzt ausführen..."), new AuslandsUeberweisungExecute(),"emblem-important.png"));
-    addItem(new NotActiveMultiMenuItem(i18n.tr("Als \"ausgeführt\" markieren..."), new TerminableMarkExecuted(),"emblem-default.png"));
+    addItem(new NotActiveSingleMenuItem(i18n.tr("Jetzt ausfÃ¼hren..."), new AuslandsUeberweisungExecute(),"emblem-important.png"));
+    addItem(new NotActiveMultiMenuItem(i18n.tr("Als \"ausgefÃ¼hrt\" markieren..."), new TerminableMarkExecuted(),"emblem-default.png"));
     addItem(ContextMenuItem.SEPARATOR);
     addItem(new CheckedContextMenuItem(i18n.tr("Drucken..."),new Action() {
       public void handleAction(Object context) throws ApplicationException
@@ -144,7 +144,7 @@ public class AuslandsUeberweisungList extends ContextMenu
     	}
     	catch (Exception e)
     	{
-        Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim Prüfen, ob Auftrag bereits ausgeführt wurde"),StatusBarMessage.TYPE_ERROR));
+        Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim PrÃ¼fen, ob Auftrag bereits ausgefÃ¼hrt wurde"),StatusBarMessage.TYPE_ERROR));
     		Logger.error("error while enable check in menu item",e);
     	}
     	return false;
@@ -192,7 +192,7 @@ public class AuslandsUeberweisungList extends ContextMenu
       catch (RemoteException e)
       {
         Logger.error("unable to check if terminable is already executed",e);
-        Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim Prüfen, ob Auftrag bereits ausgeführt wurde"),StatusBarMessage.TYPE_ERROR));
+        Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim PrÃ¼fen, ob Auftrag bereits ausgefÃ¼hrt wurde"),StatusBarMessage.TYPE_ERROR));
       }
       return false;
     }

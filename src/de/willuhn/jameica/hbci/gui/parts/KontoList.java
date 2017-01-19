@@ -207,7 +207,7 @@ public class KontoList extends TablePart implements Part
         if (!Double.isNaN(d))
         {
           // Wir haben tatsaechlich eines, wo was drin steht
-          Column col = new Column("saldo_available",i18n.tr("Verfügbar"),new CurrencyFormatter(k.getWaehrung(),HBCI.DECIMALFORMAT),false,Column.ALIGN_RIGHT);
+          Column col = new Column("saldo_available",i18n.tr("VerfÃ¼gbar"),new CurrencyFormatter(k.getWaehrung(),HBCI.DECIMALFORMAT),false,Column.ALIGN_RIGHT);
           addColumn(col);
           return;
         }

@@ -55,10 +55,10 @@ public class MT940UmsatzImporter implements Importer
   {
 
     if (is == null)
-      throw new ApplicationException(i18n.tr("Keine zu importierende Datei ausgew‰hlt"));
+      throw new ApplicationException(i18n.tr("Keine zu importierende Datei ausgew√§hlt"));
     
     if (format == null)
-      throw new ApplicationException(i18n.tr("Kein Datei-Format ausgew‰hlt"));
+      throw new ApplicationException(i18n.tr("Kein Datei-Format ausgew√§hlt"));
     
     try
     {
@@ -71,7 +71,7 @@ public class MT940UmsatzImporter implements Importer
       if (konto == null)
       {
         KontoAuswahlDialog d = new KontoAuswahlDialog(KontoAuswahlDialog.POSITION_CENTER);
-        d.setText(i18n.tr("Bitte w‰hlen Sie das zu verwendende Konto aus."));
+        d.setText(i18n.tr("Bitte w√§hlen Sie das zu verwendende Konto aus."));
         konto = (de.willuhn.jameica.hbci.rmi.Konto) d.open();
       }
       // Wir erzeugen das HBCI4Java-Umsatz-Objekt selbst. Dann muessen wir
@@ -94,13 +94,13 @@ public class MT940UmsatzImporter implements Importer
       umsaetze.appendMT940Data(Swift.decodeUmlauts(sb.toString()));
 
       if (monitor != null)
-        monitor.setStatusText(i18n.tr("Speichere Ums‰tze"));
+        monitor.setStatusText(i18n.tr("Speichere Ums√§tze"));
       
       List lines = umsaetze.getFlatData();
       
       if (lines.size() == 0)
       {
-        konto.addToProtokoll(i18n.tr("Keine Ums‰tze importiert"),Protokoll.TYP_ERROR);
+        konto.addToProtokoll(i18n.tr("Keine Ums√§tze importiert"),Protokoll.TYP_ERROR);
         return;
       }
       
@@ -149,7 +149,7 @@ public class MT940UmsatzImporter implements Importer
           error++;
         }
       }
-      monitor.setStatusText(i18n.tr("{0} Ums‰tze erfolgreich importiert, {1} fehlerhafte ¸bersprungen", new String[]{""+created,""+error}));
+      monitor.setStatusText(i18n.tr("{0} Ums√§tze erfolgreich importiert, {1} fehlerhafte √ºbersprungen", new String[]{""+created,""+error}));
       monitor.addPercentComplete(1);
     }
     catch (OperationCanceledException oce)

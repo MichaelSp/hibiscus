@@ -71,6 +71,6 @@ public class SepaDauerauftragScheduleProvider implements ScheduleProvider<SepaDa
    */
   public String getName()
   {
-    return i18n.tr("SEPA-Daueraufträge");
+    return i18n.tr("SEPA-DauerauftrÃ¤ge");
   }
 }

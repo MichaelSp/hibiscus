@@ -44,7 +44,7 @@ public class UmsatzTypList extends ContextMenu implements Extendable
 	{
 		addItem(new OpenItem());
     addItem(new ContextMenuItem(i18n.tr("Neue Umsatz-Kategorie..."), new UNeu(),"text-x-generic.png"));
-    addItem(new CheckedContextMenuItem(i18n.tr("Löschen..."), new DBObjectDelete(),"user-trash-full.png"));
+    addItem(new CheckedContextMenuItem(i18n.tr("LÃ¶schen..."), new DBObjectDelete(),"user-trash-full.png"));
     addItem(ContextMenuItem.SEPARATOR);
     addItem(new CheckedContextMenuItem(i18n.tr("Exportieren..."),new UmsatzTypExport(),"document-save.png"));
     addItem(new ContextMenuItem(i18n.tr("Importieren..."),new UmsatzTypImport(),"document-open.png"));
@@ -89,7 +89,7 @@ public class UmsatzTypList extends ContextMenu implements Extendable
   {
     private OpenItem()
     {
-      super(i18n.tr("Öffnen"),new UmsatzTypNew(),"document-open.png");
+      super(i18n.tr("Ã–ffnen"),new UmsatzTypNew(),"document-open.png");
     }
 
     /**

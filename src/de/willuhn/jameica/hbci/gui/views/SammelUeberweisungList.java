@@ -46,7 +46,7 @@ public class SammelUeberweisungList extends AbstractView
       }
     });
 
-    GUI.getView().setTitle(i18n.tr("Vorhandene Sammel-Überweisungen"));
+    GUI.getView().setTitle(i18n.tr("Vorhandene Sammel-Ãœberweisungen"));
     GUI.getView().addPanelButton(print);
 
     table.paint(getParent());

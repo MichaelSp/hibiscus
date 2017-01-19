@@ -62,7 +62,7 @@ public class SepaDauerauftragExecute implements Action
 			catch (Exception e)
 			{
 				Logger.error("error while showing confirm dialog",e);
-				Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim Ausführen des SEPA-Dauerauftrages"),StatusBarMessage.TYPE_ERROR));
+				Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim AusfÃ¼hren des SEPA-Dauerauftrages"),StatusBarMessage.TYPE_ERROR));
 				return;
 			}
 
@@ -81,7 +81,7 @@ public class SepaDauerauftragExecute implements Action
 		catch (RemoteException e)
 		{
 			Logger.error("error while executing dauerauftrag",e);
-			GUI.getStatusBar().setErrorText(i18n.tr("Fehler beim Ausführen des SEPA-Dauerauftrag"));
+			GUI.getStatusBar().setErrorText(i18n.tr("Fehler beim AusfÃ¼hren des SEPA-Dauerauftrag"));
 		}
   }
 }

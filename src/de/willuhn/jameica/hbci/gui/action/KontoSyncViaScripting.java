@@ -42,12 +42,12 @@ public class KontoSyncViaScripting implements Action
   public void handleAction(Object context) throws ApplicationException
   {
 		if (context == null || !(context instanceof Konto))
-			throw new ApplicationException(i18n.tr("Bitte w‰hlen Sie ein Konto aus"));
+			throw new ApplicationException(i18n.tr("Bitte w√§hlen Sie ein Konto aus"));
 
     final Konto k = (Konto) context;
 		try {
 	    if (!k.hasFlag(Konto.FLAG_OFFLINE))
-	      throw new ApplicationException(i18n.tr("Bitte w‰hlen Sie ein Offline-Konto aus"));
+	      throw new ApplicationException(i18n.tr("Bitte w√§hlen Sie ein Offline-Konto aus"));
 
 			if (k.isNewObject())
 				k.store();

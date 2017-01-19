@@ -69,7 +69,7 @@ public class UmsatzImpl extends AbstractHibiscusDBObject implements Umsatz
 		try
 		{
 			if (Double.isNaN(getBetrag()))
-				throw new ApplicationException(i18n.tr("Betrag ungültig."));
+				throw new ApplicationException(i18n.tr("Betrag ungÃ¼ltig."));
 
 			if (getDatum() == null)
 				throw new ApplicationException(i18n.tr("Datum fehlt."));
@@ -538,7 +538,7 @@ public class UmsatzImpl extends AbstractHibiscusDBObject implements Umsatz
           k.getWaehrung() + " " + HBCI.DECIMALFORMAT.format(getBetrag())
         };
         if ((this.getFlags() & Umsatz.FLAG_NOTBOOKED) == 0)
-          k.addToProtokoll(i18n.tr("Umsatz [Gegenkonto: {0}, Kto. {1} BLZ {2}], Datum {3}, Zweck: {4}] {5} gelöscht",fields),Protokoll.TYP_SUCCESS);
+          k.addToProtokoll(i18n.tr("Umsatz [Gegenkonto: {0}, Kto. {1} BLZ {2}], Datum {3}, Zweck: {4}] {5} gelÃ¶scht",fields),Protokoll.TYP_SUCCESS);
       }
       
       this.transactionCommit();

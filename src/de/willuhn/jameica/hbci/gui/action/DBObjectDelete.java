@@ -51,7 +51,7 @@ public class DBObjectDelete implements Action
   public void handleAction(Object context) throws ApplicationException
   {
 		if (context == null)
-      throw new ApplicationException(i18n.tr("Keine zu löschenden Daten ausgewählt"));
+      throw new ApplicationException(i18n.tr("Keine zu lÃ¶schenden Daten ausgewÃ¤hlt"));
 
     if (!(context instanceof DBObject) && !(context instanceof DBObject[]))
     {
@@ -64,13 +64,13 @@ public class DBObjectDelete implements Action
     YesNoDialog d = new YesNoDialog(YesNoDialog.POSITION_CENTER);
     if (array)
     {
-      d.setTitle(i18n.tr("Daten löschen"));
-      d.setText(i18n.tr("Wollen Sie diese {0} Datensätze wirklich löschen?",""+((DBObject[])context).length));
+      d.setTitle(i18n.tr("Daten lÃ¶schen"));
+      d.setText(i18n.tr("Wollen Sie diese {0} DatensÃ¤tze wirklich lÃ¶schen?",""+((DBObject[])context).length));
     }
     else
     {
-      d.setTitle(i18n.tr("Daten löschen"));
-      d.setText(i18n.tr("Wollen Sie diesen Datensatz wirklich löschen?"));
+      d.setTitle(i18n.tr("Daten lÃ¶schen"));
+      d.setText(i18n.tr("Wollen Sie diesen Datensatz wirklich lÃ¶schen?"));
     }
     try {
       Boolean choice = (Boolean) d.open();
@@ -85,7 +85,7 @@ public class DBObjectDelete implements Action
     catch (Exception e)
     {
       Logger.error("error while deleting objects",e);
-      GUI.getStatusBar().setErrorText(i18n.tr("Fehler beim Löschen des Datensatzes"));
+      GUI.getStatusBar().setErrorText(i18n.tr("Fehler beim LÃ¶schen des Datensatzes"));
       return;
     }
 
@@ -145,7 +145,7 @@ public class DBObjectDelete implements Action
       try
       {
         if (monitor != null)
-          monitor.setStatusText(i18n.tr("Lösche {0} Datensätze",""+list.length));
+          monitor.setStatusText(i18n.tr("LÃ¶sche {0} DatensÃ¤tze",""+list.length));
 
         double factor = 100d / list.length;
         
@@ -165,9 +165,9 @@ public class DBObjectDelete implements Action
         if (monitor != null)
           monitor.setPercentComplete(100);
         
-        String text = i18n.tr("Datensatz gelöscht.");
+        String text = i18n.tr("Datensatz gelÃ¶scht.");
         if (list.length > 1)
-          text = i18n.tr("{0} Datensätze gelöscht.",""+list.length);
+          text = i18n.tr("{0} DatensÃ¤tze gelÃ¶scht.",""+list.length);
         
         Application.getMessagingFactory().sendMessage(new StatusBarMessage(text,StatusBarMessage.TYPE_SUCCESS));
         if (monitor != null)
@@ -180,12 +180,12 @@ public class DBObjectDelete implements Action
       catch (RemoteException e)
       {
         Logger.error("error while deleting objects",e);
-        Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim Löschen der Datensätze."), StatusBarMessage.TYPE_ERROR));
+        Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim LÃ¶schen der DatensÃ¤tze."), StatusBarMessage.TYPE_ERROR));
 
         if (monitor != null)
         {
           monitor.setStatus(ProgressMonitor.STATUS_ERROR);
-          monitor.setStatusText(i18n.tr("Fehler beim Löschen der Daten"));
+          monitor.setStatusText(i18n.tr("Fehler beim LÃ¶schen der Daten"));
           monitor.log(e.toString());
         }
       }

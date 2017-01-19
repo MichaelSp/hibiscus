@@ -76,7 +76,7 @@ public class LastschriftControl extends AbstractBaseUeberweisungControl
       return textschluessel;
 
     textschluessel = new SelectInput(TextSchluessel.get(TextSchluessel.SET_LAST),TextSchluessel.get(((BaseUeberweisung)getTransfer()).getTextSchluessel()));
-    textschluessel.setName(i18n.tr("Textschlüssel"));
+    textschluessel.setName(i18n.tr("TextschlÃ¼ssel"));
     textschluessel.setEnabled(!((Terminable)getTransfer()).ausgefuehrt());
     return textschluessel;
   }

@@ -79,7 +79,7 @@ public class HBCIDBServiceImpl extends DBServiceImpl implements HBCIDBService
   public String getName() throws RemoteException
   {
 		I18N i18n = Application.getPluginLoader().getPlugin(HBCI.class).getResources().getI18N();
-    return i18n.tr("Datenbank-Service für Hibiscus");
+    return i18n.tr("Datenbank-Service fÃ¼r Hibiscus");
   }
 
   /**

@@ -140,7 +140,7 @@ public class PassportChange implements Action
                 k.setKundennummer(pcr.custId);
                 k.store();
                 
-                k.addToProtokoll(i18n.tr("Ge‰nderte Kundenkennung - neu: {0}, alt: {1}",pcr.custId,custOld),Protokoll.TYP_SUCCESS);
+                k.addToProtokoll(i18n.tr("Ge√§nderte Kundenkennung - neu: {0}, alt: {1}",pcr.custId,custOld),Protokoll.TYP_SUCCESS);
                 count++;
               }
 
@@ -148,18 +148,18 @@ public class PassportChange implements Action
               // wir das wenigstens im Konto, auch wenn das Konto selbst dabei
               // nicht angefasst wurde
               if (changeUserId)
-                k.addToProtokoll(i18n.tr("Ge‰nderte Benutzerkennung - neu: {0}, alt: {1}",pcr.userId,userOld),Protokoll.TYP_SUCCESS);
+                k.addToProtokoll(i18n.tr("Ge√§nderte Benutzerkennung - neu: {0}, alt: {1}",pcr.userId,userOld),Protokoll.TYP_SUCCESS);
             }
           }
         }
         Logger.info("updated customerId in " + count + " accounts");
       }
-      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Ge‰nderte Zugangsdaten erfolgreich ¸bernommen"),StatusBarMessage.TYPE_SUCCESS));
+      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Ge√§nderte Zugangsdaten erfolgreich √ºbernommen"),StatusBarMessage.TYPE_SUCCESS));
     }
     catch (Exception e)
     {
       Logger.error("error while applying new user-/customer data",e);
-      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim ‹bernehmen der ge‰nderten Zugangsdaten: {0}",e.getMessage()),StatusBarMessage.TYPE_ERROR));
+      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim √úbernehmen der ge√§nderten Zugangsdaten: {0}",e.getMessage()),StatusBarMessage.TYPE_ERROR));
     }
   }
 

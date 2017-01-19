@@ -51,7 +51,7 @@ public class SelectSizEntryDialog extends AbstractDialog
   {
     super(position);
     this.data = data;
-    setTitle(i18n.tr("Schlüsselauswahl"));
+    setTitle(i18n.tr("SchlÃ¼sselauswahl"));
   }
 
   /**
@@ -60,7 +60,7 @@ public class SelectSizEntryDialog extends AbstractDialog
   protected void paint(Composite parent) throws Exception
   {
     Container group = new SimpleContainer(parent);
-    group.addText(i18n.tr("Bitte wählen Sie den zu verwendenden Schlüssel aus"),true);
+    group.addText(i18n.tr("Bitte wÃ¤hlen Sie den zu verwendenden SchlÃ¼ssel aus"),true);
     
     List<Entry> list = new ArrayList<Entry>();
 
@@ -88,7 +88,7 @@ public class SelectSizEntryDialog extends AbstractDialog
     table.paint(parent);
     
     ButtonArea buttons = new ButtonArea();
-    buttons.addButton(i18n.tr("Übernehmen"), new Action() {
+    buttons.addButton(i18n.tr("Ãœbernehmen"), new Action() {
       public void handleAction(Object context) throws ApplicationException
       {
         Object o = table.getSelection();

@@ -35,7 +35,7 @@ public class View extends AbstractView
 		final Controller control = new Controller(this);
 
     Container c = new SimpleContainer(getParent());
-    c.addText(i18n.tr("Klicken Sie auf \"PIN/TAN-Zugang anlegen\", um einen neuen Bank-Zugang über das PIN/TAN-Verfahren einzurichten."),true);
+    c.addText(i18n.tr("Klicken Sie auf \"PIN/TAN-Zugang anlegen\", um einen neuen Bank-Zugang Ã¼ber das PIN/TAN-Verfahren einzurichten."),true);
 
 		ButtonArea buttons = new ButtonArea();
     buttons.addButton(i18n.tr("PIN/TAN-Zugang anlegen"),new Action()

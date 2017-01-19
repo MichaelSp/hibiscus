@@ -38,12 +38,12 @@ public class PassportList extends AbstractView
    */
   public void bind() throws Exception
   {
-    GUI.getView().setTitle(i18n.tr("Bank-Zugänge"));
+    GUI.getView().setTitle(i18n.tr("Bank-ZugÃ¤nge"));
     final PassportControl control = new PassportControl(this);
 
     Container c = new SimpleContainer(getParent());
     c.addText(i18n.tr("Klicken Sie auf \"Neuer Bank-Zugang...\", um eine neue PIN/TAN- oder " +
-    		              "Kartenleser-Konfiguration anzulegen oder eine Schlüsseldatei zu erstellen bzw. zu importieren."),true);
+    		              "Kartenleser-Konfiguration anzulegen oder eine SchlÃ¼sseldatei zu erstellen bzw. zu importieren."),true);
 
     final PassportTree tree = control.getPassports();
 

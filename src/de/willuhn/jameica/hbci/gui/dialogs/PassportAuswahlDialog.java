@@ -78,12 +78,12 @@ public class PassportAuswahlDialog extends AbstractDialog
   protected void paint(Composite parent) throws Exception
   {
     Container c = new SimpleContainer(parent);
-    c.addText(i18n.tr("Bitte w‰hlen Sie das zu verwendende HBCI-Verfahren aus."),false);
+    c.addText(i18n.tr("Bitte w√§hlen Sie das zu verwendende HBCI-Verfahren aus."),false);
     c.addInput(this.getInput());
     c.addInput(this.getComment());
     
     ButtonArea buttons = new ButtonArea();
-    buttons.addButton(i18n.tr("‹bernehmen"), new Action() {
+    buttons.addButton(i18n.tr("√úbernehmen"), new Action() {
       public void handleAction(Object context) throws ApplicationException
       {
         try
@@ -91,7 +91,7 @@ public class PassportAuswahlDialog extends AbstractDialog
           passport = (Passport) getInput().getValue();
           if (passport == null)
           {
-            getComment().setValue(i18n.tr("Bitte w‰hlen Sie ein Verfahren aus."));
+            getComment().setValue(i18n.tr("Bitte w√§hlen Sie ein Verfahren aus."));
             return;
           }
           close();

@@ -60,7 +60,7 @@ public class Detail extends AbstractView
       Container group = new SimpleContainer(getParent());
       group.addHeadline(i18n.tr("Erweiterte Einstellungen"));
       group.addInput(control.getBezeichnung());
-      group.addCheckbox(control.getShowTan(),i18n.tr("TANs während der Eingabe anzeigen"));
+      group.addCheckbox(control.getShowTan(),i18n.tr("TANs wÃ¤hrend der Eingabe anzeigen"));
     }
     
     {
@@ -68,7 +68,7 @@ public class Detail extends AbstractView
       // BUGZILLA 218
       String secMech  = control.getConfig().getSecMech();
       String tanMedia = control.getConfig().getTanMedia();
-      Button b = new Button(i18n.tr("TAN-Verfahren zurücksetzen"), new Action() {
+      Button b = new Button(i18n.tr("TAN-Verfahren zurÃ¼cksetzen"), new Action() {
         public void handleAction(Object context) throws ApplicationException
         {
           control.handleDeleteTanSettings();

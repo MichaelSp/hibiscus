@@ -62,7 +62,7 @@ public class KontoFetchSepaDauerauftraege implements Action
 		}
 
 		if (!(context instanceof Konto))
-			throw new ApplicationException(i18n.tr("Kein Konto ausgew‰hlt"));
+			throw new ApplicationException(i18n.tr("Kein Konto ausgew√§hlt"));
 
 		final Konto konto = (Konto) context;
     Class<SynchronizeJobSepaDauerauftragList> type = SynchronizeJobSepaDauerauftragList.class;

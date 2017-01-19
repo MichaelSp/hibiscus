@@ -63,7 +63,7 @@ public abstract class AbstractBaseUeberweisungImpl extends AbstractHibiscusTrans
     catch (RemoteException e)
     {
       Logger.error("error while checking order",e);
-      throw new ApplicationException(i18n.tr("Fehler beim Prüfen des Auftrages."));
+      throw new ApplicationException(i18n.tr("Fehler beim PrÃ¼fen des Auftrages."));
     }
   }
 
@@ -75,12 +75,12 @@ public abstract class AbstractBaseUeberweisungImpl extends AbstractHibiscusTrans
 		try
 		{
 			if (!whileStore && ausgefuehrt())
-				throw new ApplicationException(i18n.tr("Auftrag wurde bereits ausgeführt und kann daher nicht mehr geändert werden."));
+				throw new ApplicationException(i18n.tr("Auftrag wurde bereits ausgefÃ¼hrt und kann daher nicht mehr geÃ¤ndert werden."));
 		}
 		catch (RemoteException e)
 		{
 			Logger.error("error while checking transfer",e);
-			throw new ApplicationException(i18n.tr("Fehler beim Prüfen des Auftrags."));
+			throw new ApplicationException(i18n.tr("Fehler beim PrÃ¼fen des Auftrags."));
 		}
 		super.updateCheck();
   }

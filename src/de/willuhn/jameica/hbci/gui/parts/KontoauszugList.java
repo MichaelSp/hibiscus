@@ -165,8 +165,8 @@ public class KontoauszugList extends UmsatzList
 
       Container c = new SimpleContainer(tab.getComposite());
       c.addInput(this.getSearch());
-      c.addCheckbox(this.getRegex(),i18n.tr("Suchbegriff ist ein regulärer Ausdruck"));
-      c.addCheckbox(this.getUnChecked(),i18n.tr("Nur ungeprüfte Umsätze"));
+      c.addCheckbox(this.getRegex(),i18n.tr("Suchbegriff ist ein regulÃ¤rer Ausdruck"));
+      c.addCheckbox(this.getUnChecked(),i18n.tr("Nur ungeprÃ¼fte UmsÃ¤tze"));
     }
 
     {
@@ -191,14 +191,14 @@ public class KontoauszugList extends UmsatzList
 
       ColumnLayout columns = new ColumnLayout(tab.getComposite(),2);
       Container left = new SimpleContainer(columns.getComposite());
-      left.addLabelPair(i18n.tr("Zweck/Notiz/Art enthält"), this.getText());
+      left.addLabelPair(i18n.tr("Zweck/Notiz/Art enthÃ¤lt"), this.getText());
       left.addLabelPair(i18n.tr("Mindest-Betrag"), this.getMindestBetrag());
-      left.addLabelPair(i18n.tr("Höchst-Betrag"),        this.getHoechstBetrag());
+      left.addLabelPair(i18n.tr("HÃ¶chst-Betrag"),        this.getHoechstBetrag());
 
       Container right = new SimpleContainer(columns.getComposite());
-      right.addLabelPair(i18n.tr("IBAN oder Kontonummer enthält"), this.getGegenkontoNummer());
-      right.addLabelPair(i18n.tr("BIC oder BLZ enthält"),           this.getGegenkontoBLZ());
-      right.addLabelPair(i18n.tr("Name des Kontoinhabers enthält"), this.getGegenkontoName());
+      right.addLabelPair(i18n.tr("IBAN oder Kontonummer enthÃ¤lt"), this.getGegenkontoNummer());
+      right.addLabelPair(i18n.tr("BIC oder BLZ enthÃ¤lt"),           this.getGegenkontoBLZ());
+      right.addLabelPair(i18n.tr("Name des Kontoinhabers enthÃ¤lt"), this.getGegenkontoName());
     }
     
     // Wir merken uns das aktive Tab.
@@ -219,7 +219,7 @@ public class KontoauszugList extends UmsatzList
         handlePrint();
       }
     },null,false,"document-save.png");
-    buttons.addButton(i18n.tr("Filter zurücksetzen"), new Action()
+    buttons.addButton(i18n.tr("Filter zurÃ¼cksetzen"), new Action()
     {
       public void handleAction(Object context) throws ApplicationException
       {
@@ -277,7 +277,7 @@ public class KontoauszugList extends UmsatzList
     
     Boolean b = (Boolean) cache.get("kontoauszug.list.regex");
     this.regex = new CheckboxInput(b != null && b.booleanValue());
-    this.regex.setName(i18n.tr("Suchbegriff ist ein regulärer Ausdruck"));
+    this.regex.setName(i18n.tr("Suchbegriff ist ein regulÃ¤rer Ausdruck"));
     this.regex.addListener(this.listener);
     return this.regex;
   }
@@ -744,7 +744,7 @@ public class KontoauszugList extends UmsatzList
 
       if (list == null || list.size() == 0)
       {
-        Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Keine zu exportierenden Umsätze"), StatusBarMessage.TYPE_ERROR));
+        Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Keine zu exportierenden UmsÃ¤tze"), StatusBarMessage.TYPE_ERROR));
         return;
       }
       
@@ -763,7 +763,7 @@ public class KontoauszugList extends UmsatzList
     catch (RemoteException re)
     {
       Logger.error("error while reloading table",re);
-      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim Exportieren der Umsätze"), StatusBarMessage.TYPE_ERROR));
+      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim Exportieren der UmsÃ¤tze"), StatusBarMessage.TYPE_ERROR));
     }
   }
   
@@ -795,7 +795,7 @@ public class KontoauszugList extends UmsatzList
     catch (Exception e)
     {
       Logger.error("unable to reset filters",e);
-      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim Zurücksetzen der Filter"), StatusBarMessage.TYPE_ERROR));
+      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim ZurÃ¼cksetzen der Filter"), StatusBarMessage.TYPE_ERROR));
     }
   }
 
@@ -849,7 +849,7 @@ public class KontoauszugList extends UmsatzList
     catch (Exception e)
     {
       Logger.error("error while reloading table",e);
-      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim Aktualisieren der Umsätze"), StatusBarMessage.TYPE_ERROR));
+      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim Aktualisieren der UmsÃ¤tze"), StatusBarMessage.TYPE_ERROR));
     }
   }
   
@@ -954,7 +954,7 @@ public class KontoauszugList extends UmsatzList
                 UmsatzTyp typ = null; 
                 if (existing.size() > 0)
                 {
-                  if (!Application.getCallback().askUser(i18n.tr("Eine Umsatz-Kategorie mit diesem Suchbegriff existiert bereits. Überschreiben?")))
+                  if (!Application.getCallback().askUser(i18n.tr("Eine Umsatz-Kategorie mit diesem Suchbegriff existiert bereits. Ãœberschreiben?")))
                     return;
                   
                   // OK, ueberschreiben

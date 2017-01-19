@@ -114,7 +114,7 @@ public class SammelLastBuchungControl extends AbstractSammelTransferBuchungContr
       {
         Konto k = getBuchung().getSammelTransfer().getKonto();
         String w = k != null ? k.getWaehrung() : HBCIProperties.CURRENCY_DEFAULT_DE;
-        GUI.getView().setErrorText(i18n.tr("Warnung: Auftragslimit überschritten: {0} ",
+        GUI.getView().setErrorText(i18n.tr("Warnung: Auftragslimit Ã¼berschritten: {0} ",
             HBCI.DECIMALFORMAT.format(Settings.getUeberweisungLimit()) + " " + w));
       }
       

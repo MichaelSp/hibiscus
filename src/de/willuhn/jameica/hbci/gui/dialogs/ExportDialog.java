@@ -99,7 +99,7 @@ public class ExportDialog extends AbstractDialog implements Extendable
   protected void paint(Composite parent) throws Exception
   {
 		this.group = new SimpleContainer(parent);
-		this.group.addText(i18n.tr("Bitte wählen Sie das gewünschte Dateiformat aus für den Export aus"),true);
+		this.group.addText(i18n.tr("Bitte wÃ¤hlen Sie das gewÃ¼nschte Dateiformat aus fÃ¼r den Export aus"),true);
 
     Input formats = getExporterList();
     this.group.addInput(formats);
@@ -154,7 +154,7 @@ public class ExportDialog extends AbstractDialog implements Extendable
     }
 
     if (exp == null || exp.exporter == null)
-      throw new ApplicationException(i18n.tr("Bitte wählen Sie ein Export-Format aus"));
+      throw new ApplicationException(i18n.tr("Bitte wÃ¤hlen Sie ein Export-Format aus"));
 
     SETTINGS.setAttribute("lastformat",exp.format.getName());
 
@@ -264,7 +264,7 @@ public class ExportDialog extends AbstractDialog implements Extendable
     if (this.openFile == null)
     {
       this.openFile = new CheckboxInput(SETTINGS.getBoolean("open",true));
-      this.openFile.setName(i18n.tr("Datei nach dem Export öffnen"));
+      this.openFile.setName(i18n.tr("Datei nach dem Export Ã¶ffnen"));
     }
     return this.openFile;
   }
@@ -311,7 +311,7 @@ public class ExportDialog extends AbstractDialog implements Extendable
 
 		if (size == 0)
 		{
-		  this.exporterListe = new LabelInput(i18n.tr("Keine Export-Filter verfügbar"));
+		  this.exporterListe = new LabelInput(i18n.tr("Keine Export-Filter verfÃ¼gbar"));
 		}
 		else
 		{
@@ -319,7 +319,7 @@ public class ExportDialog extends AbstractDialog implements Extendable
 	    Exp[] exp = (Exp[]) l.toArray(new Exp[size]);
 	    this.exporterListe = new SelectInput(PseudoIterator.fromArray(exp),selected);
 		}
-		this.exporterListe.setName(i18n.tr("Verfügbare Formate"));
+		this.exporterListe.setName(i18n.tr("VerfÃ¼gbare Formate"));
 		return this.exporterListe;
 	}
 

@@ -80,8 +80,8 @@ public class IbanCalcDialog extends AbstractDialog
   {
     Container container1 = new SimpleContainer(parent);
     container1.addHeadline(i18n.tr("Wichtiger Hinweis"));
-    container1.addText(i18n.tr("Für einige Banken gelten Sonderregeln für die IBAN-Berechnung, die von " +
-                               "Hibiscus u.U. nicht unterstützt werden." +
+    container1.addText(i18n.tr("FÃ¼r einige Banken gelten Sonderregeln fÃ¼r die IBAN-Berechnung, die von " +
+                               "Hibiscus u.U. nicht unterstÃ¼tzt werden." +
                                "\n\nDaher gilt: " +
                                "Bitte verifizieren Sie daher die errechnete IBAN."),true);
 
@@ -89,7 +89,7 @@ public class IbanCalcDialog extends AbstractDialog
     container2.addHeadline(i18n.tr("Nationale Bankverbindung"));
     container2.addInput(this.getBlz());
     container2.addInput(this.getKonto());
-    container2.addHeadline(i18n.tr("Zugehörige SEPA-Bankverbindung"));
+    container2.addHeadline(i18n.tr("ZugehÃ¶rige SEPA-Bankverbindung"));
     container2.addInput(this.getBic());
     container2.addInput(this.getIban());
     container2.addInput(this.getMessage());
@@ -103,7 +103,7 @@ public class IbanCalcDialog extends AbstractDialog
         calc();
       }
     },null,true,"accessories-calculator.png");
-    buttons.addButton(i18n.tr("Schließen"),new Action()
+    buttons.addButton(i18n.tr("SchlieÃŸen"),new Action()
     {
       public void handleAction(Object context) throws ApplicationException
       {
@@ -220,13 +220,13 @@ public class IbanCalcDialog extends AbstractDialog
     }
     if (blz.length() != HBCIProperties.HBCI_BLZ_LENGTH)
     {
-      getBlz().setComment(i18n.tr("BLZ ungültig"));
+      getBlz().setComment(i18n.tr("BLZ ungÃ¼ltig"));
     }
     
     if (kto.length() > 0 && blz.length() == HBCIProperties.HBCI_BLZ_LENGTH)
     {
       boolean ok = HBCIProperties.checkAccountCRC(blz,kto);
-      getKonto().setComment(i18n.tr(ok ? "Konto OK" : "BLZ/Kto ungültig, bitte prüfen"));
+      getKonto().setComment(i18n.tr(ok ? "Konto OK" : "BLZ/Kto ungÃ¼ltig, bitte prÃ¼fen"));
       
       if (ok)
       {
@@ -238,7 +238,7 @@ public class IbanCalcDialog extends AbstractDialog
           
           IBANCode code = newIban.getCode();
           if (code != null && code == IBANCode.PRUEFZIFFERNMETHODEFEHLT)
-            getMessage().setValue("Prüfziffer konnte nicht verifiziert werden. Bitte prüfen Sie die IBAN");
+            getMessage().setValue("PrÃ¼fziffer konnte nicht verifiziert werden. Bitte prÃ¼fen Sie die IBAN");
           else
             getMessage().setValue("");
         }

@@ -95,7 +95,7 @@ public class PassportHandleImpl extends UnicastRemoteObject implements PassportH
       RDHKey activeKey = this.key != null ? this.key : RDHKeyFactory.findByKonto(passport != null ? passport.getKonto() : null);
       
       if (activeKey == null)
-        throw new ApplicationException(i18n.tr("Keine Schlüssel-Diskette für dieses Konto definiert"));
+        throw new ApplicationException(i18n.tr("Keine SchlÃ¼ssel-Diskette fÃ¼r dieses Konto definiert"));
 
       String filename = activeKey.getFilename();
       
@@ -105,7 +105,7 @@ public class PassportHandleImpl extends UnicastRemoteObject implements PassportH
         InsertKeyDialog kd = new InsertKeyDialog(f);
         Boolean b = (Boolean) kd.open();
         if (b == null || !b.booleanValue())
-          throw new OperationCanceledException(i18n.tr("Schlüsseldiskette nicht eingelegt oder nicht lesbar"));
+          throw new OperationCanceledException(i18n.tr("SchlÃ¼sseldiskette nicht eingelegt oder nicht lesbar"));
       }
       
       Logger.info("using passport file " + filename);
@@ -162,7 +162,7 @@ public class PassportHandleImpl extends UnicastRemoteObject implements PassportH
 		{
 			close();
       Logger.error("error while opening key",e);
-      throw new ApplicationException(i18n.tr("Fehler beim Öffnen des Schlüssels: {0}",e.getMessage()));
+      throw new ApplicationException(i18n.tr("Fehler beim Ã–ffnen des SchlÃ¼ssels: {0}",e.getMessage()));
 		}
   }
 
@@ -212,7 +212,7 @@ public class PassportHandleImpl extends UnicastRemoteObject implements PassportH
     catch (Exception e)
     {
       Logger.error("error while applying new user-/customer data",e);
-      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim Übernehmen der geänderten Zugangsdaten: {0}",e.getMessage()),StatusBarMessage.TYPE_ERROR));
+      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim Ãœbernehmen der geÃ¤nderten Zugangsdaten: {0}",e.getMessage()),StatusBarMessage.TYPE_ERROR));
     }
   }
 

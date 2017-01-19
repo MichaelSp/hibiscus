@@ -220,7 +220,7 @@ public class SepaSammelLastschriftControl extends AbstractSepaSammelTransferCont
     this.buchungen.setMulti(true);
 
     ContextMenu ctx = new ContextMenu();
-    ctx.addItem(new CheckedSingleContextMenuItem(i18n.tr("Buchung öffnen"), new SepaSammelLastBuchungNew(),"document-open.png"));
+    ctx.addItem(new CheckedSingleContextMenuItem(i18n.tr("Buchung Ã¶ffnen"), new SepaSammelLastBuchungNew(),"document-open.png"));
     ctx.addItem(new DeleteMenuItem());
     ctx.addItem(ContextMenuItem.SEPARATOR);
     ctx.addItem(new CreateMenuItem(new SepaSammelLastBuchungNew()));

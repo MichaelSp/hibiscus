@@ -93,13 +93,13 @@ public class UmsatzTypImpl extends AbstractDBObjectNode implements UmsatzTyp, Du
           }
           catch (PatternSyntaxException pse)
           {
-            throw new ApplicationException(i18n.tr("Regulärer Ausdruck ungültig: {0}",pse.getDescription()));
+            throw new ApplicationException(i18n.tr("RegulÃ¤rer Ausdruck ungÃ¼ltig: {0}",pse.getDescription()));
           }
         }
       }
 
       if (isCustomColor() && (getColor() == null || getColor().length != 3))
-        throw new ApplicationException("Wählen Sie bitte eine benutzerdefinierte Farbe aus");
+        throw new ApplicationException("WÃ¤hlen Sie bitte eine benutzerdefinierte Farbe aus");
 
     }
     catch (RemoteException e)
@@ -337,7 +337,7 @@ public class UmsatzTypImpl extends AbstractDBObjectNode implements UmsatzTyp, Du
     }
     catch (Exception e)
     {
-      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Ungültiger regulärer Ausdruck \"{0}\": {1}", new String[]{s,e.getMessage()}),StatusBarMessage.TYPE_ERROR));
+      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("UngÃ¼ltiger regulÃ¤rer Ausdruck \"{0}\": {1}", new String[]{s,e.getMessage()}),StatusBarMessage.TYPE_ERROR));
       Logger.error("invalid regex pattern: " + e.getMessage(),e);
       return false;
     }

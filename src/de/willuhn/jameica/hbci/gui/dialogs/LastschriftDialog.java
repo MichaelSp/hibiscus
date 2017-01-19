@@ -53,7 +53,7 @@ public class LastschriftDialog extends AbstractExecuteDialog
 			
 		Input kto = new LabelInput(ueb.getKonto().getKontonummer());
 		kto.setComment(ueb.getKonto().getBezeichnung());
-		group.addLabelPair(i18n.tr("Eigenes Konto (Empf‰nger)"),kto);
+		group.addLabelPair(i18n.tr("Eigenes Konto (Empf√§nger)"),kto);
 
 		Input empfName = new LabelInput(ueb.getGegenkontoName());
 		group.addLabelPair(i18n.tr("Names des Zahlungspflichtigen"),empfName);

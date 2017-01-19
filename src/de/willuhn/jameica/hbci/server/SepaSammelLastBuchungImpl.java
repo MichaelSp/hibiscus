@@ -64,11 +64,11 @@ public class SepaSammelLastBuchungImpl extends AbstractSepaSammelTransferBuchung
     {
       String creditorId = getCreditorId();
       if (creditorId == null || creditorId.length() == 0)
-        throw new ApplicationException(i18n.tr("Bitte geben Sie die Gläubiger-Identifikation ein."));
+        throw new ApplicationException(i18n.tr("Bitte geben Sie die GlÃ¤ubiger-Identifikation ein."));
       HBCIProperties.checkLength(creditorId, HBCIProperties.HBCI_SEPA_CREDITORID_MAXLENGTH);
       HBCIProperties.checkChars(creditorId, HBCIProperties.HBCI_SEPA_VALIDCHARS);
       if (!HBCIProperties.checkCreditorIdCRC(creditorId))
-        throw new ApplicationException(i18n.tr("Ungültige Gläubiger-Identifikation. Bitte prüfen Sie Ihre Eingaben."));
+        throw new ApplicationException(i18n.tr("UngÃ¼ltige GlÃ¤ubiger-Identifikation. Bitte prÃ¼fen Sie Ihre Eingaben."));
 
       String mandateId = getMandateId();
       if (mandateId == null || mandateId.length() == 0)
@@ -82,7 +82,7 @@ public class SepaSammelLastBuchungImpl extends AbstractSepaSammelTransferBuchung
     catch (RemoteException e)
     {
       Logger.error("error while checking foreign ueberweisung",e);
-      throw new ApplicationException(i18n.tr("Fehler beim Prüfen des SEPA-Auftrages."));
+      throw new ApplicationException(i18n.tr("Fehler beim PrÃ¼fen des SEPA-Auftrages."));
     }
   }
   

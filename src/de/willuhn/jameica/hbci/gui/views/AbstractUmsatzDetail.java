@@ -77,7 +77,7 @@ public abstract class AbstractUmsatzDetail extends AbstractView
     right.addLabelPair(i18n.tr("Art der Buchung"),              control.getArt());
     right.addLabelPair(i18n.tr("Kundenreferenz"),               control.getCustomerRef());
     right.addLabelPair(i18n.tr("Primanota-Kennzeichen"),        control.getPrimanota());
-    right.addLabelPair(i18n.tr("Gesch‰ftsvorfall-Code"),        control.getGvCode());
+    right.addLabelPair(i18n.tr("Gesch√§ftsvorfall-Code"),        control.getGvCode());
 
     right.addHeadline(i18n.tr("Notizen"));
     right.addPart(control.getKommentar());

@@ -116,7 +116,7 @@ public class HBCISynchronizeBackend extends AbstractSynchronizeBackend<HBCISynch
     catch (RemoteException re)
     {
       Logger.error("unable to check konto flags",re);
-      throw new ApplicationException(i18n.tr("Der Geschäftsvorfall konnte nicht erstellt werden: {0}",re.getMessage()));
+      throw new ApplicationException(i18n.tr("Der GeschÃ¤ftsvorfall konnte nicht erstellt werden: {0}",re.getMessage()));
     }
 
     // aufgrund eines Bugs im SUN compiler muessen wir hier explizit casten.
@@ -147,7 +147,7 @@ public class HBCISynchronizeBackend extends AbstractSynchronizeBackend<HBCISynch
       {
         Konto konto = job.getKonto();
         if (!this.supports(konto))
-          throw new ApplicationException(i18n.tr("Das Konto ist ein Offline-Konto oder das Zugangsverfahren {0} wurde nicht ausgewählt: {1}",this.getName(),konto.getLongName()));
+          throw new ApplicationException(i18n.tr("Das Konto ist ein Offline-Konto oder das Zugangsverfahren {0} wurde nicht ausgewÃ¤hlt: {1}",this.getName(),konto.getLongName()));
       }
     }
     catch (RemoteException re)
@@ -303,9 +303,9 @@ public class HBCISynchronizeBackend extends AbstractSynchronizeBackend<HBCISynch
         ////////////////////////////////////////////////////////////////////////
         // Jobs ausfuehren
         Logger.info("executing jobs");
-        monitor.setStatusText(i18n.tr("Führe HBCI-Jobs aus"));
+        monitor.setStatusText(i18n.tr("FÃ¼hre HBCI-Jobs aus"));
         this.handler.execute();
-        monitor.setStatusText(i18n.tr("HBCI-Jobs ausgeführt"));
+        monitor.setStatusText(i18n.tr("HBCI-Jobs ausgefÃ¼hrt"));
         //
         ////////////////////////////////////////////////////////////////////////
       }
@@ -452,7 +452,7 @@ public class HBCISynchronizeBackend extends AbstractSynchronizeBackend<HBCISynch
         {
           Passport passport = PassportRegistry.findByClass(konto.getPassportClass());
           if (passport == null)
-            throw new ApplicationException(i18n.tr("Kein HBCI-Sicherheitsmedium für das Konto gefunden"));
+            throw new ApplicationException(i18n.tr("Kein HBCI-Sicherheitsmedium fÃ¼r das Konto gefunden"));
 
           monitor.setStatusText(i18n.tr("Initialisiere HBCI-Sicherheitsmedium"));
           passport.init(konto);
@@ -536,11 +536,11 @@ public class HBCISynchronizeBackend extends AbstractSynchronizeBackend<HBCISynch
 
         try
         {
-          monitor.setStatusText(i18n.tr("Öffne HBCI-Verbindung"));
+          monitor.setStatusText(i18n.tr("Ã–ffne HBCI-Verbindung"));
           HBCIHandler handler = this.handle.open();
 
           if (handler == null)
-            throw new ApplicationException(i18n.tr("Fehler beim Öffnen der HBCI-Verbindung"));
+            throw new ApplicationException(i18n.tr("Fehler beim Ã–ffnen der HBCI-Verbindung"));
 
           monitor.addPercentComplete(1);
           return handler;

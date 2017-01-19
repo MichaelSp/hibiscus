@@ -73,7 +73,7 @@ public class ValueSerializer extends DefaultSerializer<Double>
     catch (Exception e)
     {
       Logger.error("unable to parse string " + value + " as double",e);
-      throw new IOException(i18n.tr("Text \"{0}\" ist kein gültiger Betrag",value));
+      throw new IOException(i18n.tr("Text \"{0}\" ist kein gÃ¼ltiger Betrag",value));
     }
   }
 

@@ -160,7 +160,7 @@ public class PassportPropertyList implements Part
     catch (Exception e)
     {
       Logger.error("unable to perform search",e);
-      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim Ausführen der Suche: {0}",e.getMessage()),StatusBarMessage.TYPE_ERROR));
+      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim AusfÃ¼hren der Suche: {0}",e.getMessage()),StatusBarMessage.TYPE_ERROR));
     }
   }
 

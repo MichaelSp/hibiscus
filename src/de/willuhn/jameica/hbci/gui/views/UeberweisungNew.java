@@ -52,7 +52,7 @@ public class UeberweisungNew extends AbstractView
 		final UeberweisungControl control = new UeberweisungControl(this);
     this.transfer = (Ueberweisung) control.getTransfer();
 
-		GUI.getView().setTitle(i18n.tr("Überweisung bearbeiten"));
+		GUI.getView().setTitle(i18n.tr("Ãœberweisung bearbeiten"));
 		GUI.getView().addPanelButton(new PanelButtonPrint(new PrintSupportUeberweisung(transfer)));
 
     Container c1 = new SimpleContainer(getParent());
@@ -64,11 +64,11 @@ public class UeberweisungNew extends AbstractView
 		// Linke Seite
 		{
       Container container = new SimpleContainer(cols.getComposite());
-	    container.addHeadline(i18n.tr("Empfänger"));
+	    container.addHeadline(i18n.tr("EmpfÃ¤nger"));
 	    container.addInput(control.getEmpfaengerName());
 	    container.addInput(control.getEmpfaengerKonto());    
 	    container.addInput(control.getEmpfaengerBlz());    
-	    container.addCheckbox(control.getStoreEmpfaenger(),i18n.tr("In Adressbuch übernehmen"));
+	    container.addCheckbox(control.getStoreEmpfaenger(),i18n.tr("In Adressbuch Ã¼bernehmen"));
 		}
 		
 		// Rechte Seite
@@ -88,7 +88,7 @@ public class UeberweisungNew extends AbstractView
     container.addInput(control.getTyp());
 
 		ButtonArea buttonArea = new ButtonArea();
-		buttonArea.addButton(i18n.tr("Löschen"),new DBObjectDelete(),transfer,false,"user-trash-full.png");
+		buttonArea.addButton(i18n.tr("LÃ¶schen"),new DBObjectDelete(),transfer,false,"user-trash-full.png");
     Button store = new Button(i18n.tr("Speichern"), new Action() {
       public void handleAction(Object context) throws ApplicationException {
       	control.handleStore();

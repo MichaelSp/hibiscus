@@ -79,7 +79,7 @@ public class DBSupportMySqlImpl extends AbstractDBSupportImpl
       I18N i18n = Application.getPluginLoader().getPlugin(HBCI.class).getResources().getI18N();
       
       String text = i18n.tr("Bei der Verwendung von MySQL wird die Datenbank " +
-          "nicht automatisch angelegt. Bitte führen Sie das folgende SQL-Script " +
+          "nicht automatisch angelegt. Bitte fÃ¼hren Sie das folgende SQL-Script " +
           "manuell aus, falls Sie dies nicht bereits getan haben:\n{0}",f.getAbsolutePath());
       
       BootMessage msg = new BootMessage(text);

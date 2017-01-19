@@ -35,7 +35,7 @@ public class HBCIAccountNew extends AbstractView
     
     Container c = new SimpleContainer(this.getParent());
     c.addHeadline(i18n.tr("Schritt 2: Auswahl des Verfahrens"));
-    c.addText(i18n.tr("Bitte w‰hlen Sie die Art des FinTS/HBCI-Verfahrens."),true);
+    c.addText(i18n.tr("Bitte w√§hlen Sie die Art des FinTS/HBCI-Verfahrens."),true);
     
     for (InfoPanel panel:control.getVariants())
     {

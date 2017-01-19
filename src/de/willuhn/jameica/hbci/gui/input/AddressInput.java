@@ -100,7 +100,7 @@ public class AddressInput implements Input
         catch (Exception e)
         {
           Logger.error("error while applying address",e);
-          Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim ‹bernehmen der Adresse: {0}",e.getMessage()),StatusBarMessage.TYPE_ERROR));
+          Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim √úbernehmen der Adresse: {0}",e.getMessage()),StatusBarMessage.TYPE_ERROR));
         }
       }
     });
@@ -340,7 +340,7 @@ public class AddressInput implements Input
           catch (Exception e)
           {
             Logger.error("unable to apply name",e);
-            Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim ‹bernehmen des Namens"),StatusBarMessage.TYPE_ERROR));
+            Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim √úbernehmen des Namens"),StatusBarMessage.TYPE_ERROR));
           }
         }
       });
@@ -356,7 +356,7 @@ public class AddressInput implements Input
       // Alle Zeichen rauswerfen, die nicht zulaessig sind.
       super.setText(after);
       if (before != null && !before.equals(after))
-        GUI.getView().setErrorText(i18n.tr("Im Namen wurden nicht zul‰ssige Zeichen entfernt"));
+        GUI.getView().setErrorText(i18n.tr("Im Namen wurden nicht zul√§ssige Zeichen entfernt"));
     }
 
     /**

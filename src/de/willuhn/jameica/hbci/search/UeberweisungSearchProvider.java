@@ -42,7 +42,7 @@ public class UeberweisungSearchProvider implements SearchProvider
    */
   public String getName()
   {
-    return Application.getPluginLoader().getPlugin(HBCI.class).getResources().getI18N().tr("Überweisungen");
+    return Application.getPluginLoader().getPlugin(HBCI.class).getResources().getI18N().tr("Ãœberweisungen");
   }
 
   /**

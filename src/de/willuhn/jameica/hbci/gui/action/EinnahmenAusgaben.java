@@ -18,7 +18,7 @@ import de.willuhn.jameica.gui.GUI;
 import de.willuhn.util.ApplicationException;
 
 /**
- * Action zum Oeffnen der Einnahmen/Ausgaben-Übersicht.
+ * Action zum Oeffnen der Einnahmen/Ausgaben-Ãœbersicht.
  */
 public class EinnahmenAusgaben implements Action
 {

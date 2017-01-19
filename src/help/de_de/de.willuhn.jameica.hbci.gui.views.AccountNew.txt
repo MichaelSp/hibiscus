@@ -4,11 +4,11 @@
 	</p>
 	
 	<p>
-		Bitte w‰hlen Sie die Art des anzulegenden Bankzugangs.
+		Bitte w√§hlen Sie die Art des anzulegenden Bankzugangs.
 	</p>
 	
 	<p>
-		Wenn Sie nicht sicher sind, w‰hlen Sie "FinTS/HBCI-Bankzugang".
-		HBCI/FinTS is das in Hibiscus haupts‰chlich verwendete Verfahren.
+		Wenn Sie nicht sicher sind, w√§hlen Sie "FinTS/HBCI-Bankzugang".
+		HBCI/FinTS is das in Hibiscus haupts√§chlich verwendete Verfahren.
 	</p>
 </form>

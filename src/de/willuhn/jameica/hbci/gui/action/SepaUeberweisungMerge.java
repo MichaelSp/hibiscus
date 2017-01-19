@@ -43,7 +43,7 @@ public class SepaUeberweisungMerge implements Action
   public void handleAction(Object context) throws ApplicationException
   {
     if (!(context instanceof AuslandsUeberweisung) && !(context instanceof AuslandsUeberweisung[]))
-      throw new ApplicationException(i18n.tr("Bitte w‰hlen Sie einen oder mehrere Auftr‰ge aus"));
+      throw new ApplicationException(i18n.tr("Bitte w√§hlen Sie einen oder mehrere Auftr√§ge aus"));
 
     AuslandsUeberweisung[] source = null;
     
@@ -53,7 +53,7 @@ public class SepaUeberweisungMerge implements Action
       source = (AuslandsUeberweisung[]) context;
     
     if (source.length == 0)
-      throw new ApplicationException(i18n.tr("Bitte w‰hlen Sie einen oder mehrere Auftr‰ge aus"));
+      throw new ApplicationException(i18n.tr("Bitte w√§hlen Sie einen oder mehrere Auftr√§ge aus"));
 
     
     SepaSammelUeberweisung tx = null;
@@ -74,7 +74,7 @@ public class SepaUeberweisungMerge implements Action
         {
           s = (SepaSammelUeberweisung) service.createObject(SepaSammelUeberweisung.class,null);
           s.setKonto(l.getKonto());
-          s.setBezeichnung(i18n.tr("SEPA-Sammel¸berweisung vom {0}",HBCI.LONGDATEFORMAT.format(new Date())));
+          s.setBezeichnung(i18n.tr("SEPA-Sammel√ºberweisung vom {0}",HBCI.LONGDATEFORMAT.format(new Date())));
           map.put(key,s);
         }
       }
@@ -143,7 +143,7 @@ public class SepaUeberweisungMerge implements Action
       tx.transactionCommit();
 
       if (count > 1)
-        Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("{0} Sammelauftr‰ge erzeugt",String.valueOf(count)), StatusBarMessage.TYPE_SUCCESS));
+        Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("{0} Sammelauftr√§ge erzeugt",String.valueOf(count)), StatusBarMessage.TYPE_SUCCESS));
       else
         Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Sammelauftrag erzeugt"), StatusBarMessage.TYPE_SUCCESS));
 		}
@@ -168,7 +168,7 @@ public class SepaUeberweisungMerge implements Action
 		    throw (ApplicationException) e;
 		  
       Logger.error("error while merging jobs",e);
-      throw new ApplicationException(i18n.tr("Zusammenfassen der ‹berweisungen fehlgeschlagen: {0}",e.getMessage()));
+      throw new ApplicationException(i18n.tr("Zusammenfassen der √úberweisungen fehlgeschlagen: {0}",e.getMessage()));
 		}
   }
   

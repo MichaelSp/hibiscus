@@ -70,7 +70,7 @@ public class SammelLastschriftNew extends AbstractView
     group.addLabelPair(i18n.tr("Summe der Buchungen"),control.getSumme());
 
     ButtonArea buttons = new ButtonArea();
-    buttons.addButton(i18n.tr("Sammelauftrag löschen"),new Action() {
+    buttons.addButton(i18n.tr("Sammelauftrag lÃ¶schen"),new Action() {
       public void handleAction(Object context) throws ApplicationException
       {
         new DBObjectDelete().handleAction(context);

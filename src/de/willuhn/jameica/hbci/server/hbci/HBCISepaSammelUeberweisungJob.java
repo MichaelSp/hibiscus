@@ -41,6 +41,6 @@ public class HBCISepaSammelUeberweisungJob extends AbstractHBCISepaSammelTransfe
    */
   public String getName() throws RemoteException
   {
-    return i18n.tr("SEPA-Sammelüberweisung {0}",getSammelTransfer().getBezeichnung());
+    return i18n.tr("SEPA-SammelÃ¼berweisung {0}",getSammelTransfer().getBezeichnung());
   }
 }

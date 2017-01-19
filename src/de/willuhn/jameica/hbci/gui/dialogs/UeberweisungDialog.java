@@ -43,18 +43,18 @@ public class UeberweisungDialog extends AbstractExecuteDialog
   protected void paint(Composite parent) throws Exception
   {
 		Container group = new SimpleContainer(parent);
-		group.addHeadline(i18n.tr("Details der ‹berweisung"));
+		group.addHeadline(i18n.tr("Details der √úberweisung"));
 			
 		Input kto = new LabelInput(ueb.getKonto().getKontonummer());
 		kto.setComment(ueb.getKonto().getBezeichnung());
 		group.addLabelPair(i18n.tr("Eigenes Konto"),kto);
 
 		Input empfName = new LabelInput(ueb.getGegenkontoName());
-		group.addLabelPair(i18n.tr("Name des Empf‰nger"),empfName);
+		group.addLabelPair(i18n.tr("Name des Empf√§nger"),empfName);
 
 		Input empfKto = new LabelInput(ueb.getGegenkontoNummer());
 		empfKto.setComment(ueb.getGegenkontoBLZ() + "/" + HBCIProperties.getNameForBank(ueb.getGegenkontoBLZ()));
-		group.addLabelPair(i18n.tr("Konto des Empf‰ngers"),empfKto);
+		group.addLabelPair(i18n.tr("Konto des Empf√§ngers"),empfKto);
 
     LabelInput betrag = new LabelInput(HBCI.DECIMALFORMAT.format(ueb.getBetrag()) + " " + ueb.getKonto().getWaehrung());
     betrag.setColor(Color.ERROR);

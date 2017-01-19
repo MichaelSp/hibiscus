@@ -52,7 +52,7 @@ public class EinnahmenAusgaben extends AbstractView
     {
       final TabFolder folder = new TabFolder(this.getParent(), SWT.NONE);
       folder.setLayoutData(new GridData(GridData.FILL_HORIZONTAL));
-      TabGroup tab = new TabGroup(folder,i18n.tr("Anzeige einschr‰nken"));
+      TabGroup tab = new TabGroup(folder,i18n.tr("Anzeige einschr√§nken"));
 
       ColumnLayout cols = new ColumnLayout(tab.getComposite(),2);
       

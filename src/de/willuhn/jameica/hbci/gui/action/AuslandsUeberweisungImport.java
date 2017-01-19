@@ -54,7 +54,7 @@ public class AuslandsUeberweisungImport implements Action
 		catch (Exception e)
 		{
 			Logger.error("error while importing transfers",e);
-			GUI.getStatusBar().setErrorText(i18n.tr("Fehler beim Importieren der SEPA-Überweisungen"));
+			GUI.getStatusBar().setErrorText(i18n.tr("Fehler beim Importieren der SEPA-Ãœberweisungen"));
 		}
   }
 

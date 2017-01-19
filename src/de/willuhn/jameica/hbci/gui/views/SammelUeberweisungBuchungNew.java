@@ -43,25 +43,25 @@ public class SammelUeberweisungBuchungNew extends AbstractView
 
 
     SammelTransfer l = control.getBuchung().getSammelTransfer();
-    GUI.getView().setTitle(i18n.tr("Sammel-Überweisung {0}: Buchung bearbeiten",l.getBezeichnung()));
+    GUI.getView().setTitle(i18n.tr("Sammel-Ãœberweisung {0}: Buchung bearbeiten",l.getBezeichnung()));
 		
     SimpleContainer group = new SimpleContainer(getParent());
-    group.addHeadline(i18n.tr("Empfänger"));
+    group.addHeadline(i18n.tr("EmpfÃ¤nger"));
     group.addLabelPair(i18n.tr("Name"),                      control.getGegenkontoName());
 		group.addLabelPair(i18n.tr("Kontonummer"),               control.getGegenKonto());
 		group.addLabelPair(i18n.tr("BLZ"),			                 control.getGegenkontoBLZ());
-		group.addCheckbox(control.getStoreAddress(),i18n.tr("In Adressbuch übernehmen"));
+		group.addCheckbox(control.getStoreAddress(),i18n.tr("In Adressbuch Ã¼bernehmen"));
 
     SimpleContainer details = new SimpleContainer(getParent());
     details.addHeadline(i18n.tr("Details"));
 		details.addLabelPair(i18n.tr("Verwendungszweck"),					control.getZweck());
 		details.addLabelPair(i18n.tr("weiterer Verwendungszweck"),control.getZweck2());
 		details.addLabelPair(i18n.tr("Betrag"),										control.getBetrag());
-    details.addLabelPair(i18n.tr("Textschlüssel"),            control.getTextSchluessel());
+    details.addLabelPair(i18n.tr("TextschlÃ¼ssel"),            control.getTextSchluessel());
 
 		ButtonArea buttonArea = new ButtonArea();
     
-    Button delete = new Button(i18n.tr("Löschen"), new DBObjectDelete(),control.getBuchung(),false,"user-trash-full.png");
+    Button delete = new Button(i18n.tr("LÃ¶schen"), new DBObjectDelete(),control.getBuchung(),false,"user-trash-full.png");
     delete.setEnabled(!l.ausgefuehrt());
     buttonArea.addButton(delete);
 
@@ -74,7 +74,7 @@ public class SammelUeberweisungBuchungNew extends AbstractView
     buttonArea.addButton(store);
     
     // BUGZILLA 116 http://www.willuhn.de/bugzilla/show_bug.cgi?id=116
-    Button store2 = new Button(i18n.tr("Speichern und nächste Buchung"), new Action() {
+    Button store2 = new Button(i18n.tr("Speichern und nÃ¤chste Buchung"), new Action() {
       public void handleAction(Object context) throws ApplicationException {
         control.handleStore(true);
       }

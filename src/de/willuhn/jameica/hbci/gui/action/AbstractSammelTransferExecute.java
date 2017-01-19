@@ -48,10 +48,10 @@ public abstract class AbstractSammelTransferExecute implements Action
 			final SammelTransfer u = (SammelTransfer) context;
 			
 			if (u.ausgefuehrt())
-				throw new ApplicationException(i18n.tr("Sammel-Auftrag wurde bereits ausgeführt"));
+				throw new ApplicationException(i18n.tr("Sammel-Auftrag wurde bereits ausgefÃ¼hrt"));
 
 			if (u.getBuchungen().size() == 0)
-				throw new ApplicationException(i18n.tr("Sammel-Auftrag enthält keine Buchungen"));
+				throw new ApplicationException(i18n.tr("Sammel-Auftrag enthÃ¤lt keine Buchungen"));
 			if (u.isNewObject())
 				u.store(); // wir speichern bei Bedarf selbst.
 
@@ -69,7 +69,7 @@ public abstract class AbstractSammelTransferExecute implements Action
 			catch (Exception e)
 			{
 				Logger.error("error while showing confirm dialog",e);
-				GUI.getStatusBar().setErrorText(i18n.tr("Fehler beim Ausführen des Sammel-Auftrages"));
+				GUI.getStatusBar().setErrorText(i18n.tr("Fehler beim AusfÃ¼hren des Sammel-Auftrages"));
 				return;
 			}
 			execute(u);
@@ -77,7 +77,7 @@ public abstract class AbstractSammelTransferExecute implements Action
 		catch (RemoteException e)
 		{
 			Logger.error("error while executing sammelauftrag",e);
-			GUI.getStatusBar().setErrorText(i18n.tr("Fehler beim Ausführen des Sammel-Auftrages"));
+			GUI.getStatusBar().setErrorText(i18n.tr("Fehler beim AusfÃ¼hren des Sammel-Auftrages"));
 		}
   }
 

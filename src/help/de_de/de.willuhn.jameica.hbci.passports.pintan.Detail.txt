@@ -4,22 +4,22 @@
   </p>
   
   <p>
-    Im Feld &quot;Alias-Name&quot; können Sie einen optionalen
-    Bezeichnung für diese PIN/TAN-Konfiguration eingeben. Sie
-    dient der eindeutigen Identifizierung, falls Sie für eine Bank
+    Im Feld &quot;Alias-Name&quot; kÃ¶nnen Sie einen optionalen
+    Bezeichnung fÃ¼r diese PIN/TAN-Konfiguration eingeben. Sie
+    dient der eindeutigen Identifizierung, falls Sie fÃ¼r eine Bank
     mehrere Konfigurationen angelegt haben.
   </p>
   
   <p>
     Bitte verwenden Sie als URL <b>nicht</b> die Adresse, welche
-    Sie sonst auch für das Internet-Banking im Browser benutzen.
+    Sie sonst auch fÃ¼r das Internet-Banking im Browser benutzen.
     PIN/TAN via Internetbrowser und PIN/TAN via HBCI sind zwei
     verschiedene Zugangswege zu Ihrer Bank. Fragen Sie ggf. bei Ihrer
     Bank nach der korrekten URL.
   </p>
   
   <p>
-    Tipp: Als Filter für die Übertragung wird fast immer Base64 verwendet.
+    Tipp: Als Filter fÃ¼r die Ãœbertragung wird fast immer Base64 verwendet.
     Als HBCI-Version kommt meist &quot;HBCI+&quot; zum Einsatz.
     Sollte die Verbindung zu Ihrer Bank nicht funktionieren,
     liegt dies meist an falschen Einstellungen bei diesen beiden
@@ -28,18 +28,18 @@
   
   <p>
     Falls Sie bei einer Bank mehrere Konten mit verschiedenen
-    PIN/TAN-Konfigurationen besitzen, dann können Sie die gewünschten
-    Konten fest zuordnen, für die diese Konfiguration gelten soll.
-    Auf diese Weise müssen Sie beim Ausführen von Geschäftsvorfällen
+    PIN/TAN-Konfigurationen besitzen, dann kÃ¶nnen Sie die gewÃ¼nschten
+    Konten fest zuordnen, fÃ¼r die diese Konfiguration gelten soll.
+    Auf diese Weise mÃ¼ssen Sie beim AusfÃ¼hren von GeschÃ¤ftsvorfÃ¤llen
     nicht manuell die zu verwendende PIN/TAN-Konfiguraiton
-    wählen.
+    wÃ¤hlen.
   </p>
 
   <p>
-    Über den Button <b>TAN-Verfahren zurücksetzen</b>
-    können Sie eine gespeicherte Vorauswahl des zu verwendenden TAN-Verfahrens
-    rückgängig machen. Dies kann sinnvoll sein, wenn Sie zum Beispiel für ein
-    Konto die Variante <b>Einschritt-Verfahren</b> ausgewählt und gespeichert haben,
+    Ãœber den Button <b>TAN-Verfahren zurÃ¼cksetzen</b>
+    kÃ¶nnen Sie eine gespeicherte Vorauswahl des zu verwendenden TAN-Verfahrens
+    rÃ¼ckgÃ¤ngig machen. Dies kann sinnvoll sein, wenn Sie zum Beispiel fÃ¼r ein
+    Konto die Variante <b>Einschritt-Verfahren</b> ausgewÃ¤hlt und gespeichert haben,
     diese Auswahl nun aber wieder anzeigen wollen.
   </p>
 

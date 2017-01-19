@@ -78,7 +78,7 @@ public abstract class AbstractSepaImporter extends AbstractImporter
     if (type != null && type != version.getType())
     {
       String l = i18n.tr("Lastschrift");
-      String u = i18n.tr("Überweisung");
+      String u = i18n.tr("Ãœberweisung");
       String q = i18n.tr("Sie versuchen, eine {0} als {1} zu importieren.\nVorgang wirklich fortsetzen?");
       boolean b = type == PainVersion.Type.PAIN_001;
       if (!Application.getCallback().askUser(q,new String[]{b ? l : u, b ? u : l}))
@@ -95,7 +95,7 @@ public abstract class AbstractSepaImporter extends AbstractImporter
   /**
    * @see de.willuhn.jameica.hbci.io.AbstractImporter#commit(java.lang.Object[], de.willuhn.jameica.hbci.io.IOFormat, java.io.InputStream, de.willuhn.util.ProgressMonitor)
    */
-  //final, damit Subklassen zukünftig nichts komisches machen können (siehe Exception-Handling in AbstractImporter#doImport)
+  //final, damit Subklassen zukÃ¼nftig nichts komisches machen kÃ¶nnen (siehe Exception-Handling in AbstractImporter#doImport)
   @Override
   final void commit(Object[] objects, IOFormat format, InputStream is, ProgressMonitor monitor) throws Exception
   {
@@ -131,7 +131,7 @@ public abstract class AbstractSepaImporter extends AbstractImporter
       // User eines auswaehlen
       KontoAuswahlDialog d = new KontoAuswahlDialog(null,KontoFilter.FOREIGN,KontoAuswahlDialog.POSITION_CENTER);
       d.setText(i18n.tr("Konto {0} nicht gefunden\n" +
-                        "Bitte wählen Sie das zu verwendende Konto aus.",iban == null || iban.length() == 0 ? i18n.tr("<unbekannt>") : iban));
+                        "Bitte wÃ¤hlen Sie das zu verwendende Konto aus.",iban == null || iban.length() == 0 ? i18n.tr("<unbekannt>") : iban));
 
       try
       {
@@ -139,11 +139,11 @@ public abstract class AbstractSepaImporter extends AbstractImporter
       }
       catch (OperationCanceledException oce)
       {
-        throw new ApplicationException(i18n.tr("Auftrag wird übersprungen"));
+        throw new ApplicationException(i18n.tr("Auftrag wird Ã¼bersprungen"));
       }
       catch (Exception e)
       {
-        throw new ApplicationException(i18n.tr("Fehler beim Auswählen des Kontos"),e);
+        throw new ApplicationException(i18n.tr("Fehler beim AuswÃ¤hlen des Kontos"),e);
       }
     }
 
@@ -152,7 +152,7 @@ public abstract class AbstractSepaImporter extends AbstractImporter
       kontenCache.put(iban,k);
       return k;
     }
-    throw new ApplicationException(i18n.tr("Kein Konto ausgewählt"));
+    throw new ApplicationException(i18n.tr("Kein Konto ausgewÃ¤hlt"));
   }
   
   /**
@@ -177,8 +177,8 @@ public abstract class AbstractSepaImporter extends AbstractImporter
   }
   
   /**
-   * Der zulässige SEPA PAIN-Typ.
-   * Wird benötigt, damit eine Lastschrift nicht versehentlich als Überweisung importiert wird.
+   * Der zulÃ¤ssige SEPA PAIN-Typ.
+   * Wird benÃ¶tigt, damit eine Lastschrift nicht versehentlich als Ãœberweisung importiert wird.
    * @return erlaubter SEPA PAIN-Typ.
    */
   abstract PainVersion.Type getSupportedPainType(); 

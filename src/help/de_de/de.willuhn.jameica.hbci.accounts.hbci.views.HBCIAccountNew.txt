@@ -4,11 +4,11 @@
 	</p>
 	
 	<p>
-		Bitte wählen Sie die Art des FinTS/HBCI-Verfahrens.
+		Bitte wÃ¤hlen Sie die Art des FinTS/HBCI-Verfahrens.
 	</p>
 	
 	<p>
-		Wenn Sie nicht sicher sind, wählen Sie "PIN/TAN".
-    Dieses Verfahren wird von den meisten Banken unterstützt.
+		Wenn Sie nicht sicher sind, wÃ¤hlen Sie "PIN/TAN".
+    Dieses Verfahren wird von den meisten Banken unterstÃ¼tzt.
 	</p>
 </form>

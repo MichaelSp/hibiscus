@@ -50,16 +50,16 @@ public class UmsatzTypDetail extends AbstractView
     group.addCheckbox(control.getCustomColor(),i18n.tr("Benutzerdefinierte Farbe"));
     group.addLabelPair(i18n.tr("Farbe"), control.getColor());
     
-    group.addLabelPair(i18n.tr("Übergeordnete Kategorie"), control.getParent());
+    group.addLabelPair(i18n.tr("Ãœbergeordnete Kategorie"), control.getParent());
     group.addLabelPair(i18n.tr("Reihenfolge"), control.getNummer());
     group.addLabelPair(i18n.tr("Suchbegriff"), control.getPattern());
-    group.addCheckbox(control.getRegex(),i18n.tr("Suchbegriff ist ein regulärer Ausdruck"));
+    group.addCheckbox(control.getRegex(),i18n.tr("Suchbegriff ist ein regulÃ¤rer Ausdruck"));
     group.addSeparator();
     group.addLabelPair(i18n.tr("Art des Umsatzes"), control.getArt());
 
     
     ButtonArea buttons = new ButtonArea();
-    buttons.addButton(i18n.tr("Löschen"),   new DBObjectDelete(),control.getCurrentObject(),false,"user-trash-full.png");
+    buttons.addButton(i18n.tr("LÃ¶schen"),   new DBObjectDelete(),control.getCurrentObject(),false,"user-trash-full.png");
     buttons.addButton(i18n.tr("Duplizieren..."), new Action() {
       public void handleAction(Object context) throws ApplicationException
       {

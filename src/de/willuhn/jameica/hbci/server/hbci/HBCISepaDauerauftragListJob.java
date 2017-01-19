@@ -46,7 +46,7 @@ public class HBCISepaDauerauftragListJob extends AbstractHBCIJob
 		try
 		{
 			if (konto == null)
-				throw new ApplicationException(i18n.tr("Bitte w‰hlen Sie ein Konto aus"));
+				throw new ApplicationException(i18n.tr("Bitte w√§hlen Sie ein Konto aus"));
 			if (konto.isNewObject())
 				konto.store();
 
@@ -95,7 +95,7 @@ public class HBCISepaDauerauftragListJob extends AbstractHBCIJob
    */
   public String getName() throws RemoteException
   {
-    return i18n.tr("Abruf SEPA-Dauerauftr‰ge {0}",konto.getLongName());
+    return i18n.tr("Abruf SEPA-Dauerauftr√§ge {0}",konto.getLongName());
   }
 
   /**
@@ -179,7 +179,7 @@ public class HBCISepaDauerauftragListJob extends AbstractHBCIJob
     }
 
     Application.getMessagingFactory().sendMessage(new ObjectChangedMessage(konto));
-    konto.addToProtokoll(i18n.tr("SEPA-Dauerauftr‰ge abgerufen"),Protokoll.TYP_SUCCESS);
+    konto.addToProtokoll(i18n.tr("SEPA-Dauerauftr√§ge abgerufen"),Protokoll.TYP_SUCCESS);
     Logger.info("sepa-dauerauftrag list fetched successfully");
   }
   
@@ -272,7 +272,7 @@ public class HBCISepaDauerauftragListJob extends AbstractHBCIJob
    */
   protected String markFailed(String error) throws RemoteException, ApplicationException
   {
-    String msg = i18n.tr("Fehler beim Abrufen der SEPA-Dauerauftr‰ge: {0}",error);
+    String msg = i18n.tr("Fehler beim Abrufen der SEPA-Dauerauftr√§ge: {0}",error);
     konto.addToProtokoll(msg,Protokoll.TYP_ERROR);
     return msg;
   }

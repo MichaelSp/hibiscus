@@ -35,11 +35,11 @@ public class SepaDauerauftragList extends ContextMenu
 	 */
 	public SepaDauerauftragList()
 	{
-		addItem(new CheckedContextMenuItem(i18n.tr("Öffnen"),            new SepaDauerauftragNew(),"document-open.png"));
+		addItem(new CheckedContextMenuItem(i18n.tr("Ã–ffnen"),            new SepaDauerauftragNew(),"document-open.png"));
     addItem(new ContextMenuItem(i18n.tr("Neuer Dauerauftrag..."),    new DNeu(),"text-x-generic.png"));
-		addItem(new CheckedContextMenuItem(i18n.tr("Löschen..."),        new SepaDauerauftragDelete(),"user-trash-full.png"));
+		addItem(new CheckedContextMenuItem(i18n.tr("LÃ¶schen..."),        new SepaDauerauftragDelete(),"user-trash-full.png"));
 		addItem(ContextMenuItem.SEPARATOR);
-		addItem(new ContextMenuItem(i18n.tr("Daueraufträge abrufen..."), new KontoFetchSepaDauerauftraege(),"mail-send-receive.png"));
+		addItem(new ContextMenuItem(i18n.tr("DauerauftrÃ¤ge abrufen..."), new KontoFetchSepaDauerauftraege(),"mail-send-receive.png"));
     addItem(ContextMenuItem.SEPARATOR);
     addItem(new CheckedSingleContextMenuItem(i18n.tr("Drucken..."),new Action() {
       public void handleAction(Object context) throws ApplicationException

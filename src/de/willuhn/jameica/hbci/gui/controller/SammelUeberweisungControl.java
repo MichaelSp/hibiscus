@@ -92,12 +92,12 @@ public class SammelUeberweisungControl extends AbstractSammelTransferControl<Sam
     this.buchungen = new SammelTransferBuchungList(getTransfer(),a);
 
     ContextMenu ctx = new ContextMenu();
-    ctx.addItem(new CheckedSingleContextMenuItem(i18n.tr("Buchung öffnen"), new SammelUeberweisungBuchungNew(),"document-open.png"));
+    ctx.addItem(new CheckedSingleContextMenuItem(i18n.tr("Buchung Ã¶ffnen"), new SammelUeberweisungBuchungNew(),"document-open.png"));
     ctx.addItem(new DeleteMenuItem());
     ctx.addItem(ContextMenuItem.SEPARATOR);
     ctx.addItem(new CreateMenuItem(new SammelUeberweisungBuchungNew()));
     ctx.addItem(ContextMenuItem.SEPARATOR);
-    ctx.addItem(new CheckedContextMenuItem(i18n.tr("In Einzelüberweisung duplizieren"), new UeberweisungNew(),"stock_next.png"));
+    ctx.addItem(new CheckedContextMenuItem(i18n.tr("In EinzelÃ¼berweisung duplizieren"), new UeberweisungNew(),"stock_next.png"));
     this.buchungen.setContextMenu(ctx);
     return this.buchungen;
   }

@@ -49,7 +49,7 @@ public class NewInstKeysDialog extends AbstractDialog
   {
     super(NewInstKeysDialog.POSITION_CENTER);
 		this.passport = p;
-		setTitle(i18n.tr("Neue Bank-Schlüssel erhalten"));
+		setTitle(i18n.tr("Neue Bank-SchlÃ¼ssel erhalten"));
     setSize(WINDOW_WIDTH,SWT.DEFAULT);
   }
 
@@ -68,9 +68,9 @@ public class NewInstKeysDialog extends AbstractDialog
   {
 		Container group = new SimpleContainer(parent);
 		group.addText(i18n.tr(
-      "Bitte vergleichen Sie die von der Bank übermittelten Hash-Werte (Checksummen)\n" +
-      "mit denen in Ihren Unterlagen. Stimmen diese mit den folgenden Werten überein,\n" +      "dann bestätigen Sie bitte mit OK.\n" +
-      "Andernfalls brechen Sie den Vorgang aus Sicherheitsgründen bitte ab."),true);
+      "Bitte vergleichen Sie die von der Bank Ã¼bermittelten Hash-Werte (Checksummen)\n" +
+      "mit denen in Ihren Unterlagen. Stimmen diese mit den folgenden Werten Ã¼berein,\n" +      "dann bestÃ¤tigen Sie bitte mit OK.\n" +
+      "Andernfalls brechen Sie den Vorgang aus SicherheitsgrÃ¼nden bitte ab."),true);
 
 		INILetter iniletter = new INILetter(passport,INILetter.TYPE_INST);
 

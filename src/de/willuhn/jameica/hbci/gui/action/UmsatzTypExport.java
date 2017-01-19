@@ -39,11 +39,11 @@ public class UmsatzTypExport implements Action
 		I18N i18n = Application.getPluginLoader().getPlugin(HBCI.class).getResources().getI18N();
 
 		if (context == null)
-			throw new ApplicationException(i18n.tr("Bitte w‰hlen Sie mindestens eine Umsatz-Kategorie aus"));
+			throw new ApplicationException(i18n.tr("Bitte w√§hlen Sie mindestens eine Umsatz-Kategorie aus"));
 
 		if (!(context instanceof UmsatzTyp) &&
         !(UmsatzTyp[].class.isAssignableFrom(context.getClass())))
-			throw new ApplicationException(i18n.tr("Bitte w‰hlen Sie einen oder mehrere Umsatz-Kategorien aus"));
+			throw new ApplicationException(i18n.tr("Bitte w√§hlen Sie einen oder mehrere Umsatz-Kategorien aus"));
 
     Object[] u = null;
 		try {

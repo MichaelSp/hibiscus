@@ -99,7 +99,7 @@ public class TanMediaDialog extends AbstractDialog
   {
     Container group = new SimpleContainer(parent);
     
-    group.addText(i18n.tr("Bitte wählen Sie die Bezeichnung des gewünschten TAN-Medium aus\n" +
+    group.addText(i18n.tr("Bitte wÃ¤hlen Sie die Bezeichnung des gewÃ¼nschten TAN-Medium aus\n" +
     		                  "oder geben Sie die Bezeichnung neu ein.\n\n" +
     		                  "Beim smsTAN/mTAN-Verfahren ist das die Bezeichnung (nicht die Telefonnummer)\n" +
     		                  "Ihres Mobiltelefons, die Sie bei Ihrer Bank hinterlegt haben."),true);
@@ -108,7 +108,7 @@ public class TanMediaDialog extends AbstractDialog
     group.addCheckbox(getSave(),i18n.tr("Auswahl speichern"));
     
     ButtonArea buttons = new ButtonArea();
-    buttons.addButton(i18n.tr("Übernehmen"),new Action() {
+    buttons.addButton(i18n.tr("Ãœbernehmen"),new Action() {
       public void handleAction(Object context) throws ApplicationException
       {
         try
@@ -127,9 +127,9 @@ public class TanMediaDialog extends AbstractDialog
             {
               try
               {
-                Application.getCallback().notifyUser(i18n.tr("Sie können diese Vorauswahl später in der PIN/TAN-Konfiguration\n" +
-                                                             "über die Option \"TAN-Verfahren zurücksetzen\" wieder\n" +
-                                                             "rückgängig machen."));
+                Application.getCallback().notifyUser(i18n.tr("Sie kÃ¶nnen diese Vorauswahl spÃ¤ter in der PIN/TAN-Konfiguration\n" +
+                                                             "Ã¼ber die Option \"TAN-Verfahren zurÃ¼cksetzen\" wieder\n" +
+                                                             "rÃ¼ckgÃ¤ngig machen."));
               }
               catch (Exception e)
               {
@@ -143,7 +143,7 @@ public class TanMediaDialog extends AbstractDialog
         catch (RemoteException e)
         {
           Logger.error("unable to apply data",e);
-          throw new ApplicationException(i18n.tr("Fehler beim Übernehmen des TAN-Mediums"));
+          throw new ApplicationException(i18n.tr("Fehler beim Ãœbernehmen des TAN-Mediums"));
         }
       }
     },null,true,"ok.png");

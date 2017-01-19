@@ -39,7 +39,7 @@ public class SepaSammelUeberweisungBuchungNew extends AbstractView
 		final SepaSammelUeberweisungBuchungControl control = new SepaSammelUeberweisungBuchungControl(this);
     final SepaSammelTransfer l = control.getBuchung().getSammelTransfer();
     
-    GUI.getView().setTitle(i18n.tr("SEPA-Sammelüberweisung {0}: Buchung bearbeiten",l.getBezeichnung()));
+    GUI.getView().setTitle(i18n.tr("SEPA-SammelÃ¼berweisung {0}: Buchung bearbeiten",l.getBezeichnung()));
 
     // Zusaetzlicher Back-Button, um zurueck zum Auftrag zu kommen
     GUI.getView().addPanelButton(new PanelButton("stock_navigator-shift-right.png",new de.willuhn.jameica.hbci.gui.action.SepaSammelUeberweisungNew(){
@@ -47,7 +47,7 @@ public class SepaSammelUeberweisungBuchungNew extends AbstractView
       {
         super.handleAction(l);
       }
-    },i18n.tr("Zurück zum Sammelauftrag")));
+    },i18n.tr("ZurÃ¼ck zum Sammelauftrag")));
 		
 
     ColumnLayout cols = new ColumnLayout(getParent(),2);
@@ -55,11 +55,11 @@ public class SepaSammelUeberweisungBuchungNew extends AbstractView
     // Linke Seite
     {
       Container container = new SimpleContainer(cols.getComposite());
-      container.addHeadline(i18n.tr("Empfänger"));
+      container.addHeadline(i18n.tr("EmpfÃ¤nger"));
       container.addLabelPair(i18n.tr("Name"), control.getEmpfaengerName());
       container.addLabelPair(i18n.tr("IBAN"), control.getEmpfaengerKonto());    
       container.addLabelPair(i18n.tr("BIC"),  control.getEmpfaengerBic());
-      container.addCheckbox(control.getStoreEmpfaenger(),i18n.tr("In Adressbuch übernehmen"));
+      container.addCheckbox(control.getStoreEmpfaenger(),i18n.tr("In Adressbuch Ã¼bernehmen"));
     }
     
     // Rechte Seite
@@ -76,7 +76,7 @@ public class SepaSammelUeberweisungBuchungNew extends AbstractView
     container.addLabelPair(i18n.tr("Betrag"),           control.getBetrag());
     
 		ButtonArea buttonArea = new ButtonArea();
-    Button delete = new Button(i18n.tr("Löschen"), new DBObjectDelete(),control.getBuchung(),false,"user-trash-full.png");
+    Button delete = new Button(i18n.tr("LÃ¶schen"), new DBObjectDelete(),control.getBuchung(),false,"user-trash-full.png");
     delete.setEnabled(!l.ausgefuehrt());
     buttonArea.addButton(delete);
 
@@ -89,7 +89,7 @@ public class SepaSammelUeberweisungBuchungNew extends AbstractView
     buttonArea.addButton(store);
     
     // BUGZILLA 116 http://www.willuhn.de/bugzilla/show_bug.cgi?id=116
-    Button store2 = new Button(i18n.tr("Speichern und nächste Buchung"), new Action() {
+    Button store2 = new Button(i18n.tr("Speichern und nÃ¤chste Buchung"), new Action() {
       public void handleAction(Object context) throws ApplicationException {
         if (control.handleStore())
         {

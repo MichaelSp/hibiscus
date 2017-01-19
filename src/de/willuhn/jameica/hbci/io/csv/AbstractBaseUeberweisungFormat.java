@@ -136,7 +136,7 @@ public abstract class AbstractBaseUeberweisungFormat<T extends BaseUeberweisung>
               {
                 // Wir haben noch kein Konto - dann den User fragen
                 KontoAuswahlDialog d = new KontoAuswahlDialog(KontoAuswahlDialog.POSITION_CENTER);
-                d.setText(i18n.tr("Bitte w‰hlen Sie das zu verwendende Konto aus."));
+                d.setText(i18n.tr("Bitte w√§hlen Sie das zu verwendende Konto aus."));
                 konto = (Konto) d.open();
               }
               u.setKonto(konto);
@@ -144,7 +144,7 @@ public abstract class AbstractBaseUeberweisungFormat<T extends BaseUeberweisung>
           }
           catch (OperationCanceledException oce)
           {
-            throw new OperationCanceledException(i18n.tr("Kein Konto ausgew‰hlt"));
+            throw new OperationCanceledException(i18n.tr("Kein Konto ausgew√§hlt"));
           }
           catch (Exception e)
           {

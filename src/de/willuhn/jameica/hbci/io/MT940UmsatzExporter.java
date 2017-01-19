@@ -101,12 +101,12 @@ public class MT940UmsatzExporter implements Exporter
     		
     		if (showSaldo)
     		{
-          //(Schlusssaldo - Umsatzbetrag) > 0 -> Soll-Haben-Kennung für den Anfangssaldo = C
+          //(Schlusssaldo - Umsatzbetrag) > 0 -> Soll-Haben-Kennung fÃ¼r den Anfangssaldo = C
           //(Credit), sonst D (Debit)
           double anfangsSaldo = u.getSaldo() - u.getBetrag();
           
           //Anfangssaldo aus dem Schlusssaldo ermitteln sowie Soll-Haben-Kennung
-          //Valuta Datum des Kontosaldos leider nicht verfügbar, deswegen wird Datum der Umsatzwertstellung genommen
+          //Valuta Datum des Kontosaldos leider nicht verfÃ¼gbar, deswegen wird Datum der Umsatzwertstellung genommen
           out.write(":60F:");
           out.write(anfangsSaldo >= 0.0d ? "C" : "D");
           out.write(DF_YYMMDD.format(u.getDatum()) + curr + df.format(anfangsSaldo).replace("-","") + NL);
@@ -114,7 +114,7 @@ public class MT940UmsatzExporter implements Exporter
 
         out.write(":61:" + DF_YYMMDD.format(u.getValuta()) + DF_MMDD.format(u.getDatum()));
 
-        // Soll-Haben-Kennung für den Betrag ermitteln
+        // Soll-Haben-Kennung fÃ¼r den Betrag ermitteln
     		double betrag = u.getBetrag();
         out.write(betrag >= 0.0d ? "CR" : "DR");
         out.write(df.format(betrag).replace("-",""));
@@ -158,7 +158,7 @@ public class MT940UmsatzExporter implements Exporter
         if (showSaldo)
         {
           out.write(":62F:");
-          //Soll-Haben-Kennung für den Schlusssaldo ermitteln
+          //Soll-Haben-Kennung fÃ¼r den Schlusssaldo ermitteln
           double schlussSaldo = u.getSaldo();
           out.write(schlussSaldo >= 0.0d ? "C" : "D");
           out.write(DF_YYMMDD.format(u.getDatum()) + curr + df.format(schlussSaldo).replace("-","") + NL);
@@ -217,7 +217,7 @@ public class MT940UmsatzExporter implements Exporter
    */
   protected class MyOutputStreamWriter extends OutputStreamWriter
   {
-    private String[] search  = new String[]{"Ü", "Ö", "Ä", "ü", "ö", "ä", "ß"};
+    private String[] search  = new String[]{"Ãœ", "Ã–", "Ã„", "Ã¼", "Ã¶", "Ã¤", "ÃŸ"};
     private String[] replace = new String[]{"UE","OE","AE","ue","oe","ae","ss"};
     private boolean doReplace = true;
     

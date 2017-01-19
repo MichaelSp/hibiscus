@@ -59,15 +59,15 @@ public class KontoList extends ContextMenu implements Extendable
   {
     i18n = Application.getPluginLoader().getPlugin(HBCI.class).getResources().getI18N();
 
-    addItem(new CheckedSingleContextMenuItem(i18n.tr("Öffnen"), new KontoNew(),"document-open.png"));
+    addItem(new CheckedSingleContextMenuItem(i18n.tr("Ã–ffnen"), new KontoNew(),"document-open.png"));
     addItem(new ContextMenuItem(i18n.tr("Neues Konto..."), new KNeu(),"system-file-manager.png"));
-    addItem(new CheckedSingleContextMenuItem(i18n.tr("Löschen..."), new KontoDelete(),"user-trash-full.png"));
+    addItem(new CheckedSingleContextMenuItem(i18n.tr("LÃ¶schen..."), new KontoDelete(),"user-trash-full.png"));
     addItem(ContextMenuItem.SEPARATOR);
-    addItem(new CheckedSingleContextMenuItem(i18n.tr("Umsätze anzeigen..."),new KontoauszugRpt(),"text-x-generic.png"));
-    addItem(new AccountItem(i18n.tr("Saldo/Umsätze abrufen..."),new KontoFetchUmsaetze(),"mail-send-receive.png"));
+    addItem(new CheckedSingleContextMenuItem(i18n.tr("UmsÃ¤tze anzeigen..."),new KontoauszugRpt(),"text-x-generic.png"));
+    addItem(new AccountItem(i18n.tr("Saldo/UmsÃ¤tze abrufen..."),new KontoFetchUmsaetze(),"mail-send-receive.png"));
     addItem(ContextMenuItem.SEPARATOR);
 
-    addItem(new AccountItem(i18n.tr("Neue Überweisung..."),new AuslandsUeberweisungNew(),"stock_next.png"));
+    addItem(new AccountItem(i18n.tr("Neue Ãœberweisung..."),new AuslandsUeberweisungNew(),"stock_next.png"));
     addItem(new AccountItem(i18n.tr("Neue Lastschrift..."),new SepaLastschriftNew(),"stock_previous.png"));
     addItem(new AccountItem(i18n.tr("Neuer Dauerauftrag..."),new SepaDauerauftragNew(),"stock_form-time-field.png"));
     addItem(new AccountItem(i18n.tr("Umsatz anlegen"),new UmsatzDetailEdit(),"emblem-documents.png").offlineAccount());
@@ -163,7 +163,7 @@ public class KontoList extends ContextMenu implements Extendable
     {
       this.setText(i18n.tr("Erweitert"));
       this.setImage(SWTUtil.getImage("emblem-symbolic-link.png"));
-      addItem(new CheckedSingleContextMenuItem(i18n.tr("Saldo und Datum zurücksetzen..."), new KontoResetAuszugsdatum(),"edit-undo.png"));
+      addItem(new CheckedSingleContextMenuItem(i18n.tr("Saldo und Datum zurÃ¼cksetzen..."), new KontoResetAuszugsdatum(),"edit-undo.png"));
       addItem(new AccountItem(i18n.tr("Salden neu berechnen..."), new KontoRecalculateOfflineSaldo(),"accessories-calculator.png").offlineAccount());
       addItem(new ChangeFlagsMenuItem(i18n.tr("Konto deaktivieren..."), new KontoDisable(),"network-offline.png",false));
       addItem(new ChangeFlagsMenuItem(i18n.tr("Konto aktivieren..."), new FlaggableChange(Konto.FLAG_DISABLED,false),"network-transmit-receive.png",true));

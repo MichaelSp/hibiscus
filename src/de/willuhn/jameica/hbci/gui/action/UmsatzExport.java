@@ -43,7 +43,7 @@ public class UmsatzExport implements Action
 		I18N i18n = Application.getPluginLoader().getPlugin(HBCI.class).getResources().getI18N();
 
 		if (context == null)
-			throw new ApplicationException(i18n.tr("Bitte w‰hlen Sie mindestens einen Umsatz aus"));
+			throw new ApplicationException(i18n.tr("Bitte w√§hlen Sie mindestens einen Umsatz aus"));
 
     Umsatz[] u = null;
 		try {
@@ -74,7 +74,7 @@ public class UmsatzExport implements Action
       }
 
 		   if (u == null || u.length == 0)
-		      throw new ApplicationException(i18n.tr("Bitte w‰hlen Sie einen oder mehrere Ums‰tze aus"));
+		      throw new ApplicationException(i18n.tr("Bitte w√§hlen Sie einen oder mehrere Ums√§tze aus"));
 
       ExportDialog d = new ExportDialog(u, Umsatz.class);
       d.open();
@@ -91,7 +91,7 @@ public class UmsatzExport implements Action
 		catch (Exception e)
 		{
 			Logger.error("error while exporting umsaetze",e);
-			GUI.getStatusBar().setErrorText(i18n.tr("Fehler beim Exportieren der Ums‰tze"));
+			GUI.getStatusBar().setErrorText(i18n.tr("Fehler beim Exportieren der Ums√§tze"));
 		}
   }
   

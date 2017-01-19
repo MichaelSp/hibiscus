@@ -42,7 +42,7 @@ public class SynchronizeExecuteDialog extends AbstractDialog
   public SynchronizeExecuteDialog(List<SynchronizeJob> jobs, int position)
   {
     super(position);
-    this.setTitle(i18n.tr("Auszuführende Aufträge"));
+    this.setTitle(i18n.tr("AuszufÃ¼hrende AuftrÃ¤ge"));
     this.setSize(470,300);
     this.jobs = jobs;
   }
@@ -53,12 +53,12 @@ public class SynchronizeExecuteDialog extends AbstractDialog
   protected void paint(Composite parent) throws Exception
   {
     Container container = new SimpleContainer(parent,true);
-    container.addText(i18n.tr("Folgende Überweisungen und Lastschriften werden jetzt " +
-    		                      "an die Bank übertragen. Bitte prüfen Sie diese nochmals " +
+    container.addText(i18n.tr("Folgende Ãœberweisungen und Lastschriften werden jetzt " +
+    		                      "an die Bank Ã¼bertragen. Bitte prÃ¼fen Sie diese nochmals " +
     		                      "um sicherzustellen, dass Sie keinen Auftrag versehentlich absenden."),true);
     
     TablePart table = new TablePart(this.jobs,null);
-    table.addColumn(i18n.tr("Aufträge"),"name");
+    table.addColumn(i18n.tr("AuftrÃ¤ge"),"name");
     table.setSummary(false);
     table.setRememberColWidths(true);
     container.addPart(table);
@@ -66,7 +66,7 @@ public class SynchronizeExecuteDialog extends AbstractDialog
     // table.paint(parent);
 
     ButtonArea buttons = new ButtonArea();
-    buttons.addButton(i18n.tr("Jetzt ausführen"),new Action()
+    buttons.addButton(i18n.tr("Jetzt ausfÃ¼hren"),new Action()
     {
       public void handleAction(Object context) throws ApplicationException
       {

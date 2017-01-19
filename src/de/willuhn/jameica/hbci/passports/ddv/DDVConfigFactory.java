@@ -154,7 +154,7 @@ public class DDVConfigFactory
   public static void delete(DDVConfig config) throws ApplicationException
   {
     if (config == null)
-      throw new ApplicationException(i18n.tr("Bitte wählen Sie die zu löschende Konfiguration aus"));
+      throw new ApplicationException(i18n.tr("Bitte wÃ¤hlen Sie die zu lÃ¶schende Konfiguration aus"));
 
     // Loeschen der Einstellungen aus der Config
     config.deleteProperties();
@@ -204,7 +204,7 @@ public class DDVConfigFactory
         // Testen, ob der Kartenleser ueberhaupt unterstuetzt wird
         if (!reader.isSupported())
         {
-          monitor.log("  " + i18n.tr("überspringe Kartenleser, wird von Ihrem System nicht unterstützt"));
+          monitor.log("  " + i18n.tr("Ã¼berspringe Kartenleser, wird von Ihrem System nicht unterstÃ¼tzt"));
           continue;
         }
 
@@ -215,13 +215,13 @@ public class DDVConfigFactory
         {
           if (s == null)
           {
-            monitor.log("  " + i18n.tr("überspringe Kartenleser, kein CTAPI-Treiber definiert."));
+            monitor.log("  " + i18n.tr("Ã¼berspringe Kartenleser, kein CTAPI-Treiber definiert."));
             continue;
           }
           File f = new File(s);
           if (!f.exists())
           {
-            monitor.log("  " + i18n.tr("überspringe Kartenleser, CTAPI-Treiber {0} existiert nicht.",f.getAbsolutePath()));
+            monitor.log("  " + i18n.tr("Ã¼berspringe Kartenleser, CTAPI-Treiber {0} existiert nicht.",f.getAbsolutePath()));
             continue;
           }
         }
@@ -449,7 +449,7 @@ public class DDVConfigFactory
   public static HBCIPassportChipcard createPassport(DDVConfig config) throws ApplicationException, RemoteException
   {
     if (config == null)
-      throw new ApplicationException(i18n.tr("Keine Konfiguration ausgewählt"));
+      throw new ApplicationException(i18n.tr("Keine Konfiguration ausgewÃ¤hlt"));
 
     Type type = config.getReaderPreset().getType();
     
@@ -563,7 +563,7 @@ public class DDVConfigFactory
     }
     
     if (file == null)
-      throw new ApplicationException(i18n.tr("Hibiscus unterstützt leider keine Chipkartenleser für Ihr Betriebssystem"));
+      throw new ApplicationException(i18n.tr("Hibiscus unterstÃ¼tzt leider keine Chipkartenleser fÃ¼r Ihr Betriebssystem"));
 
     File f = new File(de.willuhn.jameica.hbci.Settings.getLibPath(),file);
     if (!f.exists())

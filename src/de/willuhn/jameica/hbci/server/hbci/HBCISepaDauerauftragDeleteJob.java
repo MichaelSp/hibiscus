@@ -47,10 +47,10 @@ public class HBCISepaDauerauftragDeleteJob extends AbstractHBCIJob
 		try
 		{
 			if (auftrag == null)
-				throw new ApplicationException(i18n.tr("Bitte wählen Sie einen SEPA-Dauerauftrag aus"));
+				throw new ApplicationException(i18n.tr("Bitte wÃ¤hlen Sie einen SEPA-Dauerauftrag aus"));
 
 			if (!auftrag.isActive())
-				throw new ApplicationException(i18n.tr("Dauerauftrag liegt nicht bei der Bank vor und muss daher nicht online gelöscht werden"));
+				throw new ApplicationException(i18n.tr("Dauerauftrag liegt nicht bei der Bank vor und muss daher nicht online gelÃ¶scht werden"));
 
 			if (auftrag.isNewObject())
 				auftrag.store();
@@ -148,7 +148,7 @@ public class HBCISepaDauerauftragDeleteJob extends AbstractHBCIJob
    */
   public String getName() throws RemoteException
   {
-    return i18n.tr("SEPA-Dauerauftrag an {0} löschen",dauerauftrag.getGegenkontoName());
+    return i18n.tr("SEPA-Dauerauftrag an {0} lÃ¶schen",dauerauftrag.getGegenkontoName());
   }
 
   /**
@@ -157,7 +157,7 @@ public class HBCISepaDauerauftragDeleteJob extends AbstractHBCIJob
   protected void markExecuted() throws RemoteException, ApplicationException
   {
     dauerauftrag.delete();
-    konto.addToProtokoll(i18n.tr("SEPA-Dauerauftrag an {0} gelöscht",dauerauftrag.getGegenkontoName()),Protokoll.TYP_SUCCESS);
+    konto.addToProtokoll(i18n.tr("SEPA-Dauerauftrag an {0} gelÃ¶scht",dauerauftrag.getGegenkontoName()),Protokoll.TYP_SUCCESS);
     Logger.info("sepa-dauerauftrag deleted successfully");
   }
 
@@ -166,7 +166,7 @@ public class HBCISepaDauerauftragDeleteJob extends AbstractHBCIJob
    */
   protected String markFailed(String error) throws RemoteException, ApplicationException
   {
-    String msg = i18n.tr("Fehler beim Löschen des SEPA-Dauerauftrages an {0}: {1}",new String[]{dauerauftrag.getGegenkontoName(),error});
+    String msg = i18n.tr("Fehler beim LÃ¶schen des SEPA-Dauerauftrages an {0}: {1}",new String[]{dauerauftrag.getGegenkontoName(),error});
     konto.addToProtokoll(msg,Protokoll.TYP_ERROR);
     return msg;
   }

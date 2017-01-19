@@ -85,7 +85,7 @@ public class HibiscusAddressImpl extends AbstractHibiscusDBObject implements Hib
 
         // Nur pruefen, wenn ungueltige Bankverbindungen im Adressbuch erlaubt sind
         if (!Settings.getKontoCheckExcludeAddressbook() && !HBCIProperties.checkAccountCRC(blz,kn))
-          throw new ApplicationException(i18n.tr("Ungültige BLZ/Kontonummer. Bitte prüfen Sie Ihre Eingaben."));
+          throw new ApplicationException(i18n.tr("UngÃ¼ltige BLZ/Kontonummer. Bitte prÃ¼fen Sie Ihre Eingaben."));
         
         haveAccount = true;
       }
@@ -121,7 +121,7 @@ public class HibiscusAddressImpl extends AbstractHibiscusDBObject implements Hib
 		catch (RemoteException e)
 		{
 			Logger.error("error while checking empfaenger",e);
-			throw new ApplicationException(i18n.tr("Fehler bei der Prüfung des Empfängers"));
+			throw new ApplicationException(i18n.tr("Fehler bei der PrÃ¼fung des EmpfÃ¤ngers"));
 		}
   }
   

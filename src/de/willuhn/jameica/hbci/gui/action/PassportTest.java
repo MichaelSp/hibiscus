@@ -48,7 +48,7 @@ public class PassportTest implements Action
 		final I18N i18n = Application.getPluginLoader().getPlugin(HBCI.class).getResources().getI18N();
 
 		if (context == null || (!(context instanceof Passport) && !(context instanceof PassportHandle)))
-			throw new ApplicationException(i18n.tr("Bitte w‰hlen Sie ein Sicherheits-Medium aus."));
+			throw new ApplicationException(i18n.tr("Bitte w√§hlen Sie ein Sicherheits-Medium aus."));
 
 		BackgroundTask task = new BackgroundTask() {
       public void run(final ProgressMonitor monitor) throws ApplicationException

@@ -59,7 +59,7 @@ public class TurnusRestriction implements Restriction
 		catch (RemoteException e)
 		{
 			Logger.error("error while performing turnus restriction test",e);
-			throw new ApplicationException(i18n.tr("Fehler beim Testen des Zahlungsturnus auf Gültigkeit"));
+			throw new ApplicationException(i18n.tr("Fehler beim Testen des Zahlungsturnus auf GÃ¼ltigkeit"));
 		}
   }
 
@@ -90,7 +90,7 @@ public class TurnusRestriction implements Restriction
 				// skip
 			}
 		}
-		throw new ApplicationException(i18n.tr("Turnus mit einem Intervall von {0} Monaten wird von Ihrer Bank nicht unterstützt",""+test));
+		throw new ApplicationException(i18n.tr("Turnus mit einem Intervall von {0} Monaten wird von Ihrer Bank nicht unterstÃ¼tzt",""+test));
 	}
 
   private void testTurnusDays() throws ApplicationException, RemoteException
@@ -125,11 +125,11 @@ public class TurnusRestriction implements Restriction
     }
 
     if (test == HBCIProperties.HBCI_LAST_OF_MONTH)
-      throw new ApplicationException(i18n.tr("Zahlungen zum Monatsletzten werden von Ihrer Bank nicht unterstützt"));
+      throw new ApplicationException(i18n.tr("Zahlungen zum Monatsletzten werden von Ihrer Bank nicht unterstÃ¼tzt"));
 
     String s = sb.toString().substring(1);
     String[] values = new String[] { ""+test,s};
-    throw new ApplicationException(i18n.tr("Zahlungen am {0}. des Monats werden von Ihrer Bank nicht unterstützt. Erlaubte Werte: {1}",values));
+    throw new ApplicationException(i18n.tr("Zahlungen am {0}. des Monats werden von Ihrer Bank nicht unterstÃ¼tzt. Erlaubte Werte: {1}",values));
   }
 
 }

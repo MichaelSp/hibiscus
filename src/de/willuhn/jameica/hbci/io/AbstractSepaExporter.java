@@ -87,9 +87,9 @@ public abstract class AbstractSepaExporter extends AbstractExporter
     if (ids.size() > 1)
     {
       KontoAuswahlDialog d = new KontoAuswahlDialog(null,KontoFilter.FOREIGN,KontoAuswahlDialog.POSITION_CENTER);
-      d.setText(i18n.tr("Die Auftr‰ge sind unterschiedlichen Konten zugeordnet.\n" +
-      		              "Eine SEPA XML-Datei kann jedoch nur Auftr‰ge eines Kontos enthalten.\n\n" +
-      		              "Bitte w‰hlen Sie das Konto, dem die Auftr‰ge in der XML-Datei\n" +
+      d.setText(i18n.tr("Die Auftr√§ge sind unterschiedlichen Konten zugeordnet.\n" +
+      		              "Eine SEPA XML-Datei kann jedoch nur Auftr√§ge eines Kontos enthalten.\n\n" +
+      		              "Bitte w√§hlen Sie das Konto, dem die Auftr√§ge in der XML-Datei\n" +
       		              "zugeordnet werden sollen"));
       konto = (Konto) d.open();
     }

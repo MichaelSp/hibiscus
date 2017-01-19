@@ -235,8 +235,8 @@ public class SynchronizeList extends TablePart
               return b;
             }
           };
-          d1.setText(i18n.tr("Bitte wählen Sie das Konto, für welches Sie die " +
-                             "Synchronisierungsoptionen ändern möchten."));
+          d1.setText(i18n.tr("Bitte wÃ¤hlen Sie das Konto, fÃ¼r welches Sie die " +
+                             "Synchronisierungsoptionen Ã¤ndern mÃ¶chten."));
           k = (Konto) d1.open();
         }
         

@@ -62,7 +62,7 @@ public class PainVersionDialog extends AbstractDialog
   protected void paint(Composite parent) throws Exception
   {
     Container c = new SimpleContainer(parent);
-    c.addText(i18n.tr("Bitte w‰hlen Sie die zu verwendende SEPA XML-Version."),true);
+    c.addText(i18n.tr("Bitte w√§hlen Sie die zu verwendende SEPA XML-Version."),true);
     
     final SelectInput version = this.getPainVersionInput();
     final LabelInput msg      = this.getMessage();
@@ -71,14 +71,14 @@ public class PainVersionDialog extends AbstractDialog
     c.addInput(msg);
     
     ButtonArea buttons = new ButtonArea();
-    this.ok = new Button(i18n.tr("‹bernehmen"),new Action()
+    this.ok = new Button(i18n.tr("√úbernehmen"),new Action()
     {
       public void handleAction(Object context) throws ApplicationException
       {
         painVersion = (PainVersion) version.getValue();
         if (painVersion == null)
         {
-          msg.setValue(i18n.tr("Bitte w‰hlen Sie eine SEPA XML-Version aus."));
+          msg.setValue(i18n.tr("Bitte w√§hlen Sie eine SEPA XML-Version aus."));
           return;
         }
         close();

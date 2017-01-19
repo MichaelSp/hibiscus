@@ -38,7 +38,7 @@ import de.willuhn.logging.Logger;
 import de.willuhn.util.I18N;
 
 /**
- * Dialog für die Eingabe eines Passwortes beim Laden des Schluessels.
+ * Dialog fÃ¼r die Eingabe eines Passwortes beim Laden des Schluessels.
  */
 public class KeyPasswordLoadDialog extends PasswordDialog
 {
@@ -77,13 +77,13 @@ public class KeyPasswordLoadDialog extends PasswordDialog
     String text = null;
     if (s != null)
     {
-      setTitle(i18n.tr("Schlüsseldiskette. Konto: {0}",s));
-      text = i18n.tr("Bitte geben Sie das Passwort der Schlüsseldiskette ein.\nKonto: {0}",s);
+      setTitle(i18n.tr("SchlÃ¼sseldiskette. Konto: {0}",s));
+      text = i18n.tr("Bitte geben Sie das Passwort der SchlÃ¼sseldiskette ein.\nKonto: {0}",s);
     }
     else
     {
-      setTitle(i18n.tr("Schlüsseldiskette"));
-      text = i18n.tr("Bitte geben Sie das Passwort der Schlüsseldiskette ein.");
+      setTitle(i18n.tr("SchlÃ¼sseldiskette"));
+      text = i18n.tr("Bitte geben Sie das Passwort der SchlÃ¼sseldiskette ein.");
     }
     
     if (passport != null && (passport instanceof HBCIPassportRDHNew))
@@ -104,7 +104,7 @@ public class KeyPasswordLoadDialog extends PasswordDialog
     Part p = new Part() {
       public void paint(Composite parent) throws RemoteException
       {
-        String text = i18n.tr("Schlüssel-Datei: {0}",filename);
+        String text = i18n.tr("SchlÃ¼ssel-Datei: {0}",filename);
 
         final Label comment = new Label(parent,SWT.WRAP);
         comment.setText(text);

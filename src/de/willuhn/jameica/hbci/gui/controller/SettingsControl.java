@@ -193,9 +193,9 @@ public class SettingsControl extends AbstractControl
             YesNoDialog d = new YesNoDialog(YesNoDialog.POSITION_CENTER);
             d.setTitle(i18n.tr("Warnung"));
             d.setSideImage(SWTUtil.getImage("dialog-warning-large.png"));
-            d.setText(i18n.tr("Mit der permanenten Speicherung der PIN verstoﬂen Sie unter Umst‰nden\n" +
+            d.setText(i18n.tr("Mit der permanenten Speicherung der PIN versto√üen Sie unter Umst√§nden\n" +
                               "gegen die Onlinebanking-AGB Ihres Geldinstitutes. Bitte wenden Sie sich\n" +
-                              "an Ihre Bank und fragen Sie diese, ob das Speichern der PIN zul‰ssig ist.\n\n" +
+                              "an Ihre Bank und fragen Sie diese, ob das Speichern der PIN zul√§ssig ist.\n\n" +
                               "PIN-Speicherung wirklich aktivieren?"));
             b = ((Boolean) d.open()).booleanValue();
           }

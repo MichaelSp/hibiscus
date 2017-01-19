@@ -62,16 +62,16 @@ public abstract class AbstractDTAUSImporter extends AbstractDTAUSIO implements I
       
       int toleranz = settings.getInt("dtaus.fehlertoleranz",DtausDateiParser.UMLAUTUMSETZUNG);
       
-      /* Aus http://de.wikipedia.org/wiki/Datentr‰geraustauschverfahren:
+      /* Aus http://de.wikipedia.org/wiki/Datentr√§geraustauschverfahren:
        * "Bei der Kodierung der Zeichen schreibt die "Spezifikation der Datenformate",
        * Version 2.2 vom 29. Oktober 2007 (Final Version) des Zentralen Kreditausschusses
-       * (ZKA) die DIN-66003-Kodierung vor, bei der die deutschen Umlaute und das ﬂ im 
+       * (ZKA) die DIN-66003-Kodierung vor, bei der die deutschen Umlaute und das √ü im 
        * Bereich der ASCII-Kodierung definiert sind.[1] DIN 66003 ist die deutsche
-       * Bezeichnung f¸r den deutschen Teil der internationalen Norm ISO 646. Die Bundesbank
-       * erw‰hnt in ihrer Spezifikation abweichend hierzu eine Kodierung der Zeichen mittels
-       * der MS-DOS Codepage 437. Beide Kodierungen entsprechen nicht der weitl‰ufig
+       * Bezeichnung f√ºr den deutschen Teil der internationalen Norm ISO 646. Die Bundesbank
+       * erw√§hnt in ihrer Spezifikation abweichend hierzu eine Kodierung der Zeichen mittels
+       * der MS-DOS Codepage 437. Beide Kodierungen entsprechen nicht der weitl√§ufig
        * verwendeten ISO-8859-Kodierung, die in keiner der beiden Spezifikationen als
-       * g¸ltige Kodierung einer DTAUS-Datei spezifiziert ist."
+       * g√ºltige Kodierung einer DTAUS-Datei spezifiziert ist."
        *
        * Insbesondere aufgrund des letzten Satzes ist es meiner Meinung nach
        * zu viel des Guten, hier noch einen extra Auswahl-Dialog fuer den
@@ -154,7 +154,7 @@ public abstract class AbstractDTAUSImporter extends AbstractDTAUSIO implements I
             sb.append("\n");
             sb.append(i18n.tr("Betrag: {0}",HBCI.DECIMALFORMAT.format(c.getBetragInEuro())));
 
-            String s = i18n.tr("Fehler beim Import eines Datensatzes\n\n{0}\n\n{1}\n\nDatensatz ¸berspringen und Import fortsetzen?",new String[]{sb.toString(),ace.getMessage()});
+            String s = i18n.tr("Fehler beim Import eines Datensatzes\n\n{0}\n\n{1}\n\nDatensatz √ºberspringen und Import fortsetzen?",new String[]{sb.toString(),ace.getMessage()});
             if (!Application.getCallback().askUser(s))
             {
               monitor.setStatusText(i18n.tr("Import abgebrochen"));
@@ -162,7 +162,7 @@ public abstract class AbstractDTAUSImporter extends AbstractDTAUSIO implements I
               return;
             }
             monitor.log("  " + ace.getMessage());
-            monitor.log("  " + i18n.tr("‹berspringe Datensatz"));
+            monitor.log("  " + i18n.tr("√úberspringe Datensatz"));
           }
           catch (OperationCanceledException oce)
           {
@@ -172,17 +172,17 @@ public abstract class AbstractDTAUSImporter extends AbstractDTAUSIO implements I
           {
             error++;
             Logger.error("unable to import transfer",e1);
-            monitor.log("  " + i18n.tr("Fehler beim Import des Datensatzes, ¸berspringe Datensatz"));
+            monitor.log("  " + i18n.tr("Fehler beim Import des Datensatzes, √ºberspringe Datensatz"));
           }
         }
         if (error > 0)
         {
           monitor.setStatus(ProgressMonitor.STATUS_ERROR);
-          monitor.setStatusText("  " + i18n.tr("{0} Datens‰tze importiert, {1} wegen Fehlern ¸bersprungen",new String[]{""+success,""+error}));
+          monitor.setStatusText("  " + i18n.tr("{0} Datens√§tze importiert, {1} wegen Fehlern √ºbersprungen",new String[]{""+success,""+error}));
         }
         else
         {
-          monitor.setStatusText("  " + i18n.tr("{0} Datens‰tze erfolgreich importiert",""+success));
+          monitor.setStatusText("  " + i18n.tr("{0} Datens√§tze erfolgreich importiert",""+success));
         }
       }
     }
@@ -245,7 +245,7 @@ public abstract class AbstractDTAUSImporter extends AbstractDTAUSIO implements I
       // User eines auswaehlen
       KontoAuswahlDialog d = new KontoAuswahlDialog(KontoAuswahlDialog.POSITION_CENTER);
       d.setText(i18n.tr("Konto {0} [BLZ {1}] nicht gefunden\n" +
-                        "Bitte w‰hlen Sie das zu verwendende Konto aus.",
+                        "Bitte w√§hlen Sie das zu verwendende Konto aus.",
                         new String[]{kontonummer == null || kontonummer.length() == 0 ? i18n.tr("<unbekannt>") : kontonummer,blz}));
 
       try
@@ -254,11 +254,11 @@ public abstract class AbstractDTAUSImporter extends AbstractDTAUSIO implements I
       }
       catch (OperationCanceledException oce)
       {
-        throw new ApplicationException(i18n.tr("Auftrag wird ¸bersprungen"));
+        throw new ApplicationException(i18n.tr("Auftrag wird √ºbersprungen"));
       }
       catch (Exception e)
       {
-        throw new ApplicationException(i18n.tr("Fehler beim Ausw‰hlen des Kontos"),e);
+        throw new ApplicationException(i18n.tr("Fehler beim Ausw√§hlen des Kontos"),e);
       }
     }
 
@@ -267,7 +267,7 @@ public abstract class AbstractDTAUSImporter extends AbstractDTAUSIO implements I
       kontenCache.put(kontonummer + blz,k);
       return k;
     }
-    throw new ApplicationException(i18n.tr("Kein Konto ausgew‰hlt"));
+    throw new ApplicationException(i18n.tr("Kein Konto ausgew√§hlt"));
   }
 
   /**

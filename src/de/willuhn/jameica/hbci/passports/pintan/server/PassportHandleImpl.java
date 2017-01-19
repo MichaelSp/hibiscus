@@ -88,7 +88,7 @@ public class PassportHandleImpl extends UnicastRemoteObject implements PassportH
 		try {
 	
       if (config == null && this.passport == null)
-        throw new ApplicationException(i18n.tr("Keine Konfiguration oder Konto ausgew‰hlt"));
+        throw new ApplicationException(i18n.tr("Keine Konfiguration oder Konto ausgew√§hlt"));
 
       if (config == null && this.passport != null && this.passport.getKonto() != null)
         config = PinTanConfigFactory.findByKonto(this.passport.getKonto());
@@ -127,7 +127,7 @@ public class PassportHandleImpl extends UnicastRemoteObject implements PassportH
       }
 
       if (config == null)
-        throw new ApplicationException(i18n.tr("Keine PIN/TAN-Konfiguration f¸r dieses Konto definiert"));
+        throw new ApplicationException(i18n.tr("Keine PIN/TAN-Konfiguration f√ºr dieses Konto definiert"));
       
 			Logger.debug("using passport file " + config.getFilename());
 
@@ -246,7 +246,7 @@ public class PassportHandleImpl extends UnicastRemoteObject implements PassportH
     catch (Exception e)
     {
       Logger.error("error while applying new user-/customer data",e);
-      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim ‹bernehmen der ge‰nderten Zugangsdaten: {0}",e.getMessage()),StatusBarMessage.TYPE_ERROR));
+      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim √úbernehmen der ge√§nderten Zugangsdaten: {0}",e.getMessage()),StatusBarMessage.TYPE_ERROR));
     }
   }
 

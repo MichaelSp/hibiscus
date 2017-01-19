@@ -141,12 +141,12 @@ public class SynchronizeOptionsDialog extends AbstractDialog
   {
     Container group = new SimpleContainer(parent);
 
-    group.addText(i18n.tr("Bitte w‰hlen Sie aus, welche Gesch‰ftsvorf‰lle bei der " +
-    		                  "Synchronisierung des Kontos ausgef¸hrt werden sollen."),true);
+    group.addText(i18n.tr("Bitte w√§hlen Sie aus, welche Gesch√§ftsvorf√§lle bei der " +
+    		                  "Synchronisierung des Kontos ausgef√ºhrt werden sollen."),true);
     
     group.addHeadline(this.konto.getLongName());
     
-    this.apply = new Button(i18n.tr("‹bernehmen"),new Action() {
+    this.apply = new Button(i18n.tr("√úbernehmen"),new Action() {
       public void handleAction(Object context) throws ApplicationException
       {
         
@@ -178,7 +178,7 @@ public class SynchronizeOptionsDialog extends AbstractDialog
         catch (Exception e)
         {
           Logger.error("unable to apply properties",e);
-          Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("‹bernehmen der Optionen fehlgeschlagen: {0}",e.getMessage()),StatusBarMessage.TYPE_ERROR));
+          Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("√úbernehmen der Optionen fehlgeschlagen: {0}",e.getMessage()),StatusBarMessage.TYPE_ERROR));
         }
         close();
       }
@@ -249,7 +249,7 @@ public class SynchronizeOptionsDialog extends AbstractDialog
     if (this.syncUmsatz == null)
     {
       this.syncUmsatz = new CheckboxInput(options.getSyncKontoauszuege());
-      this.syncUmsatz.setName(i18n.tr("Ums‰tze abrufen"));
+      this.syncUmsatz.setName(i18n.tr("Ums√§tze abrufen"));
       if (this.offline)
         this.syncUmsatz.addListener(new OfflineListener());
     }
@@ -265,7 +265,7 @@ public class SynchronizeOptionsDialog extends AbstractDialog
     if (this.syncSepaDauer == null)
     {
       this.syncSepaDauer = new CheckboxInput(options.getSyncSepaDauerauftraege());
-      this.syncSepaDauer.setName(i18n.tr("SEPA-Dauerauftr‰ge synchronisieren"));
+      this.syncSepaDauer.setName(i18n.tr("SEPA-Dauerauftr√§ge synchronisieren"));
     }
     return this.syncSepaDauer;
   }
@@ -279,7 +279,7 @@ public class SynchronizeOptionsDialog extends AbstractDialog
     if (this.syncAueb == null)
     {
       this.syncAueb = new CheckboxInput(options.getSyncAuslandsUeberweisungen());
-      this.syncAueb.setName(i18n.tr("F‰llige SEPA-‹berweisungen absenden"));
+      this.syncAueb.setName(i18n.tr("F√§llige SEPA-√úberweisungen absenden"));
     }
     return this.syncAueb;
   }
@@ -293,7 +293,7 @@ public class SynchronizeOptionsDialog extends AbstractDialog
     if (this.syncSepaLast == null)
     {
       this.syncSepaLast = new CheckboxInput(options.getSyncSepaLastschriften());
-      this.syncSepaLast.setName(i18n.tr("F‰llige SEPA-Lastschriften einziehen"));
+      this.syncSepaLast.setName(i18n.tr("F√§llige SEPA-Lastschriften einziehen"));
     }
     return this.syncSepaLast;
   }
@@ -353,7 +353,7 @@ public class SynchronizeOptionsDialog extends AbstractDialog
         boolean a = ((Boolean)getSyncOffline().getValue()).booleanValue();
         boolean b = ((Boolean)getSyncUmsatz().getValue()).booleanValue();
         if (a && b)
-          getErrorLabel().setValue(i18n.tr("Umsatzabruf und Anlegen von Gegenbuchungen\nkˆnnen nicht zusammen aktiviert werden."));
+          getErrorLabel().setValue(i18n.tr("Umsatzabruf und Anlegen von Gegenbuchungen\nk√∂nnen nicht zusammen aktiviert werden."));
         else
           getErrorLabel().setValue("\n");
         

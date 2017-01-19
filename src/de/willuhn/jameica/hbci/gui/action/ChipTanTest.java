@@ -50,20 +50,20 @@ public class ChipTanTest implements Action
         }
       };
       d.setTitle(i18n.tr("chipTAN-Test"));
-      d.setText(i18n.tr("Verwenden Sie diese Flicker-Grafik, um die Funktionsfähigkeit Ihres TAN-Generators zu testen.\n\n" +
+      d.setText(i18n.tr("Verwenden Sie diese Flicker-Grafik, um die FunktionsfÃ¤higkeit Ihres TAN-Generators zu testen.\n\n" +
                         "1. Schieben Sie Ihre Bank-Karte in den TAN-Generator\n" +
-                        "2. Halten Sie das Gerät bündig an den Bildschirm vor die blinkenden Balken. Die weißen\n" +
-                        "    Positionsdreiecke sollten zwischen Bildschirm und TAN-Generator übereinstimmen\n" +
+                        "2. Halten Sie das GerÃ¤t bÃ¼ndig an den Bildschirm vor die blinkenden Balken. Die weiÃŸen\n" +
+                        "    Positionsdreiecke sollten zwischen Bildschirm und TAN-Generator Ã¼bereinstimmen\n" +
                         "3. Passen Sie mit den Tasten \"-\" und \"+\" ggf. die Breite der Flicker-Grafik an\n" +
-                        "4. Drücken Sie die Taste \"F\", um den Scan-Vorgang zu starten\n" +
-                        "5. Wenn der Flicker-Code erfolgreich übertragen wurde, sollte auf dem Gerät der Text\n" +
-                        "    \"Überweisung Inland\" angezeigt werden.\n" +
-                        "6. Nach mehrmaligem Drücken der Taste \"OK\" sollten\n" +
+                        "4. DrÃ¼cken Sie die Taste \"F\", um den Scan-Vorgang zu starten\n" +
+                        "5. Wenn der Flicker-Code erfolgreich Ã¼bertragen wurde, sollte auf dem GerÃ¤t der Text\n" +
+                        "    \"Ãœberweisung Inland\" angezeigt werden.\n" +
+                        "6. Nach mehrmaligem DrÃ¼cken der Taste \"OK\" sollten\n" +
                         "    \"Konto Empf: 1234567890\"\n" +
                         "    \"BLZ Empf: 12030000\"\n" +
                         "    \"Betrag: 0,20\"\n" +
                         "    angezeigt werden\n" +
-                        "7. Nach einer weiterer Bestätigung mit \"OK\" sollte eine TAN generiert werden.\n"));
+                        "7. Nach einer weiterer BestÃ¤tigung mit \"OK\" sollte eine TAN generiert werden.\n"));
       String tan = StringUtils.trimToNull((String) d.open());
       if (tan != null)
         Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Eingegebene TAN: {0}",tan),StatusBarMessage.TYPE_SUCCESS));

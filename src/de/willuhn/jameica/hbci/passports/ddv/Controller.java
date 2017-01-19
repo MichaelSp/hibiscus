@@ -114,7 +114,7 @@ public class Controller extends AbstractControl
 
     ContextMenu ctx = new ContextMenu();
 
-    ctx.addItem(new CheckedContextMenuItem(i18n.tr("Öffnen"),new Action() {
+    ctx.addItem(new CheckedContextMenuItem(i18n.tr("Ã–ffnen"),new Action() {
       public void handleAction(Object context) throws ApplicationException {
         if (context == null)
           return;
@@ -134,7 +134,7 @@ public class Controller extends AbstractControl
     },"document-new.png"));
 
     ctx.addItem(ContextMenuItem.SEPARATOR);
-    ctx.addItem(new CheckedContextMenuItem(i18n.tr("Löschen..."),new Action() {
+    ctx.addItem(new CheckedContextMenuItem(i18n.tr("LÃ¶schen..."),new Action() {
       public void handleAction(Object context) throws ApplicationException {handleDelete((DDVConfig)context);}
     },"user-trash-full.png"));
 
@@ -310,7 +310,7 @@ public class Controller extends AbstractControl
   {
     try
     {
-      String ask = i18n.tr("Legen Sie Ihre HBCI-Chipkarte vor dem Test in das Lesegerät.\nDie Suchen kann einige Minuten in Anspruch nehmen. Vorgang fortsetzen?");
+      String ask = i18n.tr("Legen Sie Ihre HBCI-Chipkarte vor dem Test in das LesegerÃ¤t.\nDie Suchen kann einige Minuten in Anspruch nehmen. Vorgang fortsetzen?");
       if (!Application.getCallback().askUser(ask))
         return;
     }
@@ -464,12 +464,12 @@ public class Controller extends AbstractControl
       return;
     try
     {
-      if (!Application.getCallback().askUser(i18n.tr("Wollen Sie diese Konfiguration wirklich löschen?")))
+      if (!Application.getCallback().askUser(i18n.tr("Wollen Sie diese Konfiguration wirklich lÃ¶schen?")))
         return;
 
       DDVConfigFactory.delete(config);
       getConfigList().removeItem(config);
-      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Konfiguration gelöscht"),StatusBarMessage.TYPE_SUCCESS));
+      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Konfiguration gelÃ¶scht"),StatusBarMessage.TYPE_SUCCESS));
     }
     catch (ApplicationException ae)
     {
@@ -483,7 +483,7 @@ public class Controller extends AbstractControl
     catch (Exception e)
     {
       Logger.error("error while deleting config",e);
-      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim Löschen der Konfiguration: {0}",e.getMessage()),StatusBarMessage.TYPE_ERROR));
+      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim LÃ¶schen der Konfiguration: {0}",e.getMessage()),StatusBarMessage.TYPE_ERROR));
     }
   }
   
@@ -614,7 +614,7 @@ public class Controller extends AbstractControl
           else
           {
             Logger.error("error while changing bank data",e);
-            Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim Ändern der Bankdaten: {0}",e.getMessage()),StatusBarMessage.TYPE_ERROR));
+            Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim Ã„ndern der Bankdaten: {0}",e.getMessage()),StatusBarMessage.TYPE_ERROR));
           }
         }
         finally
@@ -656,7 +656,7 @@ public class Controller extends AbstractControl
 
         if (!r.isSupported())
         {
-          GUI.getView().setErrorText(i18n.tr("Der ausgewählte Kartenleser wird von Hibiscus nicht unterstützt"));
+          GUI.getView().setErrorText(i18n.tr("Der ausgewÃ¤hlte Kartenleser wird von Hibiscus nicht unterstÃ¼tzt"));
           return;
         }
         
@@ -696,7 +696,7 @@ public class Controller extends AbstractControl
     	catch (Exception e)
     	{
     		Logger.error("error while applying reader preset",e);
-        Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim Übernehmen der Einstellungen: {0}",e.getMessage()),StatusBarMessage.TYPE_ERROR));
+        Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim Ãœbernehmen der Einstellungen: {0}",e.getMessage()),StatusBarMessage.TYPE_ERROR));
     	}
     }
   }

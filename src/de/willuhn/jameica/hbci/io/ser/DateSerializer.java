@@ -56,7 +56,7 @@ public class DateSerializer extends DefaultSerializer<Date>
     catch (Exception e)
     {
       Logger.error("unable to parse string " + value + " as date",e);
-      throw new IOException(i18n.tr("Text \"{0}\" ist kein gültiges Datum",value));
+      throw new IOException(i18n.tr("Text \"{0}\" ist kein gÃ¼ltiges Datum",value));
     }
   }
 

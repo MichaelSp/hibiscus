@@ -27,7 +27,7 @@ public class SynchronizeJobSepaDauerauftragList extends AbstractSynchronizeJob
     try
     {
       Konto kt = (Konto) this.getContext(CTX_ENTITY);
-      return i18n.tr("{0}: SEPA-Dauerauftr‰ge abrufen",kt.getLongName());
+      return i18n.tr("{0}: SEPA-Dauerauftr√§ge abrufen",kt.getLongName());
     }
     catch (RemoteException re)
     {

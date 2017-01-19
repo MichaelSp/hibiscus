@@ -80,7 +80,7 @@ public class PassportTree extends TreePart
     this.setMulti(false);
     
     ContextMenu menu = new ContextMenu();
-    menu.addItem(new CheckedSingleContextMenuItem(i18n.tr("Öffnen"),new Action() {
+    menu.addItem(new CheckedSingleContextMenuItem(i18n.tr("Ã–ffnen"),new Action() {
       public void handleAction(Object context) throws ApplicationException
       {
         if (context == null || !(context instanceof ConfigObject))
@@ -103,7 +103,7 @@ public class PassportTree extends TreePart
     },"seahorse-preferences.png"));
     
     menu.addItem(ContextMenuItem.SEPARATOR);
-    menu.addItem(new CheckedSingleContextMenuItem(i18n.tr("Löschen"),new Action() {
+    menu.addItem(new CheckedSingleContextMenuItem(i18n.tr("LÃ¶schen"),new Action() {
       public void handleAction(Object context) throws ApplicationException
       {
         if (context == null || !(context instanceof ConfigObject))
@@ -115,7 +115,7 @@ public class PassportTree extends TreePart
 
         try
         {
-          if (!Application.getCallback().askUser(i18n.tr("Wollen Sie diesen Bank-Zugang wirklich löschen?\nDie Konten, Aufträge und Umsätze bleiben erhalten.")))
+          if (!Application.getCallback().askUser(i18n.tr("Wollen Sie diesen Bank-Zugang wirklich lÃ¶schen?\nDie Konten, AuftrÃ¤ge und UmsÃ¤tze bleiben erhalten.")))
             return;
         }
         catch (OperationCanceledException oce)
@@ -130,7 +130,7 @@ public class PassportTree extends TreePart
         catch (Exception e)
         {
           Logger.error("unable to delete config",e);
-          throw new ApplicationException(i18n.tr("Löschen fehlgeschlagen: {0}",e.getMessage()));
+          throw new ApplicationException(i18n.tr("LÃ¶schen fehlgeschlagen: {0}",e.getMessage()));
         }
         
         config.delete();

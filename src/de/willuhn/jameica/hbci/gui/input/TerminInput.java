@@ -56,7 +56,7 @@ public class TerminInput extends DateInput
     
     this.setName(i18n.tr("Erinnerungstermin"));
     this.setTitle(i18n.tr("Erinnerung"));
-    this.setText(i18n.tr("Bitte wählen Sie ein Datum aus, zu dem\nHibiscus Sie an den Auftrag erinnern soll."));
+    this.setText(i18n.tr("Bitte wÃ¤hlen Sie ein Datum aus, zu dem\nHibiscus Sie an den Auftrag erinnern soll."));
     this.setComment("");
     this.setMandatory(true);
     
@@ -119,12 +119,12 @@ public class TerminInput extends DateInput
           // checken, ob wir auch noch das Ausfuehrungsdatum haben
           Date ausgefuehrt = auftrag.getAusfuehrungsdatum();
           if (ausgefuehrt != null)
-            setComment(i18n.tr("Am {0} ausgeführt",HBCI.DATEFORMAT.format(ausgefuehrt)));
+            setComment(i18n.tr("Am {0} ausgefÃ¼hrt",HBCI.DATEFORMAT.format(ausgefuehrt)));
           else
-            setComment(i18n.tr("Bereits ausgeführt"));
+            setComment(i18n.tr("Bereits ausgefÃ¼hrt"));
         }
         else if (auftrag.ueberfaellig())
-          setComment(i18n.tr("Der Auftrag ist fällig"));
+          setComment(i18n.tr("Der Auftrag ist fÃ¤llig"));
         else
           setComment("");
       }
@@ -144,7 +144,7 @@ public class TerminInput extends DateInput
  * @N BUGZILLA 182 - Erste Version von client-seitigen Dauerauftraegen fuer alle Auftragsarten
  *
  * Revision 1.2  2011-06-24 07:55:41  willuhn
- * @C Bei Hibiscus-verwalteten Terminen besser "Fällig am" verwenden - ist nicht so missverstaendlich - der User denkt sonst ggf. es sei ein bankseitig terminierter Auftrag
+ * @C Bei Hibiscus-verwalteten Terminen besser "FÃ¤llig am" verwenden - ist nicht so missverstaendlich - der User denkt sonst ggf. es sei ein bankseitig terminierter Auftrag
  *
  * Revision 1.1  2011-05-20 16:22:31  willuhn
  * @N Termin-Eingabefeld in eigene Klasse ausgelagert (verhindert duplizierten Code) - bessere Kommentare

@@ -57,7 +57,7 @@ public class HBCISepaDauerauftragStoreJob extends AbstractHBCIJob
 		try
 		{
 			if (auftrag == null)
-				throw new ApplicationException(i18n.tr("Bitte wählen Sie einen SEPA-Dauerauftrag aus"));
+				throw new ApplicationException(i18n.tr("Bitte wÃ¤hlen Sie einen SEPA-Dauerauftrag aus"));
 
 			if (auftrag.isNewObject())
 				auftrag.store();
@@ -70,7 +70,7 @@ public class HBCISepaDauerauftragStoreJob extends AbstractHBCIJob
       {
 			  // Limit pruefen wir nur bei neuen Dauerauftraegen
         if (this.dauerauftrag.getBetrag() > Settings.getUeberweisungLimit())
-          throw new ApplicationException(i18n.tr("Auftragslimit überschritten: {0} ", 
+          throw new ApplicationException(i18n.tr("Auftragslimit Ã¼berschritten: {0} ", 
             HBCI.DECIMALFORMAT.format(Settings.getUeberweisungLimit()) + " " + this.konto.getWaehrung()));
       }
 
@@ -189,7 +189,7 @@ public class HBCISepaDauerauftragStoreJob extends AbstractHBCIJob
     if (dauerauftrag.isActive())
       konto.addToProtokoll(i18n.tr("SEPA-Dauerauftrag aktualisiert an {0}",empfName),Protokoll.TYP_SUCCESS);
     else
-      konto.addToProtokoll(i18n.tr("SEPA-Dauerauftrag ausgeführt an {0} ",empfName),Protokoll.TYP_SUCCESS);
+      konto.addToProtokoll(i18n.tr("SEPA-Dauerauftrag ausgefÃ¼hrt an {0} ",empfName),Protokoll.TYP_SUCCESS);
 
     String orderID = null;
     HBCIJobResult result = this.getJobResult();
@@ -201,7 +201,7 @@ public class HBCISepaDauerauftragStoreJob extends AbstractHBCIJob
     if (StringUtils.trimToNull(orderID) == null)
     {
       Logger.warn("got no order id for this job, using placeholder id " + BaseDauerauftrag.ORDERID_PLACEHOLDER);
-      konto.addToProtokoll(i18n.tr("Keine Order-ID für SEPA-Dauerauftrag von Bank erhalten",empfName),Protokoll.TYP_ERROR);
+      konto.addToProtokoll(i18n.tr("Keine Order-ID fÃ¼r SEPA-Dauerauftrag von Bank erhalten",empfName),Protokoll.TYP_ERROR);
       orderID = BaseDauerauftrag.ORDERID_PLACEHOLDER;
     }
     dauerauftrag.setOrderID(orderID);
@@ -217,7 +217,7 @@ public class HBCISepaDauerauftragStoreJob extends AbstractHBCIJob
    */
   protected String markFailed(String error) throws RemoteException, ApplicationException
   {
-    String msg = i18n.tr("Fehler beim Ausführen des SEPA-Dauerauftrages an {0}: {1}",new String[]{dauerauftrag.getGegenkontoName(),error});
+    String msg = i18n.tr("Fehler beim AusfÃ¼hren des SEPA-Dauerauftrages an {0}: {1}",new String[]{dauerauftrag.getGegenkontoName(),error});
     konto.addToProtokoll(msg,Protokoll.TYP_ERROR);
     return msg;
   }

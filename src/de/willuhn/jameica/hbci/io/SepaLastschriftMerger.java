@@ -49,7 +49,7 @@ public class SepaLastschriftMerger
   public List<SepaSammelLastschrift> merge(List<SepaLastschrift> lastschriften) throws ApplicationException
   {
     if (lastschriften == null || lastschriften.size() == 0)
-      throw new ApplicationException(i18n.tr("Bitte w‰hlen Sie einen oder mehrere Auftr‰ge aus"));
+      throw new ApplicationException(i18n.tr("Bitte w√§hlen Sie einen oder mehrere Auftr√§ge aus"));
     
     List<SepaSammelLastschrift> result = new ArrayList<SepaSammelLastschrift>();
     SepaSammelLastschrift tx = null;

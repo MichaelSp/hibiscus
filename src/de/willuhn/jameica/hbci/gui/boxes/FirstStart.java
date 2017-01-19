@@ -134,14 +134,14 @@ public class FirstStart extends AbstractBox
       Label desc = new Label(comp,SWT.WRAP);
       desc.setBackground(bg);
       desc.setLayoutData(new GridData(GridData.FILL_HORIZONTAL));
-      desc.setText(i18n.tr("Bitte richten Sie zun‰chst einen Bank-Zugang (Chipkarte, Schl¸sseldiskette oder PIN/TAN) ein.\n\n" +
-          "Wechseln Sie anschlieﬂend zur Konten-‹bersicht und pr¸fen Sie die angelegten Konten. " +
+      desc.setText(i18n.tr("Bitte richten Sie zun√§chst einen Bank-Zugang (Chipkarte, Schl√ºsseldiskette oder PIN/TAN) ein.\n\n" +
+          "Wechseln Sie anschlie√üend zur Konten-√úbersicht und pr√ºfen Sie die angelegten Konten. " +
           "Falls sie nicht automatisch angelegt wurden, dann erstellen Sie das Konto bitte manuell."));
     }
       
     ButtonArea buttons = new ButtonArea();
     buttons.addButton(i18n.tr("Bank-Zugang einrichten"),new PassportDetail(),null,true,"seahorse-preferences.png");
-    buttons.addButton(i18n.tr("Konten-‹bersicht"),new KontoList(),null,false,"system-file-manager.png");
+    buttons.addButton(i18n.tr("Konten-√úbersicht"),new KontoList(),null,false,"system-file-manager.png");
     buttons.paint(comp);
   }
 

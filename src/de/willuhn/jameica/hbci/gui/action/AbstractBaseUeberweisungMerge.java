@@ -46,10 +46,10 @@ public abstract class AbstractBaseUeberweisungMerge implements Action
 		I18N i18n = Application.getPluginLoader().getPlugin(HBCI.class).getResources().getI18N();
 
 		if (context == null)
-      throw new ApplicationException(i18n.tr("Bitte w‰hlen Sie einen oder mehrere Auftr‰ge aus"));
+      throw new ApplicationException(i18n.tr("Bitte w√§hlen Sie einen oder mehrere Auftr√§ge aus"));
 
     if (!(context instanceof BaseUeberweisung) && !(context instanceof BaseUeberweisung[]))
-      throw new ApplicationException(i18n.tr("Bitte w‰hlen Sie einen oder mehrere Auftr‰ge aus"));
+      throw new ApplicationException(i18n.tr("Bitte w√§hlen Sie einen oder mehrere Auftr√§ge aus"));
 
     BaseUeberweisung[] transfers = null;
     
@@ -59,7 +59,7 @@ public abstract class AbstractBaseUeberweisungMerge implements Action
       transfers = (BaseUeberweisung[]) context;
     
     if (transfers.length == 0)
-      throw new ApplicationException(i18n.tr("Bitte w‰hlen Sie einen oder mehrere Auftr‰ge aus"));
+      throw new ApplicationException(i18n.tr("Bitte w√§hlen Sie einen oder mehrere Auftr√§ge aus"));
       
     SammelTransfer t = null;
 		try

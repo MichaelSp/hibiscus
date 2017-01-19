@@ -101,13 +101,13 @@ public class VersionImpl extends AbstractDBObject implements Version
     {
       if (getName() == null || getName().length() == 0)
       {
-        throw new ApplicationException(i18n.tr("Keine Bezeichnung für die Version angegeben"));
+        throw new ApplicationException(i18n.tr("Keine Bezeichnung fÃ¼r die Version angegeben"));
       }
     }
     catch (RemoteException re)
     {
       Logger.error("error while checking version",re);
-      throw new ApplicationException(i18n.tr("Fehler beim Prüfen der Version"));
+      throw new ApplicationException(i18n.tr("Fehler beim PrÃ¼fen der Version"));
     }
     super.insertCheck();
   }

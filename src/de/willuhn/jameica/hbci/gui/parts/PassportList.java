@@ -46,7 +46,7 @@ public class PassportList extends TablePart implements Part
     super(init(),action);
 
     ContextMenu menu = new ContextMenu();
-    menu.addItem(new CheckedSingleContextMenuItem(i18n.tr("Öffnen..."),new PassportDetail(),"document-open.png"));
+    menu.addItem(new CheckedSingleContextMenuItem(i18n.tr("Ã–ffnen..."),new PassportDetail(),"document-open.png"));
     this.setContextMenu(menu);
 
     this.setMulti(false);

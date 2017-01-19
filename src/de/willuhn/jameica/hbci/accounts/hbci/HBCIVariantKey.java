@@ -29,7 +29,7 @@ public class HBCIVariantKey implements HBCIVariant
   @Override
   public String getName()
   {
-    return i18n.tr("Schlüsseldatei");
+    return i18n.tr("SchlÃ¼sseldatei");
   }
 
   /**
@@ -40,7 +40,7 @@ public class HBCIVariantKey implements HBCIVariant
   {
     InfoPanel info = new InfoPanel();
     info.setTitle(this.getName());
-    info.setText(i18n.tr("Verwenden Sie dieses Verfahren, wenn Sie eine Schlüsseldatei besitzen oder einen neuen INI-Brief erstellen möchten."));
+    info.setText(i18n.tr("Verwenden Sie dieses Verfahren, wenn Sie eine SchlÃ¼sseldatei besitzen oder einen neuen INI-Brief erstellen mÃ¶chten."));
     info.setComment(i18n.tr("Dieses Verfahren wird nur von sehr wenigen Banken angeboten."));
     info.setUrl("http://www.willuhn.de/wiki/doku.php?id=support:list:banken:misc:rdh");
     info.setIcon("hbci-key.png");

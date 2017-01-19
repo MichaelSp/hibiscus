@@ -148,7 +148,7 @@ public abstract class AbstractSepaSammelTransferBuchungControl<T extends SepaSam
     this.endToEndId.setName(i18n.tr("End-to-End ID"));
     this.endToEndId.setValidChars(HBCIProperties.HBCI_SEPA_VALIDCHARS);
     this.endToEndId.setEnabled(!s.getSammelTransfer().ausgefuehrt());
-    this.endToEndId.setHint(i18n.tr("freilassen wenn nicht benötigt"));
+    this.endToEndId.setHint(i18n.tr("freilassen wenn nicht benÃ¶tigt"));
     this.endToEndId.setMandatory(false);
     return this.endToEndId;
   }

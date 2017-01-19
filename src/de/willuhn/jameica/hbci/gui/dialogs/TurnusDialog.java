@@ -49,7 +49,7 @@ public class TurnusDialog extends AbstractDialog
   public TurnusDialog(int position)
   {
     super(position);
-		this.setTitle(i18n.tr("Zahlungsturnus auswählen"));
+		this.setTitle(i18n.tr("Zahlungsturnus auswÃ¤hlen"));
   }
 
 	/**
@@ -143,7 +143,7 @@ public class TurnusDialog extends AbstractDialog
 
 
     // Ein Contextmenu-Eintrag zum Loeschen    
-    c.addItem(new ContextMenuItem(i18n.tr("Löschen..."), new Action()
+    c.addItem(new ContextMenuItem(i18n.tr("LÃ¶schen..."), new Action()
     {
       public void handleAction(Object context) throws ApplicationException
       {
@@ -196,7 +196,7 @@ public class TurnusDialog extends AbstractDialog
         handleEdit(null);
 			}
 		},null,false,"document-new.png");
-		buttonArea.addButton(i18n.tr("Übernehmen"), new Action()
+		buttonArea.addButton(i18n.tr("Ãœbernehmen"), new Action()
 		{
 			public void handleAction(Object context) throws ApplicationException
 			{

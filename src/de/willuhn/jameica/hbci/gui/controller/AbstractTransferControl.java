@@ -117,7 +117,7 @@ public abstract class AbstractTransferControl extends AbstractControl
     KontoListener kl = new KontoListener();
 		this.kontoAuswahl = new KontoInput(k,getTransfer().isNewObject() ? KontoFilter.ONLINE : KontoFilter.ALL); // Falls nachtraeglich das Konto deaktiviert wurde
     this.kontoAuswahl.setRememberSelection("auftraege",false); // BUGZILLA 1362 - zuletzt ausgewaehltes Konto gleich uebernehmen
-		this.kontoAuswahl.setName(i18n.tr("Persönliches Konto"));
+		this.kontoAuswahl.setName(i18n.tr("PersÃ¶nliches Konto"));
 		this.kontoAuswahl.setMandatory(true);
     this.kontoAuswahl.addListener(kl);
     
@@ -328,7 +328,7 @@ public abstract class AbstractTransferControl extends AbstractControl
       Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Auftrag gespeichert"),StatusBarMessage.TYPE_SUCCESS));
 
       if (t.getBetrag() > Settings.getUeberweisungLimit())
-        GUI.getView().setErrorText(i18n.tr("Warnung: Auftragslimit überschritten: {0} ", HBCI.DECIMALFORMAT.format(Settings.getUeberweisungLimit()) + " " + getKonto().getWaehrung()));
+        GUI.getView().setErrorText(i18n.tr("Warnung: Auftragslimit Ã¼berschritten: {0} ", HBCI.DECIMALFORMAT.format(Settings.getUeberweisungLimit()) + " " + getKonto().getWaehrung()));
       
       return true;
 		}
@@ -378,7 +378,7 @@ public abstract class AbstractTransferControl extends AbstractControl
 			catch (RemoteException er)
 			{
 				Logger.error("error while updating currency",er);
-        Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler bei Ermittlung der Währung"),StatusBarMessage.TYPE_ERROR));
+        Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler bei Ermittlung der WÃ¤hrung"),StatusBarMessage.TYPE_ERROR));
 			}
 		}
 	}
@@ -402,12 +402,12 @@ public abstract class AbstractTransferControl extends AbstractControl
           getEmpfaengerKonto().setComment("");
           return;
         }
-        getEmpfaengerKonto().setComment(i18n.tr(HBCIProperties.checkAccountCRC(blz,kto) ? "Konto OK" : "BLZ/Kto ungültig, bitte prüfen"));
+        getEmpfaengerKonto().setComment(i18n.tr(HBCIProperties.checkAccountCRC(blz,kto) ? "Konto OK" : "BLZ/Kto ungÃ¼ltig, bitte prÃ¼fen"));
       }
       catch (RemoteException er)
       {
         Logger.error("error while checking konto/blz",er);
-        Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim Prüfen der Bankverbindung"),StatusBarMessage.TYPE_ERROR));
+        Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim PrÃ¼fen der Bankverbindung"),StatusBarMessage.TYPE_ERROR));
       }
     }
     
@@ -469,7 +469,7 @@ public abstract class AbstractTransferControl extends AbstractControl
 			catch (RemoteException er)
 			{
 				Logger.error("error while choosing empfaenger",er);
-				GUI.getStatusBar().setErrorText(i18n.tr("Fehler bei der Auswahl des Empfängers"));
+				GUI.getStatusBar().setErrorText(i18n.tr("Fehler bei der Auswahl des EmpfÃ¤ngers"));
     	}
     }
 	}

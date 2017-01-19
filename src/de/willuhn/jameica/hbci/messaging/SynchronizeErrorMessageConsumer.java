@@ -44,7 +44,7 @@ public class SynchronizeErrorMessageConsumer implements MessageConsumer
       return;
     
     // User fragen
-    Boolean cont = Application.getCallback().askUser(i18n.tr("Synchronisierung fehlgeschlagen.\nMöchten Sie den Vorgang dennoch fortsetzen?"));
+    Boolean cont = Application.getCallback().askUser(i18n.tr("Synchronisierung fehlgeschlagen.\nMÃ¶chten Sie den Vorgang dennoch fortsetzen?"));
     msg.setData(cont);
   }
 

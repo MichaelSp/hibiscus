@@ -54,7 +54,7 @@ public class PDFUmsatzExporter implements Exporter
   {
     
     if (objects == null || objects.length == 0)
-      throw new ApplicationException(i18n.tr("Bitte w‰hlen Sie die zu exportierenden Ums‰tze aus"));
+      throw new ApplicationException(i18n.tr("Bitte w√§hlen Sie die zu exportierenden Ums√§tze aus"));
 
     Umsatz u = (Umsatz) objects[0];
 
@@ -64,7 +64,7 @@ public class PDFUmsatzExporter implements Exporter
     
     if (monitor != null) 
     {
-      monitor.setStatusText(i18n.tr("Ermittle zu exportierende Ums‰tze und Konten"));
+      monitor.setStatusText(i18n.tr("Ermittle zu exportierende Ums√§tze und Konten"));
       monitor.addPercentComplete(1);
     }
 
@@ -107,10 +107,10 @@ public class PDFUmsatzExporter implements Exporter
     {
       // Der Export
       String subTitle = i18n.tr("{0} - {1}", new String[]{startDate == null ? "" : HBCI.DATEFORMAT.format(startDate),endDate == null ? "" : HBCI.DATEFORMAT.format(endDate)});
-      reporter = new Reporter(os,monitor,i18n.tr("Ums‰tze") + (filter != null && filter.booleanValue() ? (" (" + i18n.tr("gefiltert") + ")") : ""), subTitle, objects.length  );
+      reporter = new Reporter(os,monitor,i18n.tr("Ums√§tze") + (filter != null && filter.booleanValue() ? (" (" + i18n.tr("gefiltert") + ")") : ""), subTitle, objects.length  );
 
       reporter.addHeaderColumn(i18n.tr("Valuta / Buchungsdatum"), Element.ALIGN_CENTER, 30, BaseColor.LIGHT_GRAY);
-      reporter.addHeaderColumn(i18n.tr("Empf‰nger/Einzahler"),    Element.ALIGN_CENTER,100, BaseColor.LIGHT_GRAY);
+      reporter.addHeaderColumn(i18n.tr("Empf√§nger/Einzahler"),    Element.ALIGN_CENTER,100, BaseColor.LIGHT_GRAY);
       reporter.addHeaderColumn(i18n.tr("Zahlungsgrund"),          Element.ALIGN_CENTER,120, BaseColor.LIGHT_GRAY);
       reporter.addHeaderColumn(i18n.tr("Betrag"),                 Element.ALIGN_CENTER, 30, BaseColor.LIGHT_GRAY);
       if (showSaldo)
@@ -133,7 +133,7 @@ public class PDFUmsatzExporter implements Exporter
 
         if (list.size() == 0)
         {
-          PdfPCell empty = reporter.getDetailCell(i18n.tr("Keine Ums‰tze"), Element.ALIGN_CENTER,BaseColor.LIGHT_GRAY);
+          PdfPCell empty = reporter.getDetailCell(i18n.tr("Keine Ums√§tze"), Element.ALIGN_CENTER,BaseColor.LIGHT_GRAY);
           empty.setColspan(5);
           reporter.addColumn(empty);
           continue;

@@ -80,12 +80,12 @@ public class HBCITraceDialog extends AbstractDialog
   {
     this.panel = new NotificationPanel();
     this.panel.paint(parent);
-    this.panel.setText(Type.INFO,i18n.tr("Bitte w‰hlen Sie ein Konto aus."));
+    this.panel.setText(Type.INFO,i18n.tr("Bitte w√§hlen Sie ein Konto aus."));
     
     Container group = new SimpleContainer(parent);
     group.addHeadline(i18n.tr("Wichtiger Hinweis"));
-    group.addText(i18n.tr("Das HBCI-Protokoll kann streng vertrauliche Informationen wie z.Bsp. Ihre PIN enthalten. Verˆffentlichen Sie das Protokoll daher niemals " +
-    		                  "in einem Forum bzw. versenden Sie es nicht per E-Mail. ÷ffnen Sie die Datei ggf. in einem Texteditor und schw‰rzen Sie darin enthaltene " +
+    group.addText(i18n.tr("Das HBCI-Protokoll kann streng vertrauliche Informationen wie z.Bsp. Ihre PIN enthalten. Ver√∂ffentlichen Sie das Protokoll daher niemals " +
+    		                  "in einem Forum bzw. versenden Sie es nicht per E-Mail. √ñffnen Sie die Datei ggf. in einem Texteditor und schw√§rzen Sie darin enthaltene " +
     		                  "sensible Daten.\n"),true, Color.ERROR);
     
     group.addText(i18n.tr("Klicken Sie nach Auswahl des Kontos bitte auf \"Speichern\", um die HBCI-Protokolle des Kontos in der angegebenen Datei zu speichern."),true);
@@ -176,7 +176,7 @@ public class HBCITraceDialog extends AbstractDialog
     {
       String file = (String) getFile().getValue();
       if (StringUtils.isEmpty(file))
-        throw new ApplicationException(i18n.tr("Bitte w‰hlen Sie eine Datei aus."));
+        throw new ApplicationException(i18n.tr("Bitte w√§hlen Sie eine Datei aus."));
       
       File f = new File(file);
       File dir = f.getParentFile();
@@ -187,7 +187,7 @@ public class HBCITraceDialog extends AbstractDialog
       
       Konto konto = (Konto) getKontoAuswahl().getValue();
       if (konto == null)
-        throw new ApplicationException(i18n.tr("Bitte w‰hlen Sie ein Konto aus."));
+        throw new ApplicationException(i18n.tr("Bitte w√§hlen Sie ein Konto aus."));
       
       BeanService service = Application.getBootLoader().getBootable(BeanService.class);
       HBCITraceMessageConsumer tracer = service.get(HBCITraceMessageConsumer.class);

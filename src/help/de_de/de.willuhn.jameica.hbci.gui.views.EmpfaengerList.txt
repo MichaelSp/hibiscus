@@ -5,14 +5,14 @@
 	
 	<p>
 	  Klicken Sie auf <b>Neue Adresse</b> um eine
-	  Bankverbindung zu Ihrem Adressbuch hinzuzufügen.
+	  Bankverbindung zu Ihrem Adressbuch hinzuzufÃ¼gen.
 	</p>
 	
 	<p>
-		<b>Tipp:</b> Sie können Bankverbindungen auch aus
-		Ihren Umsätzen übernehmen, indem Sie doppelt
+		<b>Tipp:</b> Sie kÃ¶nnen Bankverbindungen auch aus
+		Ihren UmsÃ¤tzen Ã¼bernehmen, indem Sie doppelt
 		auf eine Buchung in den Umsatzlisten klicken
-		und dort <b>In Adressbuch übernehmen</b>
-		wählen.
+		und dort <b>In Adressbuch Ã¼bernehmen</b>
+		wÃ¤hlen.
 	</p>
 </form>

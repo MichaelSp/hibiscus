@@ -57,7 +57,7 @@ public class SepaSammelLastschriftImpl extends AbstractSepaSammelTransferImpl<Se
 
     try {
       if (getSequenceType() == null)
-        throw new ApplicationException(i18n.tr("Bitte wählen Sie den Sequenz-Typ aus"));
+        throw new ApplicationException(i18n.tr("Bitte wÃ¤hlen Sie den Sequenz-Typ aus"));
 
       if (this.getTargetDate() == null)
         throw new ApplicationException(i18n.tr("Bitte geben Sie einen Zieltermin ein"));
@@ -72,7 +72,7 @@ public class SepaSammelLastschriftImpl extends AbstractSepaSammelTransferImpl<Se
     catch (RemoteException e)
     {
       Logger.error("error while checking foreign ueberweisung",e);
-      throw new ApplicationException(i18n.tr("Fehler beim Prüfen des SEPA-Auftrages."));
+      throw new ApplicationException(i18n.tr("Fehler beim PrÃ¼fen des SEPA-Auftrages."));
     }
   }
   

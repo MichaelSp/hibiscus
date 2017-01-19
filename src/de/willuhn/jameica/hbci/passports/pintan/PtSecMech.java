@@ -41,7 +41,7 @@ public class PtSecMech
   public final static List<PtSecMech> parse(String text) throws ApplicationException
   {
     if (text == null || text.length() == 0)
-      throw new ApplicationException(i18n.tr("Keine TAN-Verfahren verfügbar"));
+      throw new ApplicationException(i18n.tr("Keine TAN-Verfahren verfÃ¼gbar"));
 
 
     List<PtSecMech> list = new ArrayList<PtSecMech>();

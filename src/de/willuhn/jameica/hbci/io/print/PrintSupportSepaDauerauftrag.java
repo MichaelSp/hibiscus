@@ -50,13 +50,13 @@ public class PrintSupportSepaDauerauftrag extends AbstractPrintSupport
     Object data = this.ctx;
     
     if (data == null)
-        throw new ApplicationException(i18n.tr("Bitte w‰hlen Sie einen Auftrag aus"));
+        throw new ApplicationException(i18n.tr("Bitte w√§hlen Sie einen Auftrag aus"));
     
     if (data instanceof TablePart)
       data = ((TablePart)data).getSelection();
     
     if (!(data instanceof SepaDauerauftrag))
-      throw new ApplicationException(i18n.tr("Bitte w‰hlen Sie einen Auftrag aus"));
+      throw new ApplicationException(i18n.tr("Bitte w√§hlen Sie einen Auftrag aus"));
     
     try
     {
@@ -127,7 +127,7 @@ public class PrintSupportSepaDauerauftrag extends AbstractPrintSupport
         table.add(new TextPrint(last == null ? "-" : HBCI.DATEFORMAT.format(last),fontNormal));
 
         Date next = a.getNaechsteZahlung();
-        table.add(new TextPrint(i18n.tr("N‰chste Zahlung"),fontNormal));
+        table.add(new TextPrint(i18n.tr("N√§chste Zahlung"),fontNormal));
         table.add(new TextPrint(next == null ? "-" : HBCI.DATEFORMAT.format(next),fontNormal));
 
         Turnus turnus = a.getTurnus();

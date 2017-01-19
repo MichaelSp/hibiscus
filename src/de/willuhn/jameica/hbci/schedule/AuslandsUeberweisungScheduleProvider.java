@@ -26,7 +26,7 @@ public class AuslandsUeberweisungScheduleProvider extends AbstractTransferSchedu
    */
   public String getName()
   {
-    return i18n.tr("SEPA-Überweisungen");
+    return i18n.tr("SEPA-Ãœberweisungen");
   }
 }
 

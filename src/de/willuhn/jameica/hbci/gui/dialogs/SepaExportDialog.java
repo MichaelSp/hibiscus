@@ -101,14 +101,14 @@ public class SepaExportDialog extends AbstractDialog
         painVersion = (PainVersion) version.getValue();
         if (painVersion == null)
         {
-          msg.setValue(i18n.tr("Bitte w‰hlen Sie eine Schema-Version aus."));
+          msg.setValue(i18n.tr("Bitte w√§hlen Sie eine Schema-Version aus."));
           return;
         }
         
         String s = StringUtils.trimToNull((String) target.getValue());
         if (s == null)
         {
-          msg.setValue(i18n.tr("Bitte w‰hlen Sie eine Datei aus"));
+          msg.setValue(i18n.tr("Bitte w√§hlen Sie eine Datei aus"));
           return;
         }
         
@@ -117,7 +117,7 @@ public class SepaExportDialog extends AbstractDialog
         {
           try
           {
-            if (!Application.getCallback().askUser(i18n.tr("Datei existiert bereits. ‹berschreiben?")))
+            if (!Application.getCallback().askUser(i18n.tr("Datei existiert bereits. √úberschreiben?")))
               return;
           }
           catch (OperationCanceledException oce)

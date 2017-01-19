@@ -142,7 +142,7 @@ public class AuslandsUeberweisungControl extends AbstractControl
     KontoListener kl = new KontoListener();
     MyKontoFilter filter = new MyKontoFilter();
     this.kontoAuswahl = new KontoInput(getTransfer().getKonto(),filter);
-    this.kontoAuswahl.setName(i18n.tr("Persönliches Konto"));
+    this.kontoAuswahl.setName(i18n.tr("PersÃ¶nliches Konto"));
     this.kontoAuswahl.setRememberSelection("auftraege",false); // BUGZILLA 1362 - zuletzt ausgewaehltes Konto gleich uebernehmen
     this.kontoAuswahl.setMandatory(true);
     this.kontoAuswahl.addListener(kl);
@@ -218,7 +218,7 @@ public class AuslandsUeberweisungControl extends AbstractControl
       this.endToEndId.setName(i18n.tr("End-to-End ID"));
       this.endToEndId.setValidChars(HBCIProperties.HBCI_SEPA_VALIDCHARS);
       this.endToEndId.setEnabled(!getTransfer().ausgefuehrt());
-      this.endToEndId.setHint(i18n.tr("freilassen wenn nicht benötigt"));
+      this.endToEndId.setHint(i18n.tr("freilassen wenn nicht benÃ¶tigt"));
       this.endToEndId.setMandatory(false);
     }
     return this.endToEndId;
@@ -238,7 +238,7 @@ public class AuslandsUeberweisungControl extends AbstractControl
     this.pmtInfId.setName(i18n.tr("Referenz (Payment-Information ID)"));
     this.pmtInfId.setValidChars(HBCIProperties.HBCI_SEPA_VALIDCHARS);
     this.pmtInfId.setEnabled(!getTransfer().ausgefuehrt());
-    this.pmtInfId.setHint(i18n.tr("freilassen wenn nicht benötigt"));
+    this.pmtInfId.setHint(i18n.tr("freilassen wenn nicht benÃ¶tigt"));
     this.pmtInfId.setMandatory(false);
     return this.pmtInfId;
   }
@@ -333,7 +333,7 @@ public class AuslandsUeberweisungControl extends AbstractControl
           cal.add(Calendar.DATE,6);
           if (DateUtil.startOfDay(date).after(cal.getTime()))
           {
-            String q = i18n.tr("Soll der Auftrag als bankseitig geführte SEPA-Terminüberweisung ausgeführt werden?");
+            String q = i18n.tr("Soll der Auftrag als bankseitig gefÃ¼hrte SEPA-TerminÃ¼berweisung ausgefÃ¼hrt werden?");
             if (Application.getCallback().askUser(q))
               getTyp().setValue(new Typ(true,false));
           }
@@ -491,7 +491,7 @@ public class AuslandsUeberweisungControl extends AbstractControl
       t.transactionCommit();
 
       if (t.getBetrag() > Settings.getUeberweisungLimit())
-        GUI.getView().setErrorText(i18n.tr("Warnung: Auftragslimit überschritten: {0} ", HBCI.DECIMALFORMAT.format(Settings.getUeberweisungLimit()) + " " + getTransfer().getKonto().getWaehrung()));
+        GUI.getView().setErrorText(i18n.tr("Warnung: Auftragslimit Ã¼berschritten: {0} ", HBCI.DECIMALFORMAT.format(Settings.getUeberweisungLimit()) + " " + getTransfer().getKonto().getWaehrung()));
       
       return true;
     }
@@ -566,7 +566,7 @@ public class AuslandsUeberweisungControl extends AbstractControl
       catch (RemoteException er)
       {
         Logger.error("error while updating currency",er);
-        GUI.getStatusBar().setErrorText(i18n.tr("Fehler bei Ermittlung der Währung"));
+        GUI.getStatusBar().setErrorText(i18n.tr("Fehler bei Ermittlung der WÃ¤hrung"));
       }
     }
   }
@@ -622,7 +622,7 @@ public class AuslandsUeberweisungControl extends AbstractControl
       catch (RemoteException er)
       {
         Logger.error("error while choosing empfaenger",er);
-        GUI.getStatusBar().setErrorText(i18n.tr("Fehler bei der Auswahl des Empfängers"));
+        GUI.getStatusBar().setErrorText(i18n.tr("Fehler bei der Auswahl des EmpfÃ¤ngers"));
       }
     }
   }
@@ -649,7 +649,7 @@ public class AuslandsUeberweisungControl extends AbstractControl
             TerminInput input = getTermin();
             Typ typ = (Typ) getTyp().getValue();
             if (typ != null && typ.termin)
-              input.setName(i18n.tr("Ausführungstermin"));
+              input.setName(i18n.tr("AusfÃ¼hrungstermin"));
             else
               input.setName(i18n.tr("Erinnerungstermin"));
             
@@ -690,9 +690,9 @@ public class AuslandsUeberweisungControl extends AbstractControl
      */
     public String getName()
     {
-      if (this.termin) return i18n.tr("Bankseitige SEPA-Terminüberweisung");
-      if (this.umb)    return i18n.tr("Interne Umbuchung (Übertrag)");
-      return           i18n.tr("Überweisung");
+      if (this.termin) return i18n.tr("Bankseitige SEPA-TerminÃ¼berweisung");
+      if (this.umb)    return i18n.tr("Interne Umbuchung (Ãœbertrag)");
+      return           i18n.tr("Ãœberweisung");
     }
     
     /**

@@ -81,7 +81,7 @@ public class Detail extends AbstractView
         control.handleTest();
       }
     },null,false,"dialog-information.png");
-    buttonArea.addButton(i18n.tr("Bankdaten ändern"), new Action()
+    buttonArea.addButton(i18n.tr("Bankdaten Ã¤ndern"), new Action()
     {
       public void handleAction(Object context) throws ApplicationException
       {

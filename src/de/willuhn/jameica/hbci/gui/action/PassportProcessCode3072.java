@@ -75,12 +75,12 @@ public class PassportProcessCode3072 implements Action
       String userOld = hbciPassport.getUserId();
 
       String text = i18n.tr("Die Bank hat mitgeteilt, dass sich die Benutzer- und Kundenkennung Ihres\n" +
-                            "Bank-Zugangs geändert hat. Die neuen Zugangsdaten lauten:\n\n" +
+                            "Bank-Zugangs geÃ¤ndert hat. Die neuen Zugangsdaten lauten:\n\n" +
                             "  Alte Kundenkennung: {0}\n" +
                             "  Neue Kundenkennung: {1}\n\n" +
                             "  Alte Benutzerkennung: {2}\n" +
                             "  Neue Benutzerkennung: {3}\n\n" +
-                            "Möchten Sie die geänderten Zugangsdaten jetzt übernehmen?");
+                            "MÃ¶chten Sie die geÃ¤nderten Zugangsdaten jetzt Ã¼bernehmen?");
       
       boolean b = Application.getCallback().askUser(text,new String[]{custOld,custId,userOld,userId});
       if (!b)
@@ -95,7 +95,7 @@ public class PassportProcessCode3072 implements Action
     catch (Exception e)
     {
       Logger.error("error while applying new user-/customer data",e);
-      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim Übernehmen der geänderten Zugangsdaten: {0}",e.getMessage()),StatusBarMessage.TYPE_ERROR));
+      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim Ãœbernehmen der geÃ¤nderten Zugangsdaten: {0}",e.getMessage()),StatusBarMessage.TYPE_ERROR));
     }
     finally
     {

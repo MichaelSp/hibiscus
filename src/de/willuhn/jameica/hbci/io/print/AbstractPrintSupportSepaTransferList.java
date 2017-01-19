@@ -65,7 +65,7 @@ public abstract class AbstractPrintSupportSepaTransferList extends AbstractPrint
       data = ((TablePart)data).getSelection();
     
     if (!(data instanceof BaseUeberweisung[]))
-      throw new ApplicationException(i18n.tr("Bitte wählen Sie mindestens einen Auftrag aus"));
+      throw new ApplicationException(i18n.tr("Bitte wÃ¤hlen Sie mindestens einen Auftrag aus"));
 
     try
     {
@@ -82,7 +82,7 @@ public abstract class AbstractPrintSupportSepaTransferList extends AbstractPrint
       table.addHeader(new TextPrint(i18n.tr("Gegenkonto"),fontTinyBold));
       table.addHeader(new TextPrint(i18n.tr("Zweck"),fontTinyBold));
       table.addHeader(new TextPrint(i18n.tr("Betrag"),fontTinyBold));
-      table.addHeader(new TextPrint(i18n.tr("Ausgeführt"),fontTinyBold));
+      table.addHeader(new TextPrint(i18n.tr("AusgefÃ¼hrt"),fontTinyBold));
 
       BaseUeberweisung[] list = (BaseUeberweisung[]) data;
 

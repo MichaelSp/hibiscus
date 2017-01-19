@@ -43,20 +43,20 @@ public class AuslandsUeberweisungDialog extends AbstractExecuteDialog
   protected void paint(Composite parent) throws Exception
   {
     Container group = new SimpleContainer(parent);
-    group.addHeadline(i18n.tr("Details der SEPA-‹berweisung"));
+    group.addHeadline(i18n.tr("Details der SEPA-√úberweisung"));
 			
 		Input kto = new LabelInput(ueb.getKonto().getKontonummer());
 		kto.setComment(ueb.getKonto().getBezeichnung());
 		group.addLabelPair(i18n.tr("Eigenes Konto"),kto);
 
 		Input empfName = new LabelInput(ueb.getGegenkontoName());
-		group.addLabelPair(i18n.tr("Name des Empf‰nger"),empfName);
+		group.addLabelPair(i18n.tr("Name des Empf√§nger"),empfName);
 
 		Input empfKto = new LabelInput(HBCIProperties.formatIban(ueb.getGegenkontoNummer()));
-		group.addLabelPair(i18n.tr("IBAN des Empf‰ngers"),empfKto);
+		group.addLabelPair(i18n.tr("IBAN des Empf√§ngers"),empfKto);
 
     Input empfBic = new LabelInput(ueb.getGegenkontoBLZ());
-    group.addLabelPair(i18n.tr("BIC des Empf‰ngers"),empfBic);
+    group.addLabelPair(i18n.tr("BIC des Empf√§ngers"),empfBic);
 
 
     LabelInput betrag = new LabelInput(HBCI.DECIMALFORMAT.format(ueb.getBetrag()) + " " + ueb.getKonto().getWaehrung());
@@ -66,7 +66,7 @@ public class AuslandsUeberweisungDialog extends AbstractExecuteDialog
     if (ueb.isTerminUeberweisung())
     {
       Input termin = new LabelInput(HBCI.DATEFORMAT.format(ueb.getTermin()));
-      group.addLabelPair(i18n.tr("Ausf¸hrungstermin"),termin);
+      group.addLabelPair(i18n.tr("Ausf√ºhrungstermin"),termin);
     }
 
     group.addHeadline(i18n.tr("Verwendungszweck"));

@@ -35,7 +35,7 @@ public class PrintSupportAuslandsUeberweisungList extends AbstractPrintSupportSe
    */
   String getTitle() throws ApplicationException
   {
-    return i18n.tr("SEPA-Überweisungen");
+    return i18n.tr("SEPA-Ãœberweisungen");
   }
 
   /**

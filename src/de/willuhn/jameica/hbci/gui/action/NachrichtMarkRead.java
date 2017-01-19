@@ -38,10 +38,10 @@ public class NachrichtMarkRead implements Action
   	I18N i18n = Application.getPluginLoader().getPlugin(HBCI.class).getResources().getI18N();
 
 		if (context == null)
-      throw new ApplicationException(i18n.tr("Keine System-Nachricht ausgew‰hlt"));
+      throw new ApplicationException(i18n.tr("Keine System-Nachricht ausgew√§hlt"));
 
     if (!(context instanceof Nachricht) && !(context instanceof Nachricht[]))
-			throw new ApplicationException(i18n.tr("Keine System-Nachricht ausgew‰hlt"));
+			throw new ApplicationException(i18n.tr("Keine System-Nachricht ausgew√§hlt"));
 
     boolean array = (context instanceof Nachricht[]);
 

@@ -54,7 +54,7 @@ public class HBCIAuslandsUeberweisungJob extends AbstractHBCIJob
 				ueberweisung.store();
       
       if (ueberweisung.ausgefuehrt())
-        throw new ApplicationException(i18n.tr("Auftrag wurde bereits ausgeführt"));
+        throw new ApplicationException(i18n.tr("Auftrag wurde bereits ausgefÃ¼hrt"));
 
       this.ueberweisung = ueberweisung;
       this.konto        = this.ueberweisung.getKonto();
@@ -62,7 +62,7 @@ public class HBCIAuslandsUeberweisungJob extends AbstractHBCIJob
       this.isUmb        = this.ueberweisung.isUmbuchung();
 
       if (this.ueberweisung.getBetrag() > Settings.getUeberweisungLimit())
-        throw new ApplicationException(i18n.tr("Auftragslimit überschritten: {0} ", 
+        throw new ApplicationException(i18n.tr("Auftragslimit Ã¼berschritten: {0} ", 
           HBCI.DECIMALFORMAT.format(Settings.getUeberweisungLimit()) + " " + this.konto.getWaehrung()));
 
       org.kapott.hbci.structures.Konto own = Converter.HibiscusKonto2HBCIKonto(konto);
@@ -158,7 +158,7 @@ public class HBCIAuslandsUeberweisungJob extends AbstractHBCIJob
    */
   public String getName() throws RemoteException
   {
-    return i18n.tr("SEPA-Überweisung an {0} (IBAN: {1})",new String[]{ueberweisung.getGegenkontoName(), ueberweisung.getGegenkontoNummer()});
+    return i18n.tr("SEPA-Ãœberweisung an {0} (IBAN: {1})",new String[]{ueberweisung.getGegenkontoName(), ueberweisung.getGegenkontoNummer()});
   }
 
   /**
@@ -169,7 +169,7 @@ public class HBCIAuslandsUeberweisungJob extends AbstractHBCIJob
     ueberweisung.setAusgefuehrt(true);
     
     Application.getMessagingFactory().sendMessage(new ObjectChangedMessage(ueberweisung));
-    konto.addToProtokoll(i18n.tr("SEPA-Überweisung ausgeführt an: {0}",ueberweisung.getGegenkontoNummer()),Protokoll.TYP_SUCCESS);
+    konto.addToProtokoll(i18n.tr("SEPA-Ãœberweisung ausgefÃ¼hrt an: {0}",ueberweisung.getGegenkontoNummer()),Protokoll.TYP_SUCCESS);
     Logger.info("foreign transfer submitted successfully");
   }
 
@@ -178,7 +178,7 @@ public class HBCIAuslandsUeberweisungJob extends AbstractHBCIJob
    */
   protected String markFailed(String error) throws ApplicationException, RemoteException
   {
-    String msg = i18n.tr("Fehler beim Ausführen des Auftrages an {0}: {1}",new String[]{ueberweisung.getGegenkontoName(),error});
+    String msg = i18n.tr("Fehler beim AusfÃ¼hren des Auftrages an {0}: {1}",new String[]{ueberweisung.getGegenkontoName(),error});
     konto.addToProtokoll(msg,Protokoll.TYP_ERROR);
     return msg;
   }
@@ -188,7 +188,7 @@ public class HBCIAuslandsUeberweisungJob extends AbstractHBCIJob
    */
   protected void markCancelled() throws RemoteException, ApplicationException
   {
-    String msg = i18n.tr("Ausführung des Auftrages an {0} abgebrochen",ueberweisung.getGegenkontoName());
+    String msg = i18n.tr("AusfÃ¼hrung des Auftrages an {0} abgebrochen",ueberweisung.getGegenkontoName());
     konto.addToProtokoll(msg,Protokoll.TYP_ERROR);
   }
 

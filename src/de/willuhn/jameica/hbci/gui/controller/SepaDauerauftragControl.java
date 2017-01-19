@@ -288,7 +288,7 @@ public class SepaDauerauftragControl extends AbstractControl
     KontoListener kl = new KontoListener();
     MyKontoFilter filter = new MyKontoFilter();
     this.kontoAuswahl = new KontoInput(getTransfer().getKonto(),filter);
-    this.kontoAuswahl.setName(i18n.tr("Persönliches Konto"));
+    this.kontoAuswahl.setName(i18n.tr("PersÃ¶nliches Konto"));
     this.kontoAuswahl.setRememberSelection("auftraege",false);
     this.kontoAuswahl.setMandatory(true);
     this.kontoAuswahl.addListener(kl);
@@ -468,11 +468,11 @@ public class SepaDauerauftragControl extends AbstractControl
           if (ersteZahlung == null || !ersteZahlung.after(now))
           {
             String msg = i18n.tr("Das Datum der ersten Zahlung befindet sich in der Vergangenheit.\n" +
-                                 "Manche Banken verlangen auch bei der Änderung existierender Daueraufträge\n" +
-                                 "die Angabe eines zukünftigen Datums für die erste (nächste) Zahlung.\n\n" +
-                                 "Der Auftrag könnte von der Bank eventuell abgelehnt werden.\n\n" +
-                                 "Möchten Sie den Vorgang dennoch fortsetzen?\n" +
-                                 "Klicken Sie alternativ auf \"Nein\" und ändern Sie das Datum der ersten Zahlung.");
+                                 "Manche Banken verlangen auch bei der Ã„nderung existierender DauerauftrÃ¤ge\n" +
+                                 "die Angabe eines zukÃ¼nftigen Datums fÃ¼r die erste (nÃ¤chste) Zahlung.\n\n" +
+                                 "Der Auftrag kÃ¶nnte von der Bank eventuell abgelehnt werden.\n\n" +
+                                 "MÃ¶chten Sie den Vorgang dennoch fortsetzen?\n" +
+                                 "Klicken Sie alternativ auf \"Nein\" und Ã¤ndern Sie das Datum der ersten Zahlung.");
             if (!Application.getCallback().askUser(msg))
               return;
           }
@@ -540,7 +540,7 @@ public class SepaDauerauftragControl extends AbstractControl
       t.transactionCommit();
 
       if (t.getBetrag() > Settings.getUeberweisungLimit())
-        GUI.getView().setErrorText(i18n.tr("Warnung: Auftragslimit überschritten: {0} ", HBCI.DECIMALFORMAT.format(Settings.getUeberweisungLimit()) + " " + getTransfer().getKonto().getWaehrung()));
+        GUI.getView().setErrorText(i18n.tr("Warnung: Auftragslimit Ã¼berschritten: {0} ", HBCI.DECIMALFORMAT.format(Settings.getUeberweisungLimit()) + " " + getTransfer().getKonto().getWaehrung()));
       
       return true;
     }
@@ -589,14 +589,14 @@ public class SepaDauerauftragControl extends AbstractControl
 
         Date next = TurnusHelper.getNaechsteZahlung(first,last,t,new Date());
         if (next != null)
-          ersteZahlung.setComment(i18n.tr("Nächste: {0}", HBCI.DATEFORMAT.format(next)));
+          ersteZahlung.setComment(i18n.tr("NÃ¤chste: {0}", HBCI.DATEFORMAT.format(next)));
         else
           ersteZahlung.setComment("");
       }
       catch (Exception e)
       {
         Logger.error("unable to apply first payment date",e);
-        Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim Ermitteln der nächsten Zahlung"), StatusBarMessage.TYPE_ERROR));
+        Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim Ermitteln der nÃ¤chsten Zahlung"), StatusBarMessage.TYPE_ERROR));
       }
     }
   }
@@ -649,7 +649,7 @@ public class SepaDauerauftragControl extends AbstractControl
       catch (RemoteException er)
       {
         Logger.error("error while updating currency",er);
-        GUI.getStatusBar().setErrorText(i18n.tr("Fehler bei Ermittlung der Währung"));
+        GUI.getStatusBar().setErrorText(i18n.tr("Fehler bei Ermittlung der WÃ¤hrung"));
       }
     }
   }
@@ -705,7 +705,7 @@ public class SepaDauerauftragControl extends AbstractControl
       catch (RemoteException er)
       {
         Logger.error("error while choosing empfaenger",er);
-        GUI.getStatusBar().setErrorText(i18n.tr("Fehler bei der Auswahl des Empfängers"));
+        GUI.getStatusBar().setErrorText(i18n.tr("Fehler bei der Auswahl des EmpfÃ¤ngers"));
       }
     }
   }

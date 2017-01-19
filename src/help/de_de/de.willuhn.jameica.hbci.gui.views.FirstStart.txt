@@ -4,12 +4,12 @@
 	</p>
 	
 	<p>
-	  Wählen Sie bitte den Button <b>Sicherheitsmedium einrichten</b>, um
-	  Ihren HBCI-Zugang via Chipkarte, Schlüsseldiskette oder PIN/TAN zu konfigurieren.
+	  WÃ¤hlen Sie bitte den Button <b>Sicherheitsmedium einrichten</b>, um
+	  Ihren HBCI-Zugang via Chipkarte, SchlÃ¼sseldiskette oder PIN/TAN zu konfigurieren.
 	</p>
 	
 	<p>
-		Wechseln Sie anschließend zur Konto-Übersicht, um die verfügbaren Konten
+		Wechseln Sie anschlieÃŸend zur Konto-Ãœbersicht, um die verfÃ¼gbaren Konten
 		automatisch abzurufen oder manuell anzulegen.
 	</p>
 </form>

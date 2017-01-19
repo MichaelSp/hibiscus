@@ -82,7 +82,7 @@ public class PinPad implements Part
     
     // Button Backspace
     final Button b = GUI.getStyleFactory().createButton(this.comp);
-    b.setText(i18n.tr("Löschen"));
+    b.setText(i18n.tr("LÃ¶schen"));
     b.setAlignment(SWT.CENTER);
     GridData gd = new GridData(GridData.FILL_HORIZONTAL);
     gd.horizontalSpan = 2;

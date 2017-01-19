@@ -54,7 +54,7 @@ public class About extends AbstractDialog
     AbstractPlugin plugin = Application.getPluginLoader().getPlugin(HBCI.class);
     final I18N i18n = plugin.getResources().getI18N();
     
-    this.setTitle(i18n.tr("‹ber ..."));
+    this.setTitle(i18n.tr("√úber ..."));
     this.setPanelText(i18n.tr("Hibiscus {0}",plugin.getManifest().getVersion().toString()));
   }
 
@@ -77,7 +77,7 @@ public class About extends AbstractDialog
     
     FormTextPart text = new FormTextPart();
     text.setText("<form>" +
-      "<p><b>Hibiscus - HBCI-Onlinebanking f¸r Jameica</b></p>" +
+      "<p><b>Hibiscus - HBCI-Onlinebanking f√ºr Jameica</b></p>" +
       "<p>Lizenz: GPL [<a href=\"http://www.gnu.org/copyleft/gpl.html\">www.gnu.org/copyleft/gpl.html</a>]<br/>" +
       "Copyright by Olaf Willuhn [<a href=\"mailto:hibiscus@willuhn.de\">hibiscus@willuhn.de</a>]<br/>" +
       "<a href=\"http://www.willuhn.de/products/hibiscus/\">www.willuhn.de/products/hibiscus/</a></p>" +
@@ -134,7 +134,7 @@ public class About extends AbstractDialog
         new DonateView().handleAction(null);
       }
     },null,false,"emblem-special.png");
-    buttons.addButton(i18n.tr("Schlieﬂen"),new Action() {
+    buttons.addButton(i18n.tr("Schlie√üen"),new Action() {
       public void handleAction(Object context) throws ApplicationException
       {
         close();

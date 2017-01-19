@@ -53,7 +53,7 @@ public class Export implements Action
     Object export = this.data != null ? this.data : context;
     
     if (export == null)
-      throw new ApplicationException(i18n.tr("Bitte w‰hlen Sie die zu exportierenden Daten aus"));
+      throw new ApplicationException(i18n.tr("Bitte w√§hlen Sie die zu exportierenden Daten aus"));
 
     Object[] objects = null;
     

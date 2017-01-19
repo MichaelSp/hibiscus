@@ -53,13 +53,13 @@ public class SepaDauerauftragDialog extends AbstractExecuteDialog
     group.addLabelPair(i18n.tr("Eigenes Konto"),kto);
 
     Input empfName = new LabelInput(auftrag.getGegenkontoName());
-    group.addLabelPair(i18n.tr("Name des Empf‰nger"),empfName);
+    group.addLabelPair(i18n.tr("Name des Empf√§nger"),empfName);
 
     Input empfKto = new LabelInput(HBCIProperties.formatIban(auftrag.getGegenkontoNummer()));
-    group.addLabelPair(i18n.tr("IBAN des Empf‰ngers"),empfKto);
+    group.addLabelPair(i18n.tr("IBAN des Empf√§ngers"),empfKto);
 
     Input empfBic = new LabelInput(auftrag.getGegenkontoBLZ());
-    group.addLabelPair(i18n.tr("BIC des Empf‰ngers"),empfBic);
+    group.addLabelPair(i18n.tr("BIC des Empf√§ngers"),empfBic);
 
     LabelInput betrag = new LabelInput(HBCI.DECIMALFORMAT.format(auftrag.getBetrag()) + " " + auftrag.getKonto().getWaehrung());
     betrag.setColor(Color.ERROR);
@@ -68,7 +68,7 @@ public class SepaDauerauftragDialog extends AbstractExecuteDialog
     group.addSeparator();
 
     Date e = auftrag.getErsteZahlung();
-    String se = i18n.tr("Zum n‰chstmˆglichen Termin");
+    String se = i18n.tr("Zum n√§chstm√∂glichen Termin");
     if (e != null) se = HBCI.DATEFORMAT.format(e);
     Input ersteZahlung = new LabelInput(se);
     group.addLabelPair(i18n.tr("Erste Zahlung"),ersteZahlung);
@@ -88,9 +88,9 @@ public class SepaDauerauftragDialog extends AbstractExecuteDialog
     group.addSeparator();
     
     if (auftrag.isActive())
-      group.addText(i18n.tr("Sind Sie sicher, daﬂ Sie diese ƒnderungen jetzt zur Bank senden wollen?") + "\n",true);
+      group.addText(i18n.tr("Sind Sie sicher, da√ü Sie diese √Ñnderungen jetzt zur Bank senden wollen?") + "\n",true);
     else
-      group.addText(i18n.tr("Sind Sie sicher, daﬂ Sie diesen Dauerauftrag jetzt ausf¸hren wollen?") + "\n",true);
+      group.addText(i18n.tr("Sind Sie sicher, da√ü Sie diesen Dauerauftrag jetzt ausf√ºhren wollen?") + "\n",true);
     
     super.paint(parent);
     getShell().setMinimumSize(getShell().computeSize(SWT.DEFAULT,SWT.DEFAULT));

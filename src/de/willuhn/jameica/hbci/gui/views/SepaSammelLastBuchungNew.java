@@ -48,7 +48,7 @@ public class SepaSammelLastBuchungNew extends AbstractView
       {
         super.handleAction(l);
       }
-    },i18n.tr("Zurück zum Sammelauftrag")));
+    },i18n.tr("ZurÃ¼ck zum Sammelauftrag")));
 		
 
     ColumnLayout cols = new ColumnLayout(getParent(),2);
@@ -60,7 +60,7 @@ public class SepaSammelLastBuchungNew extends AbstractView
       container.addLabelPair(i18n.tr("Name"), control.getEmpfaengerName());
       container.addLabelPair(i18n.tr("IBAN"), control.getEmpfaengerKonto());    
       container.addLabelPair(i18n.tr("BIC"),  control.getEmpfaengerBic());
-      container.addCheckbox(control.getStoreEmpfaenger(),i18n.tr("In Adressbuch übernehmen"));
+      container.addCheckbox(control.getStoreEmpfaenger(),i18n.tr("In Adressbuch Ã¼bernehmen"));
     }
     
     // Rechte Seite
@@ -80,7 +80,7 @@ public class SepaSammelLastBuchungNew extends AbstractView
     container.addLabelPair(i18n.tr("Betrag"),           control.getBetrag());
     
 		ButtonArea buttonArea = new ButtonArea();
-    Button delete = new Button(i18n.tr("Löschen"), new DBObjectDelete(),control.getBuchung(),false,"user-trash-full.png");
+    Button delete = new Button(i18n.tr("LÃ¶schen"), new DBObjectDelete(),control.getBuchung(),false,"user-trash-full.png");
     delete.setEnabled(!l.ausgefuehrt());
     buttonArea.addButton(delete);
 
@@ -93,7 +93,7 @@ public class SepaSammelLastBuchungNew extends AbstractView
     buttonArea.addButton(store);
     
     // BUGZILLA 116 http://www.willuhn.de/bugzilla/show_bug.cgi?id=116
-    Button store2 = new Button(i18n.tr("Speichern und nächste Buchung"), new Action() {
+    Button store2 = new Button(i18n.tr("Speichern und nÃ¤chste Buchung"), new Action() {
       public void handleAction(Object context) throws ApplicationException {
         if (control.handleStore())
         {

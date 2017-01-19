@@ -72,8 +72,8 @@ public class UmsatzTypChart implements Part
       
       if (start < 0)
       {
-        einnahmen.setTitle(i18n.tr("Einnahmen (alle Umsätze)"));
-        ausgaben.setTitle(i18n.tr("Ausgaben (alle Umsätze)"));
+        einnahmen.setTitle(i18n.tr("Einnahmen (alle UmsÃ¤tze)"));
+        ausgaben.setTitle(i18n.tr("Ausgaben (alle UmsÃ¤tze)"));
       }
       else
       {
@@ -107,8 +107,8 @@ public class UmsatzTypChart implements Part
             myAData = new ChartDataUmsatzTyp(UmsatzTyp.TYP_AUSGABE,newStart);
             if (newStart < 0)
             {
-              einnahmen.setTitle(i18n.tr("Einnahmen (alle Umsätze)"));
-              ausgaben.setTitle(i18n.tr("Ausgaben (alle Umsätze)"));
+              einnahmen.setTitle(i18n.tr("Einnahmen (alle UmsÃ¤tze)"));
+              ausgaben.setTitle(i18n.tr("Ausgaben (alle UmsÃ¤tze)"));
             }
             else
             {

@@ -58,12 +58,12 @@ public class Settings extends AbstractView implements Extendable
 		// Grund-Einstellungen
     TabGroup system = new TabGroup(getTabFolder(),i18n.tr("Grundeinstellungen"));
 		system.addCheckbox(control.getOnlineMode(),i18n.tr("Dauerhafte Internetverbindung, Aufforderung zum Verbinden nicht erforderlich"));
-    system.addCheckbox(control.getCachePin(),i18n.tr("PIN-Eingaben f¸r die aktuelle Sitzung zwischenspeichern"));
+    system.addCheckbox(control.getCachePin(),i18n.tr("PIN-Eingaben f√ºr die aktuelle Sitzung zwischenspeichern"));
     system.addCheckbox(control.getStorePin(),i18n.tr("PIN-Eingaben permanent speichern (nur bei PIN/TAN)"));
-    system.addCheckbox(control.getDecimalGrouping(),i18n.tr("Tausender-Trennzeichen bei Geld-Betr‰gen anzeigen"));
-    system.addCheckbox(control.getKontoCheck(),i18n.tr("Kontonummern und Bankleitzahlen mittels Pr¸fsumme testen"));
-    system.addCheckbox(control.getKontoCheckExcludeAddressbook(),i18n.tr("Auﬂer Bankverbindungen des Adressbuches"));
-    system.addLabelPair(i18n.tr("Limit f¸r Auftr‰ge"), control.getUeberweisungLimit());
+    system.addCheckbox(control.getDecimalGrouping(),i18n.tr("Tausender-Trennzeichen bei Geld-Betr√§gen anzeigen"));
+    system.addCheckbox(control.getKontoCheck(),i18n.tr("Kontonummern und Bankleitzahlen mittels Pr√ºfsumme testen"));
+    system.addCheckbox(control.getKontoCheckExcludeAddressbook(),i18n.tr("Au√üer Bankverbindungen des Adressbuches"));
+    system.addLabelPair(i18n.tr("Limit f√ºr Auftr√§ge"), control.getUeberweisungLimit());
 		
     // Farb-Einstellungen
     TabGroup colors = new TabGroup(getTabFolder(),i18n.tr("Farben"));

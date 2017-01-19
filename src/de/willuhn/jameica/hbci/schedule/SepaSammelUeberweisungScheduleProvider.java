@@ -22,6 +22,6 @@ public class SepaSammelUeberweisungScheduleProvider extends AbstractTransferSche
    */
   public String getName()
   {
-    return i18n.tr("SEPA-Sammelüberweisungen");
+    return i18n.tr("SEPA-SammelÃ¼berweisungen");
   }
 }

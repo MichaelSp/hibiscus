@@ -47,10 +47,10 @@ public class XMLUmsatzTypImporter implements Importer
   {
 
     if (is == null)
-      throw new ApplicationException(i18n.tr("Keine zu importierende Datei ausgew‰hlt"));
+      throw new ApplicationException(i18n.tr("Keine zu importierende Datei ausgew√§hlt"));
     
     if (format == null)
-      throw new ApplicationException(i18n.tr("Kein Datei-Format ausgew‰hlt"));
+      throw new ApplicationException(i18n.tr("Kein Datei-Format ausgew√§hlt"));
 
     final ClassLoader loader = Application.getPluginLoader().getManifest(HBCI.class).getClassLoader();
     
@@ -130,7 +130,7 @@ public class XMLUmsatzTypImporter implements Importer
         }
       }
 
-      monitor.setStatusText(i18n.tr("{0} Datens‰tze erfolgreich importiert, {1} fehlerhafte ¸bersprungen", new String[]{""+created,""+error}));
+      monitor.setStatusText(i18n.tr("{0} Datens√§tze erfolgreich importiert, {1} fehlerhafte √ºbersprungen", new String[]{""+created,""+error}));
       monitor.setPercentComplete(100);
     }
     catch (OperationCanceledException oce)

@@ -35,7 +35,7 @@ public class InsertKeyDialog extends WaitDialog
   {
     super(InsertKeyDialog.POSITION_CENTER);
     this.file = f;
-    setTitle(i18n.tr("Schlüsseldiskette/USB-Stick einlegen"));
+    setTitle(i18n.tr("SchlÃ¼sseldiskette/USB-Stick einlegen"));
   }
 
   /**
@@ -72,7 +72,7 @@ public class InsertKeyDialog extends WaitDialog
    */
   public String getText()
   {
-    return i18n.tr("Die Schlüsseldatei wurde nicht gefunden.\n" +
+    return i18n.tr("Die SchlÃ¼sseldatei wurde nicht gefunden.\n" +
                    "Bitte legen Sie die Diskette/den USB-Stick ein.\n" +
                    "\nDateiname: {0}\n",this.file.getAbsolutePath());
   }

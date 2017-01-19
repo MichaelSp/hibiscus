@@ -256,7 +256,7 @@ public class PassportHandleImpl extends UnicastRemoteObject implements PassportH
       }
 
       case HBCICallback.NEED_CHIPCARD:
-        return handleCallback(i18n.tr("Bitte legen Sie die Chipkarte in das Leseger‰t"),true,settings.getBoolean("waitfor.card.insert",false), StatusBarMessage.TYPE_INFO);
+        return handleCallback(i18n.tr("Bitte legen Sie die Chipkarte in das Leseger√§t"),true,settings.getBoolean("waitfor.card.insert",false), StatusBarMessage.TYPE_INFO);
 
       case HBCICallback.HAVE_CHIPCARD:
         return handleCallback(i18n.tr("HBCI-Chipkarte wird ausgelesen."),false,false, StatusBarMessage.TYPE_SUCCESS);
@@ -268,7 +268,7 @@ public class PassportHandleImpl extends UnicastRemoteObject implements PassportH
         return handleCallback(i18n.tr("PIN wurde eingegeben."),false,false, StatusBarMessage.TYPE_SUCCESS);
 
       case HBCICallback.NEED_REMOVE_CHIPCARD:
-        return handleCallback(i18n.tr("Bitte entfernen Sie die Chipkarte aus dem Leseger‰t."),false,settings.getBoolean("waitfor.card.eject",false), StatusBarMessage.TYPE_INFO);
+        return handleCallback(i18n.tr("Bitte entfernen Sie die Chipkarte aus dem Leseger√§t."),false,settings.getBoolean("waitfor.card.eject",false), StatusBarMessage.TYPE_INFO);
     }
     
     return false;

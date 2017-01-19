@@ -32,7 +32,7 @@ public class SepaLastschriftMerge implements Action
   public void handleAction(Object context) throws ApplicationException
   {
     if (!(context instanceof SepaLastschrift) && !(context instanceof SepaLastschrift[]))
-      throw new ApplicationException(i18n.tr("Bitte w‰hlen Sie einen oder mehrere Auftr‰ge aus"));
+      throw new ApplicationException(i18n.tr("Bitte w√§hlen Sie einen oder mehrere Auftr√§ge aus"));
 
     SepaLastschrift[] source = null;
     
@@ -42,7 +42,7 @@ public class SepaLastschriftMerge implements Action
       source = (SepaLastschrift[]) context;
     
     if (source.length == 0)
-      throw new ApplicationException(i18n.tr("Bitte w‰hlen Sie einen oder mehrere Auftr‰ge aus"));
+      throw new ApplicationException(i18n.tr("Bitte w√§hlen Sie einen oder mehrere Auftr√§ge aus"));
     
     List<SepaLastschrift> lastschriften = Arrays.asList(source);
     SepaLastschriftMerger merger = new SepaLastschriftMerger();
@@ -50,7 +50,7 @@ public class SepaLastschriftMerge implements Action
 
     int count = result.size();
     if (count > 1)
-      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("{0} Sammelauftr‰ge erzeugt",String.valueOf(count)), StatusBarMessage.TYPE_SUCCESS));
+      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("{0} Sammelauftr√§ge erzeugt",String.valueOf(count)), StatusBarMessage.TYPE_SUCCESS));
     else
       Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Sammelauftrag erzeugt"), StatusBarMessage.TYPE_SUCCESS));
   }

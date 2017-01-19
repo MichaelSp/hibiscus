@@ -50,12 +50,12 @@ public class AuslandsUeberweisungList extends AbstractView
       }
     });
 
-    GUI.getView().setTitle(i18n.tr("Vorhandene SEPA-Überweisungen"));
+    GUI.getView().setTitle(i18n.tr("Vorhandene SEPA-Ãœberweisungen"));
     GUI.getView().addPanelButton(print);
 
     ButtonArea buttons = table.getButtons();
     buttons.addButton(i18n.tr("Importieren..."),new AuslandsUeberweisungImport(),null,false,"document-open.png");
-    buttons.addButton(i18n.tr("Neue SEPA-Überweisung"), new AuslandsUeberweisungNew(),null,false,"text-x-generic.png");
+    buttons.addButton(i18n.tr("Neue SEPA-Ãœberweisung"), new AuslandsUeberweisungNew(),null,false,"text-x-generic.png");
 
     table.paint(getParent());
     print.setEnabled(table.getSelection() != null); // einmal initial ausloesen

@@ -84,7 +84,7 @@ public class WalletDialog extends AbstractDialog
     table.paint(parent);
 
     ButtonArea buttons = new ButtonArea();
-    buttons.addButton(i18n.tr("Schlieﬂen"),new Action() {
+    buttons.addButton(i18n.tr("Schlie√üen"),new Action() {
       public void handleAction(Object context) throws ApplicationException
       {
         close();

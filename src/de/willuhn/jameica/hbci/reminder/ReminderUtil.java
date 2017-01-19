@@ -47,7 +47,7 @@ public class ReminderUtil
     if (!(order instanceof Terminable))
     {
       Logger.info("type " + order.getClass().getName() + " does not support reminders");
-      throw new ApplicationException(i18n.tr("Der Auftrag unterstützt keine Termine"));
+      throw new ApplicationException(i18n.tr("Der Auftrag unterstÃ¼tzt keine Termine"));
     }
     
     try
@@ -88,7 +88,7 @@ public class ReminderUtil
         // 2 Daten enthalten (erster und letzter des Jahres).
         List<Date> dates = interval.getDates(((Terminable)order).getTermin(),null,null);
         if (dates.size() < 2)
-          throw new ApplicationException(i18n.tr("Kein Datum für die nächste Wiederholung ermittelbar"));
+          throw new ApplicationException(i18n.tr("Kein Datum fÃ¼r die nÃ¤chste Wiederholung ermittelbar"));
         reminder.setDate(dates.get(1));
         reminder.setEnd(DateUtil.endOfDay(end)); // BUGZILLA 1585 - Datum auf Ende des Tages setzen, um sicherzustellen, dass der Termin im Laufe des Tages noch gilt
         reminder.setData(Reminder.KEY_EXPIRED,null); // expired date resetten. Wird vom Service bei Bedarf neu gesetzt

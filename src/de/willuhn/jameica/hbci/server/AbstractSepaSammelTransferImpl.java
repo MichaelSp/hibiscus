@@ -60,17 +60,17 @@ public abstract class AbstractSepaSammelTransferImpl<T extends SepaSammelTransfe
       Konto k = getKonto();
 
       if (k == null)
-        throw new ApplicationException(i18n.tr("Bitte wählen Sie ein Konto aus."));
+        throw new ApplicationException(i18n.tr("Bitte wÃ¤hlen Sie ein Konto aus."));
       if (k.isNewObject())
-        throw new ApplicationException(i18n.tr("Bitte speichern Sie zunächst das Konto"));
+        throw new ApplicationException(i18n.tr("Bitte speichern Sie zunÃ¤chst das Konto"));
       
       String kiban = k.getIban();
       if (kiban == null || kiban.length() == 0)
-        throw new ApplicationException(i18n.tr("Das ausgewählte Konto besitzt keine IBAN"));
+        throw new ApplicationException(i18n.tr("Das ausgewÃ¤hlte Konto besitzt keine IBAN"));
       
       String bic = k.getBic();
       if (bic == null || bic.length() == 0)
-        throw new ApplicationException(i18n.tr("Das ausgewählte Konto besitzt keine BIC"));
+        throw new ApplicationException(i18n.tr("Das ausgewÃ¤hlte Konto besitzt keine BIC"));
 
       if (getBezeichnung() == null || getBezeichnung().length() == 0)
         throw new ApplicationException(i18n.tr("Bitte geben Sie eine Bezeichnung ein."));
@@ -84,7 +84,7 @@ public abstract class AbstractSepaSammelTransferImpl<T extends SepaSammelTransfe
     catch (RemoteException e)
     {
       Logger.error("error while checking sammeltransfer",e);
-      throw new ApplicationException(i18n.tr("Fehler beim Prüfen des Auftrags."));
+      throw new ApplicationException(i18n.tr("Fehler beim PrÃ¼fen des Auftrags."));
     }
   }
 
@@ -95,12 +95,12 @@ public abstract class AbstractSepaSammelTransferImpl<T extends SepaSammelTransfe
   {
     try {
       if (!whileStore && ausgefuehrt())
-        throw new ApplicationException(i18n.tr("Auftrag wurde bereits ausgeführt und kann daher nicht mehr geändert werden."));
+        throw new ApplicationException(i18n.tr("Auftrag wurde bereits ausgefÃ¼hrt und kann daher nicht mehr geÃ¤ndert werden."));
     }
     catch (RemoteException e)
     {
       Logger.error("error while checking sammeltransfer",e);
-      throw new ApplicationException(i18n.tr("Fehler beim Prüfen des Auftrags."));
+      throw new ApplicationException(i18n.tr("Fehler beim PrÃ¼fen des Auftrags."));
     }
     insertCheck();
   }
@@ -252,7 +252,7 @@ public abstract class AbstractSepaSammelTransferImpl<T extends SepaSammelTransfe
       // und noch in's Protokoll schreiben.
       Konto k = this.getKonto();
       if (k != null)
-        k.addToProtokoll(i18n.tr("Sammel-Auftrag [Bezeichnung: {0}] gelöscht. Enthaltene Buchungen: {1}",getBezeichnung(),Integer.toString(count)), Protokoll.TYP_SUCCESS);
+        k.addToProtokoll(i18n.tr("Sammel-Auftrag [Bezeichnung: {0}] gelÃ¶scht. Enthaltene Buchungen: {1}",getBezeichnung(),Integer.toString(count)), Protokoll.TYP_SUCCESS);
 
       this.transactionCommit();
     }

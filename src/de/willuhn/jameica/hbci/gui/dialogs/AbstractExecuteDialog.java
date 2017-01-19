@@ -58,7 +58,7 @@ public abstract class AbstractExecuteDialog extends AbstractDialog
   {
     Container group = new SimpleContainer(parent);
     ButtonArea b = new ButtonArea();
-    b.addButton(i18n.tr("Jetzt ausführen"), new Action()
+    b.addButton(i18n.tr("Jetzt ausfÃ¼hren"), new Action()
     {
       public void handleAction(Object context) throws ApplicationException
       {

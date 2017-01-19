@@ -41,11 +41,11 @@ public class NachrichtList extends ContextMenu
 	{
 		i18n = Application.getPluginLoader().getPlugin(HBCI.class).getResources().getI18N();
 
-    addItem(new SingleItem(i18n.tr("Öffnen"), new NachrichtOpen(),"document-open.png"));
+    addItem(new SingleItem(i18n.tr("Ã–ffnen"), new NachrichtOpen(),"document-open.png"));
     addItem(new SingleItem(i18n.tr("In Zwischenablage kopieren"), new NachrichtCopy(),"edit-copy.png"));
     addItem(new CheckedContextMenuItem(i18n.tr("Als gelesen markieren"), new NachrichtMarkRead(),"emblem-default.png"));
     addItem(ContextMenuItem.SEPARATOR);
-		addItem(new CheckedContextMenuItem(i18n.tr("Löschen..."), new DBObjectDelete(),"user-trash-full.png"));
+		addItem(new CheckedContextMenuItem(i18n.tr("LÃ¶schen..."), new DBObjectDelete(),"user-trash-full.png"));
 	}
 	
   /**

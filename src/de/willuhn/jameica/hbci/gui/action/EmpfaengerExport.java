@@ -39,7 +39,7 @@ public class EmpfaengerExport implements Action
 		I18N i18n = Application.getPluginLoader().getPlugin(HBCI.class).getResources().getI18N();
 
 		if (context == null)
-			throw new ApplicationException(i18n.tr("Bitte w‰hlen Sie mindestens eine Adresse aus"));
+			throw new ApplicationException(i18n.tr("Bitte w√§hlen Sie mindestens eine Adresse aus"));
 
     Object[] u = null;
 		try
@@ -66,7 +66,7 @@ public class EmpfaengerExport implements Action
       }
 
 			if (u == null)
-        throw new ApplicationException(i18n.tr("Bitte w‰hlen Sie einen oder mehrere Adressen aus"));
+        throw new ApplicationException(i18n.tr("Bitte w√§hlen Sie einen oder mehrere Adressen aus"));
 
       ExportDialog d = new ExportDialog(u, Address.class);
       d.open();

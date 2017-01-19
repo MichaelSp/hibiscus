@@ -56,7 +56,7 @@ public class SelectConfigDialog extends AbstractDialog
   protected void paint(Composite parent) throws Exception
   {
     Container group = new SimpleContainer(parent,true);
-    group.addText(text == null ? i18n.tr("Bitte w‰hlen Sie die zu verwendende PIN/TAN-Konfiguration aus") : text,true);
+    group.addText(text == null ? i18n.tr("Bitte w√§hlen Sie die zu verwendende PIN/TAN-Konfiguration aus") : text,true);
     
     if (list != null)
       list.begin();
@@ -79,7 +79,7 @@ public class SelectConfigDialog extends AbstractDialog
     group.addPart(table);
 
     ButtonArea buttons = new ButtonArea();
-    buttons.addButton(i18n.tr("‹bernehmen"), new Action() {
+    buttons.addButton(i18n.tr("√úbernehmen"), new Action() {
       public void handleAction(Object context) throws ApplicationException
       {
         selected = (PinTanConfig) table.getSelection();

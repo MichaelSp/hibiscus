@@ -24,7 +24,7 @@ import de.willuhn.util.ApplicationException;
 import de.willuhn.util.I18N;
 
 /**
- * Action für die Ausgabe der Einnahmen/Ausgaben
+ * Action fÃ¼r die Ausgabe der Einnahmen/Ausgaben
  */
 public class EinnahmeAusgabeExport implements Action
 {
@@ -37,7 +37,7 @@ public class EinnahmeAusgabeExport implements Action
   public void handleAction(Object context) throws ApplicationException
   {
     if (context == null || !(context instanceof EinnahmeAusgabe[]))
-      throw new ApplicationException(i18n.tr("Bitte wählen Sie die zu exportierenden Daten aus"));
+      throw new ApplicationException(i18n.tr("Bitte wÃ¤hlen Sie die zu exportierenden Daten aus"));
 
     try
     {

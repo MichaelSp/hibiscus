@@ -49,7 +49,7 @@ public class NeueUmsaetze extends AbstractBox
    */
   public String getName()
   {
-    return "Hibiscus: " + i18n.tr("Neue Ums‰tze");
+    return "Hibiscus: " + i18n.tr("Neue Ums√§tze");
   }
 
   /**

@@ -4,23 +4,23 @@
 	</p>
 
   <p>
-    Starten Sie zunächst die automatische Suche nach dem Kartenleser.
-    Falls sie nicht erfolgreich verläuft, dann konfigurieren Sie den
+    Starten Sie zunÃ¤chst die automatische Suche nach dem Kartenleser.
+    Falls sie nicht erfolgreich verlÃ¤uft, dann konfigurieren Sie den
     Kartenleser bitte manuell.
   </p>	
 	<p>
-		<b>CTAPI Treiber-Datei</b>: Wählen Sie hier bitte Pfad und Dateiname
-		des Treibers für Ihren Kartenleser aus. Dieser muss den CTAPI-Standard
-		erfüllen.
+		<b>CTAPI Treiber-Datei</b>: WÃ¤hlen Sie hier bitte Pfad und Dateiname
+		des Treibers fÃ¼r Ihren Kartenleser aus. Dieser muss den CTAPI-Standard
+		erfÃ¼llen.
 	</p>
 	
 	<p>
-	  Der Port wird dem CTAPI-Treiber als logische Portnummer übergeben.
-	  Testen Sie daher auch bei einem USB-Gerät die Ports COM1 und COM2.
+	  Der Port wird dem CTAPI-Treiber als logische Portnummer Ã¼bergeben.
+	  Testen Sie daher auch bei einem USB-GerÃ¤t die Ports COM1 und COM2.
 	</p>
 	
 	<p>
-		Durch Klick auf <b>Konfiguration testen</b> können Sie die Einstellungen
-		überprüfen.
+		Durch Klick auf <b>Konfiguration testen</b> kÃ¶nnen Sie die Einstellungen
+		Ã¼berprÃ¼fen.
 	</p>
 </form>

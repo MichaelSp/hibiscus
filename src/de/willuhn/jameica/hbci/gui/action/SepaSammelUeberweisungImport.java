@@ -47,7 +47,7 @@ public class SepaSammelUeberweisungImport implements Action
 		catch (Exception e)
 		{
 			Logger.error("error while importing transfers",e);
-			GUI.getStatusBar().setErrorText(i18n.tr("Fehler beim Importieren der SEPA-Sammelüberweisungen"));
+			GUI.getStatusBar().setErrorText(i18n.tr("Fehler beim Importieren der SEPA-SammelÃ¼berweisungen"));
 		}
   }
 }

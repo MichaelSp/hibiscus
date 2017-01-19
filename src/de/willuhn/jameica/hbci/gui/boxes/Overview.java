@@ -72,7 +72,7 @@ public class Overview extends AbstractBox implements Box
    */
   public String getName()
   {
-    return "Hibiscus: " + i18n.tr("Finanz-Übersicht");
+    return "Hibiscus: " + i18n.tr("Finanz-Ãœbersicht");
   }
 
   /**

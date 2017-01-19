@@ -77,7 +77,7 @@ public class SammelTransferBuchungList extends TablePart
         catch (RemoteException e)
         {
           Logger.error("unable to read name of sammeltransfer",e);
-          return i18n.tr("Zugehöriger Sammel-Auftrag nicht ermittelbar");
+          return i18n.tr("ZugehÃ¶riger Sammel-Auftrag nicht ermittelbar");
         }
       }
     });

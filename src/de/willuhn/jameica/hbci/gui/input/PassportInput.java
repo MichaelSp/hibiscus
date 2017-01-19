@@ -69,7 +69,7 @@ public class PassportInput extends SelectInput
       }
     }
     
-    this.setPleaseChoose("Bitte w‰hlen...");
+    this.setPleaseChoose("Bitte w√§hlen...");
     this.setAttribute("name");
     this.setName(i18n.tr("Verfahren"));
   }

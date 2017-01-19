@@ -63,7 +63,7 @@ public class SepaSammelUeberweisungControl extends AbstractSepaSammelTransferCon
     
     this.name = super.getName();
     if (StringUtils.trimToNull((String)this.name.getValue()) == null)
-      this.name.setValue(i18n.tr("SEPA-Sammelüberweisung vom {0}",HBCI.LONGDATEFORMAT.format(new Date())));
+      this.name.setValue(i18n.tr("SEPA-SammelÃ¼berweisung vom {0}",HBCI.LONGDATEFORMAT.format(new Date())));
     return this.name;
   }
 
@@ -123,12 +123,12 @@ public class SepaSammelUeberweisungControl extends AbstractSepaSammelTransferCon
     this.buchungen.setMulti(true);
 
     ContextMenu ctx = new ContextMenu();
-    ctx.addItem(new CheckedSingleContextMenuItem(i18n.tr("Buchung öffnen"), new SepaSammelUeberweisungBuchungNew(),"document-open.png"));
+    ctx.addItem(new CheckedSingleContextMenuItem(i18n.tr("Buchung Ã¶ffnen"), new SepaSammelUeberweisungBuchungNew(),"document-open.png"));
     ctx.addItem(new DeleteMenuItem());
     ctx.addItem(ContextMenuItem.SEPARATOR);
     ctx.addItem(new CreateMenuItem(new SepaSammelUeberweisungBuchungNew()));
     ctx.addItem(ContextMenuItem.SEPARATOR);
-    ctx.addItem(new CheckedSingleContextMenuItem(i18n.tr("In Einzelüberweisung duplizieren"), new AuslandsUeberweisungNew(),"stock_next.png"));
+    ctx.addItem(new CheckedSingleContextMenuItem(i18n.tr("In EinzelÃ¼berweisung duplizieren"), new AuslandsUeberweisungNew(),"stock_next.png"));
     this.buchungen.setContextMenu(ctx);
     return this.buchungen;
   }

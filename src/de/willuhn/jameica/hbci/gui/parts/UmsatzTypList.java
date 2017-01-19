@@ -215,7 +215,7 @@ public class UmsatzTypList extends TablePart implements Part
  * @B Verzaehler bei XML-Import
  *
  * Revision 1.7  2007/03/10 07:17:58  jost
- * Neu: Nummer für die Sortierung der Umsatz-Kategorien
+ * Neu: Nummer fÃ¼r die Sortierung der Umsatz-Kategorien
  *
  * Revision 1.6  2006/11/24 00:07:09  willuhn
  * @C Konfiguration der Umsatz-Kategorien in View Einstellungen verschoben

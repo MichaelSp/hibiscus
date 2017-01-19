@@ -49,7 +49,7 @@ public class PassportImpl extends UnicastRemoteObject implements Passport
    */
   public String getName() throws RemoteException
   {
-    return i18n.tr("Schlüsseldiskette");
+    return i18n.tr("SchlÃ¼sseldiskette");
   }
 
   /**
@@ -58,7 +58,7 @@ public class PassportImpl extends UnicastRemoteObject implements Passport
   public String getInfo() throws RemoteException
   {
     GenericIterator i = RDHKeyFactory.getKeys();
-    return i18n.tr("vorhandene Schlüsseldisketten: {0}",Integer.toString(i.size()));
+    return i18n.tr("vorhandene SchlÃ¼sseldisketten: {0}",Integer.toString(i.size()));
   }
 
   /**

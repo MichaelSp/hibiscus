@@ -54,7 +54,7 @@ public class AuslandsUeberweisungNew extends AbstractView
 		final AuslandsUeberweisungControl control = new AuslandsUeberweisungControl(this);
     this.transfer = control.getTransfer();
 
-		GUI.getView().setTitle(i18n.tr("SEPA-Überweisung bearbeiten"));
+		GUI.getView().setTitle(i18n.tr("SEPA-Ãœberweisung bearbeiten"));
     GUI.getView().addPanelButton(new PanelButtonPrint(new PrintSupportAuslandsUeberweisung(transfer)));
 		
     Container cl = new SimpleContainer(getParent());
@@ -66,14 +66,14 @@ public class AuslandsUeberweisungNew extends AbstractView
     // Linke Seite
     {
       Container container = new SimpleContainer(cols.getComposite());
-      container.addHeadline(i18n.tr("Empfänger"));
+      container.addHeadline(i18n.tr("EmpfÃ¤nger"));
       container.addLabelPair(i18n.tr("Name"),                      control.getEmpfaengerName());
       container.addLabelPair(i18n.tr("IBAN"),                      control.getEmpfaengerKonto());    
       container.addLabelPair(i18n.tr("BIC"),                       control.getEmpfaengerBic());
-      container.addCheckbox(control.getStoreEmpfaenger(),i18n.tr("In Adressbuch übernehmen"));
+      container.addCheckbox(control.getStoreEmpfaenger(),i18n.tr("In Adressbuch Ã¼bernehmen"));
       
       container.addHeadline(i18n.tr("Auftragswiederholung (nur Hibiscus-intern)"));
-      container.addText(i18n.tr("Diese Information wird nicht an die Bank übertragen."),true);
+      container.addText(i18n.tr("Diese Information wird nicht an die Bank Ã¼bertragen."),true);
       container.addInput(control.getReminderInterval());
     }
     
@@ -95,7 +95,7 @@ public class AuslandsUeberweisungNew extends AbstractView
     container.addLabelPair(i18n.tr("Betrag"),                   control.getBetrag());
 
 		ButtonArea buttonArea = new ButtonArea();
-		buttonArea.addButton(i18n.tr("Löschen"),new AuslandsUeberweisungDelete(),transfer,false,"user-trash-full.png");
+		buttonArea.addButton(i18n.tr("LÃ¶schen"),new AuslandsUeberweisungDelete(),transfer,false,"user-trash-full.png");
     buttonArea.addButton(i18n.tr("Duplizieren..."), new Action() {
       public void handleAction(Object context) throws ApplicationException
       {
@@ -104,7 +104,7 @@ public class AuslandsUeberweisungNew extends AbstractView
       }
     },null,false,"edit-copy.png");
 
-    Button execute = new Button(i18n.tr("Jetzt ausführen..."), new Action() {
+    Button execute = new Button(i18n.tr("Jetzt ausfÃ¼hren..."), new Action() {
       public void handleAction(Object context) throws ApplicationException {
 				if (control.handleStore())
   				new AuslandsUeberweisungExecute().handleAction(transfer);

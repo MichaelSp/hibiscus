@@ -55,7 +55,7 @@ public class EmpfaengerNew extends AbstractView
     left.addLabelPair(i18n.tr("Kontoinhaber"),              control.getName());
 		left.addLabelPair(i18n.tr("Kontonummer"),               control.getKontonummer());
 		left.addLabelPair(i18n.tr("Bankleitzahl"),              control.getBlz());
-    left.addHeadline(i18n.tr("Europäische Bankverbindung (SEPA)"));
+    left.addHeadline(i18n.tr("EuropÃ¤ische Bankverbindung (SEPA)"));
     left.addLabelPair(i18n.tr("IBAN"),                      control.getIban());
     left.addLabelPair(i18n.tr("BIC"),                       control.getBic());
     left.addLabelPair(i18n.tr("Name des Kredit-Instituts"), control.getBank());
@@ -68,7 +68,7 @@ public class EmpfaengerNew extends AbstractView
     // und noch die Abschicken-Knoepfe
     ButtonArea buttonArea = new ButtonArea();
     
-    Button delete = new Button(i18n.tr("Löschen"), new DBObjectDelete(),control.getAddress(),false,"user-trash-full.png");
+    Button delete = new Button(i18n.tr("LÃ¶schen"), new DBObjectDelete(),control.getAddress(),false,"user-trash-full.png");
     delete.setEnabled(control.isHibiscusAdresse());
     buttonArea.addButton(delete);
     
@@ -90,14 +90,14 @@ public class EmpfaengerNew extends AbstractView
     gd.heightHint = 100; // wir verdecken sonst den Kommentar
     folder.setLayoutData(gd);
 
-    TabGroup tab = new TabGroup(folder,i18n.tr("Umsätze"), false,1);
+    TabGroup tab = new TabGroup(folder,i18n.tr("UmsÃ¤tze"), false,1);
     control.getUmsatzListe().paint(tab.getComposite());
 
     // BUGZILLA 107 http://www.willuhn.de/bugzilla/show_bug.cgi?id=107
     TabGroup tab2 = new TabGroup(folder,i18n.tr("Eingezogene SEPA-Sammellastschriften"));
     control.getSammelLastListe().paint(tab2.getComposite());
 
-    TabGroup tab3 = new TabGroup(folder,i18n.tr("SEPA-Sammelüberweisungen"));
+    TabGroup tab3 = new TabGroup(folder,i18n.tr("SEPA-SammelÃ¼berweisungen"));
     control.getSammelUeberweisungListe().paint(tab3.getComposite());
   }
 }

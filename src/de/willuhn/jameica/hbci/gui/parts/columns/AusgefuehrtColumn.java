@@ -35,7 +35,7 @@ public class AusgefuehrtColumn extends Column
    */
   public AusgefuehrtColumn()
   {
-    super("ausgefuehrt_am",i18n.tr("Ausgeführt?"),null,false,Column.ALIGN_RIGHT);
+    super("ausgefuehrt_am",i18n.tr("AusgefÃ¼hrt?"),null,false,Column.ALIGN_RIGHT);
   }
 
   /**
@@ -58,7 +58,7 @@ public class AusgefuehrtColumn extends Column
           return HBCI.LONGDATEFORMAT.format((Date)value);
         
         // Das sind die alten ohne Ausfuehrungs-Datum
-        return i18n.tr("ausgeführt");
+        return i18n.tr("ausgefÃ¼hrt");
       }
       catch (RemoteException re)
       {

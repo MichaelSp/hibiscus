@@ -40,7 +40,7 @@ public class KontoDelete implements Action
   	I18N i18n = Application.getPluginLoader().getPlugin(HBCI.class).getResources().getI18N();
 
 		if (context == null || !(context instanceof Konto))
-			throw new ApplicationException(i18n.tr("Kein Konto ausgewählt"));
+			throw new ApplicationException(i18n.tr("Kein Konto ausgewÃ¤hlt"));
 
 		try {
 
@@ -49,8 +49,8 @@ public class KontoDelete implements Action
 				return;
 
 			YesNoDialog d = new YesNoDialog(YesNoDialog.POSITION_CENTER);
-			d.setTitle(i18n.tr("Bankverbindung löschen"));
-			d.setText(i18n.tr("Wollen Sie diese Bankverbindung wirklich löschen?\nHierbei werden auch alle Umsätze, Überweisungen und Daueraufträge des Kontos lokal gelöscht."));
+			d.setTitle(i18n.tr("Bankverbindung lÃ¶schen"));
+			d.setText(i18n.tr("Wollen Sie diese Bankverbindung wirklich lÃ¶schen?\nHierbei werden auch alle UmsÃ¤tze, Ãœberweisungen und DauerauftrÃ¤ge des Kontos lokal gelÃ¶scht."));
 
 			try {
 				Boolean choice = (Boolean) d.open();
@@ -70,11 +70,11 @@ public class KontoDelete implements Action
 
 			// ok, wir loeschen das Objekt
 			k.delete();
-			GUI.getStatusBar().setSuccessText(i18n.tr("Bankverbindung gelöscht."));
+			GUI.getStatusBar().setSuccessText(i18n.tr("Bankverbindung gelÃ¶scht."));
 		}
 		catch (RemoteException e)
 		{
-			GUI.getStatusBar().setErrorText(i18n.tr("Fehler beim Löschen der Bankverbindung."));
+			GUI.getStatusBar().setErrorText(i18n.tr("Fehler beim LÃ¶schen der Bankverbindung."));
 			Logger.error("unable to delete konto",e);
 		}
   }

@@ -156,7 +156,7 @@ public class SepaLastschriftControl extends AbstractControl
     KontoListener kl = new KontoListener();
     MyKontoFilter filter = new MyKontoFilter();
     this.kontoAuswahl = new KontoInput(getTransfer().getKonto(),filter);
-    this.kontoAuswahl.setName(i18n.tr("Persˆnliches Konto"));
+    this.kontoAuswahl.setName(i18n.tr("Pers√∂nliches Konto"));
     this.kontoAuswahl.setRememberSelection("auftraege",false); // BUGZILLA 1362 - zuletzt ausgewaehltes Konto gleich uebernehmen
     this.kontoAuswahl.setMandatory(true);
     this.kontoAuswahl.addListener(kl);
@@ -256,7 +256,7 @@ public class SepaLastschriftControl extends AbstractControl
       this.endToEndId.setName(i18n.tr("End-to-End ID"));
       this.endToEndId.setValidChars(HBCIProperties.HBCI_SEPA_VALIDCHARS);
       this.endToEndId.setEnabled(!getTransfer().ausgefuehrt());
-      this.endToEndId.setHint(i18n.tr("freilassen wenn nicht benˆtigt"));
+      this.endToEndId.setHint(i18n.tr("freilassen wenn nicht ben√∂tigt"));
       this.endToEndId.setMandatory(false);
     }
     return this.endToEndId;
@@ -276,7 +276,7 @@ public class SepaLastschriftControl extends AbstractControl
     this.pmtInfId.setName(i18n.tr("Referenz (Payment-Information ID)"));
     this.pmtInfId.setValidChars(HBCIProperties.HBCI_SEPA_VALIDCHARS);
     this.pmtInfId.setEnabled(!getTransfer().ausgefuehrt());
-    this.pmtInfId.setHint(i18n.tr("freilassen wenn nicht benˆtigt"));
+    this.pmtInfId.setHint(i18n.tr("freilassen wenn nicht ben√∂tigt"));
     this.pmtInfId.setMandatory(false);
     return this.pmtInfId;
   }
@@ -291,7 +291,7 @@ public class SepaLastschriftControl extends AbstractControl
     if (this.creditorId == null)
     {
       this.creditorId = new TextInput(getTransfer().getCreditorId(),HBCIProperties.HBCI_SEPA_CREDITORID_MAXLENGTH);
-      this.creditorId.setName(i18n.tr("Gl‰ubiger-Identifikation"));
+      this.creditorId.setName(i18n.tr("Gl√§ubiger-Identifikation"));
       this.creditorId.setValidChars(HBCIProperties.HBCI_SEPA_VALIDCHARS);
       this.creditorId.setEnabled(!getTransfer().ausgefuehrt());
       this.creditorId.setMandatory(true);
@@ -639,7 +639,7 @@ public class SepaLastschriftControl extends AbstractControl
       catch (RemoteException er)
       {
         Logger.error("error while updating currency",er);
-        GUI.getStatusBar().setErrorText(i18n.tr("Fehler bei Ermittlung der W‰hrung"));
+        GUI.getStatusBar().setErrorText(i18n.tr("Fehler bei Ermittlung der W√§hrung"));
       }
     }
   }
@@ -734,8 +734,8 @@ public class SepaLastschriftControl extends AbstractControl
           // standen und wir die nicht komplett ueberschrieben haben, zeigen wir einen Warnhinweis an
           if (addressCur != null && !BeanUtil.equals(address,addressCur) && haveCur && !haveNew)
           {
-            String msg = i18n.tr("Sie haben eine neue Adresse ausgew‰hlt zu der noch keine vollst‰ndigen Mandatsdaten\n" +
-            		                 "hinterlegt sind. Die Daten des Mandats stammen u.U. noch von der vorher ausgew‰hlten\n" +
+            String msg = i18n.tr("Sie haben eine neue Adresse ausgew√§hlt zu der noch keine vollst√§ndigen Mandatsdaten\n" +
+            		                 "hinterlegt sind. Die Daten des Mandats stammen u.U. noch von der vorher ausgew√§hlten\n" +
             		                 "Adresse.\n\nMandats-Referenz und Unterschriftsdatum entfernen und neu eingeben?");
             
             boolean clear = Application.getCallback().askUser(msg);

@@ -193,7 +193,7 @@ public class EmpfaengerList extends TablePart implements Part
   {
     final TabFolder folder = new TabFolder(parent, SWT.NONE);
     folder.setLayoutData(new GridData(GridData.FILL_HORIZONTAL));
-    TabGroup tab = new TabGroup(folder,i18n.tr("Anzeige einschr‰nken"));
+    TabGroup tab = new TabGroup(folder,i18n.tr("Anzeige einschr√§nken"));
 
     /////////////////////////////////////////////////////////////////
     // Mal schauen, ob wir mehrere Adressbuecher haben. Ist das der Fall,

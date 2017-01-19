@@ -101,13 +101,13 @@ public class TextSchluessel
   static
   {
     list.add(new TextSchluessel(TS_ABBUCHUNG,i18n.tr("Abbuchungsverfahren")));
-    list.add(new TextSchluessel(TS_EINZUG,   i18n.tr("Einzugsermächtigung")));
+    list.add(new TextSchluessel(TS_EINZUG,   i18n.tr("EinzugsermÃ¤chtigung")));
     list.add(new TextSchluessel(TS_DAUER,    i18n.tr("Dauerauftrag")));
-    list.add(new TextSchluessel(TS_UEB,      i18n.tr("Überweisung")));
-    list.add(new TextSchluessel(TS_LOHN,     i18n.tr("Überweisung Lohn/Gehalt/Rente")));
-    list.add(new TextSchluessel(TS_VL,       i18n.tr("Vermögenswirksame Leistungen")));
-    list.add(new TextSchluessel(TS_RUECKUEB, i18n.tr("Rücküberweisung")));
-    list.add(new TextSchluessel(TS_BZU,      i18n.tr("BZÜ-Überweisung")));
+    list.add(new TextSchluessel(TS_UEB,      i18n.tr("Ãœberweisung")));
+    list.add(new TextSchluessel(TS_LOHN,     i18n.tr("Ãœberweisung Lohn/Gehalt/Rente")));
+    list.add(new TextSchluessel(TS_VL,       i18n.tr("VermÃ¶genswirksame Leistungen")));
+    list.add(new TextSchluessel(TS_RUECKUEB, i18n.tr("RÃ¼ckÃ¼berweisung")));
+    list.add(new TextSchluessel(TS_BZU,      i18n.tr("BZÃœ-Ãœberweisung")));
     list.add(new TextSchluessel(TS_SPENDE,   i18n.tr("Spende")));
   }
 
@@ -164,7 +164,7 @@ public class TextSchluessel
   
   /**
    * ct
-   * @param code Nummer des Textschlüssel.
+   * @param code Nummer des TextschlÃ¼ssel.
    * @param name Bezeichnung.
    */
   private TextSchluessel(String code, String name)

@@ -49,7 +49,7 @@ public class NachrichtDetails extends AbstractView {
 
     ButtonArea buttons = new ButtonArea();
     buttons.addButton(i18n.tr("In Zwischenablage kopieren"),new NachrichtCopy(),n,false,"edit-copy.png");
-    buttons.addButton(i18n.tr("Löschen"),new DBObjectDelete(),n,false,"user-trash-full.png");
+    buttons.addButton(i18n.tr("LÃ¶schen"),new DBObjectDelete(),n,false,"user-trash-full.png");
     buttons.paint(getParent());
   }
 }

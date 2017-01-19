@@ -64,7 +64,7 @@ public class SepaLastschriftNew extends AbstractView
       container.addLabelPair(i18n.tr("Name"), control.getEmpfaengerName());
       container.addLabelPair(i18n.tr("IBAN"), control.getEmpfaengerKonto());    
       container.addLabelPair(i18n.tr("BIC"),  control.getEmpfaengerBic());
-      container.addCheckbox(control.getStoreEmpfaenger(),i18n.tr("In Adressbuch übernehmen"));
+      container.addCheckbox(control.getStoreEmpfaenger(),i18n.tr("In Adressbuch Ã¼bernehmen"));
 
       container.addHeadline(i18n.tr("SEPA"));
       container.addText(i18n.tr("Bitte beachten Sie die Vorlauffristen."),true);
@@ -83,7 +83,7 @@ public class SepaLastschriftNew extends AbstractView
       container.addInput(control.getSignatureDate());
       container.addInput(control.getSequenceType());
       container.addHeadline(i18n.tr("Sonstige Informationen (nur Hibiscus-intern)"));
-      container.addText(i18n.tr("Diese Daten werden nicht an die Bank übertragen."),true);
+      container.addText(i18n.tr("Diese Daten werden nicht an die Bank Ã¼bertragen."),true);
       container.addInput(control.getTermin());
       container.addInput(control.getReminderInterval());
     }
@@ -94,7 +94,7 @@ public class SepaLastschriftNew extends AbstractView
     container.addLabelPair(i18n.tr("Betrag"),           control.getBetrag());
 
 		ButtonArea buttonArea = new ButtonArea();
-		buttonArea.addButton(i18n.tr("Löschen"),new DBObjectDelete(),transfer,false,"user-trash-full.png");
+		buttonArea.addButton(i18n.tr("LÃ¶schen"),new DBObjectDelete(),transfer,false,"user-trash-full.png");
     buttonArea.addButton(i18n.tr("Duplizieren..."), new Action() {
       public void handleAction(Object context) throws ApplicationException
       {
@@ -103,7 +103,7 @@ public class SepaLastschriftNew extends AbstractView
       }
     },null,false,"edit-copy.png");
 
-    Button execute = new Button(i18n.tr("Jetzt ausführen..."), new Action() {
+    Button execute = new Button(i18n.tr("Jetzt ausfÃ¼hren..."), new Action() {
       public void handleAction(Object context) throws ApplicationException {
 				if (control.handleStore())
   				new SepaLastschriftExecute().handleAction(transfer);

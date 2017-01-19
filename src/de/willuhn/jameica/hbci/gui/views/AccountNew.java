@@ -35,7 +35,7 @@ public class AccountNew extends AbstractView
     
     Container c = new SimpleContainer(this.getParent());
     c.addHeadline(i18n.tr("Schritt 1: Art des Bankzugangs"));
-    c.addText(i18n.tr("Bitte w‰hlen Sie die Art des anzulegenden Bankzugangs."),true);
+    c.addText(i18n.tr("Bitte w√§hlen Sie die Art des anzulegenden Bankzugangs."),true);
     
     for (InfoPanel panel:control.getAccountProviders())
     {

@@ -36,7 +36,7 @@ public class SepaDauerauftragSearchProvider implements SearchProvider
    */
   public String getName()
   {
-    return Application.getPluginLoader().getPlugin(HBCI.class).getResources().getI18N().tr("SEPA-Dauerauftr‰ge");
+    return Application.getPluginLoader().getPlugin(HBCI.class).getResources().getI18N().tr("SEPA-Dauerauftr√§ge");
   }
 
   /**

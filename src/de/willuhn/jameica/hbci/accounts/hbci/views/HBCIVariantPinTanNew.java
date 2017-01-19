@@ -50,7 +50,7 @@ public class HBCIVariantPinTanNew extends AbstractView
 
     Container c = new SimpleContainer(this.getParent());
     c.addHeadline(i18n.tr("Schritt 3: Auswahl der Bank"));
-    c.addText(i18n.tr("Bitte w‰hlen Sie die Bank aus, zu der Sie einen Zugang einrichten mˆchten."),true);
+    c.addText(i18n.tr("Bitte w√§hlen Sie die Bank aus, zu der Sie einen Zugang einrichten m√∂chten."),true);
     
     InfoPanel panel = this.variant.getInfo();
     c.addPart(panel);
@@ -58,7 +58,7 @@ public class HBCIVariantPinTanNew extends AbstractView
     
     Composite comp = this.getComposite(panel);
     Container cs = new SimpleContainer(comp);
-    cs.addText("\n" + i18n.tr("Bitte geben Sie die BLZ, BIC oder den Namen Ihrer Bank ein.\nHibiscus wird anschlieﬂend versuchen, die Adresse des Bankservers zu ermitteln."),true);
+    cs.addText("\n" + i18n.tr("Bitte geben Sie die BLZ, BIC oder den Namen Ihrer Bank ein.\nHibiscus wird anschlie√üend versuchen, die Adresse des Bankservers zu ermitteln."),true);
     cs.addPart(control.getBank());
     cs.addPart(control.getURL());
 //    c.addInput(control.getHBCIVersion());

@@ -5,7 +5,7 @@
 	</p>
 
 	<p>
-		<b>Tipp:</b> Wenn Sie die Option <b>In Adressbuch übernehmen</b>
+		<b>Tipp:</b> Wenn Sie die Option <b>In Adressbuch Ã¼bernehmen</b>
 		aktivieren, wird das eingegebene Gegenkonto automatisch in Ihrem
 		Adressbuch gespeichert.
 	</p>

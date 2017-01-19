@@ -105,7 +105,7 @@ public class BICInput extends AccountInput
       catch (Exception e)
       {
         Logger.error("error while checking BIC",e);
-        Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim Prüfen der BIC: {}",e.getMessage()),StatusBarMessage.TYPE_INFO));
+        Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim PrÃ¼fen der BIC: {}",e.getMessage()),StatusBarMessage.TYPE_INFO));
       }
     }
   }

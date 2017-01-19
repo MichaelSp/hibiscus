@@ -42,7 +42,7 @@ import de.willuhn.util.ApplicationException;
 import de.willuhn.util.I18N;
 
 /**
- * Abstrakte Basis-Implementierung des Controllers fuer die Dialog Liste der Sammellastschriften/Sammel-Überweisungen.
+ * Abstrakte Basis-Implementierung des Controllers fuer die Dialog Liste der Sammellastschriften/Sammel-Ãœberweisungen.
  * @author willuhn
  * @param <T> der konkrete Typ des Sammel-Auftrages.
  */
@@ -260,7 +260,7 @@ public abstract class AbstractSammelTransferControl<T extends SammelTransfer> ex
      */
     public DeleteMenuItem()
     {
-      super(i18n.tr("Buchung(en) löschen..."),new Action() {
+      super(i18n.tr("Buchung(en) lÃ¶schen..."),new Action() {
         public void handleAction(Object context) throws ApplicationException
         {
           new DBObjectDelete().handleAction(context);

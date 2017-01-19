@@ -104,7 +104,7 @@ public class Converter
     // Aus einer Mail von Stefan Palme
     //    Es geht noch besser. Wenn in "umsline.gvcode" nicht der Wert "999"
     //    drinsteht, sind die Variablen "text", "primanota", "usage", "other"
-    //    und "addkey" irgendwie sinnvoll gefüllt.  Steht in "gvcode" der Wert
+    //    und "addkey" irgendwie sinnvoll gefÃ¼llt.  Steht in "gvcode" der Wert
     //    "999" drin, dann sind diese Variablen alle null, und der ungeparste 
     //    Inhalt des Feldes :86: steht komplett in "additional".
 
@@ -426,7 +426,7 @@ public class Converter
    */
   public static DTAUS HibiscusSammelUeberweisung2DTAUS(SammelUeberweisung su) throws RemoteException
   {
-    // TYPE_CREDIT = Sammelüberweisung
+    // TYPE_CREDIT = SammelÃ¼berweisung
     // TYPE_DEBIT = Sammellastschrift
     return HibiscusSammelTransfer2DTAUS(su, DTAUS.TYPE_CREDIT);
   }
@@ -439,7 +439,7 @@ public class Converter
    */
   public static DTAUS HibiscusSammelLastschrift2DTAUS(SammelLastschrift sl) throws RemoteException
   {
-    // TYPE_CREDIT = Sammelüberweisung
+    // TYPE_CREDIT = SammelÃ¼berweisung
     // TYPE_DEBIT = Sammellastschrift
     return HibiscusSammelTransfer2DTAUS(sl, DTAUS.TYPE_DEBIT);
   }

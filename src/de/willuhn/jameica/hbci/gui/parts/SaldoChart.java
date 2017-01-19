@@ -160,7 +160,7 @@ public class SaldoChart implements Part
         {
           final TabFolder folder = new TabFolder(parent, SWT.NONE);
           folder.setLayoutData(new GridData(GridData.FILL_HORIZONTAL));
-          TabGroup tab = new TabGroup(folder,i18n.tr("Anzeige einschr‰nken"));
+          TabGroup tab = new TabGroup(folder,i18n.tr("Anzeige einschr√§nken"));
           
           tab.addInput(this.getKontoAuswahl());
           tab.addInput(this.getRange());

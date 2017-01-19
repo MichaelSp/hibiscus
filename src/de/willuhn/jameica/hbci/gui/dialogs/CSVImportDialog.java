@@ -117,7 +117,7 @@ public class CSVImportDialog extends AbstractDialog
     // BUGZILLA 412
     options.addHeadline(i18n.tr("Zuordnung der Spalten"));
     options.addText(i18n.tr("In der linken Spalte sehen Sie die erste Zeile Ihrer CSV-Datei.\n" +
-                            "Ordnen Sie die Felder bitte über die Auswahl-Elemente auf der rechte Seite zu."),true);
+                            "Ordnen Sie die Felder bitte Ã¼ber die Auswahl-Elemente auf der rechte Seite zu."),true);
 
     this.parent = new Composite(parent,SWT.NONE);
     this.parent.setLayoutData(new GridData(GridData.FILL_BOTH));
@@ -128,7 +128,7 @@ public class CSVImportDialog extends AbstractDialog
     c.addInput(this.getError());
     
     ButtonArea b = new ButtonArea();
-    b.addButton(i18n.tr("Übernehmen"), new Action()
+    b.addButton(i18n.tr("Ãœbernehmen"), new Action()
     {
       public void handleAction(Object context) throws ApplicationException
       {
@@ -229,19 +229,19 @@ public class CSVImportDialog extends AbstractDialog
       
       if (cols == 0)
       {
-        this.getError().setValue(i18n.tr("CSV-Datei enthält keine Spalten"));
+        this.getError().setValue(i18n.tr("CSV-Datei enthÃ¤lt keine Spalten"));
         return;
       }
 
       if (lines.size() == 0)
       {
-        this.getError().setValue(i18n.tr("CSV-Datei enthält keine Zeilen"));
+        this.getError().setValue(i18n.tr("CSV-Datei enthÃ¤lt keine Zeilen"));
         return;
       }
 
       if (lines.size() <= p.getSkipLines())
       {
-        this.getError().setValue(i18n.tr("CSV-Datei enthält nur {0} Zeilen",Integer.toString(lines.size())));
+        this.getError().setValue(i18n.tr("CSV-Datei enthÃ¤lt nur {0} Zeilen",Integer.toString(lines.size())));
         return;
       }
       
@@ -496,7 +496,7 @@ public class CSVImportDialog extends AbstractDialog
     if (this.quoteChar == null)
     {
       this.quoteChar = new TextInput(this.getProfile().getQuotingChar(),1);
-      this.quoteChar.setName(i18n.tr("Anführungszeichen"));
+      this.quoteChar.setName(i18n.tr("AnfÃ¼hrungszeichen"));
       this.quoteChar.setComment(i18n.tr("Zeichen, mit dem die Spalten umschlossen sind"));
       this.quoteChar.setMandatory(false);
     }
@@ -530,8 +530,8 @@ public class CSVImportDialog extends AbstractDialog
     if (this.skipLines == null)
     {
       this.skipLines = new SpinnerInput(0,10,this.getProfile().getSkipLines());
-      this.skipLines.setName(i18n.tr("Zeilen überspringen"));
-      this.skipLines.setComment(i18n.tr("Zu überspringende Zeilen am Datei-Anfang"));
+      this.skipLines.setName(i18n.tr("Zeilen Ã¼berspringen"));
+      this.skipLines.setComment(i18n.tr("Zu Ã¼berspringende Zeilen am Datei-Anfang"));
       this.skipLines.setMandatory(false);
     }
     return this.skipLines;

@@ -79,7 +79,7 @@ public class CaptchaDialog extends AbstractDialog
   public CaptchaDialog(InputStream is, int position) throws ApplicationException
   {
     super(position,false);
-    this.setTitle(i18n.tr("Captcha lösen"));
+    this.setTitle(i18n.tr("Captcha lÃ¶sen"));
     this.setPanelText(i18n.tr("Bitte geben Sie den in der Grafik angezeigten Text ein."));
     this.image = is;
   }
@@ -209,7 +209,7 @@ public class CaptchaDialog extends AbstractDialog
       return this.solution;
     
     this.solution = new TextInput(null);
-    this.solution.setName(i18n.tr("Lösung"));
+    this.solution.setName(i18n.tr("LÃ¶sung"));
     this.solution.setMandatory(true);
     return this.solution;
   }
@@ -223,7 +223,7 @@ public class CaptchaDialog extends AbstractDialog
     if (this.applyButton != null)
       return this.applyButton;
     
-    this.applyButton = new Button(i18n.tr("Übernehmen"),new Action() {
+    this.applyButton = new Button(i18n.tr("Ãœbernehmen"),new Action() {
       public void handleAction(Object context) throws ApplicationException
       {
         data = (String) getSolution().getValue();

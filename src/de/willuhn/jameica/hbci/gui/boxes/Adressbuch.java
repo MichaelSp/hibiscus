@@ -105,7 +105,7 @@ public class Adressbuch extends AbstractBox implements Box
  * *** empty log message ***
  *
  * Revision 1.3  2006/03/20 00:35:53  willuhn
- * @N new box "Konten-Übersicht"
+ * @N new box "Konten-Ãœbersicht"
  *
  * Revision 1.2  2005/11/09 01:14:14  willuhn
  * *** empty log message ***

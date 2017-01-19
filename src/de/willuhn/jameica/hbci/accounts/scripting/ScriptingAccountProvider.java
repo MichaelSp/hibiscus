@@ -41,7 +41,7 @@ public class ScriptingAccountProvider implements AccountProvider
   {
     InfoPanel info = new InfoPanel();
     info.setTitle(this.getName());
-    info.setText(i18n.tr("Verwenden Sie diese Option für die Anlage von Bankzugängen per Scripting-Plugin."));
+    info.setText(i18n.tr("Verwenden Sie diese Option fÃ¼r die Anlage von BankzugÃ¤ngen per Scripting-Plugin."));
     info.setComment(i18n.tr("Per Scripting-Plugin erhalten Sie Zugriff auf Kreditkarten-, PayPal- und andere Konten."));
     info.setUrl("http://www.willuhn.de/wiki/doku.php?id=support:list:banken:scripting");
     info.setIcon("application-javascript-large.png");

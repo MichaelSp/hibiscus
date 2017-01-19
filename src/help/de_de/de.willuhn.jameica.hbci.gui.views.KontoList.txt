@@ -7,7 +7,7 @@
 		Klicken Sie auf <b>Konten aus HBCI-Konfiguration laden...</b>,
 		um die Konten zu einem Bank-Zugang automatisch zu ermitteln - vergessen Sie nicht,
 		vorher einen Bank-Zugang anzulegen. Bereits eingerichtete Konten
-		werden hierbei nicht überschrieben.
+		werden hierbei nicht Ã¼berschrieben.
 	</p>
 	<p>
 	  Sollte das automatische Erstellen der Konten nicht funktionieren, dann legen

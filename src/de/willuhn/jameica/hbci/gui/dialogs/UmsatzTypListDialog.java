@@ -103,7 +103,7 @@ public class UmsatzTypListDialog extends AbstractDialog
   {
     Container group = new SimpleContainer(parent,true);
     
-    group.addText(i18n.tr("Bitte w‰hlen Sie die zu verwendende Kategorie aus."),true);
+    group.addText(i18n.tr("Bitte w√§hlen Sie die zu verwendende Kategorie aus."),true);
     TextInput text = this.getSearch();
     group.addInput(text);
     group.addPart(this.getTable());
@@ -146,7 +146,7 @@ public class UmsatzTypListDialog extends AbstractDialog
     if (this.apply != null)
       return this.apply;
     
-    this.apply = new Button(i18n.tr("‹bernehmen"),new Apply(),null,true,"ok.png");
+    this.apply = new Button(i18n.tr("√úbernehmen"),new Apply(),null,true,"ok.png");
     this.apply.setEnabled(false); // initial deaktiviert
     return this.apply;
   }

@@ -81,7 +81,7 @@ public class PrintSupportUmsatzList extends AbstractPrintSupport
     }
 
     if (!(data instanceof Umsatz[]))
-      throw new ApplicationException(i18n.tr("Bitte w‰hlen Sie mindestens einen Umsatz aus"));
+      throw new ApplicationException(i18n.tr("Bitte w√§hlen Sie mindestens einen Umsatz aus"));
 
     try
     {
@@ -196,7 +196,7 @@ public class PrintSupportUmsatzList extends AbstractPrintSupport
    */
   String getTitle() throws ApplicationException
   {
-    return i18n.tr("Ums‰tze");
+    return i18n.tr("Ums√§tze");
   }
 }
 

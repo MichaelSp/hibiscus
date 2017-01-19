@@ -43,7 +43,7 @@ public class DateToInput extends AbstractDateInput
   {
     super(date,parameter);
     this.setName(i18n.tr("End-Datum"));
-    this.setComment(i18n.tr("Spätestes Datum"));
+    this.setComment(i18n.tr("SpÃ¤testes Datum"));
   }
 
   /**

@@ -354,9 +354,9 @@ public class HBCI extends AbstractPlugin
       String driver = HBCIDBService.SETTINGS.getString("database.driver",null);
       if (driver != null && driver.equals(DBSupportH2Impl.class.getName()))
       {
-        msg += "\n\nMˆglicherweise ist die Hibiscus-Datenbank defekt. Klicken Sie bitte auf \"Datei>Backups verwalten\", " +
-        		   "w‰hlen Sie das Backup vom letzten Tag aus, an dem der Fehler noch nicht auftrat und klicken " +
-        		   "Sie anschlieﬂend auf \"Ausgew‰hltes Backup wiederherstellen...\". Beim n‰chsten Start von Hibiscus " +
+        msg += "\n\nM√∂glicherweise ist die Hibiscus-Datenbank defekt. Klicken Sie bitte auf \"Datei>Backups verwalten\", " +
+        		   "w√§hlen Sie das Backup vom letzten Tag aus, an dem der Fehler noch nicht auftrat und klicken " +
+        		   "Sie anschlie√üend auf \"Ausgew√§hltes Backup wiederherstellen...\". Beim n√§chsten Start von Hibiscus " +
         		   "wird das Backup automatisch wiederhergestellt. Sollte sich das Problem hierdurch nicht beheben lassen, " +
         		   "besuchen Sie bitte http://www.willuhn.de/wiki/doku.php?id=support:fehlermelden";
       }

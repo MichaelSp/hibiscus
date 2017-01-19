@@ -54,11 +54,11 @@ public class Synchronize implements Action
     Logger.info("Start synchronization");
 
     if (!(context instanceof List))
-      throw new ApplicationException(i18n.tr("Keine Synchronisierungsaufgaben ausgew‰hlt"));
+      throw new ApplicationException(i18n.tr("Keine Synchronisierungsaufgaben ausgew√§hlt"));
 
     List list = (List) context;
     if (list.size() == 0)
-      throw new ApplicationException(i18n.tr("Keine Synchronisierungsaufgaben ausgew‰hlt"));
+      throw new ApplicationException(i18n.tr("Keine Synchronisierungsaufgaben ausgew√§hlt"));
 
     Logger.info("backends to synchronize: " + list.size());
     List<Synchronization> result = new ArrayList<Synchronization>();
@@ -126,7 +126,7 @@ public class Synchronize implements Action
     catch (Exception e)
     {
       Logger.error("error while checking jobs",e);
-      throw new ApplicationException(i18n.tr("Fehler beim Ausf¸hren der Auftr‰ge: {0}",e.getMessage()));
+      throw new ApplicationException(i18n.tr("Fehler beim Ausf√ºhren der Auftr√§ge: {0}",e.getMessage()));
     }
   }
   

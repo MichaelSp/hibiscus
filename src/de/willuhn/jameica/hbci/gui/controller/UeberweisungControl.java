@@ -156,7 +156,7 @@ public class UeberweisungControl extends AbstractBaseUeberweisungControl
           cal.add(Calendar.DATE,6);
           if (DateUtil.startOfDay(date).after(cal.getTime()))
           {
-            String q = i18n.tr("Soll der Auftrag als bankseitig geführte Termin-Überweisung ausgeführt werden?");
+            String q = i18n.tr("Soll der Auftrag als bankseitig gefÃ¼hrte Termin-Ãœberweisung ausgefÃ¼hrt werden?");
             if (Application.getCallback().askUser(q))
               getTyp().setValue(new Typ(true,false));
           }
@@ -196,11 +196,11 @@ public class UeberweisungControl extends AbstractBaseUeberweisungControl
 
     String current = ((BaseUeberweisung)getTransfer()).getTextSchluessel();
     textschluessel = new SelectInput(TextSchluessel.get(TextSchluessel.SET_UEB),TextSchluessel.get(current));
-    textschluessel.setName(i18n.tr("Textschlüssel"));
+    textschluessel.setName(i18n.tr("TextschlÃ¼ssel"));
     textschluessel.setEnabled(!((Terminable)getTransfer()).ausgefuehrt());
 
     ////////////////////////////////////////////////////////////////////////////
-    // BZÜ und Spenden-Ueberweisung
+    // BZÃœ und Spenden-Ueberweisung
 
     // initiales Setzen der Einstellungen
     updateZweck(current);
@@ -234,7 +234,7 @@ public class UeberweisungControl extends AbstractBaseUeberweisungControl
       
       if (code != null && code.equals(TextSchluessel.TS_BZU))
       {
-        zweck.setName(i18n.tr("BZÜ-Prüfziffer"));
+        zweck.setName(i18n.tr("BZÃœ-PrÃ¼fziffer"));
         zweck.setMaxLength(HBCIProperties.HBCI_TRANSFER_BZU_LENGTH);
         zweck.setValidChars(HBCIProperties.HBCI_BZU_VALIDCHARS);
       }
@@ -275,7 +275,7 @@ public class UeberweisungControl extends AbstractBaseUeberweisungControl
     catch (RemoteException re)
     {
       Logger.error("error while storing ueberweisung",re);
-      GUI.getStatusBar().setErrorText(i18n.tr("Fehler beim Speichern der Überweisung"));
+      GUI.getStatusBar().setErrorText(i18n.tr("Fehler beim Speichern der Ãœberweisung"));
       return false;
     }
   }
@@ -305,9 +305,9 @@ public class UeberweisungControl extends AbstractBaseUeberweisungControl
      */
     public String getName()
     {
-      if (this.termin) return i18n.tr("Termin-Überweisung");
-      if (this.umb)    return i18n.tr("Interne Umbuchung (Übertrag)");
-      return           i18n.tr("Überweisung");
+      if (this.termin) return i18n.tr("Termin-Ãœberweisung");
+      if (this.umb)    return i18n.tr("Interne Umbuchung (Ãœbertrag)");
+      return           i18n.tr("Ãœberweisung");
     }
     
     /**

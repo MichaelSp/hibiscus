@@ -241,7 +241,7 @@ public class SparQuote implements Part
     {
       final TabFolder folder = new TabFolder(parent, SWT.NONE);
       folder.setLayoutData(new GridData(GridData.FILL_HORIZONTAL));
-      TabGroup tab = new TabGroup(folder,i18n.tr("Anzeige einschr‰nken"));
+      TabGroup tab = new TabGroup(folder,i18n.tr("Anzeige einschr√§nken"));
 
       tab.addInput(getKontoAuswahl());
       tab.addInput(getStartAuswahl());
@@ -408,7 +408,7 @@ public class SparQuote implements Part
     }
 
     // Trend ermitteln
-    // http://de.wikibooks.org/wiki/Mathematik:_Statistik:_Gl‰ttungsverfahren
+    // http://de.wikibooks.org/wiki/Mathematik:_Statistik:_Gl√§ttungsverfahren
     // http://de.wikibooks.org/wiki/Mathematik:_Statistik:_Trend_und_Saisonkomponente
 
     this.trend.clear();

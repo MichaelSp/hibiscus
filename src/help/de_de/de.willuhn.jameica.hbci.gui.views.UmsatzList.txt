@@ -1,16 +1,16 @@
 <form>
 	<p>
-		<span color="header" font="header">Umsätze</span>
+		<span color="header" font="header">UmsÃ¤tze</span>
 	</p>
 	
 	<p>
-		Klicken Sie auf <b>Umsätze abrufen</b> um aktuelle Buchungen
+		Klicken Sie auf <b>UmsÃ¤tze abrufen</b> um aktuelle Buchungen
 		von Ihrem Konto abzurufen. Hierbei wird auch der
 		Saldo dieses Kontos aktualisiert.
 	</p>
 	
 	<p>
-		<b>Tipp:</b> Durch Doppelklick auf eine Buchung können
-		Sie weitere Details anzeigen und das Gegenkonto in Ihr Adressbuch übernehmen.
+		<b>Tipp:</b> Durch Doppelklick auf eine Buchung kÃ¶nnen
+		Sie weitere Details anzeigen und das Gegenkonto in Ihr Adressbuch Ã¼bernehmen.
 	</p>
 </form>

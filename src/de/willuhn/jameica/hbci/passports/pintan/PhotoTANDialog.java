@@ -24,7 +24,7 @@ import de.willuhn.jameica.hbci.passports.pintan.rmi.PinTanConfig;
 import de.willuhn.util.ApplicationException;
 
 /**
- * Dialog für die PhotoTAN-Eingabe.
+ * Dialog fÃ¼r die PhotoTAN-Eingabe.
  */
 public class PhotoTANDialog extends TANDialog
 {

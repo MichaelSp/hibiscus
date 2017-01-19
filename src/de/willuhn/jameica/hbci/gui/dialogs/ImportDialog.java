@@ -85,10 +85,10 @@ public class ImportDialog extends AbstractDialog
   protected void paint(Composite parent) throws Exception
   {
 		Container group = new SimpleContainer(parent);
-		group.addText(i18n.tr("Bitte wählen Sie das gewünschte Dateiformat für den Import aus"),true);
+		group.addText(i18n.tr("Bitte wÃ¤hlen Sie das gewÃ¼nschte Dateiformat fÃ¼r den Import aus"),true);
 
     Input formats = getImporterList();
-		group.addLabelPair(i18n.tr("Verfügbare Formate:"),formats);
+		group.addLabelPair(i18n.tr("VerfÃ¼gbare Formate:"),formats);
 
 		ButtonArea buttons = new ButtonArea();
 		Button button = new Button(i18n.tr("Import starten"),new Action()
@@ -130,12 +130,12 @@ public class ImportDialog extends AbstractDialog
     }
 
     if (imp == null || imp.importer == null)
-      throw new ApplicationException(i18n.tr("Bitte wählen Sie ein Import-Format aus"));
+      throw new ApplicationException(i18n.tr("Bitte wÃ¤hlen Sie ein Import-Format aus"));
 
     settings.setAttribute("lastformat",imp.format.getName());
 
     FileDialog fd = new FileDialog(GUI.getShell(),SWT.OPEN);
-    fd.setText(i18n.tr("Bitte wählen Sie die Datei aus, welche für den Import verwendet werden soll."));
+    fd.setText(i18n.tr("Bitte wÃ¤hlen Sie die Datei aus, welche fÃ¼r den Import verwendet werden soll."));
     fd.setFilterNames(imp.format.getFileExtensions());
 
     String path = settings.getString("lastdir",System.getProperty("user.home"));
@@ -264,7 +264,7 @@ public class ImportDialog extends AbstractDialog
 
 		if (size == 0)
 		{
-			importerListe = new LabelInput(i18n.tr("Keine Import-Filter verfügbar"));
+			importerListe = new LabelInput(i18n.tr("Keine Import-Filter verfÃ¼gbar"));
 			return importerListe;
 		}
 

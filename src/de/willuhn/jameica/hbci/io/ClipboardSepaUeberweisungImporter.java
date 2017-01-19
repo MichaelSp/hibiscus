@@ -27,7 +27,7 @@ public class ClipboardSepaUeberweisungImporter
   private final static Pattern PT_KONTO = Pattern.compile("(.*iban.*)|(.*Konto.*)|(.*Kto.*)", Pattern.CASE_INSENSITIVE);
   private final static Pattern PT_BLZ   = Pattern.compile("(.*bic.*)", Pattern.CASE_INSENSITIVE);
   private final static Pattern PT_ZWECK = Pattern.compile("(.*zweck.*)", Pattern.CASE_INSENSITIVE);
-  private final static Pattern PT_NAME  = Pattern.compile("(.*Inhaber.*)|(.*Name.*)|(.*Empf‰nger.*)|(.*Empfaenger.*)", Pattern.CASE_INSENSITIVE);
+  private final static Pattern PT_NAME  = Pattern.compile("(.*Inhaber.*)|(.*Name.*)|(.*Empf√§nger.*)|(.*Empfaenger.*)", Pattern.CASE_INSENSITIVE);
 
 	/**
    * Versucht eine SEPA-Ueberweisung aus der Zwischenablage zu erstellen.

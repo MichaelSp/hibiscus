@@ -42,7 +42,7 @@ public class UmsatzSearchProvider implements SearchProvider
    */
   public String getName()
   {
-    return Application.getPluginLoader().getPlugin(HBCI.class).getResources().getI18N().tr("Ums‰tze");
+    return Application.getPluginLoader().getPlugin(HBCI.class).getResources().getI18N().tr("Ums√§tze");
   }
 
   /**

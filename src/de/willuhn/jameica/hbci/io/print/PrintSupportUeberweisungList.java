@@ -35,7 +35,7 @@ public class PrintSupportUeberweisungList extends AbstractPrintSupportBaseUeberw
    */
   String getTitle() throws ApplicationException
   {
-    return i18n.tr("Überweisungen");
+    return i18n.tr("Ãœberweisungen");
   }
 
   /**

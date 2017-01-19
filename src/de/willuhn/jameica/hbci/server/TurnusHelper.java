@@ -250,7 +250,7 @@ public class TurnusHelper
 		if (iv == 1 && ze == Turnus.ZEITEINHEIT_MONATLICH)
 			s = i18n.tr("Monatlich");
 		else if (iv == 1 && ze == Turnus.ZEITEINHEIT_WOECHENTLICH)
-			s = i18n.tr("Wˆchentlich");
+			s = i18n.tr("W√∂chentlich");
 
 		// komplexer Zahlungsplan
 		if (iv > 1 && ze == Turnus.ZEITEINHEIT_MONATLICH)
@@ -260,11 +260,11 @@ public class TurnusHelper
 
 		// Standardfaelle
 		if (iv == 3 && ze == Turnus.ZEITEINHEIT_MONATLICH)
-			s = i18n.tr("Viertelj‰hrlich");
+			s = i18n.tr("Viertelj√§hrlich");
 		if (iv == 6 && ze == Turnus.ZEITEINHEIT_MONATLICH)
-			s = i18n.tr("Halbj‰hrlich");
+			s = i18n.tr("Halbj√§hrlich");
 		if (iv == 12 && ze == Turnus.ZEITEINHEIT_MONATLICH)
-			s = i18n.tr("J‰hrlich");
+			s = i18n.tr("J√§hrlich");
 
 
 		// Zahltag anhaengen

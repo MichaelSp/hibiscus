@@ -21,7 +21,7 @@ import de.willuhn.jameica.system.Application;
 import de.willuhn.util.I18N;
 
 /**
- * Zeigt Kontoauszüge an und gibt gibt sie in eine PDF-Datei aus.
+ * Zeigt KontoauszÃ¼ge an und gibt gibt sie in eine PDF-Datei aus.
  */
 public class KontoauszugList extends AbstractView
 {
@@ -32,7 +32,7 @@ public class KontoauszugList extends AbstractView
    */
   public void bind() throws Exception
   {
-    GUI.getView().setTitle(i18n.tr("Umsätze"));
+    GUI.getView().setTitle(i18n.tr("UmsÃ¤tze"));
 
     final de.willuhn.jameica.hbci.gui.parts.KontoauszugList list = new de.willuhn.jameica.hbci.gui.parts.KontoauszugList();
     

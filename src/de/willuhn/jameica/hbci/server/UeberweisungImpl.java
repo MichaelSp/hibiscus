@@ -69,7 +69,7 @@ public class UeberweisungImpl extends AbstractBaseUeberweisungImpl implements Ue
         String dest = getGegenkontoBLZ();
         String src  = getKonto().getBLZ();
         if (!dest.equals(src))
-          throw new ApplicationException(i18n.tr("Umbuchungen sind nur zu einem Konto bei Ihrer eigenen Bank möglich"));
+          throw new ApplicationException(i18n.tr("Umbuchungen sind nur zu einem Konto bei Ihrer eigenen Bank mÃ¶glich"));
       }
       
       String key = this.getTextSchluessel();
@@ -78,9 +78,9 @@ public class UeberweisungImpl extends AbstractBaseUeberweisungImpl implements Ue
         // Verwendungszweck-Zeile 1 darf nur 13 Zeichen lang sein und nur aus Zahlen bestehen
         String usage = this.getZweck();
         if (usage == null || usage.length() == 0)
-          throw new ApplicationException(i18n.tr("Bitte geben Sie die {0}-stellige BZÜ-Prüfziffer ein.",Integer.toString(HBCIProperties.HBCI_TRANSFER_BZU_LENGTH)));
+          throw new ApplicationException(i18n.tr("Bitte geben Sie die {0}-stellige BZÃœ-PrÃ¼fziffer ein.",Integer.toString(HBCIProperties.HBCI_TRANSFER_BZU_LENGTH)));
         if (!usage.matches("^[" + HBCIProperties.HBCI_BZU_VALIDCHARS + "]{" + HBCIProperties.HBCI_TRANSFER_BZU_LENGTH + "}$"))
-          throw new ApplicationException(i18n.tr("Die BZÜ-Prüfziffer muss exakt {0} Ziffern enthalten",Integer.toString(HBCIProperties.HBCI_TRANSFER_BZU_LENGTH)));
+          throw new ApplicationException(i18n.tr("Die BZÃœ-PrÃ¼fziffer muss exakt {0} Ziffern enthalten",Integer.toString(HBCIProperties.HBCI_TRANSFER_BZU_LENGTH)));
       }
       else if (key != null && key.equals(TextSchluessel.TS_SPENDE))
       {
@@ -100,7 +100,7 @@ public class UeberweisungImpl extends AbstractBaseUeberweisungImpl implements Ue
     catch (RemoteException e)
     {
       Logger.error("error while checking transfer",e);
-      throw new ApplicationException(i18n.tr("Fehler beim Prüfen des Auftrages."));
+      throw new ApplicationException(i18n.tr("Fehler beim PrÃ¼fen des Auftrages."));
     }
   }
 

@@ -25,7 +25,7 @@ import de.willuhn.jameica.services.BeanService;
 import de.willuhn.jameica.system.Application;
 
 /**
- * Prüft eingehende oder geloeschte Umsätze, ob sich diese auf ein Offline-Konto
+ * PrÃ¼ft eingehende oder geloeschte UmsÃ¤tze, ob sich diese auf ein Offline-Konto
  * beziehen und aktualisiert den Saldo in das Offline-Konto.
  */
 public class OfflineSaldoMessageConsumer implements MessageConsumer

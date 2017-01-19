@@ -43,12 +43,12 @@ public class SepaSammelUeberweisungList extends AbstractView
       }
     });
     
-    GUI.getView().setTitle(i18n.tr("Vorhandene SEPA-Sammelüberweisungen"));
+    GUI.getView().setTitle(i18n.tr("Vorhandene SEPA-SammelÃ¼berweisungen"));
     GUI.getView().addPanelButton(print);
 
     ButtonArea buttons = table.getButtons();
     buttons.addButton(i18n.tr("Importieren..."),new SepaSammelUeberweisungImport(),null,false,"document-open.png");
-    buttons.addButton(i18n.tr("Neue SEPA-Sammelüberweisung"),new de.willuhn.jameica.hbci.gui.action.SepaSammelUeberweisungNew(),null,false,"text-x-generic.png");
+    buttons.addButton(i18n.tr("Neue SEPA-SammelÃ¼berweisung"),new de.willuhn.jameica.hbci.gui.action.SepaSammelUeberweisungNew(),null,false,"text-x-generic.png");
 
     table.paint(getParent());
     print.setEnabled(table.getSelection() != null); // einmal initial ausloesen

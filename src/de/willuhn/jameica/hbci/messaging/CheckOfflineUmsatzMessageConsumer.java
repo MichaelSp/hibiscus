@@ -28,8 +28,8 @@ import de.willuhn.logging.Logger;
 import de.willuhn.util.I18N;
 
 /**
- * Prüft eingehende Umsätze, ob diese als Gegenkonto ein eigenes Offlinekonto haben.
- * Wenn ja, wird der entsprechende Umsatz für das Offlinekonto angelegt.
+ * PrÃ¼ft eingehende UmsÃ¤tze, ob diese als Gegenkonto ein eigenes Offlinekonto haben.
+ * Wenn ja, wird der entsprechende Umsatz fÃ¼r das Offlinekonto angelegt.
  */
 public class CheckOfflineUmsatzMessageConsumer implements MessageConsumer
 {
@@ -142,7 +142,7 @@ public class CheckOfflineUmsatzMessageConsumer implements MessageConsumer
     gegenbuchung.setGegenkontoBLZ(k.getBLZ());
     gegenbuchung.setGegenkontoName(k.getName());
     
-    // Art des Umsatzes setzen, Laenge ggf. auf DB-Feldlaenge küuerzen
+    // Art des Umsatzes setzen, Laenge ggf. auf DB-Feldlaenge kÃ¼uerzen
     String art = i18n.tr("Auto-Buchung Offline-Konto");
     if (art.length()>100) art = art.substring(0, 100);
     gegenbuchung.setArt(art);

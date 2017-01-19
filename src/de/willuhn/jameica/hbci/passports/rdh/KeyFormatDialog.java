@@ -77,7 +77,7 @@ public class KeyFormatDialog extends AbstractDialog
         if (o == null || !(o instanceof KeyFormat))
         {
           // Der User soll nicht einfach auf "Uebernehmen" klicken koennen, ohne etwas auszuwaehlen
-          warn.setValue(i18n.tr("Bitte w‰hlen Sie ein Format aus"));
+          warn.setValue(i18n.tr("Bitte w√§hlen Sie ein Format aus"));
           return;
         }
         choosen = (KeyFormat) o;
@@ -87,7 +87,7 @@ public class KeyFormatDialog extends AbstractDialog
     };
 
     Container c = new SimpleContainer(parent);
-    c.addText(i18n.tr("Bitte w‰hlen Sie das Datei-Format des Schl¸ssels"),true);
+    c.addText(i18n.tr("Bitte w√§hlen Sie das Datei-Format des Schl√ºssels"),true);
     c.addInput(this.warn);
 
     this.table = new TablePart(Arrays.asList(RDHKeyFactory.getKeyFormats(this.neededFeature)),action);
@@ -100,7 +100,7 @@ public class KeyFormatDialog extends AbstractDialog
     c.addPart(this.table);
     
     ButtonArea buttons = new ButtonArea();
-    buttons.addButton(i18n.tr("‹bernehmen"), action,null,false,"ok.png");
+    buttons.addButton(i18n.tr("√úbernehmen"), action,null,false,"ok.png");
     buttons.addButton(i18n.tr("Abbrechen"), new Action() {
       public void handleAction(Object context) throws ApplicationException
       {

@@ -98,7 +98,7 @@ public class KontoAuswahlDialog extends AbstractDialog
   protected void paint(Composite parent) throws Exception
   {
     Container group = new SimpleContainer(parent);
-    group.addText(text != null && text.length() > 0 ? text : i18n.tr("Bitte w‰hlen Sie das gew¸nschte Konto aus."),true);
+    group.addText(text != null && text.length() > 0 ? text : i18n.tr("Bitte w√§hlen Sie das gew√ºnschte Konto aus."),true);
     group.addInput(getKontoAuswahl());
     group.addInput(getInstitut());
     group.addInput(getName());
@@ -273,7 +273,7 @@ public class KontoAuswahlDialog extends AbstractDialog
       else
       {
         getSaldo().setColor(Color.COMMENT);
-        getSaldo().setValue(i18n.tr("Kein Saldo verf¸gbar"));
+        getSaldo().setValue(i18n.tr("Kein Saldo verf√ºgbar"));
       }
     }
   }
@@ -287,7 +287,7 @@ public class KontoAuswahlDialog extends AbstractDialog
     if (this.apply != null)
       return this.apply;
     
-    this.apply = new Button(i18n.tr("‹bernehmen"), new Action()
+    this.apply = new Button(i18n.tr("√úbernehmen"), new Action()
     {
       public void handleAction(Object context) throws ApplicationException
       {

@@ -47,7 +47,7 @@ public class UeberweisungList extends AbstractView
       }
     });
     
-		GUI.getView().setTitle(i18n.tr("Vorhandene Überweisungen"));
+		GUI.getView().setTitle(i18n.tr("Vorhandene Ãœberweisungen"));
     GUI.getView().addPanelButton(print);
     
 		table.paint(getParent());

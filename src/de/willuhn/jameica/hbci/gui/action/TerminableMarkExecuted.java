@@ -52,9 +52,9 @@ public class TerminableMarkExecuted implements Action
     YesNoDialog d = new YesNoDialog(YesNoDialog.POSITION_CENTER);
     d.setTitle(i18n.tr("Sicher?"));
     if (t.length == 1)
-      d.setText(i18n.tr("Sind Sie sicher, dass Sie diesen Auftrag als \"ausgeführt\" markieren wollen?\nDies kann nicht rückgängig gemacht werden."));
+      d.setText(i18n.tr("Sind Sie sicher, dass Sie diesen Auftrag als \"ausgefÃ¼hrt\" markieren wollen?\nDies kann nicht rÃ¼ckgÃ¤ngig gemacht werden."));
     else
-      d.setText(i18n.tr("Sind Sie sicher, dass Sie diese {0} Aufträge als \"ausgeführt\" markieren wollen?\nDies kann nicht rückgängig gemacht werden.",""+t.length));
+      d.setText(i18n.tr("Sind Sie sicher, dass Sie diese {0} AuftrÃ¤ge als \"ausgefÃ¼hrt\" markieren wollen?\nDies kann nicht rÃ¼ckgÃ¤ngig gemacht werden.",""+t.length));
     
     try
     {
@@ -70,7 +70,7 @@ public class TerminableMarkExecuted implements Action
           HibiscusTransfer tr = (HibiscusTransfer) t[i];
           Konto k = tr.getKonto();
           if (k != null)
-            k.addToProtokoll(i18n.tr("Auftrag \"{0}\" [Gegenkonto {1}, BLZ {2}] manuell als \"ausgeführt\" markiert",new String[]{tr.getZweck(),tr.getGegenkontoName(),tr.getGegenkontoBLZ()}),Protokoll.TYP_SUCCESS);
+            k.addToProtokoll(i18n.tr("Auftrag \"{0}\" [Gegenkonto {1}, BLZ {2}] manuell als \"ausgefÃ¼hrt\" markiert",new String[]{tr.getZweck(),tr.getGegenkontoName(),tr.getGegenkontoBLZ()}),Protokoll.TYP_SUCCESS);
           Application.getMessagingFactory().sendMessage(new ObjectChangedMessage(tr));
         }
         else if (t[i] instanceof SammelTransfer)
@@ -78,14 +78,14 @@ public class TerminableMarkExecuted implements Action
           SammelTransfer tr = (SammelTransfer) t[i];
           Konto k = tr.getKonto();
           if (k != null)
-            k.addToProtokoll(i18n.tr("Sammel-Auftrag [Bezeichnung: {0}] manuell als \"ausgeführt\" markiert",tr.getBezeichnung()),Protokoll.TYP_SUCCESS);
+            k.addToProtokoll(i18n.tr("Sammel-Auftrag [Bezeichnung: {0}] manuell als \"ausgefÃ¼hrt\" markiert",tr.getBezeichnung()),Protokoll.TYP_SUCCESS);
           Application.getMessagingFactory().sendMessage(new ObjectChangedMessage(tr));
         }
       }
       if (t.length == 1)
-        Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Auftrag als \"ausgeführt\" markiert"),StatusBarMessage.TYPE_SUCCESS));
+        Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Auftrag als \"ausgefÃ¼hrt\" markiert"),StatusBarMessage.TYPE_SUCCESS));
       else
-        Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Aufträge als \"ausgeführt\" markiert"),StatusBarMessage.TYPE_SUCCESS));
+        Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("AuftrÃ¤ge als \"ausgefÃ¼hrt\" markiert"),StatusBarMessage.TYPE_SUCCESS));
     }
     catch (OperationCanceledException oce)
     {
@@ -98,7 +98,7 @@ public class TerminableMarkExecuted implements Action
     catch (Exception e)
     {
       Logger.error("unabel to mark transfers as executed",e);
-      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim Markieren als \"ausgeführt\""),StatusBarMessage.TYPE_ERROR));
+      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim Markieren als \"ausgefÃ¼hrt\""),StatusBarMessage.TYPE_ERROR));
     }
     
   }

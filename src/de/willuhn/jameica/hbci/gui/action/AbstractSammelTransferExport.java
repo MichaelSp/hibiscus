@@ -38,7 +38,7 @@ public abstract class AbstractSammelTransferExport implements Action
 		I18N i18n = Application.getPluginLoader().getPlugin(HBCI.class).getResources().getI18N();
 
 		if (context == null || (!(context instanceof SammelTransfer) && !(context instanceof SammelTransfer[])))
-      throw new ApplicationException(i18n.tr("Bitte w‰hlen Sie mindestens einen Sammel-Auftrag aus"));
+      throw new ApplicationException(i18n.tr("Bitte w√§hlen Sie mindestens einen Sammel-Auftrag aus"));
 
 		try
     {
@@ -63,7 +63,7 @@ public abstract class AbstractSammelTransferExport implements Action
 		catch (Exception e)
 		{
 			Logger.error("error while exporting sammeltransfer",e);
-			GUI.getStatusBar().setErrorText(i18n.tr("Fehler beim Exportieren der Sammel-Auftr‰ge"));
+			GUI.getStatusBar().setErrorText(i18n.tr("Fehler beim Exportieren der Sammel-Auftr√§ge"));
 		}
   }
 

@@ -32,7 +32,7 @@ public abstract class AbstractSepaSammelTransferExport<T extends SepaSammelTrans
   public void handleAction(Object context) throws ApplicationException
   {
 		if (context == null || (!(context instanceof SepaSammelTransfer) && !(context instanceof SepaSammelTransfer[])))
-      throw new ApplicationException(i18n.tr("Bitte wählen Sie mindestens einen SEPA-Sammelauftrag aus"));
+      throw new ApplicationException(i18n.tr("Bitte wÃ¤hlen Sie mindestens einen SEPA-Sammelauftrag aus"));
 
 		try
     {
@@ -57,7 +57,7 @@ public abstract class AbstractSepaSammelTransferExport<T extends SepaSammelTrans
 		catch (Exception e)
 		{
 			Logger.error("error while exporting sepa sammeltransfer",e);
-			GUI.getStatusBar().setErrorText(i18n.tr("Fehler beim Exportieren der SEPA-Sammelaufträge"));
+			GUI.getStatusBar().setErrorText(i18n.tr("Fehler beim Exportieren der SEPA-SammelauftrÃ¤ge"));
 		}
   }
 

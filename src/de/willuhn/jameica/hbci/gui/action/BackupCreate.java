@@ -82,7 +82,7 @@ public class BackupCreate implements Action
     fd.setOverwrite(true);
     fd.setFileName("hibiscus-backup-" + DATEFORMAT.format(new Date()) + ".xml");
     fd.setFilterExtensions(new String[]{"*.xml"});
-    fd.setText("Bitte wählen Sie die Datei, in der das Backup gespeichert wird");
+    fd.setText("Bitte wÃ¤hlen Sie die Datei, in der das Backup gespeichert wird");
     String f = fd.open();
     if (f == null || f.length() == 0)
       return;
@@ -122,15 +122,15 @@ public class BackupCreate implements Action
           backup(NachrichtImpl.class,writer,monitor);
           monitor.addPercentComplete(5);
 
-          monitor.setStatusText(i18n.tr("Speichere Umsätze"));
+          monitor.setStatusText(i18n.tr("Speichere UmsÃ¤tze"));
           backup(UmsatzImpl.class,writer,monitor);
           monitor.addPercentComplete(20);
           
-          monitor.setStatusText(i18n.tr("Speichere Daueraufträge"));
+          monitor.setStatusText(i18n.tr("Speichere DauerauftrÃ¤ge"));
           backup(DauerauftragImpl.class,writer,monitor);
           monitor.addPercentComplete(5);
 
-          monitor.setStatusText(i18n.tr("Speichere SEPA-Daueraufträge"));
+          monitor.setStatusText(i18n.tr("Speichere SEPA-DauerauftrÃ¤ge"));
           backup(SepaDauerauftragImpl.class,writer,monitor);
           monitor.addPercentComplete(5);
 
@@ -138,11 +138,11 @@ public class BackupCreate implements Action
           backup(LastschriftImpl.class,writer,monitor);
           monitor.addPercentComplete(5);
 
-          monitor.setStatusText(i18n.tr("Speichere Überweisungen"));
+          monitor.setStatusText(i18n.tr("Speichere Ãœberweisungen"));
           backup(UeberweisungImpl.class,writer,monitor);
           monitor.addPercentComplete(5);
 
-          monitor.setStatusText(i18n.tr("Speichere SEPA-Überweisungen"));
+          monitor.setStatusText(i18n.tr("Speichere SEPA-Ãœberweisungen"));
           backup(AuslandsUeberweisungImpl.class,writer,monitor);
           monitor.addPercentComplete(5);
 
@@ -155,7 +155,7 @@ public class BackupCreate implements Action
           backup(SammelLastBuchungImpl.class,writer,monitor);
           monitor.addPercentComplete(5);
 
-          monitor.setStatusText(i18n.tr("Speichere Sammel-Überweisungen"));
+          monitor.setStatusText(i18n.tr("Speichere Sammel-Ãœberweisungen"));
           backup(SammelUeberweisungImpl.class,writer,monitor);
           backup(SammelUeberweisungBuchungImpl.class,writer,monitor);
           monitor.addPercentComplete(5);
@@ -165,7 +165,7 @@ public class BackupCreate implements Action
           backup(SepaSammelLastBuchungImpl.class,writer,monitor);
           monitor.addPercentComplete(5);
 
-          monitor.setStatusText(i18n.tr("Speichere SEPA-Sammelüberweisungen"));
+          monitor.setStatusText(i18n.tr("Speichere SEPA-SammelÃ¼berweisungen"));
           backup(SepaSammelUeberweisungImpl.class,writer,monitor);
           backup(SepaSammelUeberweisungBuchungImpl.class,writer,monitor);
           monitor.addPercentComplete(5);
@@ -251,7 +251,7 @@ public class BackupCreate implements Action
       catch (Exception e)
       {
         Logger.error("error while writing object " + BeanUtil.toString(o) + " - skipping",e);
-        monitor.log("  " + i18n.tr("{0} fehlerhaft ({1}), überspringe",new String[]{BeanUtil.toString(o),e.getMessage()}));
+        monitor.log("  " + i18n.tr("{0} fehlerhaft ({1}), Ã¼berspringe",new String[]{BeanUtil.toString(o),e.getMessage()}));
       }
     }
   }
@@ -283,7 +283,7 @@ public class BackupCreate implements Action
       catch (Exception e)
       {
         Logger.error("error while writing object " + BeanUtil.toString(o) + " - skipping",e);
-        monitor.log("  " + i18n.tr("{0} fehlerhaft ({1}), überspringe",new String[]{BeanUtil.toString(o),e.getMessage()}));
+        monitor.log("  " + i18n.tr("{0} fehlerhaft ({1}), Ã¼berspringe",new String[]{BeanUtil.toString(o),e.getMessage()}));
       }
     }
   }
@@ -315,7 +315,7 @@ public class BackupCreate implements Action
     catch (Exception e)
     {
       Logger.error("error while writing object " + BeanUtil.toString(node) + " - skipping",e);
-      monitor.log("  " + i18n.tr("{0} fehlerhaft ({1}), überspringe",new String[]{BeanUtil.toString(node),e.getMessage()}));
+      monitor.log("  " + i18n.tr("{0} fehlerhaft ({1}), Ã¼berspringe",new String[]{BeanUtil.toString(node),e.getMessage()}));
     }
   }
   

@@ -43,18 +43,18 @@ public class SepaDauerauftragNew extends AbstractView
 
     Container konten = new SimpleContainer(getParent());
     konten.addHeadline(i18n.tr("Konten"));
-		konten.addLabelPair(i18n.tr("Persönliches Konto"),			  control.getKontoAuswahl());
+		konten.addLabelPair(i18n.tr("PersÃ¶nliches Konto"),			  control.getKontoAuswahl());
 
     ColumnLayout columns = new ColumnLayout(getParent(),2);
 
     {
       // Links
       Container left = new SimpleContainer(columns.getComposite());
-      left.addHeadline(i18n.tr("Empfänger"));
+      left.addHeadline(i18n.tr("EmpfÃ¤nger"));
       left.addLabelPair(i18n.tr("Name"),                      control.getEmpfaengerName());
       left.addLabelPair(i18n.tr("IBAN"),                      control.getEmpfaengerKonto());    
       left.addLabelPair(i18n.tr("BIC"),                       control.getEmpfaengerBic());
-      left.addCheckbox(control.getStoreEmpfaenger(),i18n.tr("In Adressbuch übernehmen"));
+      left.addCheckbox(control.getStoreEmpfaenger(),i18n.tr("In Adressbuch Ã¼bernehmen"));
     }
     {
       // Rechts
@@ -74,11 +74,11 @@ public class SepaDauerauftragNew extends AbstractView
 	  details.addLabelPair(i18n.tr("Auftragsnummer"),            control.getOrderID());
     
 		ButtonArea buttonArea = new ButtonArea();
-		String s = i18n.tr("Jetzt ausführen...");
+		String s = i18n.tr("Jetzt ausfÃ¼hren...");
 		if (da.isActive())
 			s = i18n.tr("Jetzt aktualisieren...");
 
-		buttonArea.addButton(i18n.tr("Löschen"),	 		 new SepaDauerauftragDelete(), da, false,"user-trash-full.png");
+		buttonArea.addButton(i18n.tr("LÃ¶schen"),	 		 new SepaDauerauftragDelete(), da, false,"user-trash-full.png");
 		buttonArea.addButton(s,										 		 new Action()
     {
       public void handleAction(Object context) throws ApplicationException

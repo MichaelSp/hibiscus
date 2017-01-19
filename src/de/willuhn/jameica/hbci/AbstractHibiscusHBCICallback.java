@@ -102,7 +102,7 @@ public abstract class AbstractHibiscusHBCICallback extends AbstractHBCICallback
             count++;
             
             if (count % 20 == 0 && monitor != null)
-              monitor.log("  " + i18n.tr("{0} Datens‰tze",Integer.toString(count)));
+              monitor.log("  " + i18n.tr("{0} Datens√§tze",Integer.toString(count)));
           }
         }
       }

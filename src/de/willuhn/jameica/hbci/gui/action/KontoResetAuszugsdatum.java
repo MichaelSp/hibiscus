@@ -38,7 +38,7 @@ public class KontoResetAuszugsdatum implements Action
   {
 
     if (context == null || !(context instanceof Konto))
-      throw new ApplicationException(i18n.tr("Bitte wählen Sie ein Konto aus"));
+      throw new ApplicationException(i18n.tr("Bitte wÃ¤hlen Sie ein Konto aus"));
 
     try
     {
@@ -46,13 +46,13 @@ public class KontoResetAuszugsdatum implements Action
       if (k.isNewObject())
         return;
 
-      String q = i18n.tr("Sollen Saldo und Aktualisierungsdatum wirklich zurückgesetzt werden?");
+      String q = i18n.tr("Sollen Saldo und Aktualisierungsdatum wirklich zurÃ¼ckgesetzt werden?");
 
       if ((k.getFlags() & Konto.FLAG_OFFLINE) == 0)
       {
         q += "\n\n";
-        q += i18n.tr("Bei der nächsten Synchronisierung werden alle bei der Bank verfügbaren\n" +
-        		         "Umsätze erneut abgerufen und Saldo sowie Datum aktualisiert.");
+        q += i18n.tr("Bei der nÃ¤chsten Synchronisierung werden alle bei der Bank verfÃ¼gbaren\n" +
+        		         "UmsÃ¤tze erneut abgerufen und Saldo sowie Datum aktualisiert.");
       }
 
       if (!Application.getCallback().askUser(q))
@@ -61,12 +61,12 @@ public class KontoResetAuszugsdatum implements Action
       k.reset();
       k.store();
       Application.getMessagingFactory().sendMessage(new ObjectChangedMessage(k));
-      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Datum zurückgesetzt."), StatusBarMessage.TYPE_SUCCESS));
+      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Datum zurÃ¼ckgesetzt."), StatusBarMessage.TYPE_SUCCESS));
     }
     catch (Exception e)
     {
       Logger.error("error while resetting saldo_date", e);
-      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim Zurücksetzen des Datums"), StatusBarMessage.TYPE_ERROR));
+      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim ZurÃ¼cksetzen des Datums"), StatusBarMessage.TYPE_ERROR));
       return;
     }
   }

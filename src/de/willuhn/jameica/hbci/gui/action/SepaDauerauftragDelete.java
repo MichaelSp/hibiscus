@@ -50,7 +50,7 @@ public class SepaDauerauftragDelete implements Action
   public void handleAction(Object context) throws ApplicationException
   {
 		if (!(context instanceof SepaDauerauftrag))
-			throw new ApplicationException(i18n.tr("Kein SEPA-Dauerauftrag ausgewählt"));
+			throw new ApplicationException(i18n.tr("Kein SEPA-Dauerauftrag ausgewÃ¤hlt"));
 
     final SepaDauerauftrag da = (SepaDauerauftrag) context;
 
@@ -74,17 +74,17 @@ public class SepaDauerauftragDelete implements Action
                 if (b.booleanValue())
                   warn.setValue("");
                 else
-                  warn.setValue(i18n.tr("Auftrag wird nur lokal gelöscht, bei der Bank bleibt er erhalten."));
+                  warn.setValue(i18n.tr("Auftrag wird nur lokal gelÃ¶scht, bei der Bank bleibt er erhalten."));
               }
             });
-            container.addCheckbox(check,i18n.tr("Auftrag auch bei der Bank löschen."));
+            container.addCheckbox(check,i18n.tr("Auftrag auch bei der Bank lÃ¶schen."));
             container.addLabelPair("",warn);
 	        }
 	        super.extend(container);
 	      }
 	    };
-	    d.setTitle(i18n.tr("SEPA-Dauerauftrag löschen"));
-	    d.setText(i18n.tr("Wollen Sie diesen Dauerauftrag wirklich löschen?"));
+	    d.setTitle(i18n.tr("SEPA-Dauerauftrag lÃ¶schen"));
+	    d.setText(i18n.tr("Wollen Sie diesen Dauerauftrag wirklich lÃ¶schen?"));
 	    d.setSize(350,SWT.DEFAULT);
 
 	    Boolean choice = (Boolean) d.open();
@@ -117,7 +117,7 @@ public class SepaDauerauftragDelete implements Action
 	    {
 	      // nur lokal loeschen
 	      da.delete();
-        Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("SEPA-Dauerauftrag lokal gelöscht."),StatusBarMessage.TYPE_SUCCESS));
+        Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("SEPA-Dauerauftrag lokal gelÃ¶scht."),StatusBarMessage.TYPE_SUCCESS));
 	    }
 		}
     catch (OperationCanceledException oce)
@@ -132,7 +132,7 @@ public class SepaDauerauftragDelete implements Action
     catch (Exception e)
     {
       Logger.error("error while deleting",e);
-      throw new ApplicationException(i18n.tr("Fehler beim Löschen des Auftrages: {0}",e.getMessage()));
+      throw new ApplicationException(i18n.tr("Fehler beim LÃ¶schen des Auftrages: {0}",e.getMessage()));
     }
   }
 }

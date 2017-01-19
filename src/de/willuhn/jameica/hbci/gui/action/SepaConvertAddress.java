@@ -47,14 +47,14 @@ public class SepaConvertAddress implements Action
       list.addAll(Arrays.asList((HibiscusAddress[])context));
       
     if (list.size() == 0)
-      throw new ApplicationException(i18n.tr("Bitte wählen Sie mindestens eine Adresse aus"));
+      throw new ApplicationException(i18n.tr("Bitte wÃ¤hlen Sie mindestens eine Adresse aus"));
       
 
     try
     {
       // User nochmal fragen
-      String q = i18n.tr("Hierbei werden bei allen ausgewählten Adressen die IBAN und BIC\n" +
-                         "anhand der Kontonummer und BLZ errechnet und vervollständigt,\n" +
+      String q = i18n.tr("Hierbei werden bei allen ausgewÃ¤hlten Adressen die IBAN und BIC\n" +
+                         "anhand der Kontonummer und BLZ errechnet und vervollstÃ¤ndigt,\n" +
                          "insofern diese nicht bereits eingetragen sind.\n\nVorgang fortsetzen?");
       if (!Application.getCallback().askUser(q))
         return;
@@ -127,7 +127,7 @@ public class SepaConvertAddress implements Action
     Logger.info("auto-completed addresses: " + count);
     
     if (count > 0)
-      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("IBAN/BIC errechnet für {0} Adressen",Integer.toString(count)),StatusBarMessage.TYPE_SUCCESS));
+      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("IBAN/BIC errechnet fÃ¼r {0} Adressen",Integer.toString(count)),StatusBarMessage.TYPE_SUCCESS));
   }
 
 }

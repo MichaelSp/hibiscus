@@ -135,7 +135,7 @@ public class KontoNew extends AbstractView
       
       Input avail = control.getSaldoAvailable();
       if (avail != null)
-        left.addLabelPair(i18n.tr("Verf¸gbarer Betrag"),avail);
+        left.addLabelPair(i18n.tr("Verf√ºgbarer Betrag"),avail);
 
       Container right = new SimpleContainer(columns.getComposite(),true);
       right.addHeadline(i18n.tr("Notizen"));
@@ -179,7 +179,7 @@ public class KontoNew extends AbstractView
     TabFolder folder = new TabFolder(getParent(), SWT.NONE);
     folder.setLayoutData(new GridData(GridData.FILL_BOTH));
 
-    TabGroup tab = new TabGroup(folder,i18n.tr("Ums‰tze"), false,1);
+    TabGroup tab = new TabGroup(folder,i18n.tr("Ums√§tze"), false,1);
     control.getUmsatzList().paint(tab.getComposite());
 
     TabGroup tab2 = new TabGroup(folder,i18n.tr("Saldo im Verlauf"),false,1);
@@ -197,7 +197,7 @@ public class KontoNew extends AbstractView
       // Checken, ob wir fuer das Konto den neuen Synchronize-Support haben
       if (synchronizeEngine.supports(SynchronizeJobKontoauszug.class,konto))
       {
-        Button sync = new Button(i18n.tr("Saldo und Ums‰tze abrufen"), new KontoFetchUmsaetze(),konto,false,"mail-send-receive.png");
+        Button sync = new Button(i18n.tr("Saldo und Ums√§tze abrufen"), new KontoFetchUmsaetze(),konto,false,"mail-send-receive.png");
         sync.setEnabled(!konto.hasFlag(Konto.FLAG_DISABLED));
         buttons.addButton(sync);
       }
@@ -210,12 +210,12 @@ public class KontoNew extends AbstractView
     }
     else
     {
-      fetch = new Button(i18n.tr("Saldo und Ums‰tze abrufen"), new KontoFetchUmsaetze(),konto,false,"mail-send-receive.png");
+      fetch = new Button(i18n.tr("Saldo und Ums√§tze abrufen"), new KontoFetchUmsaetze(),konto,false,"mail-send-receive.png");
     }
     fetch.setEnabled(!konto.hasFlag(Konto.FLAG_DISABLED));
     buttons.addButton(fetch);
     
-    buttons.addButton(i18n.tr("Alle Ums‰tze anzeigen"),new KontoauszugRpt(),konto,false,"text-x-generic.png");
+    buttons.addButton(i18n.tr("Alle Ums√§tze anzeigen"),new KontoauszugRpt(),konto,false,"text-x-generic.png");
     buttons.paint(getParent());
   }
   

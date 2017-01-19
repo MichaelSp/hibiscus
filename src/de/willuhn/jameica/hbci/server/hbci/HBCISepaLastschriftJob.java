@@ -57,14 +57,14 @@ public class HBCISepaLastschriftJob extends AbstractHBCIJob
 			  lastschrift.store();
       
       if (lastschrift.ausgefuehrt())
-        throw new ApplicationException(i18n.tr("Auftrag wurde bereits ausgeführt"));
+        throw new ApplicationException(i18n.tr("Auftrag wurde bereits ausgefÃ¼hrt"));
 
       this.lastschrift = lastschrift;
       this.konto       = this.lastschrift.getKonto();
       this.type        = this.lastschrift.getType();
 
       if (this.lastschrift.getBetrag() > Settings.getUeberweisungLimit())
-        throw new ApplicationException(i18n.tr("Auftragslimit überschritten: {0} ", 
+        throw new ApplicationException(i18n.tr("Auftragslimit Ã¼berschritten: {0} ", 
           HBCI.DECIMALFORMAT.format(Settings.getUeberweisungLimit()) + " " + this.konto.getWaehrung()));
 
       org.kapott.hbci.structures.Konto own = Converter.HibiscusKonto2HBCIKonto(konto);
@@ -204,7 +204,7 @@ public class HBCISepaLastschriftJob extends AbstractHBCIJob
     }
     
     Application.getMessagingFactory().sendMessage(new ObjectChangedMessage(lastschrift));
-    konto.addToProtokoll(i18n.tr("SEPA-Lastschrift (Order-ID: {0}) eingereicht für: {1}",orderId, lastschrift.getGegenkontoNummer()),Protokoll.TYP_SUCCESS);
+    konto.addToProtokoll(i18n.tr("SEPA-Lastschrift (Order-ID: {0}) eingereicht fÃ¼r: {1}",orderId, lastschrift.getGegenkontoNummer()),Protokoll.TYP_SUCCESS);
     Logger.info("sepa direct debit submitted successfully");
   }
 
@@ -223,7 +223,7 @@ public class HBCISepaLastschriftJob extends AbstractHBCIJob
    */
   protected void markCancelled() throws RemoteException, ApplicationException
   {
-    String msg = i18n.tr("Ausführung der SEPA-Lastschrift {0} abgebrochen",lastschrift.getGegenkontoName());
+    String msg = i18n.tr("AusfÃ¼hrung der SEPA-Lastschrift {0} abgebrochen",lastschrift.getGegenkontoName());
     konto.addToProtokoll(msg,Protokoll.TYP_ERROR);
   }
 

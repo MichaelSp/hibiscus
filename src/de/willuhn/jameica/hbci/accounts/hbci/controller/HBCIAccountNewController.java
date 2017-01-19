@@ -59,7 +59,7 @@ public class HBCIAccountNewController extends AbstractControl
     for (final HBCIVariant v:hbci.getVariants())
     {
       InfoPanel p = v.getInfo();
-      final Button button = new Button(i18n.tr("Verfahren ausw‰hlen..."),new Action() {
+      final Button button = new Button(i18n.tr("Verfahren ausw√§hlen..."),new Action() {
         @Override
         public void handleAction(Object context) throws ApplicationException
         {

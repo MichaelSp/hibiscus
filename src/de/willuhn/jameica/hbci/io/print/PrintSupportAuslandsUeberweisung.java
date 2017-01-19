@@ -35,7 +35,7 @@ public class PrintSupportAuslandsUeberweisung extends AbstractPrintSupportSepaTr
     try
     {
       if (this.getTransfer().isTerminUeberweisung())
-        return i18n.tr("SEPA-Terminüberweisung");
+        return i18n.tr("SEPA-TerminÃ¼berweisung");
       else if (this.getTransfer().isUmbuchung())
         return i18n.tr("SEPA-Umbuchung");
     }
@@ -44,6 +44,6 @@ public class PrintSupportAuslandsUeberweisung extends AbstractPrintSupportSepaTr
       Logger.error("check failed",re);
     }
     
-    return i18n.tr("SEPA-Überweisung");
+    return i18n.tr("SEPA-Ãœberweisung");
   }
 }

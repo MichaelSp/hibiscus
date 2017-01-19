@@ -18,7 +18,7 @@ import de.willuhn.jameica.gui.GUI;
 import de.willuhn.util.ApplicationException;
 
 /**
- * Action zum Oeffnen der �bersicht der Umsatzkategorien.
+ * Action zum Oeffnen der Übersicht der Umsatzkategorien.
  */
 public class UmsatzTypTree implements Action
 {
@@ -39,6 +39,6 @@ public class UmsatzTypTree implements Action
  * @C Kategorie-Baum in separates TreePart ausgelagert
  *
  * Revision 1.1  2007/03/06 20:05:50  jost
- * Neu: Umsatz-Kategorien-Übersicht
+ * Neu: Umsatz-Kategorien-Ãbersicht
  *
  ******************************************************************************/

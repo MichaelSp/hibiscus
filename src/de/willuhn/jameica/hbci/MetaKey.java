@@ -37,14 +37,14 @@ public enum MetaKey
   SEPA_SEQUENCE_CODE("sepa.sequencetype", "Signatur-Datum des Mandats",null),
 
   /**
-   * Gl‰ubiger-Identifikation.
+   * Gl√§ubiger-Identifikation.
    */
-  SEPA_CREDITOR_ID("sepa.creditor.id", "Gl‰ubiger-Identifikation",null),
+  SEPA_CREDITOR_ID("sepa.creditor.id", "Gl√§ubiger-Identifikation",null),
   
   /**
    * Batch-Book-Flag.
    */
-  SEPA_BATCHBOOK("sepa.batchbook", "Ums‰tze dieses Sammelauftrages",null),
+  SEPA_BATCHBOOK("sepa.batchbook", "Ums√§tze dieses Sammelauftrages",null),
 
   ;
 

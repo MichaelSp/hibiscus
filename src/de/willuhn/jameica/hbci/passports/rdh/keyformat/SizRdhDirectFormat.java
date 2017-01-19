@@ -53,10 +53,10 @@ public class SizRdhDirectFormat extends AbstractSizRdhFormat
   {
     // Checken, ob die Datei lesbar ist.
     if (file == null)
-      throw new ApplicationException(i18n.tr("Bitte wählen Sie eine Schlüsseldatei aus"));
+      throw new ApplicationException(i18n.tr("Bitte wÃ¤hlen Sie eine SchlÃ¼sseldatei aus"));
     
     if (!file.canRead() || !file.isFile())
-      throw new ApplicationException(i18n.tr("Schlüsseldatei nicht lesbar"));
+      throw new ApplicationException(i18n.tr("SchlÃ¼sseldatei nicht lesbar"));
     
     // Das ist ein Hibiscus-Schluessel. Wir lassen den Schluessel gleich dort, wo er ist
     try
@@ -68,7 +68,7 @@ public class SizRdhDirectFormat extends AbstractSizRdhFormat
     catch (RemoteException re)
     {
       Logger.error("unable to import key " + file.getAbsolutePath(),re);
-      throw new ApplicationException(i18n.tr("Schlüsseldatei kann nicht importiert werden: {0}",re.getMessage()));
+      throw new ApplicationException(i18n.tr("SchlÃ¼sseldatei kann nicht importiert werden: {0}",re.getMessage()));
     }
   }
 
@@ -108,7 +108,7 @@ public class SizRdhDirectFormat extends AbstractSizRdhFormat
         throw ae;
 
       Logger.error("unable to load key",e);
-      throw new ApplicationException(i18n.tr("Fehler beim Laden des Schlüssels: {0}",e.getMessage()));
+      throw new ApplicationException(i18n.tr("Fehler beim Laden des SchlÃ¼ssels: {0}",e.getMessage()));
     }
     finally
     {

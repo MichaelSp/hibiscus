@@ -122,7 +122,7 @@ public class TransferLastschriftMessageConsumer implements MessageConsumer
         }
       }
       if (!stored)
-        throw new ApplicationException(Application.getPluginLoader().getPlugin(HBCI.class).getResources().getI18N().tr("Bitte vervollst‰ndigen Sie die Angaben in Ihrer Lastschrift"));
+        throw new ApplicationException(Application.getPluginLoader().getPlugin(HBCI.class).getResources().getI18N().tr("Bitte vervollst√§ndigen Sie die Angaben in Ihrer Lastschrift"));
     }
     catch (ApplicationException ae)
     {

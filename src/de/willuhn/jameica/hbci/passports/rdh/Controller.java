@@ -122,7 +122,7 @@ public class Controller extends AbstractControl {
       return this.passport;
     RDHKey key = getKey();
     if (key == null)
-      throw new ApplicationException(i18n.tr("Kein Schlüssel ausgewählt"));
+      throw new ApplicationException(i18n.tr("Kein SchlÃ¼ssel ausgewÃ¤hlt"));
     this.passport = key.load();
     return this.passport;
   }
@@ -185,7 +185,7 @@ public class Controller extends AbstractControl {
     if (this.alias != null)
       return this.alias;
     this.alias = new TextInput(getKey().getAlias());
-    this.alias.setName(i18n.tr("Alias-Name des Schlüssels"));
+    this.alias.setName(i18n.tr("Alias-Name des SchlÃ¼ssels"));
     return this.alias;
   }
 
@@ -218,7 +218,7 @@ public class Controller extends AbstractControl {
       // und neu importieren.
       this.path = new FileInput(getKey().getFilename());
       this.path.setEnabled(false);
-      this.path.setName(i18n.tr("Pfad zu Schlüsseldatei"));
+      this.path.setName(i18n.tr("Pfad zu SchlÃ¼sseldatei"));
     }
     return this.path;
   }
@@ -292,7 +292,7 @@ public class Controller extends AbstractControl {
 
 
     // Spalte Datei
-    keyList.addColumn(i18n.tr("Schlüsseldatei"),"file");
+    keyList.addColumn(i18n.tr("SchlÃ¼sseldatei"),"file");
     keyList.addColumn(i18n.tr("Alias-Name"),"alias");
     keyList.addColumn(i18n.tr("Format"),"format");
 
@@ -301,7 +301,7 @@ public class Controller extends AbstractControl {
     ContextMenu ctx = new ContextMenu();
 
     // Kontext: Details.
-    ctx.addItem(new CheckedContextMenuItem(i18n.tr("Öffnen"),new Action()
+    ctx.addItem(new CheckedContextMenuItem(i18n.tr("Ã–ffnen"),new Action()
     {
       public void handleAction(Object context) throws ApplicationException
       {
@@ -318,10 +318,10 @@ public class Controller extends AbstractControl {
       }
     },"document-open.png"));
 
-    ctx.addItem(new ContextMenuItem(i18n.tr("Neuer Schlüssel..."),new Action() {
+    ctx.addItem(new ContextMenuItem(i18n.tr("Neuer SchlÃ¼ssel..."),new Action() {
       public void handleAction(Object context) throws ApplicationException {startCreate();}
     },"document-new.png"));
-    ctx.addItem(new ContextMenuItem(i18n.tr("Schlüssel importieren..."),new Action()
+    ctx.addItem(new ContextMenuItem(i18n.tr("SchlÃ¼ssel importieren..."),new Action()
     {
       public void handleAction(Object context) throws ApplicationException
       {
@@ -334,14 +334,14 @@ public class Controller extends AbstractControl {
     ctx.addItem(new ActivateKey(true));
     ctx.addItem(new ActivateKey(false));
     ctx.addItem(ContextMenuItem.SEPARATOR);
-    ctx.addItem(new CheckedContextMenuItem(i18n.tr("Löschen..."), new Action() {
+    ctx.addItem(new CheckedContextMenuItem(i18n.tr("LÃ¶schen..."), new Action() {
       public void handleAction(Object context) throws ApplicationException
       {
         try
         {
-          String q = i18n.tr("Wollen Sie diesen Schlüssel wirklich löschen?\n" +
-                             "Hierbei wird nur die Verknüpfung aus Hibiscus " +
-                             "entfernt. Die Schlüsseldatei selbst bleibt erhalten.");
+          String q = i18n.tr("Wollen Sie diesen SchlÃ¼ssel wirklich lÃ¶schen?\n" +
+                             "Hierbei wird nur die VerknÃ¼pfung aus Hibiscus " +
+                             "entfernt. Die SchlÃ¼sseldatei selbst bleibt erhalten.");
         
           if (!Application.getCallback().askUser(q))
             return;
@@ -362,7 +362,7 @@ public class Controller extends AbstractControl {
         catch (Exception e2)
         {
           Logger.error("unable to delete key",e2);
-          Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim Löschen des Schlüssels"),StatusBarMessage.TYPE_ERROR));
+          Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim LÃ¶schen des SchlÃ¼ssels"),StatusBarMessage.TYPE_ERROR));
         }
       }
     },"user-trash-full.png"));
@@ -404,7 +404,7 @@ public class Controller extends AbstractControl {
     RDHKey key = getKey();
     if (key == null)
     {
-      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Bitte wählen Sie eine Schlüsseldatei aus"),StatusBarMessage.TYPE_ERROR));
+      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Bitte wÃ¤hlen Sie eine SchlÃ¼sseldatei aus"),StatusBarMessage.TYPE_ERROR));
       return;
     }
     
@@ -468,7 +468,7 @@ public class Controller extends AbstractControl {
       
       // Passwort-Cache leeren
       DialogFactory.clearPINCache(passport);
-      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Passwort geändert"),StatusBarMessage.TYPE_SUCCESS));
+      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Passwort geÃ¤ndert"),StatusBarMessage.TYPE_SUCCESS));
     }
     catch (ApplicationException ae)
     {
@@ -477,7 +477,7 @@ public class Controller extends AbstractControl {
     catch (Exception e)
     {
       Logger.error("unable to change password",e);
-      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim Ändern des Passwortes: {0}",e.getMessage()),StatusBarMessage.TYPE_ERROR));
+      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim Ã„ndern des Passwortes: {0}",e.getMessage()),StatusBarMessage.TYPE_ERROR));
     }
     finally
     {
@@ -494,7 +494,7 @@ public class Controller extends AbstractControl {
     RDHKey key = getKey();
     if (key == null)
     {
-      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Bitte wählen Sie eine Schlüsseldatei aus"),StatusBarMessage.TYPE_ERROR));
+      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Bitte wÃ¤hlen Sie eine SchlÃ¼sseldatei aus"),StatusBarMessage.TYPE_ERROR));
       return;
     }
     
@@ -540,7 +540,7 @@ public class Controller extends AbstractControl {
           break;
         if (current instanceof NeedKeyAckException)
         {
-          Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Schlüssel noch nicht freigegeben"), StatusBarMessage.TYPE_ERROR));
+          Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("SchlÃ¼ssel noch nicht freigegeben"), StatusBarMessage.TYPE_ERROR));
           return;
         }
         current = current.getCause();
@@ -568,7 +568,7 @@ public class Controller extends AbstractControl {
   public synchronized void startImport()
   {
     FileDialog fd = new FileDialog(GUI.getShell(),SWT.OPEN);
-    fd.setText(i18n.tr("Bitte wählen Sie die zu importierende Schlüsseldatei"));
+    fd.setText(i18n.tr("Bitte wÃ¤hlen Sie die zu importierende SchlÃ¼sseldatei"));
 
     String importFile = fd.open();
     if (importFile == null || importFile.length() == 0)
@@ -599,7 +599,7 @@ public class Controller extends AbstractControl {
     catch (RemoteException e)
     {
       Logger.error("error while testing passport",e);
-      GUI.getStatusBar().setErrorText(i18n.tr("Fehler beim Testen der Konfiguration. Bitte prüfen Sie das Protokoll. ") + e.getMessage());
+      GUI.getStatusBar().setErrorText(i18n.tr("Fehler beim Testen der Konfiguration. Bitte prÃ¼fen Sie das Protokoll. ") + e.getMessage());
     }
   }
 
@@ -613,7 +613,7 @@ public class Controller extends AbstractControl {
     RDHKey key = getKey();
     if (key == null)
     {
-      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Bitte wählen Sie eine Schlüsseldatei aus"),StatusBarMessage.TYPE_ERROR));
+      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Bitte wÃ¤hlen Sie eine SchlÃ¼sseldatei aus"),StatusBarMessage.TYPE_ERROR));
       return false;
     }
 
@@ -698,7 +698,7 @@ public class Controller extends AbstractControl {
       // Wir fragen den User, wo er den Schluessel hinhaben will.
       FileDialog dialog = new FileDialog(GUI.getShell(), SWT.SAVE);
       dialog.setOverwrite(true);
-      dialog.setText(Application.getI18n().tr("Bitte wählen einen Pfad und Dateinamen, an dem der Schlüssel gespeichert werden soll."));
+      dialog.setText(Application.getI18n().tr("Bitte wÃ¤hlen einen Pfad und Dateinamen, an dem der SchlÃ¼ssel gespeichert werden soll."));
       dialog.setFileName("hibiscus-" + System.currentTimeMillis() + ".rdh");
       dialog.setFilterPath(Application.getPluginLoader().getPlugin(HBCI.class).getResources().getWorkPath());
       String newFile = dialog.open();
@@ -717,7 +717,7 @@ public class Controller extends AbstractControl {
     catch (Throwable t)
     {
       Logger.error("error while exporting key",t);
-      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim Export der Schlüsseldatei"),StatusBarMessage.TYPE_ERROR));
+      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim Export der SchlÃ¼sseldatei"),StatusBarMessage.TYPE_ERROR));
     }
 
   }
@@ -736,7 +736,7 @@ public class Controller extends AbstractControl {
      */
     public ActivateKey(final boolean activate)
     {
-      super((activate ? i18n.tr("Schlüssel aktivieren") : i18n.tr("Schlüssel deaktivieren")),
+      super((activate ? i18n.tr("SchlÃ¼ssel aktivieren") : i18n.tr("SchlÃ¼ssel deaktivieren")),
         new Action()
         {
           public void handleAction(Object context) throws ApplicationException

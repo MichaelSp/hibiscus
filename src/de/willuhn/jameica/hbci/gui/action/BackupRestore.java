@@ -63,7 +63,7 @@ public class BackupRestore implements Action
     {
       if (Settings.getDBService().createList(Konto.class).size() > 0)
       {
-        String text = i18n.tr("Die Hibiscus-Installation enthält bereits Daten.\n" +
+        String text = i18n.tr("Die Hibiscus-Installation enthÃ¤lt bereits Daten.\n" +
                               "Das Backup kann nur in eine neue Hibiscus-Installation importiert werden.");
         Application.getCallback().notifyUser(text);
         return;
@@ -86,7 +86,7 @@ public class BackupRestore implements Action
     FileDialog fd = new FileDialog(GUI.getShell(),SWT.OPEN);
     fd.setFileName("hibiscus-backup-" + BackupCreate.DATEFORMAT.format(new Date()) + ".xml");
     fd.setFilterExtensions(new String[]{"*.xml"});
-    fd.setText("Bitte wählen Sie die Backup-Datei aus");
+    fd.setText("Bitte wÃ¤hlen Sie die Backup-Datei aus");
     String f = fd.open();
     if (f == null || f.length() == 0)
       return;
@@ -148,7 +148,7 @@ public class BackupRestore implements Action
               else
               {
                 Logger.error("unable to import " + o.getClass().getName() + ":" + o.getID() + ", skipping",e);
-                monitor.log("  " + i18n.tr("{0} fehlerhaft ({1}), überspringe",new String[]{BeanUtil.toString(o),e.getMessage()}));
+                monitor.log("  " + i18n.tr("{0} fehlerhaft ({1}), Ã¼berspringe",new String[]{BeanUtil.toString(o),e.getMessage()}));
               }
             }
             if (count++ % 100 == 0)

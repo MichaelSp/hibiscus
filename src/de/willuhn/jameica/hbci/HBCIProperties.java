@@ -55,7 +55,7 @@ public class HBCIProperties
 	/**
 	 * Liste der in DTAUS erlaubten Zeichen.
 	 */
-	public final static String HBCI_DTAUS_VALIDCHARS = settings.getString("hbci.dtaus.validchars", "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 ,.&-+*%/$üöäÜÖÄß"); 
+	public final static String HBCI_DTAUS_VALIDCHARS = settings.getString("hbci.dtaus.validchars", "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 ,.&-+*%/$Ã¼Ã¶Ã¤ÃœÃ–Ã„ÃŸ"); 
 
   /**
    * Liste der in SWIFT erlaubten Zeichen.
@@ -75,7 +75,7 @@ public class HBCIProperties
    * Liste der in SEPA erlaubten Zeichen. Jedoch erweitert um die im Inland extra erlaubten Zeichen - insbesondere die Umlaute.
    * Siehe Anlage3_Datenformate_V2.7.pdf Seite 23
    */
-  public final static String HBCI_SEPA_VALIDCHARS_RELAX = HBCI_SEPA_VALIDCHARS + settings.getString("hbci.sepa.validchars.add", "ÜÖÄüöäß&*$%");
+  public final static String HBCI_SEPA_VALIDCHARS_RELAX = HBCI_SEPA_VALIDCHARS + settings.getString("hbci.sepa.validchars.add", "ÃœÃ–Ã„Ã¼Ã¶Ã¤ÃŸ&*$%");
 
   /**
    * Liste der fuer die Mandate-ID gueltigen Zeichen. RestrictedIdentificationSEPA2.
@@ -103,7 +103,7 @@ public class HBCIProperties
   public final static String HBCI_BLZ_VALIDCHARS = settings.getString("hbci.blz.validchars","0123456789"); 
 
   /**
-   * Liste der in der BZÜ-Pruefziffer erlaubten Zeichen.
+   * Liste der in der BZÃœ-Pruefziffer erlaubten Zeichen.
    */
   public final static String HBCI_BZU_VALIDCHARS = settings.getString("hbci.bzu.validchars","0123456789"); 
 
@@ -129,7 +129,7 @@ public class HBCIProperties
   public final static int HBCI_ADDKEY_MAXLENGTH = settings.getInt("hbci.addkey.maxlength",3);
 
   /**
-   * Laenge der Pruefziffern bei BZÜ-Ueberweisung.
+   * Laenge der Pruefziffern bei BZÃœ-Ueberweisung.
    */
   public final static int HBCI_TRANSFER_BZU_LENGTH = settings.getInt("hbci.transfer.bzu.length",13);
 
@@ -239,9 +239,9 @@ public class HBCIProperties
 
   /**
    * Text-Replacements fuer SEPA.
-   * Die in SEPA nicht zulaessigen Zeichen "&*%$üöäÜÖÄß" werden ersetzt.
+   * Die in SEPA nicht zulaessigen Zeichen "&*%$Ã¼Ã¶Ã¤ÃœÃ–Ã„ÃŸ" werden ersetzt.
    */
-  public final static String[][] TEXT_REPLACEMENTS_SEPA = new String[][] {new String[]{"&","*","%","$","ü", "ö", "ä", "Ü", "Ö", "Ä", "ß"},
+  public final static String[][] TEXT_REPLACEMENTS_SEPA = new String[][] {new String[]{"&","*","%","$","Ã¼", "Ã¶", "Ã¤", "Ãœ", "Ã–", "Ã„", "ÃŸ"},
                                                                           new String[]{"+",".",".",".","ue","oe","ae","Ue","Oe","Ae","ss"}};
 
   /**
@@ -256,9 +256,9 @@ public class HBCIProperties
     put(Fehler.BLZ_UNGUELTIGE_LAENGE,                       i18n.tr("BLZ nicht achtstellig"));
     put(Fehler.BLZ_UNGUELTIG,                               i18n.tr("BLZ unbekannt"));
     put(Fehler.KONTO_LEER,                                  i18n.tr("Keine Kontonummer angegeben"));
-    put(Fehler.KONTO_UNGUELTIGE_LAENGE,                     i18n.tr("Länge der Kontonummer ungültig"));
-    put(Fehler.KONTO_PRUEFZIFFER_FALSCH,                    i18n.tr("Prüfziffer der Kontonummer falsch"));
-    put(Fehler.KONTO_PRUEFZIFFERNREGEL_NICHT_IMPLEMENTIERT, i18n.tr("Prüfziffern-Verfahren der Kontonummer unbekannt"));
+    put(Fehler.KONTO_UNGUELTIGE_LAENGE,                     i18n.tr("LÃ¤nge der Kontonummer ungÃ¼ltig"));
+    put(Fehler.KONTO_PRUEFZIFFER_FALSCH,                    i18n.tr("PrÃ¼fziffer der Kontonummer falsch"));
+    put(Fehler.KONTO_PRUEFZIFFERNREGEL_NICHT_IMPLEMENTIERT, i18n.tr("PrÃ¼fziffern-Verfahren der Kontonummer unbekannt"));
     put(Fehler.IBANREGEL_NICHT_IMPLEMENTIERT,               i18n.tr("IBAN-Regel unbekannt"));
     put(Fehler.UNGUELTIGES_LAND,                            i18n.tr("Land unbekannt"));
   }};
@@ -342,22 +342,22 @@ public class HBCIProperties
       throw new ApplicationException(i18n.tr("Der Text \"{0}\" ist zu lang. Bitte geben Sie maximal {1} Zeichen ein", new String[]{chars,""+maxLength}));
 
     // Achtung: Jetzt kommts! Festhalten! ;)
-    // In der deutschen Sprache gibt es keinen Grossbuchstaben von "ß".
+    // In der deutschen Sprache gibt es keinen Grossbuchstaben von "ÃŸ".
     // Wird nun ein Text von Java in Grossbuchstaben umgewandelt (mittels String#toUpperCase())
-    // bleibt nicht etwa das "ß" erhalten. Nein, es wird gegen "SS" ersetzt.
-    // Haben wir nun einen String, der exakt maxLength lang ist und enthält er
-    // ein "ß" wuerden wir das hier tolerieren, bei der Ausfuehrung des
+    // bleibt nicht etwa das "ÃŸ" erhalten. Nein, es wird gegen "SS" ersetzt.
+    // Haben wir nun einen String, der exakt maxLength lang ist und enthÃ¤lt er
+    // ein "ÃŸ" wuerden wir das hier tolerieren, bei der Ausfuehrung des
     // Geschaeftsvorfalls wuerde es jedoch zu einem Fehler kommen, da dort
     // der Text automatisch in Grossbuchstaben umgewandelt wird (geschieht
-    // bei HBCI generell), damit das "ß" gegen "SS" ersetzt wird und der
+    // bei HBCI generell), damit das "ÃŸ" gegen "SS" ersetzt wird und der
     // Text am Ende genau um ein Zeichen zu lang wird. Verrueckt, oder? ;)
-    // Da ggf. auch mehrere "ß" enthalten sind, ersetzen wir alle und schauen
+    // Da ggf. auch mehrere "ÃŸ" enthalten sind, ersetzen wir alle und schauen
     // dann, wie lang der Text geworden ist.
-    if (chars.indexOf("ß") != -1)
+    if (chars.indexOf("ÃŸ") != -1)
     {
-      String s = chars.replaceAll("ß","ss");
+      String s = chars.replaceAll("ÃŸ","ss");
       if (s.length() > maxLength)
-        throw new ApplicationException(i18n.tr("Der Text \"{0}\" wird nach der HBCI-Kodierung (ß wird hierbei gegen SS ersetzt) zu lang.",chars));
+        throw new ApplicationException(i18n.tr("Der Text \"{0}\" wird nach der HBCI-Kodierung (ÃŸ wird hierbei gegen SS ersetzt) zu lang.",chars));
     }
   }
   
@@ -545,7 +545,7 @@ public class HBCIProperties
     
     int len = bic.length();
     if (len != HBCI_BIC_MAXLENGTH && len != 8)
-      throw new ApplicationException(i18n.tr("Bitte prüfen Sie die Länge der BIC. Muss entweder 8 oder 11 Zeichen lang sein."));
+      throw new ApplicationException(i18n.tr("Bitte prÃ¼fen Sie die LÃ¤nge der BIC. Muss entweder 8 oder 11 Zeichen lang sein."));
     
     if (len == 8)
       bic += "XXX";
@@ -553,7 +553,7 @@ public class HBCIProperties
     return bic;
   }
   /**
-   * Prueft die Gueltigkeit einer Creditor-ID (Gläubiger-Identifikationsnummer)
+   * Prueft die Gueltigkeit einer Creditor-ID (GlÃ¤ubiger-Identifikationsnummer)
    * anhand von Pruefziffern.
    * @see HBCIUtils#checkCredtitorIdCRC(String)
    * @param creditorId die Creditor-ID
@@ -640,7 +640,7 @@ public class HBCIProperties
     {
       IBAN iban = new IBAN(konto, blz, "DE");
       
-      // Rückgabe-Code checken
+      // RÃ¼ckgabe-Code checken
       IBANCode code = iban.getCode();
       if (code == null || code == IBANCode.GUELTIG)
         return iban;

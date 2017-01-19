@@ -42,7 +42,7 @@ public class AuslandsUeberweisungSearchProvider implements SearchProvider
    */
   public String getName()
   {
-    return Application.getPluginLoader().getPlugin(HBCI.class).getResources().getI18N().tr("SEPA-Überweisungen");
+    return Application.getPluginLoader().getPlugin(HBCI.class).getResources().getI18N().tr("SEPA-Ãœberweisungen");
   }
 
   /**

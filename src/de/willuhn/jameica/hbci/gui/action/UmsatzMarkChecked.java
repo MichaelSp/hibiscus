@@ -65,8 +65,8 @@ public class UmsatzMarkChecked extends FlaggableChange
     {
       // Ermitteln, ob der User gefragt werden soll, ob er die Kategorien dabei fest zuordnen will
       String s = i18n.tr("Sollen Umsatz-Kategorien, die dynamisch per Suchbegriff zugeordnet wurden,\n" +
-                         "hierbei fest mit den Umsätzen verbunden werden? Das ermöglicht eine spätere\n" +
-                         "Änderung des Suchbegriffes in der Kategorie, ohne dass hierbei die Zuordnung\n" +
+                         "hierbei fest mit den UmsÃ¤tzen verbunden werden? Das ermÃ¶glicht eine spÃ¤tere\n" +
+                         "Ã„nderung des Suchbegriffes in der Kategorie, ohne dass hierbei die Zuordnung\n" +
                          "ggf. wieder verloren geht.\n\n" +
                          "Kategorien hierbei fest zuordnen?");
       this.assign = Boolean.valueOf(Application.getCallback().askUser(s));

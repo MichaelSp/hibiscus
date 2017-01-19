@@ -36,7 +36,7 @@ public class SepaSammelUeberweisungSearchProvider implements SearchProvider
    */
   public String getName()
   {
-    return Application.getPluginLoader().getPlugin(HBCI.class).getResources().getI18N().tr("SEPA-Sammelüberweisungen");
+    return Application.getPluginLoader().getPlugin(HBCI.class).getResources().getI18N().tr("SEPA-SammelÃ¼berweisungen");
   }
 
   /**

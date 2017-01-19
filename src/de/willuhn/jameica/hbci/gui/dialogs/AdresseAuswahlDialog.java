@@ -86,7 +86,7 @@ public class AdresseAuswahlDialog extends AbstractDialog
     empf.setMulti(false);
     empf.setSummary(false);
     
-    final Button apply = new Button(i18n.tr("Übernehmen"), new Action()
+    final Button apply = new Button(i18n.tr("Ãœbernehmen"), new Action()
     {
       public void handleAction(Object context) throws ApplicationException
       {

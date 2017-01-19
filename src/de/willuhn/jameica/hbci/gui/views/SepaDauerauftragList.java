@@ -51,11 +51,11 @@ public class SepaDauerauftragList extends AbstractView
       }
     });
 
-    GUI.getView().setTitle(i18n.tr("Vorhandene SEPA-Dauerauftr‰ge"));
+    GUI.getView().setTitle(i18n.tr("Vorhandene SEPA-Dauerauftr√§ge"));
     GUI.getView().addPanelButton(print);
 		
     ButtonArea buttons = new ButtonArea();
-    buttons.addButton(i18n.tr("SEPA-Dauerauftr‰ge abrufen..."),  new KontoFetchSepaDauerauftraege(),null,false,"mail-send-receive.png");
+    buttons.addButton(i18n.tr("SEPA-Dauerauftr√§ge abrufen..."),  new KontoFetchSepaDauerauftraege(),null,false,"mail-send-receive.png");
     buttons.addButton(i18n.tr("Neuer SEPA-Dauerauftrag"),        new de.willuhn.jameica.hbci.gui.action.SepaDauerauftragNew(),null,false,"text-x-generic.png");
     buttons.paint(getParent());
 

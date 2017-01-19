@@ -11,7 +11,7 @@ import de.willuhn.jameica.gui.GUI;
 import de.willuhn.util.ApplicationException;
 
 /**
- * Action fuer die Kontoauszüge.
+ * Action fuer die KontoauszÃ¼ge.
  */
 public class KontoauszugRpt implements Action
 {

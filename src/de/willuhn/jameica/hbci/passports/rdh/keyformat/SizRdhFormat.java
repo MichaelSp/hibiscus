@@ -59,24 +59,24 @@ public class SizRdhFormat extends AbstractSizRdhFormat
   {
     // Checken, ob die Datei lesbar ist.
     if (file == null)
-      throw new ApplicationException(i18n.tr("Bitte wählen Sie eine Schlüsseldatei aus"));
+      throw new ApplicationException(i18n.tr("Bitte wÃ¤hlen Sie eine SchlÃ¼sseldatei aus"));
     
     if (!file.canRead() || !file.isFile())
-      throw new ApplicationException(i18n.tr("Schlüsseldatei nicht lesbar"));
+      throw new ApplicationException(i18n.tr("SchlÃ¼sseldatei nicht lesbar"));
 
     HBCI plugin           = (HBCI) Application.getPluginLoader().getPlugin(HBCI.class);
     PluginResources res   = plugin.getResources();
     
     // Wir fragen den User, wo er den Schluessel hinhaben will.
     FileDialog dialog = new FileDialog(GUI.getShell(), SWT.SAVE);
-    dialog.setText(Application.getI18n().tr("Bitte wählen einen Pfad und Dateinamen, an dem der importierte Schlüssel gespeichert werden soll."));
+    dialog.setText(Application.getI18n().tr("Bitte wÃ¤hlen einen Pfad und Dateinamen, an dem der importierte SchlÃ¼ssel gespeichert werden soll."));
     dialog.setFileName("hibiscus-" + file.getName());
     dialog.setOverwrite(true);
     dialog.setFilterPath(res.getWorkPath());
     String newFile = dialog.open();
     
     if (newFile == null || newFile.length() == 0)
-      throw new ApplicationException(i18n.tr("Keine Datei ausgewählt"));
+      throw new ApplicationException(i18n.tr("Keine Datei ausgewÃ¤hlt"));
     
     File newKey = new File(newFile);
     if (!newKey.getParentFile().canWrite())
@@ -157,7 +157,7 @@ public class SizRdhFormat extends AbstractSizRdhFormat
         throw ae;
 
       Logger.error("unable to import key " + file.getAbsolutePath(),e);
-      throw new ApplicationException(i18n.tr("Schlüsseldatei kann nicht importiert werden: {0}",e.getMessage()));
+      throw new ApplicationException(i18n.tr("SchlÃ¼sseldatei kann nicht importiert werden: {0}",e.getMessage()));
     }
     finally
     {

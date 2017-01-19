@@ -36,7 +36,7 @@ public interface LineChartData extends ChartData
   public int[] getColor() throws RemoteException;
   
   /**
-   * Legt fest, ob die Flaeche unter der Linie gefüllt ist oder nicht.
+   * Legt fest, ob die Flaeche unter der Linie gefÃ¼llt ist oder nicht.
    * @return true falls gefuellt.
    * @throws RemoteException
    */

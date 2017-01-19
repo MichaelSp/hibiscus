@@ -93,9 +93,9 @@ public class UmsatzTypVerlauf implements Part
     }
     
     if (count <= 1)
-      this.chart.setTitle(i18n.tr("Bitte wählen Sie einen größeren Zeitraum (mindestens zwei Monate)"));
+      this.chart.setTitle(i18n.tr("Bitte wÃ¤hlen Sie einen grÃ¶ÃŸeren Zeitraum (mindestens zwei Monate)"));
     else
-      this.chart.setTitle(i18n.tr("Umsätze der Kategorien im Verlauf (gruppiert nach Monat)"));
+      this.chart.setTitle(i18n.tr("UmsÃ¤tze der Kategorien im Verlauf (gruppiert nach Monat)"));
     
     this.chart.redraw();
   }
@@ -108,8 +108,8 @@ public class UmsatzTypVerlauf implements Part
     try
     {
       this.chart = new LineChart();
-      this.chart.setStacked(false); // TODO Stacked Graph für "Umsätze nach Kategorieren" BUGZILLA 749
-      this.chart.setTitle(i18n.tr("Umsätze der Kategorien im Verlauf (gruppiert nach Monat)"));
+      this.chart.setStacked(false); // TODO Stacked Graph fÃ¼r "UmsÃ¤tze nach Kategorieren" BUGZILLA 749
+      this.chart.setTitle(i18n.tr("UmsÃ¤tze der Kategorien im Verlauf (gruppiert nach Monat)"));
       for (int i=0;i<this.data.size();++i)
       {
         UmsatzTreeNode group = (UmsatzTreeNode) this.data.get(i);
@@ -149,7 +149,7 @@ public class UmsatzTypVerlauf implements Part
     }
     
     /**
-     * Erzeugt eine Liste mit den aggregierten Daten für eine Linie des Charts 
+     * Erzeugt eine Liste mit den aggregierten Daten fÃ¼r eine Linie des Charts 
      * @param group
      * @throws RemoteException
      */

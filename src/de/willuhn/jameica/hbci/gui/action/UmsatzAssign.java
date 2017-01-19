@@ -40,10 +40,10 @@ public class UmsatzAssign implements Action
   public void handleAction(Object context) throws ApplicationException
   {
 		if (context == null)
-      throw new ApplicationException(i18n.tr("Bitte w‰hlen Sie einen oder mehrere Ums‰tze aus"));
+      throw new ApplicationException(i18n.tr("Bitte w√§hlen Sie einen oder mehrere Ums√§tze aus"));
 
     if (!(context instanceof Umsatz) && !(context instanceof Umsatz[]))
-      throw new ApplicationException(i18n.tr("Bitte w‰hlen Sie einen oder mehrere Ums‰tze aus"));
+      throw new ApplicationException(i18n.tr("Bitte w√§hlen Sie einen oder mehrere Ums√§tze aus"));
 
     Umsatz[] umsaetze = null;
     
@@ -53,7 +53,7 @@ public class UmsatzAssign implements Action
       umsaetze = (Umsatz[]) context;
 
     if (umsaetze.length == 0)
-      throw new ApplicationException(i18n.tr("Bitte w‰hlen Sie einen oder mehrere Ums‰tze aus"));
+      throw new ApplicationException(i18n.tr("Bitte w√§hlen Sie einen oder mehrere Ums√§tze aus"));
 
     UmsatzTyp ut = null;
     
@@ -84,7 +84,7 @@ public class UmsatzAssign implements Action
     catch (Exception e)
     {
       Logger.error("error while choosing umsatztyp",e);
-      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim Ausw‰hlen der Umsatz-Kategorie"), StatusBarMessage.TYPE_ERROR));
+      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim Ausw√§hlen der Umsatz-Kategorie"), StatusBarMessage.TYPE_ERROR));
     }
       
 

@@ -51,7 +51,7 @@ public class SepaSammelUeberweisungAppointmentProvider extends AbstractAppointme
       {
         SepaSammelUeberweisung t = this.schedule.getContext();
         Konto k = t.getKonto();
-        return i18n.tr("{0}SEPA-Sammelüberweisung: {1} {2} überweisen\n\n{3}\n\nKonto: {4}",
+        return i18n.tr("{0}SEPA-SammelÃ¼berweisung: {1} {2} Ã¼berweisen\n\n{3}\n\nKonto: {4}",
                        (this.schedule.isPlanned() ? (i18n.tr("Geplant") + ":\n") : ""),
                        HBCI.DECIMALFORMAT.format(t.getSumme()),
                        k.getWaehrung(),
@@ -79,7 +79,7 @@ public class SepaSammelUeberweisungAppointmentProvider extends AbstractAppointme
       catch (RemoteException re)
       {
         Logger.error("unable to build name",re);
-        return i18n.tr("SEPA-Sammelüberweisung");
+        return i18n.tr("SEPA-SammelÃ¼berweisung");
       }
     }
   }

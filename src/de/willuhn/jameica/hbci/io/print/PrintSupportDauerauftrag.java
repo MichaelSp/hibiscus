@@ -55,13 +55,13 @@ public class PrintSupportDauerauftrag extends AbstractPrintSupport
     Object data = this.ctx;
     
     if (data == null)
-        throw new ApplicationException(i18n.tr("Bitte w‰hlen Sie einen Auftrag aus"));
+        throw new ApplicationException(i18n.tr("Bitte w√§hlen Sie einen Auftrag aus"));
     
     if (data instanceof TablePart)
       data = ((TablePart)data).getSelection();
     
     if (!(data instanceof Dauerauftrag))
-      throw new ApplicationException(i18n.tr("Bitte w‰hlen Sie einen Auftrag aus"));
+      throw new ApplicationException(i18n.tr("Bitte w√§hlen Sie einen Auftrag aus"));
     
     try
     {
@@ -123,7 +123,7 @@ public class PrintSupportDauerauftrag extends AbstractPrintSupport
       
       // Der Rest
       {
-        table.add(new TextPrint(i18n.tr("Textschl¸ssel"),fontNormal));
+        table.add(new TextPrint(i18n.tr("Textschl√ºssel"),fontNormal));
         table.add(new TextPrint(notNull(TextSchluessel.get(a.getTextSchluessel())),fontNormal));
         
         Date first = a.getErsteZahlung();
@@ -135,7 +135,7 @@ public class PrintSupportDauerauftrag extends AbstractPrintSupport
         table.add(new TextPrint(last == null ? "-" : HBCI.DATEFORMAT.format(last),fontNormal));
 
         Date next = a.getNaechsteZahlung();
-        table.add(new TextPrint(i18n.tr("N‰chste Zahlung"),fontNormal));
+        table.add(new TextPrint(i18n.tr("N√§chste Zahlung"),fontNormal));
         table.add(new TextPrint(next == null ? "-" : HBCI.DATEFORMAT.format(next),fontNormal));
 
         Turnus turnus = a.getTurnus();

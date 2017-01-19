@@ -38,7 +38,7 @@ public class Konten extends AbstractBox implements Box
    */
   public String getName()
   {
-    return "Hibiscus: " + i18n.tr("Konten-Übersicht");
+    return "Hibiscus: " + i18n.tr("Konten-Ãœbersicht");
   }
 
   /**
@@ -114,6 +114,6 @@ public class Konten extends AbstractBox implements Box
  * *** empty log message ***
  *
  * Revision 1.1  2006/03/20 00:35:54  willuhn
- * @N new box "Konten-Übersicht"
+ * @N new box "Konten-Ãœbersicht"
  *
  **********************************************************************/

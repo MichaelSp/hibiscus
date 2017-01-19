@@ -27,7 +27,7 @@ import de.willuhn.logging.Logger;
 import de.willuhn.util.I18N;
 
 /**
- * Dialog für die PIN-Eingabe.
+ * Dialog fÃ¼r die PIN-Eingabe.
  * Es muss weder Text, noch Titel oder LabelText gesetzt werden.
  * Das ist alles schon drin.
  */
@@ -96,7 +96,7 @@ public class PINDialog extends PasswordDialog
     // BUGZILLA 28 http://www.willuhn.de/bugzilla/show_bug.cgi?id=28
 		if (password == null || password.length() < HBCIProperties.HBCI_PIN_MINLENGTH || password.length() > HBCIProperties.HBCI_PIN_MAXLENGTH)
 		{
-			setErrorText(i18n.tr("Länge der PIN ungültig ({0}-{1} Zeichen)",Integer.toString(HBCIProperties.HBCI_PIN_MINLENGTH),Integer.toString(HBCIProperties.HBCI_PIN_MAXLENGTH)) + " " + getRetryString());
+			setErrorText(i18n.tr("LÃ¤nge der PIN ungÃ¼ltig ({0}-{1} Zeichen)",Integer.toString(HBCIProperties.HBCI_PIN_MINLENGTH),Integer.toString(HBCIProperties.HBCI_PIN_MAXLENGTH)) + " " + getRetryString());
 			return false;
 		}
 

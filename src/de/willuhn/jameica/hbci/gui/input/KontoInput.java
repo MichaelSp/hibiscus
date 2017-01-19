@@ -77,7 +77,7 @@ public class KontoInput extends SelectInput
         this.setPreselected(konten.get(0));
     }
     
-    setPleaseChoose(i18n.tr("Bitte wählen..."));
+    setPleaseChoose(i18n.tr("Bitte wÃ¤hlen..."));
     this.setComment("");
 
     this.listener = new KontoListener();
@@ -256,7 +256,7 @@ public class KontoInput extends SelectInput
 
     if ((o instanceof String) && !this.supportGroups) // Kategorie
     {
-      GUI.getView().setErrorText(i18n.tr("Die Auswahl einer Konto-Gruppen ist hier nicht möglich"));
+      GUI.getView().setErrorText(i18n.tr("Die Auswahl einer Konto-Gruppen ist hier nicht mÃ¶glich"));
       return null;
     }
     return o;
@@ -356,7 +356,7 @@ public class KontoInput extends SelectInput
       catch (RemoteException er)
       {
         Logger.error("error while updating currency",er);
-        GUI.getStatusBar().setErrorText(i18n.tr("Fehler bei Ermittlung der Währung"));
+        GUI.getStatusBar().setErrorText(i18n.tr("Fehler bei Ermittlung der WÃ¤hrung"));
       }
     }
   }

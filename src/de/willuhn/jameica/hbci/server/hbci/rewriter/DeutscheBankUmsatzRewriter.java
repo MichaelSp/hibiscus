@@ -141,7 +141,7 @@ public class DeutscheBankUmsatzRewriter implements UmsatzRewriter
 /**********************************************************************
  * $Log: DeutscheBankUmsatzRewriter.java,v $
  * Revision 1.8  2012/05/29 19:53:40  willuhn
- * @N BLZ 26570090 (Deutsche Bank Osnabrück zu Rewriter hinzugefügt. Siehe http://www.willuhn.de/blog/index.php?/archives/519-Neues-in-Hibiscus.html#c1541
+ * @N BLZ 26570090 (Deutsche Bank OsnabrÃ¼ck zu Rewriter hinzugefÃ¼gt. Siehe http://www.willuhn.de/blog/index.php?/archives/519-Neues-in-Hibiscus.html#c1541
  *
  * Revision 1.7  2012/02/26 14:07:51  willuhn
  * @N Lifecycle-Management via BeanService

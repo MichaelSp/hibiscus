@@ -108,7 +108,7 @@ public class PreTimeRestriction implements Restriction
     Date test = DateUtil.endOfDay(cal.getTime());
 		if (!date.before(test))
 		{
-			throw new ApplicationException(i18n.tr("Das Datum der Zahlung darf höchstens {0} Tag(e) in der Zukunft liegen",max));
+			throw new ApplicationException(i18n.tr("Das Datum der Zahlung darf hÃ¶chstens {0} Tag(e) in der Zukunft liegen",max));
 		}
 	}
 

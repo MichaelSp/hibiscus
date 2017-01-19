@@ -28,7 +28,7 @@ import de.willuhn.util.ProgressMonitor;
 
 /**
  * Exporter fuer einen Baum von Umsaetzen nach Kategorien im PDF-Format.
- * Hierbei werden die Summen der einzelnen Kategorien, aufgeschl¸sselt nach Einnahmen und Ausgaben exportiert.
+ * Hierbei werden die Summen der einzelnen Kategorien, aufgeschl√ºsselt nach Einnahmen und Ausgaben exportiert.
  */
 public class UmsatzTreeAccountingExporter extends AbstractUmsatzTreeExporter
 {
@@ -38,11 +38,11 @@ public class UmsatzTreeAccountingExporter extends AbstractUmsatzTreeExporter
   public void doExport(Object[] objects, IOFormat format, OutputStream os, ProgressMonitor monitor) throws RemoteException, ApplicationException
   {
     if (objects == null || !(objects instanceof UmsatzTree[]))
-      throw new ApplicationException(i18n.tr("Bitte w‰hlen Sie die zu exportierenden Ums‰tze aus"));
+      throw new ApplicationException(i18n.tr("Bitte w√§hlen Sie die zu exportierenden Ums√§tze aus"));
 
     UmsatzTree[] t = (UmsatzTree[]) objects;
     if (t.length == 0)
-      throw new ApplicationException(i18n.tr("Bitte w‰hlen Sie die zu exportierenden Ums‰tze aus"));
+      throw new ApplicationException(i18n.tr("Bitte w√§hlen Sie die zu exportierenden Ums√§tze aus"));
 
     UmsatzTree tree = t[0];
     List list  = tree.getUmsatzTree();

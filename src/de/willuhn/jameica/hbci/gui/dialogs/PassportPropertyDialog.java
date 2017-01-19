@@ -71,13 +71,13 @@ public class PassportPropertyDialog extends AbstractDialog
     table.paint(parent);
     
     ButtonArea buttons = new ButtonArea();
-    buttons.addButton(i18n.tr("BPD löschen"),new Action() {
+    buttons.addButton(i18n.tr("BPD lÃ¶schen"),new Action() {
       public void handleAction(Object context) throws ApplicationException
       {
-        String s = i18n.tr("Die BPD (Bank-Parameter-Daten) werden beim nächsten Verbindungsaufbau \n" +
+        String s = i18n.tr("Die BPD (Bank-Parameter-Daten) werden beim nÃ¤chsten Verbindungsaufbau \n" +
         		               "mit der Bank automatisch erneut abgerufen.\n\n" +
-        		               "Hinweis: Bei Verwendung einer Chipkarte müssen Sie gleich die PIN eingeben.\n\n" +
-        		               "BPD jetzt löschen?");
+        		               "Hinweis: Bei Verwendung einer Chipkarte mÃ¼ssen Sie gleich die PIN eingeben.\n\n" +
+        		               "BPD jetzt lÃ¶schen?");
         try
         {
           if (!Application.getCallback().askUser(s))
@@ -97,7 +97,7 @@ public class PassportPropertyDialog extends AbstractDialog
           table.clearBPD();
           
           // Noch aus der Tabelle loeschen
-          Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("BPD gelöscht"),StatusBarMessage.TYPE_SUCCESS));
+          Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("BPD gelÃ¶scht"),StatusBarMessage.TYPE_SUCCESS));
         }
         catch (OperationCanceledException oce)
         {
@@ -113,7 +113,7 @@ public class PassportPropertyDialog extends AbstractDialog
         }
       }
     },null,false,"user-trash-full.png");
-    buttons.addButton(i18n.tr("Schließen"),new Action() {
+    buttons.addButton(i18n.tr("SchlieÃŸen"),new Action() {
       public void handleAction(Object context) throws ApplicationException
       {
         close();

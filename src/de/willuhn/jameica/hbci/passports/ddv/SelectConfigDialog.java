@@ -52,7 +52,7 @@ public class SelectConfigDialog extends AbstractDialog
   protected void paint(Composite parent) throws Exception
   {
     LabelGroup group = new LabelGroup(parent,i18n.tr("Konfiguration"));
-    group.addText(text == null ? i18n.tr("Bitte w‰hlen Sie die zu verwendende Kartenleser-Konfiguration aus") : text,true);
+    group.addText(text == null ? i18n.tr("Bitte w√§hlen Sie die zu verwendende Kartenleser-Konfiguration aus") : text,true);
     
     final TablePart table = new TablePart(DDVConfigFactory.getConfigs(), new Action() {
       public void handleAction(Object context) throws ApplicationException
@@ -71,7 +71,7 @@ public class SelectConfigDialog extends AbstractDialog
     table.paint(parent);
     
     ButtonArea buttons = new ButtonArea();
-    buttons.addButton(i18n.tr("‹bernehmen"), new Action() {
+    buttons.addButton(i18n.tr("√úbernehmen"), new Action() {
       public void handleAction(Object context) throws ApplicationException
       {
         selected = (DDVConfig) table.getSelection();

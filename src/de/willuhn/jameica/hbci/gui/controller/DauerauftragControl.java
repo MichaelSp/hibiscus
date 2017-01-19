@@ -359,14 +359,14 @@ public class DauerauftragControl extends AbstractTransferControl {
 
         Date next = TurnusHelper.getNaechsteZahlung(first,last,t,first);
         if (next != null)
-          ersteZahlung.setComment(i18n.tr("N‰chste: {0}", HBCI.DATEFORMAT.format(next)));
+          ersteZahlung.setComment(i18n.tr("N√§chste: {0}", HBCI.DATEFORMAT.format(next)));
         else
           ersteZahlung.setComment("");
       }
       catch (Exception e)
       {
         Logger.error("unable to apply first payment date",e);
-        Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim Ermitteln der n‰chsten Zahlung"), StatusBarMessage.TYPE_ERROR));
+        Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim Ermitteln der n√§chsten Zahlung"), StatusBarMessage.TYPE_ERROR));
       }
     }
   }

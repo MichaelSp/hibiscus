@@ -237,7 +237,7 @@ public interface Konto extends HibiscusDBObject, Checksum, Flaggable
 	public Date getSaldoDatum() throws RemoteException;
   
   /**
-   * Setzt das Saldo und Datum zurück
+   * Setzt das Saldo und Datum zurÃ¼ck
    * @throws RemoteException
    */
   public void reset() throws RemoteException;

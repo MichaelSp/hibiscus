@@ -41,11 +41,11 @@ public class EinnahmeAusgabeExporter implements Exporter
   public void doExport(Object[] objects, IOFormat format, OutputStream os, ProgressMonitor monitor) throws RemoteException, ApplicationException
   {
     if (objects == null || !(objects instanceof EinnahmeAusgabe[]))
-      throw new ApplicationException(i18n.tr("Bitte w‰hlen Sie die zu exportierenden Daten aus"));
+      throw new ApplicationException(i18n.tr("Bitte w√§hlen Sie die zu exportierenden Daten aus"));
 
     EinnahmeAusgabe[] ea = (EinnahmeAusgabe[]) objects;
     if (ea.length == 0)
-      throw new ApplicationException(i18n.tr("Bitte w‰hlen Sie die zu exportierenden Daten aus"));
+      throw new ApplicationException(i18n.tr("Bitte w√§hlen Sie die zu exportierenden Daten aus"));
 
     Reporter reporter = null;
 

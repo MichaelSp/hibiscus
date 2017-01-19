@@ -104,7 +104,7 @@ public class HBCIVariantPinTanNewController extends AbstractControl
     if (this.next != null)
       return this.next;
     
-    this.next = new Button(i18n.tr("Übernehmen"),null,null,true,"go-next.png");
+    this.next = new Button(i18n.tr("Ãœbernehmen"),null,null,true,"go-next.png");
     this.next.setEnabled(false);
     return this.next;
   }

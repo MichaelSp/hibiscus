@@ -79,10 +79,10 @@ public class HBCI4JavaFormat implements KeyFormat
   {
     // Checken, ob die Datei lesbar ist.
     if (file == null)
-      throw new ApplicationException(i18n.tr("Bitte wählen Sie eine Schlüsseldatei aus"));
+      throw new ApplicationException(i18n.tr("Bitte wÃ¤hlen Sie eine SchlÃ¼sseldatei aus"));
     
     if (!file.canRead() || !file.isFile())
-      throw new ApplicationException(i18n.tr("Schlüsseldatei nicht lesbar"));
+      throw new ApplicationException(i18n.tr("SchlÃ¼sseldatei nicht lesbar"));
     
     // Das ist ein Hibiscus-Schluessel. Wir lassen den Schluessel gleich dort, wo er ist
     try
@@ -94,7 +94,7 @@ public class HBCI4JavaFormat implements KeyFormat
     catch (RemoteException re)
     {
       Logger.error("unable to import key " + file.getAbsolutePath(),re);
-      throw new ApplicationException(i18n.tr("Schlüsseldatei kann nicht importiert werden: {0}",re.getMessage()));
+      throw new ApplicationException(i18n.tr("SchlÃ¼sseldatei kann nicht importiert werden: {0}",re.getMessage()));
     }
   }
 
@@ -133,7 +133,7 @@ public class HBCI4JavaFormat implements KeyFormat
       handler = new HBCIHandler(version,passport);
       handler.close();
       handler = null;
-      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Schlüssel erfolgreich erstellt"), StatusBarMessage.TYPE_SUCCESS));
+      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("SchlÃ¼ssel erfolgreich erstellt"), StatusBarMessage.TYPE_SUCCESS));
       return key;
     }
     catch (ApplicationException ae)
@@ -157,7 +157,7 @@ public class HBCI4JavaFormat implements KeyFormat
       NeedKeyAckException ack = (NeedKeyAckException) HBCIProperties.getCause(e,NeedKeyAckException.class);
       if (ack != null)
       {
-        Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Schlüssel erfolgreich erstellt"), StatusBarMessage.TYPE_SUCCESS));
+        Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("SchlÃ¼ssel erfolgreich erstellt"), StatusBarMessage.TYPE_SUCCESS));
         String msg = i18n.tr("Bitte senden Sie den INI-Brief an Ihre Bank\nund warten Sie auf die Freischaltung durch die Bank.");
         try
         {
@@ -172,7 +172,7 @@ public class HBCI4JavaFormat implements KeyFormat
       }
       
       Logger.error("unable to create key " + file.getAbsolutePath(),e);
-      throw new ApplicationException(i18n.tr("Fehler beim Erstellen des Schlüssels: {0}",e.getMessage()));
+      throw new ApplicationException(i18n.tr("Fehler beim Erstellen des SchlÃ¼ssels: {0}",e.getMessage()));
     }
     finally
     {
@@ -234,7 +234,7 @@ public class HBCI4JavaFormat implements KeyFormat
           InsertKeyDialog kd = new InsertKeyDialog(f);
           Boolean b = (Boolean) kd.open();
           if (b == null || !b.booleanValue())
-            throw new OperationCanceledException(i18n.tr("Schlüsseldiskette nicht eingelegt oder nicht lesbar"));
+            throw new OperationCanceledException(i18n.tr("SchlÃ¼sseldiskette nicht eingelegt oder nicht lesbar"));
         }
       }
       
@@ -273,14 +273,14 @@ public class HBCI4JavaFormat implements KeyFormat
       if (ipe != null)
       {
         Logger.write(Level.TRACE,"password for key file seems to be wrong",e);
-        String text = i18n.tr("Das Passwort für die Schlüsseldatei ist falsch.");
+        String text = i18n.tr("Das Passwort fÃ¼r die SchlÃ¼sseldatei ist falsch.");
         Application.getMessagingFactory().sendMessage(new StatusBarMessage(text,StatusBarMessage.TYPE_ERROR));
         throw new ApplicationException(text);
       }
       
       // Keine brauchbare Exception gefunden
       Logger.error("unable to load " + getPassportType() + " key",e);
-      throw new ApplicationException(i18n.tr("Fehler beim Laden des Schlüssels: {0}",e.getMessage()),e);
+      throw new ApplicationException(i18n.tr("Fehler beim Laden des SchlÃ¼ssels: {0}",e.getMessage()),e);
     }
     finally
     {

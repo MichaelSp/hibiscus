@@ -42,8 +42,8 @@ public class DauerauftragList extends ContextMenu
 	{
 		i18n = Application.getPluginLoader().getPlugin(HBCI.class).getResources().getI18N();
 
-		addItem(new CheckedContextMenuItem(i18n.tr("Öffnen"),            new DauerauftragNew(),"document-open.png"));
-		addItem(new CheckedContextMenuItem(i18n.tr("Löschen..."),        new DBObjectDelete(),"user-trash-full.png"));
+		addItem(new CheckedContextMenuItem(i18n.tr("Ã–ffnen"),            new DauerauftragNew(),"document-open.png"));
+		addItem(new CheckedContextMenuItem(i18n.tr("LÃ¶schen..."),        new DBObjectDelete(),"user-trash-full.png"));
 		addItem(ContextMenuItem.SEPARATOR);
     addItem(new CheckedSingleContextMenuItem(i18n.tr("Drucken..."),new Action() {
       public void handleAction(Object context) throws ApplicationException

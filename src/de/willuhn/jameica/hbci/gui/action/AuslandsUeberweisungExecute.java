@@ -56,7 +56,7 @@ public class AuslandsUeberweisungExecute implements Action
 			final AuslandsUeberweisung u = (AuslandsUeberweisung) context;
 			
 			if (u.ausgefuehrt())
-				throw new ApplicationException(i18n.tr("Überweisung wurde bereits ausgeführt"));
+				throw new ApplicationException(i18n.tr("Ãœberweisung wurde bereits ausgefÃ¼hrt"));
 
 			if (u.isNewObject())
 				u.store(); // wir speichern bei Bedarf selbst.
@@ -66,8 +66,8 @@ public class AuslandsUeberweisungExecute implements Action
       if (!u.isTerminUeberweisung() && (termin.getTime() - now.getTime()) >= (24 * 60 * 60 * 1000))
       {
         String q = i18n.tr("Der Termin liegt mindestens 1 Tag in Zukunft.\n" +
-                           "Soll der Auftrag stattdessen als bankseitige SEPA-Terminüberweisung " +
-                           "ausgeführt werden?");
+                           "Soll der Auftrag stattdessen als bankseitige SEPA-TerminÃ¼berweisung " +
+                           "ausgefÃ¼hrt werden?");
         if (Application.getCallback().askUser(q))
         {
           u.setTerminUeberweisung(true);
@@ -89,7 +89,7 @@ public class AuslandsUeberweisungExecute implements Action
 			catch (Exception e)
 			{
 				Logger.error("error while showing confirm dialog",e);
-        Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim Ausführen der Überweisung"),StatusBarMessage.TYPE_ERROR));
+        Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim AusfÃ¼hren der Ãœberweisung"),StatusBarMessage.TYPE_ERROR));
 				return;
 			}
 
@@ -112,7 +112,7 @@ public class AuslandsUeberweisungExecute implements Action
     catch (Exception e)
     {
       Logger.error("error while executing transfer",e);
-      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim Ausführen der Überweisung: {0}",e.getMessage()),StatusBarMessage.TYPE_ERROR));
+      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim AusfÃ¼hren der Ãœberweisung: {0}",e.getMessage()),StatusBarMessage.TYPE_ERROR));
     }
   }
 

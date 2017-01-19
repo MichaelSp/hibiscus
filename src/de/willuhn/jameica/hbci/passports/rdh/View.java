@@ -35,24 +35,24 @@ public class View extends AbstractView
    */
   public void bind() throws Exception
   {
-		GUI.getView().setTitle(i18n.tr("Schlüsseldisketten"));
+		GUI.getView().setTitle(i18n.tr("SchlÃ¼sseldisketten"));
 
 		final Controller control = new Controller(this);
 
     Container c = new SimpleContainer(getParent());
-    c.addText(i18n.tr("Zum Erstellen eines neuen INI-Briefes klicken Sie auf \"Neuen Schlüssel erstellen\". " +
-    		              "Wenn Sie eine existierende Schlüssel-Datei (z.Bsp. aus einem anderen Programm) " +
-    		              "importieren möchten, dann wählen Sie bitte \"Schlüssel importieren\"."),true);
+    c.addText(i18n.tr("Zum Erstellen eines neuen INI-Briefes klicken Sie auf \"Neuen SchlÃ¼ssel erstellen\". " +
+    		              "Wenn Sie eine existierende SchlÃ¼ssel-Datei (z.Bsp. aus einem anderen Programm) " +
+    		              "importieren mÃ¶chten, dann wÃ¤hlen Sie bitte \"SchlÃ¼ssel importieren\"."),true);
 
 		ButtonArea buttons = new ButtonArea();
-    buttons.addButton(i18n.tr("Schlüssel importieren..."),new Action()
+    buttons.addButton(i18n.tr("SchlÃ¼ssel importieren..."),new Action()
     {
       public void handleAction(Object context) throws ApplicationException
       {
         control.startImport();
       }
     },null,false,"document-open.png");
-		buttons.addButton(i18n.tr("Neuen Schlüssel (INI-Brief) erstellen"),new Action()
+		buttons.addButton(i18n.tr("Neuen SchlÃ¼ssel (INI-Brief) erstellen"),new Action()
 		{
 			public void handleAction(Object context) throws ApplicationException
 			{

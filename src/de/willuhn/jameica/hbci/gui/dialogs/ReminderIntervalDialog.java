@@ -93,7 +93,7 @@ public class ReminderIntervalDialog extends AbstractDialog<ReminderInterval>
   protected void paint(Composite parent) throws Exception
   {
     Container ct = new SimpleContainer(parent,true);
-    ct.addText(i18n.tr("Bei einer regelm‰ﬂigen Wiederholung wird der Auftrag " +
+    ct.addText(i18n.tr("Bei einer regelm√§√üigen Wiederholung wird der Auftrag " +
                        "im angegebenen Intervall (beginnend mit dem ersten " +
                        "Erinnerungstermin) automatisch durch Hibiscus " +
                        "dupliziert"),true);
@@ -108,7 +108,7 @@ public class ReminderIntervalDialog extends AbstractDialog<ReminderInterval>
 
     ////////////////////////////////////////////////////////////////////////////
     // Die Buttons
-    final Button apply = new Button(i18n.tr("‹bernehmen"), new Action() {
+    final Button apply = new Button(i18n.tr("√úbernehmen"), new Action() {
       public void handleAction(Object context) throws ApplicationException
       {
         boolean enabled = ((Boolean)checkbox.getValue()).booleanValue();
@@ -129,7 +129,7 @@ public class ReminderIntervalDialog extends AbstractDialog<ReminderInterval>
     ////////////////////////////////////////////////////////////////////////////
     // Checkbox
     this.checkbox = new CheckboxInput(this.interval != null);
-    this.checkbox.setName(i18n.tr("Auftrag regelm‰ﬂig wiederholen"));
+    this.checkbox.setName(i18n.tr("Auftrag regelm√§√üig wiederholen"));
     this.checkbox.addListener(listener);
     ////////////////////////////////////////////////////////////////////////////
     
@@ -141,7 +141,7 @@ public class ReminderIntervalDialog extends AbstractDialog<ReminderInterval>
     
     TextInput startInput = new TextInput(HBCI.DATEFORMAT.format(this.start));
     startInput.setEnabled(false);
-    startInput.setName("Erste Ausf¸hrung");
+    startInput.setName("Erste Ausf√ºhrung");
 
     
     ////////////////////////////////////////////////////////////////////////////
@@ -151,7 +151,7 @@ public class ReminderIntervalDialog extends AbstractDialog<ReminderInterval>
     this.error.setColor(Color.ERROR);
     
     this.endInput = new DateInput(this.end,HBCI.DATEFORMAT);
-    this.endInput.setName(i18n.tr("Letzte Ausf¸hrung"));
+    this.endInput.setName(i18n.tr("Letzte Ausf√ºhrung"));
     
     final Listener endCheck = new Listener() {
       public void handleEvent(Event event)

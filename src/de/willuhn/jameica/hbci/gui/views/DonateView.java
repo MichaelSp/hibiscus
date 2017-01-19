@@ -48,7 +48,7 @@ public class DonateView extends AbstractView
    */
   public void bind() throws Exception
   {
-    GUI.getView().setTitle(i18n.tr("Spenden für Hibiscus"));
+    GUI.getView().setTitle(i18n.tr("Spenden fÃ¼r Hibiscus"));
     
     {
       Composite comp = new Composite(this.getParent(),SWT.NONE);
@@ -60,9 +60,9 @@ public class DonateView extends AbstractView
       container.addText(i18n.tr("Viele Opensource-Anwendungen werden nicht von finanzstarken Unternehmen programmiert " +
                                 "sondern von freiwilligen Entwicklern, die das in ihrer Freizeit tun. Hibiscus ist ein " +
                                 "solches Projekt.\n\n" +
-                                "Neben der Zeit, die ich für die Weiterentwicklung von Hibiscus investiere, " +
-                                "benötige ich natürlich auch Geld für die Miete des Webservers, für zu testende Chipkarten-Leser " +
-                                "und auch für die Computer und Betriebssysteme, auf denen Hibiscus laufen soll. Leider " +
+                                "Neben der Zeit, die ich fÃ¼r die Weiterentwicklung von Hibiscus investiere, " +
+                                "benÃ¶tige ich natÃ¼rlich auch Geld fÃ¼r die Miete des Webservers, fÃ¼r zu testende Chipkarten-Leser " +
+                                "und auch fÃ¼r die Computer und Betriebssysteme, auf denen Hibiscus laufen soll. Leider " +
                                 "konnte ich bisher kein Unternehmen finden, welches mich sponsored."),true);
       
       Canvas c = SWTUtil.getCanvas(comp,SWTUtil.getImage("hibiscus-donate.png"),SWT.TOP | SWT.LEFT);
@@ -71,11 +71,11 @@ public class DonateView extends AbstractView
     
     {
       Container container = new SimpleContainer(getParent());
-      container.addHeadline(i18n.tr("Unterstützen"));
-      container.addText(i18n.tr("Ich würde mich freuen, wenn Sie das Projekt mit unterstützen wollen. Durch Klick auf " +
-      		                      "\"Dauerauftrag erstellen\" können Sie eine einmalige Überweisung oder einen Dauerauftrag (z.Bsp. mit 1 oder 2 EUR) " +
-      		                      "erstellen, in dem mein Konto bereits als Empfänger eingetragen ist.\n\n" +
-      		                      "Nur wenn Sie wollen - es ist völlig freiwillig.\n\n" +
+      container.addHeadline(i18n.tr("UnterstÃ¼tzen"));
+      container.addText(i18n.tr("Ich wÃ¼rde mich freuen, wenn Sie das Projekt mit unterstÃ¼tzen wollen. Durch Klick auf " +
+      		                      "\"Dauerauftrag erstellen\" kÃ¶nnen Sie eine einmalige Ãœberweisung oder einen Dauerauftrag (z.Bsp. mit 1 oder 2 EUR) " +
+      		                      "erstellen, in dem mein Konto bereits als EmpfÃ¤nger eingetragen ist.\n\n" +
+      		                      "Nur wenn Sie wollen - es ist vÃ¶llig freiwillig.\n\n" +
       		                      "Vielen Dank!\n" +
       		                      "Olaf Willuhn"),true);
     }
@@ -116,7 +116,7 @@ public class DonateView extends AbstractView
           }
         }
       },null,false,"emblem-special.png");
-      buttons.addButton(i18n.tr("...oder Überweisung"),new Action() {
+      buttons.addButton(i18n.tr("...oder Ãœberweisung"),new Action() {
         public void handleAction(Object context) throws ApplicationException
         {
           try
@@ -131,7 +131,7 @@ public class DonateView extends AbstractView
           catch (Exception e)
           {
             Logger.error("unable to create sepa ueberweisung",e);
-            Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim Anlegen der SEPA-Überweisung: {0}",e.getMessage()),StatusBarMessage.TYPE_ERROR));
+            Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim Anlegen der SEPA-Ãœberweisung: {0}",e.getMessage()),StatusBarMessage.TYPE_ERROR));
           }
         }
       },null,false,"stock_next.png");

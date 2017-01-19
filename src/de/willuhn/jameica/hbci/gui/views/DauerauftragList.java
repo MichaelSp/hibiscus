@@ -55,7 +55,7 @@ public class DauerauftragList extends AbstractView
       }
     });
 
-    GUI.getView().setTitle(i18n.tr("Vorhandene Dauerauftr‰ge"));
+    GUI.getView().setTitle(i18n.tr("Vorhandene Dauerauftr√§ge"));
     GUI.getView().addPanelButton(print);
 		
     table.paint(getParent());

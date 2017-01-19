@@ -59,13 +59,13 @@ public class HBCIVersionDialog extends AbstractDialog
   protected void paint(Composite parent) throws Exception
   {
     Container group = new SimpleContainer(parent);
-    group.addText(i18n.tr("Bitte w‰hlen Sie die zu verwendende HBCI-Version"),true);
+    group.addText(i18n.tr("Bitte w√§hlen Sie die zu verwendende HBCI-Version"),true);
     
     final HBCIVersionInput input = new HBCIVersionInput();
     group.addInput(input);
     
     ButtonArea buttons = new ButtonArea();
-    buttons.addButton(i18n.tr("‹bernehmen"), new Action() {
+    buttons.addButton(i18n.tr("√úbernehmen"), new Action() {
       public void handleAction(Object context) throws ApplicationException
       {
         version = (String) input.getValue();

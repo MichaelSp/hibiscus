@@ -74,7 +74,7 @@ public class MT940UmsatzExporterMerged extends MT940UmsatzExporter
         if (k == null)
           k = konto;
         else if (!k.getID().equals(konto.getID()))
-          throw new ApplicationException(i18n.tr("Die zu exportierenden Umsätze müssen vom selben Konto stammen"));
+          throw new ApplicationException(i18n.tr("Die zu exportierenden UmsÃ¤tze mÃ¼ssen vom selben Konto stammen"));
         list.add(u);
       }
       Collections.sort(list,new Comparator<Umsatz>() {
@@ -126,12 +126,12 @@ public class MT940UmsatzExporterMerged extends MT940UmsatzExporter
         // Anfangssaldo
     		if (showSaldo && i == 0)
     		{
-          //(Schlusssaldo - Umsatzbetrag) > 0 -> Soll-Haben-Kennung für den Anfangssaldo = C
+          //(Schlusssaldo - Umsatzbetrag) > 0 -> Soll-Haben-Kennung fÃ¼r den Anfangssaldo = C
           //(Credit), sonst D (Debit)
           double saldo = u.getSaldo() - u.getBetrag();
           
           //Anfangssaldo aus dem Schlusssaldo ermitteln sowie Soll-Haben-Kennung
-          //Valuta Datum des Kontosaldos leider nicht verfügbar, deswegen wird Datum der Umsatzwertstellung genommen
+          //Valuta Datum des Kontosaldos leider nicht verfÃ¼gbar, deswegen wird Datum der Umsatzwertstellung genommen
           out.write(":60F:");
           out.write(saldo >= 0.0d ? "C" : "D");
           out.write(DF_YYMMDD.format(u.getDatum()) + curr + df.format(saldo).replace("-","") + NL);
@@ -139,7 +139,7 @@ public class MT940UmsatzExporterMerged extends MT940UmsatzExporter
 
         out.write(":61:" + DF_YYMMDD.format(u.getValuta()) + DF_MMDD.format(u.getDatum()));
 
-        // Soll-Haben-Kennung für den Betrag ermitteln
+        // Soll-Haben-Kennung fÃ¼r den Betrag ermitteln
     		double betrag = u.getBetrag();
         out.write(betrag >= 0.0d ? "CR" : "DR");
         out.write(df.format(betrag).replace("-",""));
@@ -184,7 +184,7 @@ public class MT940UmsatzExporterMerged extends MT940UmsatzExporter
         if (showSaldo && i >= list.size() - 1)
         {
           out.write(":62F:");
-          //Soll-Haben-Kennung für den Schlusssaldo ermitteln
+          //Soll-Haben-Kennung fÃ¼r den Schlusssaldo ermitteln
           double schlussSaldo = u.getSaldo();
           out.write(schlussSaldo >= 0.0d ? "C" : "D");
           out.write(DF_YYMMDD.format(u.getDatum()) + curr + df.format(schlussSaldo).replace("-","") + NL);

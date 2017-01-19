@@ -41,7 +41,7 @@ public class KontoRecalculateOfflineSaldo implements Action
   {
 
     if (context == null || !(context instanceof Konto))
-      throw new ApplicationException(i18n.tr("Bitte wählen Sie ein Konto aus"));
+      throw new ApplicationException(i18n.tr("Bitte wÃ¤hlen Sie ein Konto aus"));
 
     try
     {
@@ -49,7 +49,7 @@ public class KontoRecalculateOfflineSaldo implements Action
       if (k.isNewObject() || !k.hasFlag(Konto.FLAG_OFFLINE))
         return;
 
-      String q = i18n.tr("Die Umsatzsalden werden ab dem letzten geprüften Umsatz neu berechnet.\nSollte es keinen geben, werden alle Salden neu berechnet, wobei der Kontoanfangssaldo 0,00 angenommen wird.");
+      String q = i18n.tr("Die Umsatzsalden werden ab dem letzten geprÃ¼ften Umsatz neu berechnet.\nSollte es keinen geben, werden alle Salden neu berechnet, wobei der Kontoanfangssaldo 0,00 angenommen wird.");
 
       if (!Application.getCallback().askUser(q))
         return;

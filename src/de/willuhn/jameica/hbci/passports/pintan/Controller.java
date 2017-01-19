@@ -115,7 +115,7 @@ public class Controller extends AbstractControl
 
     ContextMenu ctx = new ContextMenu();
 
-    ctx.addItem(new CheckedContextMenuItem(i18n.tr("Öffnen"),new Action() {
+    ctx.addItem(new CheckedContextMenuItem(i18n.tr("Ã–ffnen"),new Action() {
       public void handleAction(Object context) throws ApplicationException {
         if (context == null)
           return;
@@ -135,7 +135,7 @@ public class Controller extends AbstractControl
     },"document-new.png"));
 
     ctx.addItem(ContextMenuItem.SEPARATOR);
-    ctx.addItem(new CheckedContextMenuItem(i18n.tr("Löschen..."),new Action() {
+    ctx.addItem(new CheckedContextMenuItem(i18n.tr("LÃ¶schen..."),new Action() {
       public void handleAction(Object context) throws ApplicationException {handleDelete((PinTanConfig)context);}
     },"user-trash-full.png"));
 
@@ -280,7 +280,7 @@ public class Controller extends AbstractControl
       new String[]{"Base64","None"},
       getConfig().getFilterType());
     filterType.setComment(i18n.tr("meist Base64"));
-    filterType.setName(i18n.tr("Filter für Übertragung"));
+    filterType.setName(i18n.tr("Filter fÃ¼r Ãœbertragung"));
     filterType.setMandatory(true);
     return filterType;
   }
@@ -327,12 +327,12 @@ public class Controller extends AbstractControl
     {
       getConfig().setSecMech(null);
       getConfig().setTanMedia(null);
-      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Vorauswahl der TAN-Verfahren zurückgesetzt"),StatusBarMessage.TYPE_SUCCESS));
+      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Vorauswahl der TAN-Verfahren zurÃ¼ckgesetzt"),StatusBarMessage.TYPE_SUCCESS));
     }
     catch (Exception e)
     {
       Logger.error("error while deleting tan settings",e);
-      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim Zurücksetzen der TAN-Verfahren"),StatusBarMessage.TYPE_ERROR));
+      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim ZurÃ¼cksetzen der TAN-Verfahren"),StatusBarMessage.TYPE_ERROR));
     }
   }
   
@@ -370,12 +370,12 @@ public class Controller extends AbstractControl
       return;
     try
     {
-      if (!Application.getCallback().askUser(i18n.tr("Wollen Sie diese Konfiguration wirklich löschen?")))
+      if (!Application.getCallback().askUser(i18n.tr("Wollen Sie diese Konfiguration wirklich lÃ¶schen?")))
         return;
 
       PinTanConfigFactory.delete(config);
       GUI.startView(View.class,null);
-      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Konfiguration gelöscht"),StatusBarMessage.TYPE_SUCCESS));
+      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Konfiguration gelÃ¶scht"),StatusBarMessage.TYPE_SUCCESS));
     }
     catch (OperationCanceledException oce)
     {
@@ -388,7 +388,7 @@ public class Controller extends AbstractControl
     catch (Exception e)
     {
       Logger.error("error while deleting config",e);
-      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Löschen fehlgeschlagen: {0}",e.getMessage()),StatusBarMessage.TYPE_ERROR));
+      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("LÃ¶schen fehlgeschlagen: {0}",e.getMessage()),StatusBarMessage.TYPE_ERROR));
     }
   }
 
@@ -414,7 +414,7 @@ public class Controller extends AbstractControl
     catch (RemoteException e)
     {
       Logger.error("error while testing passport",e);
-      GUI.getStatusBar().setErrorText(i18n.tr("Fehler beim Testen der Konfiguration. Bitte prüfen Sie das Protokoll. ") + e.getMessage());
+      GUI.getStatusBar().setErrorText(i18n.tr("Fehler beim Testen der Konfiguration. Bitte prÃ¼fen Sie das Protokoll. ") + e.getMessage());
     }
   }
 
@@ -430,7 +430,7 @@ public class Controller extends AbstractControl
       conf = PinTanConfigFactory.create();
       GUI.startView(Detail.class,conf);
       
-      GUI.getStatusBar().setSuccessText(i18n.tr("Konfiguration erfolgreich erstellt. Bitte klicken Sie \"Speichern\" zum Übernehmen."));
+      GUI.getStatusBar().setSuccessText(i18n.tr("Konfiguration erfolgreich erstellt. Bitte klicken Sie \"Speichern\" zum Ãœbernehmen."));
     }
     catch (ApplicationException e)
     {

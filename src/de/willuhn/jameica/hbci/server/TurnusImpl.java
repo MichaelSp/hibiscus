@@ -64,12 +64,12 @@ public class TurnusImpl extends AbstractHibiscusDBObject implements Turnus
   {
 		try {
 			if (isInitial())
-				throw new ApplicationException(i18n.tr("Turnus ist Bestandteil der System-Daten und kann nicht gelöscht werden."));
+				throw new ApplicationException(i18n.tr("Turnus ist Bestandteil der System-Daten und kann nicht gelÃ¶scht werden."));
 		}
 		catch (RemoteException e)
 		{
 			Logger.error("error in turnus deletCheck",e);
-			throw new ApplicationException(i18n.tr("Fehler beim Löschen des Turnus"));
+			throw new ApplicationException(i18n.tr("Fehler beim LÃ¶schen des Turnus"));
 		}
   }
 
@@ -81,17 +81,17 @@ public class TurnusImpl extends AbstractHibiscusDBObject implements Turnus
   	try {
 
   		if (getZeiteinheit() != Turnus.ZEITEINHEIT_MONATLICH && getZeiteinheit() != Turnus.ZEITEINHEIT_WOECHENTLICH)
-  			throw new ApplicationException(i18n.tr("Bitte wählen Sie eine gültige Zeiteinheit aus"));
+  			throw new ApplicationException(i18n.tr("Bitte wÃ¤hlen Sie eine gÃ¼ltige Zeiteinheit aus"));
 
 			if (getIntervall() < 1)
-				throw new ApplicationException(i18n.tr("Bitte geben Sie ein gültiges Intervall ein"));
+				throw new ApplicationException(i18n.tr("Bitte geben Sie ein gÃ¼ltiges Intervall ein"));
 
       // BUGZILLA #49 http://www.willuhn.de/bugzilla/show_bug.cgi?id=49
 			if (getZeiteinheit() == Turnus.ZEITEINHEIT_MONATLICH && (getTag() < 1 || getTag() > 31) && getTag() != HBCIProperties.HBCI_LAST_OF_MONTH)
-				throw new ApplicationException(i18n.tr("Bei monatlicher Zeiteinheit darf der Zahltag nicht kleiner als 1 und nicht größer als 31 sein. Angegebener Tag: {0}",""+getTag()));
+				throw new ApplicationException(i18n.tr("Bei monatlicher Zeiteinheit darf der Zahltag nicht kleiner als 1 und nicht grÃ¶ÃŸer als 31 sein. Angegebener Tag: {0}",""+getTag()));
 
 			if (getZeiteinheit() == Turnus.ZEITEINHEIT_WOECHENTLICH && (getTag() < 1 || getTag() > 7))
-				throw new ApplicationException(i18n.tr("Bitte wählen Sie einen gültigen Wochentag"));
+				throw new ApplicationException(i18n.tr("Bitte wÃ¤hlen Sie einen gÃ¼ltigen Wochentag"));
   	}
   	catch (RemoteException e)
   	{

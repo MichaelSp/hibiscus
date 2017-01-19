@@ -55,7 +55,7 @@ public class SammelUeberweisungNew extends AbstractView
 		final SammelUeberweisungControl control = new SammelUeberweisungControl(this);
     this.transfer = control.getTransfer();
 
-		GUI.getView().setTitle(i18n.tr("Sammel-Überweisung bearbeiten"));
+		GUI.getView().setTitle(i18n.tr("Sammel-Ãœberweisung bearbeiten"));
     GUI.getView().addPanelButton(new PanelButtonPrint(new PrintSupportSammelUeberweisung(transfer)));
 		
 		Container group = new SimpleContainer(getParent());
@@ -69,7 +69,7 @@ public class SammelUeberweisungNew extends AbstractView
     group.addLabelPair(i18n.tr("Summe der Buchungen"),control.getSumme());
 
     ButtonArea buttons = new ButtonArea();
-    buttons.addButton(i18n.tr("Sammelauftrag löschen"),new Action() {
+    buttons.addButton(i18n.tr("Sammelauftrag lÃ¶schen"),new Action() {
       public void handleAction(Object context) throws ApplicationException
       {
         new DBObjectDelete().handleAction(context);

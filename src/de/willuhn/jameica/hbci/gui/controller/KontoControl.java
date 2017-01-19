@@ -329,7 +329,7 @@ public class KontoControl extends AbstractControl
     if (this.delButton != null)
       return this.delButton;
     
-    this.delButton = new Button(i18n.tr("Konto lˆschen"),new KontoDelete(),this.getKonto(),false,"user-trash-full.png");
+    this.delButton = new Button(i18n.tr("Konto l√∂schen"),new KontoDelete(),this.getKonto(),false,"user-trash-full.png");
     this.delButton.setEnabled(!this.getKonto().isNewObject());
     return this.delButton;
   }
@@ -671,7 +671,7 @@ public class KontoControl extends AbstractControl
 
     kontoList = new de.willuhn.jameica.hbci.gui.parts.KontoList(new KontoNew());
     // BUGZILLA 81 http://www.willuhn.de/bugzilla/show_bug.cgi?id=81
-    kontoList.addColumn(i18n.tr("Ums‰tze"),"numumsaetze");
+    kontoList.addColumn(i18n.tr("Ums√§tze"),"numumsaetze");
 		return kontoList;
 	}
   
@@ -704,7 +704,7 @@ public class KontoControl extends AbstractControl
             IBAN newIban = HBCIProperties.getIBAN(blz,kto);
             getIban().setValue(newIban.getIBAN());
             newBic = newIban.getBIC();
-            txt = i18n.tr("IBAN/BIC vervollst‰ndigt. Zum ‹bernehmen \"Speichern\" dr¸cken.");
+            txt = i18n.tr("IBAN/BIC vervollst√§ndigt. Zum √úbernehmen \"Speichern\" dr√ºcken.");
           }
           
           if (bic == null)
@@ -714,7 +714,7 @@ public class KontoControl extends AbstractControl
             if (StringUtils.trimToNull(newBic) != null)
             {
               getBic().setValue(newBic);
-              txt = i18n.tr("BIC vervollst‰ndigt. Zum ‹bernehmen \"Speichern\" dr¸cken.");
+              txt = i18n.tr("BIC vervollst√§ndigt. Zum √úbernehmen \"Speichern\" dr√ºcken.");
             }
           }
 
@@ -763,7 +763,7 @@ public class KontoControl extends AbstractControl
 	      // Bei HBCI ist der Passport Pflicht
 	      if (backend != null && backend.equals(hbci) && p == null)
 	      {
-	        throw new ApplicationException(i18n.tr("Bitte w‰hlen Sie ein Sicherheitsverfahren aus"));
+	        throw new ApplicationException(i18n.tr("Bitte w√§hlen Sie ein Sicherheitsverfahren aus"));
 	      }
 	      else
 	      {

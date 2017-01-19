@@ -81,7 +81,7 @@ public abstract class AbstractExporter implements Exporter
   void setup(Object[] objects, IOFormat format, OutputStream os, ProgressMonitor monitor) throws Exception
   {
     if (objects == null || objects.length == 0)
-      throw new ApplicationException(i18n.tr("Bitte w‰hlen Sie die zu exportierenden Daten aus"));
+      throw new ApplicationException(i18n.tr("Bitte w√§hlen Sie die zu exportierenden Daten aus"));
   }
   
   /**

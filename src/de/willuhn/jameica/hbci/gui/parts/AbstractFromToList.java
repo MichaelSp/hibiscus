@@ -129,7 +129,7 @@ public abstract class AbstractFromToList extends TablePart implements Part
       if (sum == null)
         return super.getSummary();
       
-      return i18n.tr("{0} Auftr‰ge, {1} markiert, Summe: {2} {3}",Integer.toString(size),Integer.toString(list.length),HBCI.DECIMALFORMAT.format(sum),HBCIProperties.CURRENCY_DEFAULT_DE);
+      return i18n.tr("{0} Auftr√§ge, {1} markiert, Summe: {2} {3}",Integer.toString(size),Integer.toString(list.length),HBCI.DECIMALFORMAT.format(sum),HBCIProperties.CURRENCY_DEFAULT_DE);
     }
     catch (Exception e)
     {
@@ -255,7 +255,7 @@ public abstract class AbstractFromToList extends TablePart implements Part
   {
     final TabFolder folder = new TabFolder(parent, SWT.NONE);
     folder.setLayoutData(new GridData(GridData.FILL_HORIZONTAL));
-    TabGroup tab = new TabGroup(folder,i18n.tr("Anzeige einschr‰nken"));
+    TabGroup tab = new TabGroup(folder,i18n.tr("Anzeige einschr√§nken"));
 
     ColumnLayout cols = new ColumnLayout(tab.getComposite(),2);
     

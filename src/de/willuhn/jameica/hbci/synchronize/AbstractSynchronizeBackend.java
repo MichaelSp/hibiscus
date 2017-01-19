@@ -198,12 +198,12 @@ public abstract class AbstractSynchronizeBackend<T extends SynchronizeJobProvide
     catch (RemoteException re)
     {
       Logger.error("unable to check konto flags",re);
-      throw new ApplicationException(i18n.tr("Der Gesch‰ftsvorfall konnte nicht erstellt werden: {0}",re.getMessage()));
+      throw new ApplicationException(i18n.tr("Der Gesch√§ftsvorfall konnte nicht erstellt werden: {0}",re.getMessage()));
     }
 
     Class<? extends SynchronizeJob> job = this.getImplementor(type, konto);
     if (job == null)
-      throw new ApplicationException(i18n.tr("Der Gesch‰ftsvorfall \"{0}\" wird f¸r {1} nicht unterst¸tzt",type.getSimpleName(),this.getName()));
+      throw new ApplicationException(i18n.tr("Der Gesch√§ftsvorfall \"{0}\" wird f√ºr {1} nicht unterst√ºtzt",type.getSimpleName(),this.getName()));
     
     // Instanz erzeugen
     BeanService service = Application.getBootLoader().getBootable(BeanService.class);
@@ -279,7 +279,7 @@ public abstract class AbstractSynchronizeBackend<T extends SynchronizeJobProvide
   public synchronized SynchronizeSession execute(List<SynchronizeJob> jobs) throws ApplicationException, OperationCanceledException
   {
     if (this.session != null)
-      throw new ApplicationException(i18n.tr("Synchronisierung via {0} l‰uft bereits",this.getName()));
+      throw new ApplicationException(i18n.tr("Synchronisierung via {0} l√§uft bereits",this.getName()));
     
     Logger.info("starting " + this.getName() + " synchronization");
     this.worker = new Worker(jobs);
@@ -314,7 +314,7 @@ public abstract class AbstractSynchronizeBackend<T extends SynchronizeJobProvide
     private Worker(List<SynchronizeJob> jobs) throws ApplicationException
     {
       if (jobs == null || jobs.size() == 0)
-        throw new ApplicationException(i18n.tr("Keine auszuf¸hrenden Auftr‰ge ausgew‰hlt"));
+        throw new ApplicationException(i18n.tr("Keine auszuf√ºhrenden Auftr√§ge ausgew√§hlt"));
       
       try
       {
@@ -380,7 +380,7 @@ public abstract class AbstractSynchronizeBackend<T extends SynchronizeJobProvide
       
       try
       {
-        this.updateStatus(ProgressMonitor.STATUS_RUNNING,i18n.tr("Synchronisierung via {0} l‰uft",getName()));
+        this.updateStatus(ProgressMonitor.STATUS_RUNNING,i18n.tr("Synchronisierung via {0} l√§uft",getName()));
         
         // Wir iterieren ueber jede Gruppe der Synchronisierung und verarbeiten deren Jobs.
         for (int i=0;i<this.sync.groups.size();++i)

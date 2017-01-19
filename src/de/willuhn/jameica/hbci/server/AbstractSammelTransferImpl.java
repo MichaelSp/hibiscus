@@ -59,9 +59,9 @@ public abstract class AbstractSammelTransferImpl extends AbstractHibiscusDBObjec
   {
     try {
       if (getKonto() == null)
-        throw new ApplicationException(i18n.tr("Bitte wählen Sie ein Konto aus."));
+        throw new ApplicationException(i18n.tr("Bitte wÃ¤hlen Sie ein Konto aus."));
       if (getKonto().isNewObject())
-        throw new ApplicationException(i18n.tr("Bitte speichern Sie zunächst das Konto"));
+        throw new ApplicationException(i18n.tr("Bitte speichern Sie zunÃ¤chst das Konto"));
 
       if (this.getTermin() == null)
         this.setTermin(new Date());
@@ -72,7 +72,7 @@ public abstract class AbstractSammelTransferImpl extends AbstractHibiscusDBObjec
     catch (RemoteException e)
     {
       Logger.error("error while checking sammeltransfer",e);
-      throw new ApplicationException(i18n.tr("Fehler beim Prüfen des Auftrags."));
+      throw new ApplicationException(i18n.tr("Fehler beim PrÃ¼fen des Auftrags."));
     }
   }
 
@@ -83,12 +83,12 @@ public abstract class AbstractSammelTransferImpl extends AbstractHibiscusDBObjec
   {
     try {
       if (!whileStore && ausgefuehrt())
-        throw new ApplicationException(i18n.tr("Auftrag wurde bereits ausgeführt und kann daher nicht mehr geändert werden."));
+        throw new ApplicationException(i18n.tr("Auftrag wurde bereits ausgefÃ¼hrt und kann daher nicht mehr geÃ¤ndert werden."));
     }
     catch (RemoteException e)
     {
       Logger.error("error while checking sammeltransfer",e);
-      throw new ApplicationException(i18n.tr("Fehler beim Prüfen des Auftrags."));
+      throw new ApplicationException(i18n.tr("Fehler beim PrÃ¼fen des Auftrags."));
     }
     insertCheck();
   }
@@ -243,7 +243,7 @@ public abstract class AbstractSammelTransferImpl extends AbstractHibiscusDBObjec
       // und noch in's Protokoll schreiben.
       Konto k = this.getKonto();
       if (k != null)
-        k.addToProtokoll(i18n.tr("Sammel-Auftrag [Bezeichnung: {0}] gelöscht. Enthaltene Buchungen: {1}",getBezeichnung(),Integer.toString(count)), Protokoll.TYP_SUCCESS);
+        k.addToProtokoll(i18n.tr("Sammel-Auftrag [Bezeichnung: {0}] gelÃ¶scht. Enthaltene Buchungen: {1}",getBezeichnung(),Integer.toString(count)), Protokoll.TYP_SUCCESS);
 
       this.transactionCommit();
     }

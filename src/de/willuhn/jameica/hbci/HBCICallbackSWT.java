@@ -178,11 +178,11 @@ public class HBCICallbackSWT extends AbstractHibiscusHBCICallback
 
 				case NEED_CONNECTION:
           if (!Settings.getOnlineMode())
-            Application.getCallback().notifyUser(i18n.tr("Bitte stellen Sie eine Internetverbindung her und klicken Sie anschlieﬂend auf OK."));
+            Application.getCallback().notifyUser(i18n.tr("Bitte stellen Sie eine Internetverbindung her und klicken Sie anschlie√üend auf OK."));
 					break;
 				case CLOSE_CONNECTION:
 					if (!Settings.getOnlineMode())
-					  Application.getCallback().notifyUser(i18n.tr("Sie kˆnnen die Internetverbindung nun wieder trennen."));
+					  Application.getCallback().notifyUser(i18n.tr("Sie k√∂nnen die Internetverbindung nun wieder trennen."));
 					break;
 
 				case NEED_COUNTRY:

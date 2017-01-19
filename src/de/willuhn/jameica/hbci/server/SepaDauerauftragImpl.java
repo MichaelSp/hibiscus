@@ -80,19 +80,19 @@ public class SepaDauerauftragImpl extends AbstractBaseDauerauftragImpl implement
       // BUGZILLA 197
       double betrag = getBetrag();
       if (betrag == 0.0 || Double.isNaN(betrag))
-        throw new ApplicationException(i18n.tr("Bitte geben Sie einen gültigen Betrag ein."));
+        throw new ApplicationException(i18n.tr("Bitte geben Sie einen gÃ¼ltigen Betrag ein."));
 
       if (getTurnus() == null)
-        throw new ApplicationException(i18n.tr("Bitte wählen Sie einen Zahlungsturnus aus"));
+        throw new ApplicationException(i18n.tr("Bitte wÃ¤hlen Sie einen Zahlungsturnus aus"));
 
       if (ersteZahlung == null)
-        throw new ApplicationException(i18n.tr("Bitte geben Sie ein Datum für die erste Zahlung an"));
+        throw new ApplicationException(i18n.tr("Bitte geben Sie ein Datum fÃ¼r die erste Zahlung an"));
 
       // Und jetzt noch checken, dass sich das Datum der letzten Zahlung
       // nicht vor der ersten Zahlung befindet
       // BUGZILLA 371
       if (letzteZahlung != null && letzteZahlung.before(ersteZahlung))
-        throw new ApplicationException(i18n.tr("Bei Angabe eines Datum für die letzte Zahlung ({0}) muss dieses nach der ersten Zahlung ({1}) liegen", new String[]{HBCI.DATEFORMAT.format(letzteZahlung), HBCI.DATEFORMAT.format(ersteZahlung)}));
+        throw new ApplicationException(i18n.tr("Bei Angabe eines Datum fÃ¼r die letzte Zahlung ({0}) muss dieses nach der ersten Zahlung ({1}) liegen", new String[]{HBCI.DATEFORMAT.format(letzteZahlung), HBCI.DATEFORMAT.format(ersteZahlung)}));
 
       //////////////////////////////////////
       // IBAN und BIC pruefen
@@ -139,7 +139,7 @@ public class SepaDauerauftragImpl extends AbstractBaseDauerauftragImpl implement
     catch (RemoteException e)
     {
       Logger.error("insert check failed",e);
-      throw new ApplicationException(i18n.tr("Fehler bei der Prüfung des SEPA-Dauerauftrags"));
+      throw new ApplicationException(i18n.tr("Fehler bei der PrÃ¼fung des SEPA-Dauerauftrags"));
     }
   }
   

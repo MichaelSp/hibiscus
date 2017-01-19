@@ -42,7 +42,7 @@ public class DauerauftragSearchProvider implements SearchProvider
    */
   public String getName()
   {
-    return Application.getPluginLoader().getPlugin(HBCI.class).getResources().getI18N().tr("Dauerauftr‰ge");
+    return Application.getPluginLoader().getPlugin(HBCI.class).getResources().getI18N().tr("Dauerauftr√§ge");
   }
 
   /**

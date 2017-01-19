@@ -34,7 +34,7 @@ public class ProtokollList implements Action
     I18N i18n = Application.getPluginLoader().getPlugin(HBCI.class).getResources().getI18N();
 
     if (context == null || !(context instanceof Konto))
-      throw new ApplicationException(i18n.tr("Bitte w‰hlen Sie ein Konto aus"));
+      throw new ApplicationException(i18n.tr("Bitte w√§hlen Sie ein Konto aus"));
 
 		GUI.startView(de.willuhn.jameica.hbci.gui.views.ProtokollList.class,context);
   }

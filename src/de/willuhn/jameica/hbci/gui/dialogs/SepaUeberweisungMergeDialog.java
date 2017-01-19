@@ -48,7 +48,7 @@ public class SepaUeberweisungMergeDialog extends AbstractDialog
 
     this.count     = count;
     this.canDelete = canDelete;
-    this.setTitle(i18n.tr("SEPA-‹berweisungen zusammenf¸hren"));
+    this.setTitle(i18n.tr("SEPA-√úberweisungen zusammenf√ºhren"));
     this.setSize(350,SWT.DEFAULT);
   }
 
@@ -67,14 +67,14 @@ public class SepaUeberweisungMergeDialog extends AbstractDialog
   {
     SimpleContainer container = new SimpleContainer(parent);
     if (this.count > 1)
-      container.addText(i18n.tr("Die ‹berweisungen werden zu {0} Sammelauftr‰gen zusammengefasst.",String.valueOf(this.count)),true);
+      container.addText(i18n.tr("Die √úberweisungen werden zu {0} Sammelauftr√§gen zusammengefasst.",String.valueOf(this.count)),true);
     else
-      container.addText(i18n.tr("Die ‹berweisungen werden zu einem Sammelauftrag zusammengefasst."),true);
+      container.addText(i18n.tr("Die √úberweisungen werden zu einem Sammelauftrag zusammengefasst."),true);
 
     if (this.canDelete)
     {
       this.check = new CheckboxInput(false);
-      this.check.setName(i18n.tr("Einzelauftr‰ge nach ‹bernahme in die Sammelauftr‰ge lˆschen"));
+      this.check.setName(i18n.tr("Einzelauftr√§ge nach √úbernahme in die Sammelauftr√§ge l√∂schen"));
       container.addInput(this.check);
     }
  

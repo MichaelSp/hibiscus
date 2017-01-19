@@ -41,11 +41,11 @@ public class UmsatzTreeCompleteExporter extends AbstractUmsatzTreeExporter
   public void doExport(Object[] objects, IOFormat format, OutputStream os, ProgressMonitor monitor) throws RemoteException, ApplicationException
   {
     if (objects == null || !(objects instanceof UmsatzTree[]))
-      throw new ApplicationException(i18n.tr("Bitte w‰hlen Sie die zu exportierenden Ums‰tze aus"));
+      throw new ApplicationException(i18n.tr("Bitte w√§hlen Sie die zu exportierenden Ums√§tze aus"));
 
     UmsatzTree[] t = (UmsatzTree[]) objects;
     if (t.length == 0)
-      throw new ApplicationException(i18n.tr("Bitte w‰hlen Sie die zu exportierenden Ums‰tze aus"));
+      throw new ApplicationException(i18n.tr("Bitte w√§hlen Sie die zu exportierenden Ums√§tze aus"));
 
     UmsatzTree tree = t[0];
     List list = tree.getUmsatzTree();
@@ -57,7 +57,7 @@ public class UmsatzTreeCompleteExporter extends AbstractUmsatzTreeExporter
       reporter = new Reporter(os, monitor, i18n.tr("Umsatzkategorien"), this.getSubTitle(tree), list.size());
 
       reporter.addHeaderColumn(i18n.tr("Valuta / Buchungsdatum"), Element.ALIGN_CENTER,  30,BaseColor.LIGHT_GRAY);
-      reporter.addHeaderColumn(i18n.tr("Empf‰nger/Einzahler"),    Element.ALIGN_CENTER, 100,BaseColor.LIGHT_GRAY);
+      reporter.addHeaderColumn(i18n.tr("Empf√§nger/Einzahler"),    Element.ALIGN_CENTER, 100,BaseColor.LIGHT_GRAY);
       reporter.addHeaderColumn(i18n.tr("Zahlungsgrund"),          Element.ALIGN_CENTER, 120,BaseColor.LIGHT_GRAY);
       reporter.addHeaderColumn(i18n.tr("Betrag"),                 Element.ALIGN_CENTER,  30,BaseColor.LIGHT_GRAY);
       reporter.createHeader();
@@ -148,7 +148,7 @@ public class UmsatzTreeCompleteExporter extends AbstractUmsatzTreeExporter
    */
   public String getName()
   {
-    return i18n.tr("PDF-Format: Ums‰tze der Kategorien");
+    return i18n.tr("PDF-Format: Ums√§tze der Kategorien");
   }
 
 }

@@ -31,7 +31,7 @@ public class AuslandsUeberweisungDelete extends DBObjectDelete
   public void handleAction(Object context) throws ApplicationException
   {
     if (context == null)
-      throw new ApplicationException(i18n.tr("Keine zu löschenden Daten ausgewählt"));
+      throw new ApplicationException(i18n.tr("Keine zu lÃ¶schenden Daten ausgewÃ¤hlt"));
 
     if (!(context instanceof AuslandsUeberweisung) && !(context instanceof AuslandsUeberweisung[]))
     {
@@ -65,28 +65,28 @@ public class AuslandsUeberweisungDelete extends DBObjectDelete
         {
           if (count == 1)
           {
-            msg = i18n.tr("Einer der Aufträge wurde bereits als bankseitige SEPA-Terminüberweisung gesendet.\n" +
-                          "Das Löschen des Auftrages geschieht nur lokal in Hibiscus. Melden Sie sich\n" +
-                          "daher ggf. auf der Webseite Ihrer Bank an und löschen den Auftrag auch dort,\n" +
-                          "wenn er nicht ausgeführt werden soll.\n\n" +
-                          "Aufträge lokal in Hibiscus löschen?");
+            msg = i18n.tr("Einer der AuftrÃ¤ge wurde bereits als bankseitige SEPA-TerminÃ¼berweisung gesendet.\n" +
+                          "Das LÃ¶schen des Auftrages geschieht nur lokal in Hibiscus. Melden Sie sich\n" +
+                          "daher ggf. auf der Webseite Ihrer Bank an und lÃ¶schen den Auftrag auch dort,\n" +
+                          "wenn er nicht ausgefÃ¼hrt werden soll.\n\n" +
+                          "AuftrÃ¤ge lokal in Hibiscus lÃ¶schen?");
           }
           else
           {
-            msg = i18n.tr("{0} Aufträge wurden bereits als bankseitige SEPA-Terminüberweisung gesendet.\n" +
-                          "Das Löschen dieser Aufträge geschieht nur lokal in Hibiscus. Melden Sie sich\n" +
-                          "daher ggf. auf der Webseite Ihrer Bank an und löschen diese auch dort,\n" +
-                          "wenn sie nicht ausgeführt werden sollen.\n\n" +
-                          "Aufträge lokal in Hibiscus löschen?",Integer.toString(count));
+            msg = i18n.tr("{0} AuftrÃ¤ge wurden bereits als bankseitige SEPA-TerminÃ¼berweisung gesendet.\n" +
+                          "Das LÃ¶schen dieser AuftrÃ¤ge geschieht nur lokal in Hibiscus. Melden Sie sich\n" +
+                          "daher ggf. auf der Webseite Ihrer Bank an und lÃ¶schen diese auch dort,\n" +
+                          "wenn sie nicht ausgefÃ¼hrt werden sollen.\n\n" +
+                          "AuftrÃ¤ge lokal in Hibiscus lÃ¶schen?",Integer.toString(count));
           }
         }
         else
         {
-          msg = i18n.tr("Der Auftrag wurde bereits als bankseitige SEPA-Terminüberweisung gesendet.\n" +
-                        "Das Löschen des Auftrages geschieht nur lokal in Hibiscus. Melden Sie sich\n" +
-                        "daher ggf. auf der Webseite Ihrer Bank an und löschen den Auftrag auch dort,\n" +
-                        "wenn er nicht ausgeführt werden soll.\n\n" +
-                        "Auftrag lokal in Hibiscus löschen?");
+          msg = i18n.tr("Der Auftrag wurde bereits als bankseitige SEPA-TerminÃ¼berweisung gesendet.\n" +
+                        "Das LÃ¶schen des Auftrages geschieht nur lokal in Hibiscus. Melden Sie sich\n" +
+                        "daher ggf. auf der Webseite Ihrer Bank an und lÃ¶schen den Auftrag auch dort,\n" +
+                        "wenn er nicht ausgefÃ¼hrt werden soll.\n\n" +
+                        "Auftrag lokal in Hibiscus lÃ¶schen?");
         }
         
         if (!Application.getCallback().askUser(msg))
@@ -100,7 +100,7 @@ public class AuslandsUeberweisungDelete extends DBObjectDelete
     catch (Exception e)
     {
       Logger.error("error while checking object",e);
-      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Auftrag wurde bereits als Termin-Überweisung an Bank übertragen"),StatusBarMessage.TYPE_INFO));
+      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Auftrag wurde bereits als Termin-Ãœberweisung an Bank Ã¼bertragen"),StatusBarMessage.TYPE_INFO));
     }
     
     super.handleAction(context);

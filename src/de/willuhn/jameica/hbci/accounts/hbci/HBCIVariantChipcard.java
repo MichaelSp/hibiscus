@@ -41,7 +41,7 @@ public class HBCIVariantChipcard implements HBCIVariant
     InfoPanel info = new InfoPanel();
     info.setTitle(this.getName());
     info.setText(i18n.tr("Verwenden Sie dieses Verfahren, wenn Sie eine spezielle HBCI-Chipkarte besitzen."));
-    info.setComment(i18n.tr("Sie benötigen hierfür zusätzlich ein Chipkarten-Lesegerät mit USB-Anschluss."));
+    info.setComment(i18n.tr("Sie benÃ¶tigen hierfÃ¼r zusÃ¤tzlich ein Chipkarten-LesegerÃ¤t mit USB-Anschluss."));
     info.setUrl("http://www.willuhn.de/wiki/doku.php?id=support:list:kartenleser");
     info.setIcon("hbci-chipcard.png");
     return info;

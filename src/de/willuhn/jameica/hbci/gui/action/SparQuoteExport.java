@@ -34,7 +34,7 @@ public class SparQuoteExport implements Action
 		I18N i18n = Application.getPluginLoader().getPlugin(HBCI.class).getResources().getI18N();
 
 		if (context == null)
-			throw new ApplicationException(i18n.tr("Bitte w‰hlen Sie mindestens einen Datensatz aus"));
+			throw new ApplicationException(i18n.tr("Bitte w√§hlen Sie mindestens einen Datensatz aus"));
 
     Object[] u = null;
 		try
@@ -66,7 +66,7 @@ public class SparQuoteExport implements Action
 			}
 
 			if (u == null || u.length == 0)
-        throw new ApplicationException(i18n.tr("Bitte w‰hlen Sie einen oder mehrere Datens‰tze aus"));
+        throw new ApplicationException(i18n.tr("Bitte w√§hlen Sie einen oder mehrere Datens√§tze aus"));
 
       ExportDialog d = new ExportDialog(u, UmsatzEntry.class);
       d.open();

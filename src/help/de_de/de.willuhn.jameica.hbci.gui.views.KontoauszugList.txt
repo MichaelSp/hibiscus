@@ -1,12 +1,12 @@
 <form>
 	<p>
-		<span color="header" font="header">Ums‰tze</span>
+		<span color="header" font="header">Ums√§tze</span>
 	</p>
 	
 	<p>
-		In dieser Liste sehen Sie alle Ums‰tze, die den angegebenen Kriterien
+		In dieser Liste sehen Sie alle Ums√§tze, die den angegebenen Kriterien
 		entsprechen. 
-		W‰hlen Sie <b>Exportieren...</b>, um die markierten Ums‰tze
+		W√§hlen Sie <b>Exportieren...</b>, um die markierten Ums√§tze
 		z.Bsp. in einer PDF- oder CSV-Datei zu speichern.
 	</p>
 </form>

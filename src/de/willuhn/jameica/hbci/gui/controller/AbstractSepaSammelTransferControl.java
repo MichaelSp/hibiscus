@@ -45,7 +45,7 @@ import de.willuhn.util.ApplicationException;
 import de.willuhn.util.I18N;
 
 /**
- * Abstrakte Basis-Implementierung des Controllers fuer die Dialog Liste der SEPA-Sammellastschriften/SEPA-Sammelüberweisungen.
+ * Abstrakte Basis-Implementierung des Controllers fuer die Dialog Liste der SEPA-Sammellastschriften/SEPA-SammelÃ¼berweisungen.
  * @author willuhn
  * @param <T> der konkrete Typ des Sammel-Auftrages.
  */
@@ -109,7 +109,7 @@ public abstract class AbstractSepaSammelTransferControl<T extends SepaSammelTran
     KontoListener kl = new KontoListener();
     MyKontoFilter filter = new MyKontoFilter();
     this.kontoAuswahl = new KontoInput(getTransfer().getKonto(),filter);
-    this.kontoAuswahl.setName(i18n.tr("Persönliches Konto"));
+    this.kontoAuswahl.setName(i18n.tr("PersÃ¶nliches Konto"));
     this.kontoAuswahl.setRememberSelection("auftraege",false); // BUGZILLA 1362 - zuletzt ausgewaehltes Konto gleich uebernehmen
     this.kontoAuswahl.setMandatory(true);
     this.kontoAuswahl.addListener(kl);
@@ -195,7 +195,7 @@ public abstract class AbstractSepaSammelTransferControl<T extends SepaSammelTran
     this.pmtInfId.setName(i18n.tr("Referenz (Payment-Information ID)"));
     this.pmtInfId.setValidChars(HBCIProperties.HBCI_SEPA_VALIDCHARS);
     this.pmtInfId.setEnabled(!getTransfer().ausgefuehrt());
-    this.pmtInfId.setHint(i18n.tr("freilassen wenn nicht benötigt"));
+    this.pmtInfId.setHint(i18n.tr("freilassen wenn nicht benÃ¶tigt"));
     this.pmtInfId.setMandatory(false);
     return this.pmtInfId;
   }
@@ -328,7 +328,7 @@ public abstract class AbstractSepaSammelTransferControl<T extends SepaSammelTran
      */
     public DeleteMenuItem()
     {
-      super(i18n.tr("Buchung(en) löschen..."),new DBObjectDelete(), "user-trash-full.png");
+      super(i18n.tr("Buchung(en) lÃ¶schen..."),new DBObjectDelete(), "user-trash-full.png");
     }
     
     /**

@@ -30,6 +30,6 @@ public class PrintSupportSepaSammelUeberweisung extends AbstractPrintSupportSepa
    */
   String getTitle() throws ApplicationException
   {
-    return i18n.tr("SEPA-Sammelüberweisung");
+    return i18n.tr("SEPA-SammelÃ¼berweisung");
   }
 }

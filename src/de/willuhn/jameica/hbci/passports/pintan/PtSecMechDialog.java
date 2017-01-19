@@ -96,13 +96,13 @@ public class PtSecMechDialog extends AbstractDialog
   {
     Container group = new SimpleContainer(parent);
     
-    group.addText(i18n.tr("Bitte wählen Sie das gewünschte PIN/TAN-Verfahren"),true);
+    group.addText(i18n.tr("Bitte wÃ¤hlen Sie das gewÃ¼nschte PIN/TAN-Verfahren"),true);
     
     group.addLabelPair(i18n.tr("Bezeichnung"), getType());
     group.addCheckbox(getSave(),i18n.tr("Auswahl speichern"));
     
     ButtonArea buttons = new ButtonArea();
-    buttons.addButton(i18n.tr("Übernehmen"),new Action() {
+    buttons.addButton(i18n.tr("Ãœbernehmen"),new Action() {
       public void handleAction(Object context) throws ApplicationException
       {
         try
@@ -118,9 +118,9 @@ public class PtSecMechDialog extends AbstractDialog
               try
               {
                 Application.getCallback().notifyUser(
-                    i18n.tr("Sie können diese Vorauswahl später in der PIN/TAN-Konfiguration\n" +
-                             "über die Option \"TAN-Verfahren zurücksetzen\" wieder\n" +
-                             "rückgängig machen."));
+                    i18n.tr("Sie kÃ¶nnen diese Vorauswahl spÃ¤ter in der PIN/TAN-Konfiguration\n" +
+                             "Ã¼ber die Option \"TAN-Verfahren zurÃ¼cksetzen\" wieder\n" +
+                             "rÃ¼ckgÃ¤ngig machen."));
               }
               catch (Exception e)
               {
@@ -135,7 +135,7 @@ public class PtSecMechDialog extends AbstractDialog
         catch (RemoteException e)
         {
           Logger.error("unable to apply data",e);
-          throw new ApplicationException(i18n.tr("Fehler beim Übernehmen des PIN/TAN-Verfahrens"));
+          throw new ApplicationException(i18n.tr("Fehler beim Ãœbernehmen des PIN/TAN-Verfahrens"));
         }
       }
     },null,true,"ok.png");

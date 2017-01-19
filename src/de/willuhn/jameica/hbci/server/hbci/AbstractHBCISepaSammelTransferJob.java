@@ -54,19 +54,19 @@ public abstract class AbstractHBCISepaSammelTransferJob<T extends SepaSammelTran
 				transfer.store();
 
       if (transfer.ausgefuehrt())
-        throw new ApplicationException(i18n.tr("SEPA-Sammelauftrag wurde bereits ausgeführt"));
+        throw new ApplicationException(i18n.tr("SEPA-Sammelauftrag wurde bereits ausgefÃ¼hrt"));
 
 			this.transfer = transfer;
 			this.konto = transfer.getKonto();
 
 			List<SepaSammelTransferBuchung> buchungen = this.transfer.getBuchungen();
 			if (buchungen.size() == 0)
-        throw new ApplicationException(i18n.tr("SEPA-Sammelauftrag enthält keine Buchungen"));
+        throw new ApplicationException(i18n.tr("SEPA-Sammelauftrag enthÃ¤lt keine Buchungen"));
 			
       for (SepaSammelTransferBuchung b:buchungen)
       {
         if (b.getBetrag() > Settings.getUeberweisungLimit())
-          throw new ApplicationException(i18n.tr("Auftragslimit überschritten: {0} ", 
+          throw new ApplicationException(i18n.tr("Auftragslimit Ã¼berschritten: {0} ", 
             HBCI.DECIMALFORMAT.format(Settings.getUeberweisungLimit()) + " " + this.konto.getWaehrung()));
       }
       
@@ -159,7 +159,7 @@ public abstract class AbstractHBCISepaSammelTransferJob<T extends SepaSammelTran
     transfer.setAusgefuehrt(true);
 
     Application.getMessagingFactory().sendMessage(new ObjectChangedMessage(transfer)); // BUGZILLA 545
-    konto.addToProtokoll(i18n.tr("SEPA-Sammelauftrag [Bezeichnung: {0}] ausgeführt",transfer.getBezeichnung()),Protokoll.TYP_SUCCESS);
+    konto.addToProtokoll(i18n.tr("SEPA-Sammelauftrag [Bezeichnung: {0}] ausgefÃ¼hrt",transfer.getBezeichnung()),Protokoll.TYP_SUCCESS);
     Logger.info("sepa sammellastschrift submitted successfully");
   }
 
@@ -168,7 +168,7 @@ public abstract class AbstractHBCISepaSammelTransferJob<T extends SepaSammelTran
    */
   protected String markFailed(String error) throws RemoteException, ApplicationException
   {
-    String msg = i18n.tr("Fehler beim Ausführen des SEPA-Sammelauftrages [Bezeichnung: {0}]: {1}",new String[]{transfer.getBezeichnung(),error});
+    String msg = i18n.tr("Fehler beim AusfÃ¼hren des SEPA-Sammelauftrages [Bezeichnung: {0}]: {1}",new String[]{transfer.getBezeichnung(),error});
     konto.addToProtokoll(msg,Protokoll.TYP_ERROR);
     return msg;
   }
@@ -178,7 +178,7 @@ public abstract class AbstractHBCISepaSammelTransferJob<T extends SepaSammelTran
    */
   protected void markCancelled() throws RemoteException, ApplicationException
   {
-    String msg = i18n.tr("Ausführung des SEPA-Sammelauftrages [Bezeichnung: {0}] abgebrochen",transfer.getBezeichnung());
+    String msg = i18n.tr("AusfÃ¼hrung des SEPA-Sammelauftrages [Bezeichnung: {0}] abgebrochen",transfer.getBezeichnung());
     konto.addToProtokoll(msg,Protokoll.TYP_ERROR);
   }
 

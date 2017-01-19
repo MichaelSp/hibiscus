@@ -39,7 +39,7 @@ public class Detail extends AbstractView
     {
       final Controller control = new Controller(this);
 
-      GUI.getView().setTitle(i18n.tr("Schlüssel-Details"));
+      GUI.getView().setTitle(i18n.tr("SchlÃ¼ssel-Details"));
 
       ColumnLayout layout = new ColumnLayout(getParent(),2);
 
@@ -68,7 +68,7 @@ public class Detail extends AbstractView
 
       {
         ButtonArea buttons = new ButtonArea();
-        buttons.addButton(i18n.tr("Passwort ändern"),new Action()
+        buttons.addButton(i18n.tr("Passwort Ã¤ndern"),new Action()
         {
           public void handleAction(Object context) throws ApplicationException
           {
@@ -140,7 +140,7 @@ public class Detail extends AbstractView
       else
       {
         Logger.error("unable to load key",e);
-        Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim Laden des Schlüssels: {0}",e.getMessage()),StatusBarMessage.TYPE_ERROR));
+        Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim Laden des SchlÃ¼ssels: {0}",e.getMessage()),StatusBarMessage.TYPE_ERROR));
       }
       // Wir springen auf jeden Fall zurueck, zur vorherigen Seite. Wir koennten hier eh nichts anzeigen
       GUI.startPreviousView();

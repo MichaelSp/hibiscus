@@ -33,7 +33,7 @@ public class PrintSupportSammelUeberweisung extends AbstractPrintSupportSammelTr
    */
   String getTitle() throws ApplicationException
   {
-    return i18n.tr("Sammel-Überweisung");
+    return i18n.tr("Sammel-Ãœberweisung");
   }
 }
 

@@ -44,18 +44,18 @@ public class DauerauftragNew extends AbstractView
 		
     Container konten = new SimpleContainer(getParent());
     konten.addHeadline(i18n.tr("Konten"));
-		konten.addLabelPair(i18n.tr("Persönliches Konto"),			  control.getKontoAuswahl());
+		konten.addLabelPair(i18n.tr("PersÃ¶nliches Konto"),			  control.getKontoAuswahl());
 
     ColumnLayout columns = new ColumnLayout(getParent(),2);
 
     {
       // Links
       Container left = new SimpleContainer(columns.getComposite());
-      left.addHeadline(i18n.tr("Empfänger"));
+      left.addHeadline(i18n.tr("EmpfÃ¤nger"));
       left.addLabelPair(i18n.tr("Name"),                      control.getEmpfaengerName());
       left.addLabelPair(i18n.tr("Kontonummer"),               control.getEmpfaengerKonto());
       left.addLabelPair(i18n.tr("BLZ"),                       control.getEmpfaengerBlz());
-      left.addCheckbox(control.getStoreEmpfaenger(),i18n.tr("In Adressbuch übernehmen"));
+      left.addCheckbox(control.getStoreEmpfaenger(),i18n.tr("In Adressbuch Ã¼bernehmen"));
     }
     {
       // Rechts
@@ -70,7 +70,7 @@ public class DauerauftragNew extends AbstractView
     details.addHeadline(i18n.tr("Details"));
     details.addLabelPair(i18n.tr("Verwendungszweck"),          control.getZweck());
     details.addLabelPair(i18n.tr("weiterer Verwendungszweck"), control.getZweck2());
-    details.addLabelPair(i18n.tr("Textschlüssel"),            control.getTextSchluessel());
+    details.addLabelPair(i18n.tr("TextschlÃ¼ssel"),            control.getTextSchluessel());
 	  details.addLabelPair(i18n.tr("Betrag"),                    control.getBetrag());
 	  details.addSeparator();
 	  details.addLabelPair(i18n.tr("Auftragsnummer"),            control.getOrderID());

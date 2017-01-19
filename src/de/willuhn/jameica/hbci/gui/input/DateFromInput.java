@@ -47,7 +47,7 @@ public class DateFromInput extends AbstractDateInput
   {
     super(date,parameter);
     this.setName(i18n.tr("Start-Datum"));
-    this.setComment(i18n.tr("Frühestes Datum"));
+    this.setComment(i18n.tr("FrÃ¼hestes Datum"));
   }
 
   /**

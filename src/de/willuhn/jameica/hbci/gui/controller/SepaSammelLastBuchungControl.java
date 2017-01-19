@@ -132,7 +132,7 @@ public class SepaSammelLastBuchungControl extends AbstractSepaSammelTransferBuch
       creditorId = StringUtils.trimToNull(MetaKey.SEPA_CREDITOR_ID.get(s.getSammelTransfer().getKonto()));
     
     this.creditorId = new TextInput(creditorId,HBCIProperties.HBCI_SEPA_CREDITORID_MAXLENGTH);
-    this.creditorId.setName(i18n.tr("Gl‰ubiger-Identifikation"));
+    this.creditorId.setName(i18n.tr("Gl√§ubiger-Identifikation"));
     this.creditorId.setValidChars(HBCIProperties.HBCI_SEPA_VALIDCHARS);
     this.creditorId.setEnabled(!s.getSammelTransfer().ausgefuehrt());
     this.creditorId.setMandatory(true);
@@ -299,8 +299,8 @@ public class SepaSammelLastBuchungControl extends AbstractSepaSammelTransferBuch
           // standen und wir die nicht komplett ueberschrieben haben, zeigen wir einen Warnhinweis an
           if (addressCur != null && !BeanUtil.equals(address,addressCur) && haveCur && !haveNew)
           {
-            String msg = i18n.tr("Sie haben eine neue Adresse ausgew‰hlt zu der noch keine vollst‰ndigen Mandatsdaten\n" +
-                                 "hinterlegt sind. Die Daten des Mandats stammen u.U. noch von der vorher ausgew‰hlten\n" +
+            String msg = i18n.tr("Sie haben eine neue Adresse ausgew√§hlt zu der noch keine vollst√§ndigen Mandatsdaten\n" +
+                                 "hinterlegt sind. Die Daten des Mandats stammen u.U. noch von der vorher ausgew√§hlten\n" +
                                  "Adresse.\n\nMandats-Referenz und Unterschriftsdatum entfernen und neu eingeben?");
             
             boolean clear = Application.getCallback().askUser(msg);

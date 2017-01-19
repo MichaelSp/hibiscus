@@ -8,9 +8,9 @@
 	</p>
 	
 	<p>
-		<b>Tipp:</b> Eine bereits ausgeführte SEPA-Lastschrift kann nicht
-		erneut abgesendet werden. Sie können diese jedoch duplizieren,
-		indem Sie mit der rechten Maustaste auf die gewünschte Buchung
-		klicken und anschließend <b>Duplizieren</b> wählen.
+		<b>Tipp:</b> Eine bereits ausgefÃ¼hrte SEPA-Lastschrift kann nicht
+		erneut abgesendet werden. Sie kÃ¶nnen diese jedoch duplizieren,
+		indem Sie mit der rechten Maustaste auf die gewÃ¼nschte Buchung
+		klicken und anschlieÃŸend <b>Duplizieren</b> wÃ¤hlen.
 	</p>
 </form>

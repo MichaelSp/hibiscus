@@ -32,7 +32,7 @@ import de.willuhn.logging.Logger;
 import de.willuhn.util.I18N;
 
 /**
- * Dialog für die TAN-Eingabe.
+ * Dialog fÃ¼r die TAN-Eingabe.
  * Es muss weder Text, noch Titel oder LabelText gesetzt werden.
  * Das ist alles schon drin.
  */

@@ -50,14 +50,14 @@ public class UmsatzTypTree extends AbstractView
    */
   public void bind() throws Exception
   {
-    GUI.getView().setTitle(i18n.tr("Ums‰tze nach Kategorien"));
+    GUI.getView().setTitle(i18n.tr("Ums√§tze nach Kategorien"));
 
     final UmsatzTypTreeControl control = new UmsatzTypTreeControl(this);
 
     {
       final TabFolder folder = new TabFolder(this.getParent(), SWT.NONE);
       folder.setLayoutData(new GridData(GridData.FILL_HORIZONTAL));
-      TabGroup tab = new TabGroup(folder,i18n.tr("Anzeige einschr‰nken"));
+      TabGroup tab = new TabGroup(folder,i18n.tr("Anzeige einschr√§nken"));
 
       ColumnLayout cols = new ColumnLayout(tab.getComposite(),2);
       
@@ -110,7 +110,7 @@ public class UmsatzTypTree extends AbstractView
         catch (RemoteException re)
         {
           Logger.error("unable to load umsatz tree",re);
-          throw new ApplicationException(i18n.tr("Fehler beim Laden der Ums‰tze"),re);
+          throw new ApplicationException(i18n.tr("Fehler beim Laden der Ums√§tze"),re);
         }
       }
     },null,false,"document-save.png");

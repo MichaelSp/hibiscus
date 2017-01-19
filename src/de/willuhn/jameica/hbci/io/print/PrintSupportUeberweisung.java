@@ -40,7 +40,7 @@ public class PrintSupportUeberweisung extends AbstractPrintSupportBaseUeberweisu
    */
   String getTitle() throws ApplicationException
   {
-    return i18n.tr("Überweisung");
+    return i18n.tr("Ãœberweisung");
   }
 
   /**
@@ -53,9 +53,9 @@ public class PrintSupportUeberweisung extends AbstractPrintSupportBaseUeberweisu
     if (this.u == null)
       return;
     
-    String typ = i18n.tr("Überweisung");
+    String typ = i18n.tr("Ãœberweisung");
     if (u.isTerminUeberweisung())
-      typ = "Termin-Überweisung";
+      typ = "Termin-Ãœberweisung";
     else if (u.isUmbuchung())
       typ = "Umbuchung";
     grid.add(new TextPrint(i18n.tr("Auftragstyp"),fontNormal));

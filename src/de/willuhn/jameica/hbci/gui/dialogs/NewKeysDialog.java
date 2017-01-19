@@ -109,7 +109,7 @@ public class NewKeysDialog extends AbstractDialog
   protected void paint(Composite parent) throws Exception
   {
 		SimpleContainer group = new SimpleContainer(parent);
-		group.addText(i18n.tr("Bitte drucken Sie den INI-Brief aus und senden Ihn unterschrieben an Ihre Bank.\n" +                          "Nach der Freischaltung durch Ihr Geldinstitut kann dieser Schlüssel verwendet werden."),true);
+		group.addText(i18n.tr("Bitte drucken Sie den INI-Brief aus und senden Ihn unterschrieben an Ihre Bank.\n" +                          "Nach der Freischaltung durch Ihr Geldinstitut kann dieser SchlÃ¼ssel verwendet werden."),true);
 
     group.addHeadline(i18n.tr("Hashwert"));
     group.addText(HBCIUtils.data2hex(iniletter.getKeyHashDisplay()).toUpperCase(),true,Color.ERROR);
@@ -202,7 +202,7 @@ public class NewKeysDialog extends AbstractDialog
     
     if (s == null || s.length() == 0)
     {
-      getError().setValue(i18n.tr("Bitte wählen Sie eine Datei für den INI-Brief aus."));
+      getError().setValue(i18n.tr("Bitte wÃ¤hlen Sie eine Datei fÃ¼r den INI-Brief aus."));
       return;
     }
 

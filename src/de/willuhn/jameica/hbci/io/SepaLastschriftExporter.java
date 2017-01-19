@@ -55,7 +55,7 @@ public class SepaLastschriftExporter extends AbstractSepaExporter
     if (conflict.size() > 1)
     {
       String txt = i18n.tr("Die Lastschriften enthalten unterschiedliche Lastschrift-Arten, Sequenz-Typen oder Zieltermine.\n" +
-      		                 "Sie können daher nicht in eine einzelne SEPA XML-Datei exportiert werden.");
+      		                 "Sie kÃ¶nnen daher nicht in eine einzelne SEPA XML-Datei exportiert werden.");
       Application.getCallback().notifyUser(txt);
       throw new OperationCanceledException("conflicting sequencetype, targetdate or type");
     }

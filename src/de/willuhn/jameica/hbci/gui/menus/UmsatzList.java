@@ -75,11 +75,11 @@ public class UmsatzList extends ContextMenu implements Extendable
 	{
 		addItem(new OpenItem());
     addItem(ContextMenuItem.SEPARATOR);
-    addItem(new UmsatzItem(i18n.tr("In Adressbuch übernehmen"),new EmpfaengerAdd(),"contact-new.png"));
-    addItem(new UmsatzItem(i18n.tr("Als neue Überweisung anlegen..."),new AuslandsUeberweisungNew(),"stock_next.png"));
+    addItem(new UmsatzItem(i18n.tr("In Adressbuch Ã¼bernehmen"),new EmpfaengerAdd(),"contact-new.png"));
+    addItem(new UmsatzItem(i18n.tr("Als neue Ãœberweisung anlegen..."),new AuslandsUeberweisungNew(),"stock_next.png"));
     addItem(ContextMenuItem.SEPARATOR);
-    addItem(new UmsatzBookedItem(i18n.tr("als \"geprüft\" markieren..."),new UmsatzMarkChecked(Umsatz.FLAG_CHECKED,true),"emblem-default.png","ALT+G"));
-    addItem(new UmsatzBookedItem(i18n.tr("als \"ungeprüft\" markieren..."),new FlaggableChange(Umsatz.FLAG_CHECKED,false),"edit-undo.png","CTRL+ALT+G"));
+    addItem(new UmsatzBookedItem(i18n.tr("als \"geprÃ¼ft\" markieren..."),new UmsatzMarkChecked(Umsatz.FLAG_CHECKED,true),"emblem-default.png","ALT+G"));
+    addItem(new UmsatzBookedItem(i18n.tr("als \"ungeprÃ¼ft\" markieren..."),new FlaggableChange(Umsatz.FLAG_CHECKED,false),"edit-undo.png","CTRL+ALT+G"));
     addReverseBookItem();
     addItem(ContextMenuItem.SEPARATOR);
     addItem(new UmsatzItem(i18n.tr("Drucken..."),new Action() {
@@ -101,7 +101,7 @@ public class UmsatzList extends ContextMenu implements Extendable
     ,"document-open.png"));
     
     addItem(ContextMenuItem.SEPARATOR);
-    addItem(new UmsatzItem(i18n.tr("Löschen..."), new DBObjectDelete(),"user-trash-full.png"));
+    addItem(new UmsatzItem(i18n.tr("LÃ¶schen..."), new DBObjectDelete(),"user-trash-full.png"));
     addItem(ContextMenuItem.SEPARATOR);
     
     // BUGZILLA 512 / 1115
@@ -314,7 +314,7 @@ public class UmsatzList extends ContextMenu implements Extendable
   {
     private OpenItem()
     {
-      super(i18n.tr("Öffnen"),new UmsatzDetail(),"document-open.png");
+      super(i18n.tr("Ã–ffnen"),new UmsatzDetail(),"document-open.png");
     }
     /**
      * @see de.willuhn.jameica.gui.parts.ContextMenuItem#isEnabledFor(java.lang.Object)

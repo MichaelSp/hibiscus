@@ -41,11 +41,11 @@ public class UeberweisungList extends ContextMenu
 	 */
 	public UeberweisungList()
 	{
-		addItem(new SingleItem(i18n.tr("Öffnen"), new UeberweisungNew(),"document-open.png"));
+		addItem(new SingleItem(i18n.tr("Ã–ffnen"), new UeberweisungNew(),"document-open.png"));
     addItem(ContextMenuItem.SEPARATOR);
-    addItem(new CheckedContextMenuItem(i18n.tr("In Adressbuch übernehmen"),new EmpfaengerAdd(),"contact-new.png"));
+    addItem(new CheckedContextMenuItem(i18n.tr("In Adressbuch Ã¼bernehmen"),new EmpfaengerAdd(),"contact-new.png"));
     addItem(ContextMenuItem.SEPARATOR);
-    addItem(new CheckedContextMenuItem(i18n.tr("Löschen..."), new DBObjectDelete(),"user-trash-full.png"));
+    addItem(new CheckedContextMenuItem(i18n.tr("LÃ¶schen..."), new DBObjectDelete(),"user-trash-full.png"));
     addItem(ContextMenuItem.SEPARATOR);
     addItem(new CheckedContextMenuItem(i18n.tr("Drucken..."),new Action() {
       public void handleAction(Object context) throws ApplicationException

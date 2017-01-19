@@ -56,7 +56,7 @@ public class AuslandsUeberweisungAppointmentProvider extends AbstractAppointment
       {
         AuslandsUeberweisung t = this.schedule.getContext();
         Konto k = t.getKonto();
-        return i18n.tr("{0}SEPA-Überweisung: {1} {2} an {3} überweisen\n\n{4}\n\nKonto: {5}",
+        return i18n.tr("{0}SEPA-Ãœberweisung: {1} {2} an {3} Ã¼berweisen\n\n{4}\n\nKonto: {5}",
                        (this.schedule.isPlanned() ? (i18n.tr("Geplant") + ":\n") : ""),
                        HBCI.DECIMALFORMAT.format(t.getBetrag()),
                        k.getWaehrung(),
@@ -85,7 +85,7 @@ public class AuslandsUeberweisungAppointmentProvider extends AbstractAppointment
       catch (RemoteException re)
       {
         Logger.error("unable to build name",re);
-        return i18n.tr("SEPA-Überweisung");
+        return i18n.tr("SEPA-Ãœberweisung");
       }
     }
   }

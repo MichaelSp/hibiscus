@@ -48,7 +48,7 @@ public abstract class AbstractPrintSupportSepaTransfer<T extends BaseUeberweisun
   Print printContent() throws ApplicationException
   {
     if (this.auftrag == null)
-        throw new ApplicationException(i18n.tr("Bitte wählen Sie einen Auftrag aus"));
+        throw new ApplicationException(i18n.tr("Bitte wÃ¤hlen Sie einen Auftrag aus"));
     
     try
     {
@@ -105,7 +105,7 @@ public abstract class AbstractPrintSupportSepaTransfer<T extends BaseUeberweisun
         table.add(new TextPrint(termin == null ? "-" : HBCI.DATEFORMAT.format(termin),fontNormal));
         
         Date ausgefuehrt = a.getAusfuehrungsdatum();
-        table.add(new TextPrint(i18n.tr("Ausgeführt"),fontNormal));
+        table.add(new TextPrint(i18n.tr("AusgefÃ¼hrt"),fontNormal));
         if (ausgefuehrt != null)
           table.add(new TextPrint(HBCI.DATEFORMAT.format(ausgefuehrt),fontBold));
         else

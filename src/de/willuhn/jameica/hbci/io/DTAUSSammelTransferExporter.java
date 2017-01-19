@@ -42,7 +42,7 @@ public class DTAUSSammelTransferExporter extends AbstractDTAUSIO implements Expo
   public void doExport(Object[] objects, IOFormat format, OutputStream os, ProgressMonitor monitor) throws RemoteException, ApplicationException
   {
     if (os == null)
-      throw new ApplicationException(i18n.tr("Kein Ausgabe-Ziel für die Datei angegeben"));
+      throw new ApplicationException(i18n.tr("Kein Ausgabe-Ziel fÃ¼r die Datei angegeben"));
 
     if (format == null)
       throw new ApplicationException(i18n.tr("Kein Ausgabe-Format angegeben"));
@@ -51,7 +51,7 @@ public class DTAUSSammelTransferExporter extends AbstractDTAUSIO implements Expo
       throw new ApplicationException(i18n.tr("Keine zu exportierenden Daten angegeben"));
 
     if (!(objects instanceof SammelTransfer[]))
-      throw new ApplicationException(i18n.tr("Die zu exportierenden Daten enthalten keine Sammel-Aufträge"));
+      throw new ApplicationException(i18n.tr("Die zu exportierenden Daten enthalten keine Sammel-AuftrÃ¤ge"));
       
     DtausDateiWriter writer = null;
 
@@ -80,7 +80,7 @@ public class DTAUSSammelTransferExporter extends AbstractDTAUSIO implements Expo
         }
         catch (Exception e)
         {
-          monitor.log(i18n.tr("Ignoriere Kundenkennung {0}: ungültig",s));
+          monitor.log(i18n.tr("Ignoriere Kundenkennung {0}: ungÃ¼ltig",s));
         }
 
         long blz = 0;
@@ -91,7 +91,7 @@ public class DTAUSSammelTransferExporter extends AbstractDTAUSIO implements Expo
         }
         catch (Exception e)
         {
-          monitor.log(i18n.tr("Ignoriere BLZ {0}: ungültig",s));
+          monitor.log(i18n.tr("Ignoriere BLZ {0}: ungÃ¼ltig",s));
         }
 
         
@@ -131,7 +131,7 @@ public class DTAUSSammelTransferExporter extends AbstractDTAUSIO implements Expo
           writer.writeCSatz();
           success++;
         }
-        monitor.setStatusText(i18n.tr("{0} Aufträge erfolgreich exportiert",""+success));
+        monitor.setStatusText(i18n.tr("{0} AuftrÃ¤ge erfolgreich exportiert",""+success));
       }
       writer.writeESatz();
     }

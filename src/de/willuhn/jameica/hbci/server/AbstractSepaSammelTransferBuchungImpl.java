@@ -53,11 +53,11 @@ public abstract class AbstractSepaSammelTransferBuchungImpl<T extends SepaSammel
   {
     try {
       if (getSammelTransfer() == null)
-        throw new ApplicationException(i18n.tr("Bitte wählen Sie den zugehörigen Sammel-Auftrag aus."));
+        throw new ApplicationException(i18n.tr("Bitte wÃ¤hlen Sie den zugehÃ¶rigen Sammel-Auftrag aus."));
 
       double betrag = getBetrag();
       if (betrag == 0.0 || Double.isNaN(betrag))
-        throw new ApplicationException(i18n.tr("Bitte geben Sie einen gültigen Betrag ein."));
+        throw new ApplicationException(i18n.tr("Bitte geben Sie einen gÃ¼ltigen Betrag ein."));
 
       //////////////////////////////////////
       // IBAN und BIC pruefen
@@ -97,7 +97,7 @@ public abstract class AbstractSepaSammelTransferBuchungImpl<T extends SepaSammel
     catch (RemoteException e)
     {
       Logger.error("error while checking sammeltransferbuchung",e);
-      throw new ApplicationException(i18n.tr("Fehler beim Prüfen der Buchung."));
+      throw new ApplicationException(i18n.tr("Fehler beim PrÃ¼fen der Buchung."));
     }
   }
 

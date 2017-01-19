@@ -15,7 +15,7 @@ import de.willuhn.jameica.system.Application;
 import de.willuhn.util.I18N;
 
 /**
- * Dialog fÃ¼r die Eingabe des Passwortes beim Speichern eines Schluessels.
+ * Dialog fÃƒÂ¼r die Eingabe des Passwortes beim Speichern eines Schluessels.
  */
 public class KeyPasswordSaveDialog extends NewPasswordDialog
 {
@@ -24,16 +24,16 @@ public class KeyPasswordSaveDialog extends NewPasswordDialog
 	// BUGZILLA 1707
   private final static char[] INVALID_CHARS = new char[]
   {
-      167, // §
-      176, // °
+      167, // Â§
+      176, // Â°
       180, // <Forward Tick> (links neben der Backspace-Taste), habs nicht hingeschrieben, weil es nicht in Latin1 enthalten ist, die Java-Datei aber das Encoding verwendet
-      196, // Ä
-      214, // Ö
-      220, // Ü
-      223, // ß
-      228, // ä
-      246, // ö
-      252, // ü
+      196, // Ã„
+      214, // Ã–
+      220, // Ãœ
+      223, // ÃŸ
+      228, // Ã¤
+      246, // Ã¶
+      252, // Ã¼
   };
 	
   /**
@@ -48,12 +48,12 @@ public class KeyPasswordSaveDialog extends NewPasswordDialog
     setTitle(i18n.tr("Passwort-Eingabe"));
     setLabelText(i18n.tr("Ihr Passwort"));
     
-    String text = i18n.tr("Bitte vergeben Sie ein Passwort, mit dem der zu speichernde\nSchlüssel geschützt werden soll.");
+    String text = i18n.tr("Bitte vergeben Sie ein Passwort, mit dem der zu speichernde\nSchlÃ¼ssel geschÃ¼tzt werden soll.");
     
     if (passport instanceof HBCIPassportRDHXFile)
       text += "\n\n" + i18n.tr("Geben Sie bitte mindestens 8 Zeichen ein.");
     else
-      text += "\n\n" + i18n.tr("Die folgenden Zeichen dürfen nicht enthalten sein: {0}",String.copyValueOf(INVALID_CHARS));
+      text += "\n\n" + i18n.tr("Die folgenden Zeichen dÃ¼rfen nicht enthalten sein: {0}",String.copyValueOf(INVALID_CHARS));
     setText(text + "\n");
   }
   

@@ -115,7 +115,7 @@ public class UmsatzTypControl extends AbstractControl
     if (this.nummer == null)
     {
       this.nummer = new TextInput(getUmsatzTyp().getNummer(),5);
-      this.nummer.setHint(i18n.tr("Wird für die Sortierung verwendet"));
+      this.nummer.setHint(i18n.tr("Wird fÃ¼r die Sortierung verwendet"));
       this.nummer.setMandatory(false);
     }
     return this.nummer;
@@ -131,7 +131,7 @@ public class UmsatzTypControl extends AbstractControl
     if (this.pattern == null)
     {
       this.pattern = new TextInput(getUmsatzTyp().getPattern(),UmsatzTyp.MAXLENGTH_PATTERN);
-      this.pattern.setHint(i18n.tr("Für automatische Zuordnung anhand von Suchbegriffen"));
+      this.pattern.setHint(i18n.tr("FÃ¼r automatische Zuordnung anhand von Suchbegriffen"));
       this.pattern.addListener(new Listener()
       {
       
@@ -153,7 +153,7 @@ public class UmsatzTypControl extends AbstractControl
               }
               catch (PatternSyntaxException pse)
               {
-                GUI.getView().setErrorText(i18n.tr("Regulärer Ausdruck ungültig: {0}",pse.getDescription()));
+                GUI.getView().setErrorText(i18n.tr("RegulÃ¤rer Ausdruck ungÃ¼ltig: {0}",pse.getDescription()));
               }
             }
           }
@@ -421,7 +421,7 @@ public class UmsatzTypControl extends AbstractControl
  * @C Eindeutigkeit des Namens trotz UNIQUE-Key vorher in insertCheck pruefen - das spart das Parsen der SQLException
  *
  * Revision 1.4  2007/03/10 07:17:40  jost
- * Neu: Nummer fÃ¼r die Sortierung der Umsatz-Kategorien
+ * Neu: Nummer fÃƒÂ¼r die Sortierung der Umsatz-Kategorien
  * Umsatzkategorien editierbar gemacht (Verlagerung vom Code -> DB)
  *
  * Revision 1.3  2006/12/28 15:38:43  willuhn

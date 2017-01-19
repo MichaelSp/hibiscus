@@ -55,7 +55,7 @@ public class TurnusEditDialog extends AbstractDialog {
   private SelectInput tagWoechentlich = null;
   private LabelInput error            = null;
 
-  private String pleaseChoose         = i18n.tr("Bitte w‰hlen...");
+  private String pleaseChoose         = i18n.tr("Bitte w√§hlen...");
   private String lastOfMonth          = i18n.tr("Zum Monatsletzten");
 
   /**
@@ -92,7 +92,7 @@ public class TurnusEditDialog extends AbstractDialog {
 
 		// und noch die Abschicken-Knoepfe
 		ButtonArea buttonArea = new ButtonArea();
-		buttonArea.addButton(i18n.tr("‹bernehmen"), new Action()
+		buttonArea.addButton(i18n.tr("√úbernehmen"), new Action()
 		{
 			public void handleAction(Object context) throws ApplicationException
 			{
@@ -246,7 +246,7 @@ public class TurnusEditDialog extends AbstractDialog {
     {
       Turnus t = getTurnus();
       if (t.isInitial())
-        throw new ApplicationException(i18n.tr("Turnus ist Bestandteil der System-Daten und kann nicht ge‰ndert werden."));
+        throw new ApplicationException(i18n.tr("Turnus ist Bestandteil der System-Daten und kann nicht ge√§ndert werden."));
         
       Zeiteinheit zh = (Zeiteinheit) getZeiteinheit().getValue();
       t.setZeiteinheit(zh.id);
@@ -326,7 +326,7 @@ public class TurnusEditDialog extends AbstractDialog {
       if (this.id == Turnus.ZEITEINHEIT_MONATLICH)
         this.name = i18n.tr("monatlich");
       else if (this.id == Turnus.ZEITEINHEIT_WOECHENTLICH)
-        this.name = i18n.tr("wˆchentlich");
+        this.name = i18n.tr("w√∂chentlich");
     }
 
     /**

@@ -49,7 +49,7 @@ public class UmsatzImport implements Action
       {
         // Immer noch kein Konto? Dann User fragen
         KontoAuswahlDialog d = new KontoAuswahlDialog(KontoAuswahlDialog.POSITION_CENTER);
-        d.setText(i18n.tr("Bitte w‰hlen Sie das Konto, in dem die Ums‰tze gespeichert werden sollen"));
+        d.setText(i18n.tr("Bitte w√§hlen Sie das Konto, in dem die Ums√§tze gespeichert werden sollen"));
         context = (Konto) d.open();
       }
 
@@ -68,7 +68,7 @@ public class UmsatzImport implements Action
 		catch (Exception e)
 		{
 			Logger.error("error while importing umsaetze",e);
-			GUI.getStatusBar().setErrorText(i18n.tr("Fehler beim Importieren der Ums‰tze"));
+			GUI.getStatusBar().setErrorText(i18n.tr("Fehler beim Importieren der Ums√§tze"));
 		}
   }
 

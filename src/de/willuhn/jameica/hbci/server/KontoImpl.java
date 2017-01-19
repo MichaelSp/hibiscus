@@ -104,7 +104,7 @@ public class KontoImpl extends AbstractHibiscusDBObject implements Konto
         setWaehrung(HBCIProperties.CURRENCY_DEFAULT_DE);
 
       if (!HBCIProperties.checkAccountCRC(getBLZ(), getKontonummer()))
-        throw new ApplicationException(i18n.tr("Ungültige BLZ/Kontonummer. Bitte prüfen Sie Ihre Eingaben."));
+        throw new ApplicationException(i18n.tr("UngÃ¼ltige BLZ/Kontonummer. Bitte prÃ¼fen Sie Ihre Eingaben."));
 
       
       //////////////////////////////////////////////////////////////////////////
@@ -128,7 +128,7 @@ public class KontoImpl extends AbstractHibiscusDBObject implements Konto
     catch (RemoteException e)
     {
       Logger.error("error while insertcheck", e);
-      throw new ApplicationException(i18n.tr("Fehler bei der Prüfung der Daten"));
+      throw new ApplicationException(i18n.tr("Fehler bei der PrÃ¼fung der Daten"));
     }
   }
 

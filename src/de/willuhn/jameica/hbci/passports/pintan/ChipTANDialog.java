@@ -38,7 +38,7 @@ import de.willuhn.logging.Logger;
 import de.willuhn.util.ApplicationException;
 
 /**
- * Dialog für die ChipTAN-Eingabe.
+ * Dialog fÃ¼r die ChipTAN-Eingabe.
  */
 public class ChipTANDialog extends TANDialog
 {
@@ -179,7 +179,7 @@ public class ChipTANDialog extends TANDialog
           }
         });
         Button larger = new Button(buttonComp,SWT.PUSH);
-        larger.setToolTipText(i18n.tr("Flicker-Code vergrößern"));
+        larger.setToolTipText(i18n.tr("Flicker-Code vergrÃ¶ÃŸern"));
         larger.setLayoutData(new GridData());
         larger.setText(" + ");
         larger.addSelectionListener(new SelectionAdapter()

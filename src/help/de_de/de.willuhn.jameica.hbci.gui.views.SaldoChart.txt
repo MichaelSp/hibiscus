@@ -10,7 +10,7 @@
   <p>
     <b>Tipp:</b> Durch Doppelklick auf einen Eintrag in der Legende kann
     die Datenreihe ein- oder ausgeblendet werden. Mit einem Rechtsklick auf die
-    Legende kann ein Kontext-Menü zum Ein- oder Ausblenden aller Datenreihen
-    geöffnet werden.
+    Legende kann ein Kontext-MenÃ¼ zum Ein- oder Ausblenden aller Datenreihen
+    geÃ¶ffnet werden.
   </p>
 </form>

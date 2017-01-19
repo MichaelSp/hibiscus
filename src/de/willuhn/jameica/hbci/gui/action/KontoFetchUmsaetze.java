@@ -44,7 +44,7 @@ public class KontoFetchUmsaetze implements Action
   public void handleAction(Object context) throws ApplicationException
   {
 		if (!(context instanceof Konto))
-			throw new ApplicationException(i18n.tr("Bitte w‰hlen Sie ein Konto aus"));
+			throw new ApplicationException(i18n.tr("Bitte w√§hlen Sie ein Konto aus"));
 
 		try
 		{
@@ -69,7 +69,7 @@ public class KontoFetchUmsaetze implements Action
 		catch (RemoteException e)
 		{
 			Logger.error("error while refreshing umsaetze",e);
-      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim Abrufen der Ums‰tze"),StatusBarMessage.TYPE_ERROR));
+      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim Abrufen der Ums√§tze"),StatusBarMessage.TYPE_ERROR));
 		}
   }
 

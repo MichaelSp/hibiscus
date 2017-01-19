@@ -96,7 +96,7 @@ public class ProtokollImpl extends AbstractHibiscusDBObject implements Protokoll
    * @see de.willuhn.datasource.db.AbstractDBObject#updateCheck()
    */
   protected void updateCheck() throws ApplicationException {
-    throw new ApplicationException(i18n.tr("Protokoll-Daten dürfen nicht geändert werden."));
+    throw new ApplicationException(i18n.tr("Protokoll-Daten dÃ¼rfen nicht geÃ¤ndert werden."));
   }
 
   /**
